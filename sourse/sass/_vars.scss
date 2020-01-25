@@ -41,13 +41,15 @@ $colors: map-merge(  ( ),  $colors);
 
 
 $primary:       $blue !default;
-$secondary:     $gray-600 !default;
+$secondary:   #6f6f6f !default;
+$secondary2:   #b2b2b2 !default;
 $success:       $green !default;
 $info:          $cyan !default;
 $warning:       $yellow !default;
 $danger:        $red !default;
 $light:         $gray-100 !default;
 $dark:          $gray-800 !default;
+$accent:          #ffdfaf !default;
 
 $theme-colors: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
@@ -55,7 +57,9 @@ $theme-colors: map-merge(
   (
     "primary":    $primary,
     "secondary":  $secondary,
+    "secondary2":  $secondary2,
     "success":    $success,
+    "accent":    $accent,
     // "info":       $info,
     // "warning":    $warning,
     "danger":     $danger,
@@ -66,7 +70,7 @@ $theme-colors: map-merge(
 );
 
 $body-bg:                   $white !default;
-$body-color:                $gray-900 !default;
+$body-color:                #151515 !default;
 
 // Typography
 //
@@ -126,12 +130,12 @@ $font-weight-base:            $font-weight-normal !default;
 $line-height-base:            1.5 !default;
 
 // title 
-$h1-font-size:                $font-size-base * 2.5 !default;
-$h2-font-size:                $font-size-base * 2 !default;
-$h3-font-size:                $font-size-base * 1.75 !default;
-$h4-font-size:                $font-size-base * 1.5 !default;
-$h5-font-size:                $font-size-base * 1.25 !default;
-$h6-font-size:                $font-size-base !default; 
+$h1-font-size:                rem(50px) !default;
+$h2-font-size:                rem(35px) !default;
+$h3-font-size:                rem(25px) !default;
+$h4-font-size:                rem(22px) !default;
+$h5-font-size:                rem(20px) !default;
+$h6-font-size:                rem(18px) !default; 
 
 
 $display1-size:               6rem !default;
