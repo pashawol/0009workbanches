@@ -2,19 +2,34 @@ extends layout/main.pug
 
 
 include ../blocks/s-content/_s-content.pug
-include ../blocks/s-contact/_s-contact.pug
+include ../blocks/s-contact/_s-contact.pug 
+include ../blocks/s-catalog/_s-catalog.pug
+include ../blocks/s-price/_s-price.pug
+include ../blocks/s-advantages/_s-advantages.pug
+include ../blocks/s-look/_s-look.pug
+include ../blocks/s-our/_s-our.pug
+include ../blocks/s-shipping/_s-shipping.pug
+
 
 block variables
 	- let  mainPage= null
 block title
-	- let  title= 'title'
+	- let  title= 'Главная'
 	title= title
 block pagecontent 
-	+mob-mnu()
+	//- +mob-mnu()
 	+header()
 		+top-line()
 		+top-nav()
 	+header-block()
-	+s-form()
-	+s-contact()
+	+s-advantages
+
+	+s-catalog()(class="section-border ")
+		+b.section-title.text-center
+			h2 Самые популярные модели сейфов
+	//- +s-price
+	+s-form()(class="section-border ")
+	+s-look
+	+s-our
+	+s-shipping
 	+footer()

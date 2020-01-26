@@ -1,0 +1,34 @@
+mixin s-price()
+	// start s-price
+	+b.s-price.section#s-price&attributes(attributes)
+		.container
+			.row
+				.col-lg-7.col-sm-6
+					h3  Средние тарифы на&nbsp;доставку:
+					.row
+						mixin group(t,...items)
+							+e.group.col-lg-6
+								+e.group-title= t
+								ul
+									each item in items
+										li= item
+						+group("В пределах г. Магнитогорска","до 5 поддонов 2 000-2 500 руб.","6-10 поддонов 3 500-4 500 руб.")
+						+group("с. Аскарово. оз.Банное","до 5 поддонов 5 000 руб.","6-10 поддонов 8 500 руб.")
+						+group("с. Агаповка, Таштемерово, Давлетово","до 5 поддонов 3 000 руб.","6-10 поддонов 5 000 руб.")
+				.col
+					h3  Оплата
+					+e.group
+						+e.group-title.text-sm-left.text-center Вы можете оплатить материалы:
+						mixin item(i)
+							+e.group-item
+								+e.icon-wrap
+									+icon(i)
+								block
+						+item("wallet")
+							+e.group-item-text Наличными водителю при доставке.
+						+item("building")
+							+e.group-item-text В&nbsp;офисе компании по&nbsp;адресу: г. Магнитогорск, ул.Вайнера, д. 2А.
+						+item("plastic-card")
+							+e.group-item-text По&nbsp;выставленному счету через банк, в&nbsp;том числе онлайн.
+								
+	// end s-price
