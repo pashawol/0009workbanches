@@ -1,0 +1,72 @@
+
+mixin item-prod(sl)
+	+b.item-prod
+		+e.img-wrap(href="#")
+			-
+				let src= (sl=="sl" ? '#' :'img/@2x/prod-1.jpg')
+				let lazy = (sl=="sl" ? 'img/@2x/prod-1.jpg': null)
+			img.res-i(src= src data-lazy= lazy , alt="")
+			+e.more Подробнее
+		+e.title
+			a(href="#") Сейф Aiko T-17 EL
+		table
+			tr
+				td Цена:
+				td 2000 Р*
+			tr
+				td Взломостойкость:
+				td H0 класс
+			tr
+				td Тип замка:
+				td электронный
+			tr
+				td Внешние размеры: (ВхШхГ)
+				td 170х260х252
+		+e.btn(href="#")
+			+icon("cart")
+			| В корзину
+mixin s-catalog()
+	// start s-catalog
+	+b.SECTION.s-catalog.section#s-catalog&attributes(attributes)
+		.container
+			block
+				
+			+e.slider--js
+				- for (var x = 0; x < 4; x++)
+					+e.slide
+						+item-prod()
+			
+			.row
+				.col-md-4
+					.control-wrap
+				.col-md-4.order-md-first
+					+e.footer-text *При оформлении заказа  уточняйте цену по&nbsp;т: #[a(href="tel:8(3519)22-00-22") 8 (3519) 22-00-22]
+	// end s-catalog
+
+mixin s-catalog-08(t="Взломостойкие сейфы")
+	// start s-catalog
+	+b.s-catalog--page&attributes(attributes) 
+			h1= t
+			+b.sort-catalog 
+				.row 
+					.col-auto Сортировать:    
+					.col-auto 
+						+b.LABEL.sort-input
+							+e.INPUT.input(type="radio" name="sort")
+							+e.text сначала дешевые    
+					.col-auto 
+						+b.LABEL.sort-input
+							+e.INPUT.input(type="radio" name="sort")
+							+e.text сначала дорогие
+			.row
+				- for (var x = 0; x < 4; x++)
+					+e.col.col-sm-6
+						+item-prod()
+			+e.footer
+				+e.footer-text---page.text-center *При оформлении заказа  уточняйте цену по&nbsp;т: #[a(href="tel:8(3519)22-00-22") 8 (3519) 22-00-22]
+				+e.btn-more(type="button")
+					+icon("refresh")
+					| Загрузить еще
+				+pugin()
+	// end s-catalog
+
