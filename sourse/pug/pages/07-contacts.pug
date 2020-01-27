@@ -1,0 +1,30 @@
+extends layout/main.pug
+
+
+include ../blocks/s-content/_s-content.pug
+include ../blocks/s-contact/_s-contact.pug 
+include ../blocks/s-catalog/_s-catalog.pug
+include ../blocks/s-price/_s-price.pug
+include ../blocks/s-advantages/_s-advantages.pug
+include ../blocks/s-look/_s-look.pug
+include ../blocks/s-our/_s-our.pug
+include ../blocks/s-shipping/_s-shipping.pug
+include ../blocks/s-shiping-and-payment/_s-shiping-and-payment.pug
+
+
+block variables
+	- let  mainPage= null
+block title
+	- let  title= 'Контакты'
+	title= title
+block pagecontent 
+	//- +mob-mnu()
+	+header()
+		+top-line()
+		+top-nav()
+	.container
+		+breadcrumb('Главная', title)
+
+	+s-contact()(class="section-border ")
+	+s-form()(class="section-border ")
+	+footer()
