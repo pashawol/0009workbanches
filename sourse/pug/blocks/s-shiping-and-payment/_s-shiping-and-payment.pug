@@ -1,0 +1,35 @@
+mixin s-shiping-and-payment()
+	// start s-shiping-and-payment
+	+b.s-shiping-and-payment#s-shiping-and-payment&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h1 Доставка и оплата
+				h3 Доставим ваш заказ в&nbsp;любую точку России и&nbsp;в&nbsp;страны ближнего зарубежья
+			.row
+				.col-lg-8
+					+e.delivery-terms
+						h3 Сроки доставки
+						+e.timing.row
+							.col-lg-5
+								+icon('check-mark')
+								|Доставка по Москве:
+							.col-lg-7 в день заказа или на следующий
+							.col-lg-5 
+								+icon('check-mark')
+								|Доставка по Росии:
+							.col-lg-7 от 2 до 5 дней (транспортной компанией)*
+							.col-lg-5
+								+icon('check-mark')
+								|Доставка по СНГ:
+							.col-lg-7 от 3 до 7 дней (транспортной компанией)*
+			p *Доставка <span>за&nbsp;пределы Москвы</span> обсуждается индивидуально
+			h3.convenient-way Оплачивайте удобным для вас способом
+			+e.payment-metod.row
+				.col-lg-5
+					ol
+						li Наличными при покупке со склада
+						li Банковской картой
+						li Безналично по выставленному счету
+				.col-lg-7
+					img.lazy.res-i(src="" data-src="img/@2x/visa_mastercard.png" alt="")
+	// end s-shiping-and-payment

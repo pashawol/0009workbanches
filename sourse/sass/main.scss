@@ -38,10 +38,35 @@ $output-bourbon-deprecation-warnings: false;
 // @import "./node_modules/bootstrap/scss/card";
 @import "./node_modules/bootstrap/scss/breadcrumb";
 .breadcrumb{
+  @extend .h5;
+  // @include roww(15);
+  font-weight: 400;
+  padding-bottom: rem(20);
+  margin-bottom: 0;
+  @include media-breakpoint-down(md) {
+    margin-bottom: rem(10);
+    padding-top: rem(19);
+    font-size: rem(12);
+  }
   .active{
     a{
       color: $breadcrumb-active-color;
       pointer-events: none;
+      text-decoration: none;
+    }
+  }
+  a {
+    text-decoration: underline;
+    color: #333845;
+  }
+  .breadcrumb-item {
+    @include media-breakpoint-up(md){
+      &:nth-child(2n) {
+      padding-left: rem(5);
+      }
+      &::before {
+        padding-right: rem(3);
+      }
     }
   }
 }
