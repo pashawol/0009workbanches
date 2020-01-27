@@ -17,16 +17,16 @@ block title
 	- let  title= 'Главная'
 	title= title
 block pagecontent 
-	//- +mob-mnu()
+	+mob-mnu()
 	+header()
 		+top-line()
 		+top-nav()
-	+header-block()
+		+header-block()
 	+s-advantages
 
 	+s-catalog()(class="section-border ")
 		+b.section-title.text-center
-			h2 Самые популярные модели сейфов
+			h2 #[strong Самые популярные модели] слесарных верстаков
 	//- +s-price
 	+s-form()(class="section-border ")
 	+s-look

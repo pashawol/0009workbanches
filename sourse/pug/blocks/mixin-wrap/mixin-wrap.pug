@@ -150,7 +150,7 @@ mixin pic(i, bg, lazy="lazy", media)
 		+src(i, exp,smpath2, lazy,"",bg) 
 	// /picture
 
-mixin pic2({i, bg, lazy="lazy", media='576px'})
+mixin pic2(i, bg, lazy="lazy", media='576px')
 	-
 		const smpath2 = "2x"
 		const smpath1 = "1x"
@@ -170,74 +170,28 @@ mixin pic2({i, bg, lazy="lazy", media='576px'})
 	
 	// picture
 	picture( class= lazy)&attributes(attributes) 
-		if media 
-			each val in ["webp",exp] 
+		if media
+			each val in [exp] 
 				each val2 in [smpath2,smpath1] 
 					+src(i,val,`${val2 + (val ==  "webp" ? "/webp" : "") }`,lazy,"source")(media=(val2 == smpath2 ? "(min-width:"+ media+")" : null))
 		else 
-			+src(i,'webp',smpath2+`/webp`,lazy,"source")
+			//- +src(i,'webp',smpath2+`/webp`,lazy,"source")
 			// /webp images  
 		+src(i, exp,smpath2, lazy,"",bg) 
 	// /picture
-
-//- mixin img( i, bg, lazy="lazy", media='576px')
-//- 	-
-//- 		const smpath2 = "2x"
-//- 		const smpath1 = "1x"
-//- 		let expArr = i.split(".")
-//- 		let exp = (expArr[1] || 'jpg')  
-//- 		const url1= `img/@${smpath1}/${expArr[0]}.${exp}`
-//- 		const url2= `img/@${smpath2}/${expArr[0]}.${exp}`
-//- 		const ifLazy = (lazy== "lazy")
-//- 		const src = ( ifLazy ? "#" : url2)
-//- 		const data2 = (ifLazy ?  url2  : null)
-//- 		const data1 = (ifLazy ?  url1  : null)
-//- 	img(
-//- 		class= (lazy +' res-i ' + (bg=="bg" ? "object-fit-js": '') )  
-//- 		src=src  
-//- 		data-src=(data1)   
-//- 		sizes="(max-width: 576px) 0, 100%"
-//- 		data-srcset=(media != 0 ? (data1 + " " + '0, '+ data2 + " 100% " ) : null))&attributes(attributes)
-		//- "img/@1x/real.jpg 1x, img/@2x/real.jpg 2x"
-	//- if media !== 0  
-	//- 	each val2 in [smpath2,smpath1] 
-	//- 	+src(i,exp,val2,lazy)(data-srcset=(val2 == smpath2 ? "(min-width:"+ media+")" : null))
-	//- else 
-	//- 	+src(i,'webp',smpath2+`/webp`,lazy) 
-
  
-	
-//- /picture with lazy
-
-
-	//- example
-	//- or
-	//- +piclazy('consult','png')
-//- +pic('','head-img-4',"")
-
-
- 
-		 
-//- /picture
-	example
-	+piclazy('consult','png','bg')
-	or
-	+piclazy('consult','png')
-
-
 mixin ie11()
 	//- modernizer and for ie11
 	 
 	<!--[if lt IE 11]><p   class="browsehappy container">К сожалению, вы используете устаревший браузер. Пожалуйста, <a href="http://browsehappy.com/" target="_blank">обновите ваш браузер</a>, чтобы улучшить производительность, качество отображаемого материала и повысить безопасность.</p><![endif]-->
 
 mixin logo()
-	+b.logo&attributes(attributes)
-		a(href="#")
-			div
-				img(src="img/@2x/logo.png", alt="")
-			+e.DIV.text
-				+e.DIV.title Комплексные системы
-				| Продажа сейфов   и&nbsp;металлических&nbsp;стеллажей  с&nbsp;доставкой по&nbsp;Магнитогорску
+	div&attributes(attributes)
+		+b.logo
+			a(href="/")
+				div
+					img(src="img/@2x/logo.png", alt="")
+				+e.DIV.text Производство и&nbsp;продажа металлической мебели&nbsp;с доставкой по&nbsp;всей России
 mixin search()
 	+b.form-search.d-lg-block
 		form
@@ -246,20 +200,34 @@ mixin search()
 				+icon("search")
 
 mixin contact-block()
-	+b.contact-block
-		.d-lg-block.d-none
-			+e.tel(href="tel:+7(3519)22-00-00") +7 (3519) 22-00-00
+	+b.contact-block.col-auto
 		
-		+e.link.link-modal(href="#modal-call") Заказать звонок
-		+b.messanger-block
-			+e.item--viber(href="#")
-				+icon("viber")
+		.row
 			
-			+e.item--whatsapp(href="#")
-				+icon("whatsapp")
-			
-			+e.item--tel.d-lg-none(href="tel:+7(3519)22-00-00")
-				+icon("tel")
-			
-			+e.item--search.d-lg-none(type="button")
-				+icon("search")
+			.col-auto.d-none.d-md-block
+				+e.tel(href="tel:8(495)266-60-73") 8 (495) #[strong 266-60-73]
+				br
+				+e.tel(href="tel:8(495)266-60-73") 8 (495) #[strong 266-60-73]
+			.col-auto.d-sm-block.d-none
+				.d-none.d-md-block
+					+e.item--whatsapp(href="#")
+						svg.icon(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewBox='0 0 58 58', style='enable-background:new 0 0 58 58;', xml:space='preserve')
+							style(type='text/css').
+								.st0{fill:#2CB742;}
+								.st1{fill:#FFFFFF;}
+							g
+								path.st0(d='M0,58l5-15c-2.5-4.3-4-9.2-4-14.5C1,12.8,13.8,0,29.5,0S58,12.8,58,28.5S45.2,57,29.5,57\
+								c-4.8,0-9.3-1.2-13.3-3.3L0,58z')
+								path.st1(d='M47.7,38c-1.3-2.5-6.2-5.3-6.2-5.3c-1.1-0.6-2.4-0.7-3,0.4c0,0-1.6,1.9-2,2.2c-1.8,1.2-3.5,1.2-5.2-0.5l-4-4\
+								l-4-4c-1.7-1.7-1.8-3.4-0.5-5.2c0.3-0.4,2.2-2,2.2-2c1.1-0.6,1-2,0.4-3c0,0-2.8-4.9-5.3-6.2c-1.1-0.6-2.4-0.4-3.2,0.5l-1.8,1.8\
+								c-5.6,5.6-2.8,11.9,2.7,17.5l5.1,5.1l5.1,5.1c5.6,5.6,11.9,8.3,17.5,2.7l1.8-1.8C48,40.3,48.2,39,47.7,38z')
+
+				.d-none.d-sm-block
+					+e.link.link-modal(href="#modal-call") Заказать звонок 
+			.col-auto.d-md-none
+				+e.item--tel(href="tel:8(495)266-60-73")
+					+icon("call")
+mixin btn-accent( t,a="#")
+	+e.btn.btn-blue(href= a) 
+			span.btn-color 
+			span.btn-text= t

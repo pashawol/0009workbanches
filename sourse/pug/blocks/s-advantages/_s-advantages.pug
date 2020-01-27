@@ -2,8 +2,28 @@ mixin s-advantages()
 	// start s-advantages
 	+b.SECTION.s-advantages.section#s-advantages&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 s-advantages
-				
 			.row
+				mixin item(i)
+					+e.col.col-lg-3.col-6
+						+e.item
+							+e.img-wrap
+								img.res-i.lazy(src="#" data-src=`img/@2x/advantages-${i}.png`, alt="")
+							block
+					// /+e.col.col-lg-3.col-6
+				+item('1')
+					+e.title Прочная конструкция
+					p Изготавливается на&nbsp;несущем каркасе из&nbsp;квадратной трубы
+				
+				+item('2')
+					+e.title  Занимают мало места
+					p и&nbsp;поддерживают чистоту в&nbsp;помещении
+				
+				+item('3')
+					+e.title Возможно окрашивание  в&nbsp;ваши фирменные цвета
+					p по стандарту Ral
+				
+				+item('4')
+					+e.title При необходимости,  изготовим верстак 
+					p по вашим размерам
+				
 	// end s-advantages

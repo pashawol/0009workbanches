@@ -1,84 +1,46 @@
 .top-line {
-  padding-top: rem(17);
-  padding-bottom: rem(10);
-  z-index: 1000;
-  position: relative;
+  @include media-breakpoint-up(md) {
 
-  &__basket {
-    z-index: 4;
-    cursor: pointer;
+    padding-top: rem(40);
+  }
+
+  padding-top: rem(30);
+  padding-bottom: rem(18);
+  z-index:900;
+  position: relative;
+  color: #ffffff;
+
+  .row {
+    align-items: center;
+  }
+
+  &__addr {
+    position: relative;
 
     .icon {
-      font-size: rem(35);
-    }
-
-    position: relative;
-  }
-
-  &__basket:hover &__basket-empty {
-    opacity: 1;
-    pointer-events: painted;
-    z-index: 10;
-  }
-
-  &__basket-count {
-    position: absolute;
-    bottom: rem(-5);
-    right: rem(-5);
-    width: rem(23px);
-    height: rem(23px);
-    border-radius: 50%;
-    background-color: #7ced91;
-    text-align: center;
-    color: #3d3d3d;
-    font-family: "Open Sans";
-    line-height: 1.38;
-    // Text style for "1"
-    letter-spacing: 0.32px;
-
-  }
-
-  &__basket-empty {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    font-weight: 500;
-    padding: rem(11) rem(30);
-    box-shadow: 3px 3px 35px rgba(154, 187, 206, 0.17);
-    background-color: #ffffff;
-    min-width: rem(170);
-    border: 1px solid #eee;
-    border-radius: 5px;
-    opacity: 0;
-    z-index: -1;
-    pointer-events: none;
-    text-align: center;
-
-    &:after,
-    &:before {
-      bottom: 100%;
-      left: rem(14);
-      border: solid transparent;
-      content: " ";
-      height: 0;
-      width: 0;
+      font-size: rem(18);
       position: absolute;
-      pointer-events: none;
+      left: 0;
+      top: 0;
+      color: #ffe2b7;
     }
 
-    &:after {
-      @include triangle(15px, #fff, up);
-    }
+    padding-left: rem(25);
+    max-width: rem(200);
 
-    &:before {
-      @include triangle(17px, #eee, up);
-      margin-left: -1px;
-
+    &-title {
+      @extend .h6;
+      margin-bottom: 0;
     }
   }
 
   // 
-  @include media-breakpoint-up(xl) {}
+  @include media-breakpoint-up(xl) {
+    .container {
+
+      // max-width: 1270px;
+    }
+  }
 
   @include media-breakpoint-up(lg) {}
 
@@ -115,7 +77,11 @@
     .logo a,
     .row {
       // justify-content: flex-end;
-      justify-content: center;
+      // justify-content: center;
+    }
+
+    .logo__text {
+      display: none;
     }
   }
 
@@ -127,7 +93,11 @@
     padding-bottom: rem(20);
   }
 
-  @include media-breakpoint-down(xs) {}
+  @include media-breakpoint-down(xs) {
+    .row {
+      @include roww(10);
+    }
+  }
 
   ul {
     display: flex;

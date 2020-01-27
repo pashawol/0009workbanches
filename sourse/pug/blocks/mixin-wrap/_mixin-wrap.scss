@@ -38,15 +38,17 @@
  }
 
  .logo {
- 	@include media-breakpoint-up(xl) {
+ 	color: #ffffff !important;
+ 	line-height: 1.44;
 
- 		margin-left: rem(20);
+ 	@include media-breakpoint-up(xl) {
  		max-width: rem(430);
+ 		margin-right: rem(65);
  	}
 
  	@include media-breakpoint-up(lg) {
 
- 		max-width: rem(410);
+ 		max-width: rem(365);
  	}
 
  	@include media-breakpoint-up(md) {
@@ -54,7 +56,7 @@
 
  	}
 
- 	margin-bottom: rem(20);
+ 	// margin-bottom: rem(20);
 
  	&__text {
  		max-width: rem(275);
@@ -68,39 +70,31 @@
 
  		@include media-breakpoint-up(xl) {
 
- 			margin-right: rem(38);
+ 			margin-right: rem(28);
  		}
 
- 		@include media-breakpoint-up(md) {}
+ 		@include media-breakpoint-up(md) {
+
+ 			margin-right: rem(18);
+ 		}
 
  		max-width: none;
 
- 		margin-right: rem(18);
  	}
 
  	a {
- 		@include media-breakpoint-up(md) {}
-
- 		display: flex;
-
+ 		color: #ffffff !important;
  		text-decoration: none !important;
- 		@extend .text-secondary;
- 		line-height: 1.3;
- 		// Text style for "П, родажа"
- 		letter-spacing: rem(0.32px);
+
+ 		@include media-breakpoint-up(md) {
+
+ 			display: flex;
+ 			align-items: center;
+ 		}
+
  		// align-items: center;
  	}
 
- 	&__title {
- 		font-weight: 600;
- 		@include rfs(rem(22));
- 		color: $body-color;
- 		line-height: 0.77;
- 		// Text style for "Комплексны"
- 		letter-spacing: rem(0.44px);
- 		display: block;
- 		margin-bottom: rem(12);
- 	}
  }
 
  .form-search {
@@ -141,47 +135,40 @@
  .contact-block {
  	@include media-breakpoint-up(md) {
 
- 		text-align: right;
+ 		// text-align: right;
  	}
 
-
  	font-weight: 600;
-
- 	// @include media-breakpoint-up(lg) {
- 	// 	margin-bottom: 0;
- 	// }
-
- 	// margin-bottom: rem(10);
 
  	&__tel {
  		@extend .h4;
  		// @extend .link-body;
- 		color: $body-color !important;
+ 		color: #fff !important;
  		text-decoration: none !important;
  		// font-family: $default-font2, serif;
- 		font-weight: 600;
+ 		font-weight: 400;
  	}
 
  	&__link {
  		text-decoration: none !important;
- 		letter-spacing: rem(0.32px);
  		display: inline-block;
  		line-height: 1;
  		display: inline-block;
- 		margin-bottom: rem(12);
- 		border-bottom: 1px dashed #b9d2f6;
+
+ 		@include media-breakpoint-up(md) {
+
+ 			margin-bottom: rem(12);
+ 		}
+
+ 		border-bottom: 1px solid;
+ 		color: #ffffff !important;
+ 		letter-spacing: rem(2.24);
+ 		text-transform: uppercase;
 
  		&:hover {
- 			border-color: #0b4190;
+ 			border-color: transparent;
  		}
  	}
- }
-
- .messanger-block {
- 	display: flex;
- 	margin-left: rem(-4);
- 	margin-right: rem(-4);
- 	justify-content: flex-end;
 
  	&__item {
  		margin-left: rem(4);
@@ -192,7 +179,7 @@
 
  		.icon {
  			color: #ffffff;
- 			font-size: rem(19);
+ 			font-size: rem(24);
 
  		}
 
@@ -200,41 +187,54 @@
  		align-items: center;
  		justify-content: center;
  		border-radius: 50%;
- 		background-color: $primary;
+ 		// background-color: $primary;
 
- 		&:hover {
- 			background-color: darken($color: $primary, $amount: 10);
-
- 		}
+ 		&:hover {}
 
  		&--tel {
- 			background-color: var(--teal);
+ 			background-color: #95c131;
 
- 			&:hover {
- 				// background-color: darken($color: #{var(--teal)}, $amount: 10);
-
+ 			.icon {
+ 				color: #ffffff;
+ 				font-size: rem(16);
  			}
- 		}
-
- 		&--viber {
- 			background-color: #665cac;
 
  			&:hover {
- 				background-color: darken($color: #665cac, $amount: 10);
+ 				background-color: darken($color: #95c131, $amount: 10);
 
  			}
  		}
 
  		&--whatsapp {
- 			background-color: #25d366;
+
+ 			// background-color: #25d366;
+ 			.icon {
+ 				// fill: #2CB742 !important;
+ 				// filter: drop-shadow(2px 0 0 #fff);
+
+
+ 				// path {
+ 				// 	&:nth-child(1) {
+ 				// 		fill: #2CB742 !important;
+ 				// 	}
+ 				// }
+ 			}
 
  			&:hover {
- 				background-color: darken($color: #25d366, $amount: 10);
+ 				// background-color: darken($color: #25d366, $amount: 10);
 
  			}
  		}
 
  	}
+ }
+
+ .messanger-block {
+ 	display: flex;
+ 	margin-left: rem(-4);
+ 	margin-right: rem(-4);
+ 	justify-content: flex-end;
+
  }
 
  .page-head {

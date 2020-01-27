@@ -1,58 +1,41 @@
 
+mixin item-menu() 
+	a(href="#") Верстаки слесарные
+	a(href="#")  Стеллажи металлические
+	a(href="#")  Шкафы металлические
+	a(href="#")  Тумбы инструментальные 
+	a(href="#")  Мебель для гаража
+	a(href="#")  Аксессуары 
 mixin mob-mnu()
-	+b.toggle-menu-mobile--js.d-lg-none
-		span
+	//- +b.toggle-menu-mobile--js.d-lg-none
+	//- 	span
 	+b.menu-mobile--js.d-lg-none
 		+b.toggle-menu-mobile--js
 			span
 		+e.inner
 		
-			+mnu()
-			.text-right
+			a(href="/").active Главная
+			+item-menu() 
+			a(href="#") Доставка и оплата
+			a(href="#") Контакты
 	//  мобильное меню
 mixin top-nav() 
 	// start top-nav
-	+b.top-nav.block-with-lazy
+	+b.top-nav.block-with-lazy.d-none.d-sm-block
 		.container
 			.row.no-gutters
-				.col-xl-3.col-md-auto.col-6
+				.col-xl-2.col-sm-auto
 					+b.catalog-menu
 						+e.toggle
 							+e.toggle-text 
 								span
 								| Каталог
-						+e.dropdown--tabs.tabss
-							.tabss__caption
-								.tabss__btn.active Сейфы
-								a.tabss__btn(class="link-modal" href="#modal-pdf") Стеллажи
-							.tabss__wrap
-								mixin tab()
-									.tabss__content&attributes(attributes)
-										.row
-											mixin item(t, ...items)
-												.col-lg-3.col-sm-6
-													.h6.strong= t
-													ul
-														each item in items
-															li: a(href="#")= item
-											+item("Категории:",'Офисные и бухгалтерские','Взломостойкие','Огнестойкие','Взломо-огнестойкие','Мебельные','Встраиваемые','Оружейные','Мини-сейфы для дома','Автомобильные')
-											+item("Взломостойкость:",'0 класс','1 класс','2 класс','3 класс')
-											+item("Огнестойкость:",'60Б — 60 минут','30Б — 30 минут')
-											+item("Тип замка:",'Ключевой','Кодовый электронный','Кодовый механический')
-								+tab()(class="active") 
-
-				.col-md.col-6
-					+b.catalog-menu
-						+e.toggle.d-md-none
-							+e.toggle-text.pl-0 Меню
-						+e.dropdown--menu-top
-							+b.menu-top
-								ul
-									li: a.scroll-link(href="#s-qwiz") 
-										+icon("safety-box")
-										| Подобрать сейф
-									li: a(href="#") Доставка и оплата
-									li: a(href="#") Контакты
-					//- +mnu()
-					
+						+e.dropdown--tabs
+							
+							+item-menu()
+				.col
+					+b.menu-top
+						ul 
+							li.current-menu-item: a(href="#") Доставка и оплата
+							li: a(href="#") Контакты
 	// end top-nav
