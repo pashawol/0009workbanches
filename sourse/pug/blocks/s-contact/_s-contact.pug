@@ -56,6 +56,23 @@ mixin s-contact()
 					//- <iframe src="https://yandex.ua/map-widget/v1/?um=constructor%3Adb87e64c101c358488e2d4335179bc5033ea071ebbe8c26551fe3a6251514200&amp;source=constructor" height="578"></iframe>
 					<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
 
+			+b.how-to-get.text-center
+				h2 Производство в Сальске
+				.map-wrap
+					+e.contact-block
+						ul
+							li 
+								| Адрес: <br>
+								span Ростовская обл., Сальск, <br>ул. Дружбы, 14
+								img.lazy(src="#" data-src="img/svg/maps-and-flags.svg", alt="")
+							li 
+								| Работаем: <br>
+								span пн-пт, с 9:00 до 18:00
+								img.lazy(src="#" data-src="img/svg/clock-circular-outline.svg", alt="")
+					.map-wrap#map
+						
+					//- <iframe src="https://yandex.ua/map-widget/v1/?um=constructor%3Adb87e64c101c358488e2d4335179bc5033ea071ebbe8c26551fe3a6251514200&amp;source=constructor" height="578"></iframe>
+					<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
 					script.
 						ymaps.ready(function () {
 						var myMap = new ymaps.Map('map', {
