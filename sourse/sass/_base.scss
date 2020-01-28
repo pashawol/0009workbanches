@@ -15,7 +15,7 @@ html {
 	// background-position: center 169px;
 	background-position: center 6px;
 	opacity: 0;
-	// opacity: 0.7;
+	opacity: 0.7;
 }
 
 body,
@@ -37,12 +37,12 @@ html {
 	@include media-breakpoint-up(sm) {
 
 		padding-top: rem(88 * .8);
-		padding-bottom: rem(97 * .8);
+		padding-bottom: rem(90* .8);
 	}
 
 	@media (min-width: 1440px) {
 		padding-top: rem(88);
-		padding-bottom: rem(97);
+		padding-bottom: rem(90);
 	}
 
 	padding-top: rem(88 /2);
@@ -363,7 +363,7 @@ body {
 	}
 
 	svg {
-		width: 14px;
+		width: 12px;
 		height: auto;
 		@include mt;
 	}
@@ -380,8 +380,15 @@ body {
 		margin: 5px;
 		@include mt;
 		cursor: pointer;
-		width: rem(23px);
-		height: rem(23px);
+
+		@include media-breakpoint-up(md) {
+
+			width: rem(23px);
+			height: rem(23px);
+		}
+
+		width: rem(18);
+		height: rem(18);
 		border: 2px solid currentColor;
 		color: #cdcdcd;
 		position: relative;
@@ -390,8 +397,15 @@ body {
 		&::before {
 			content: '';
 			@include a-cent;
-			width: rem(8px);
-			height: rem(8px);
+
+			@include media-breakpoint-up(md) {
+
+				width: rem(8px);
+				height: rem(8px);
+			}
+
+			width: rem(4px);
+			height: rem(4px);
 			border-radius: 50%;
 			background-color: currentColor;
 		}
@@ -510,37 +524,25 @@ input::-webkit-inner-spin-button {
 
 
 .control-wrap {
+	@include media-breakpoint-up(md) {
+		position: initial;
+	}
+
+	@include media-breakpoint-down(sm) {
+		.slick-arrow {
+			margin-top: 0;
+			top: rem(-5);
+		}
+
+		margin-left: auto;
+		margin-right: auto;
+		max-width: 240px;
+	}
+
 	position: relative;
 
 	.slick-arrow {
-		@include media-breakpoint-up(xl) {
-
-			&::after {
-				// @include a-cent(y);
-				top: 50%;
-				position: absolute;
-				margin-top: -1.2em;
-				font-weight: 300;
-
-			}
-
-			&.l {
-				&::after {
-					content: 'Назад';
-					left: 100%;
-					padding-left: rem(10);
-				}
-			}
-
-			&.r {
-				&::after {
-					content: 'Вперед';
-					right: 100%;
-					padding-right: rem(10);
-				}
-			}
-
-		}
+		@include media-breakpoint-up(xl) {}
 	}
 }
 
@@ -631,143 +633,19 @@ a {
 // 	letter-spacing: rem(0.44px);
 // }
 
-.btn {
-	font-weight: 600;
-}
-
-.btn-blue {
-	@extend .btn;
-	border: none;
-
-	background-color: transparent;
-	position: relative;
-	z-index: 2;
-	align-items: center;
-	justify-content: center;
-	padding: rem(2) rem(10);
-
-	@include media-breakpoint-up(md) {
-
-		min-height: rem(84);
-	}
-
-	min-height: rem(64);
-	text-shadow: 0 2px 0 rgba(255, 255, 255, 0.74);
-	color: #614826 !important;
-	font-weight: 700;
-	line-height: rem(2.06);
-	text-transform: uppercase;
-	// Text style for "Подобрать"
-	letter-spacing: rem(2.24px);
-	border-radius: rem(10px);
-	background-image: url(../img/@2x/btn-bg.png);
-	background-size: 100%;
-	box-shadow: none !important;
-
-	&.btn-lg {
-
-		min-height: rem(90);
-	}
-
-	line-height: 1.2;
-	display: flex;
-
-	.btn-color,
-	&::after,
-	&::before {
-		content: '';
-		z-index: -1;
-		@include a-cent;
-		@include mt;
-		border-radius: 7px;
-		opacity: 0.72;
-		border: 1px solid;
-		// z-index: -1;
-	}
-
-	&::before {
-		width: calc(100% - 3px);
-		height: calc(100% - 3px);
-		border-color: #ffffff;
-		z-index: 2;
-	}
-
-	&::after {
-		width: calc(100% - 6px);
-		height: calc(100% - 6px);
-		border-color: #887966;
-		opacity: 0.73;
-		z-index: 2;
-	}
-
-	.btn-color {
-		width: 100%;
-		height: 100%;
-		border: none;
-		border-radius: 10px;
-		background-color: #e0e0e0;
-		background-image: linear-gradient(-10deg, #b9a385 0%, #ffebcb 100%);
-
-		&::after {
-			content: '';
-			border-radius: 10px;
-			position: absolute;
-			left: 0;
-			top: 0;
-			width: 100%;
-			height: 100%;
-			background-image: linear-gradient(-10deg, #a48e71 0%, #ffe0b0 100%);
-			@include mt;
-		}
-
-		z-index: -1;
-
-		&::before {
-			content: '';
-			position: absolute;
-			z-index: -2;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			border-radius: 10px 10px 15px 15px;
-			box-shadow: 0 rem(6) 0 #97856d;
-			@include mt;
-		}
-	}
-
-	&:hover {
-		.btn-color {
-			&::before {
-				box-shadow: 0 rem(0) 0 #97856d;
-
-			}
-
-			&::after {
-				opacity: 0;
-			}
-		}
-	}
-
-	&:focus {
-		.btn-color {
-			&::before {
-				box-shadow: 0 rem(6) 0 #97856d;
-
-			}
-
-			&::after {
-				opacity: 1;
-			}
-		}
-	}
-
-	.btn-text {
-		position: relative;
-		z-index: 3;
-	}
-
-	&:hover {}
+// Кнопка вернутся на главную
+.back-to-main {
+  margin-top: rem(18);
+  font-size: rem(12);
+  @include media-breakpoint-up(md) {
+    margin-top: rem(34);
+    font-size: rem(20);
+  }
+  a {
+    color: #333845;
+    text-decoration: underline;
+    font-weight: 400;
+  }
 }
 
 .control-wrap {
