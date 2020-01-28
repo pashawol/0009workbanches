@@ -2,8 +2,14 @@ mixin s-shipping()
 	// start s-shipping
 	+b.SECTION.s-shipping.section#s-shipping&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 s-shipping
+			+b.section-title
+				h2 #[strong Отправим заказ] в&nbsp;тот&nbsp;же&nbsp;день
+				.row
+					.col-lg-6
+						p Доставим по&nbsp;Москве&nbsp;&mdash; #[strong в&nbsp;день заказа или на&nbsp;следующий.]
+
+						p По&nbsp;России #[strong от&nbsp;2&nbsp;до&nbsp;5&nbsp;дней] транспортной компанией
+					.col-lg-6
+
 				
-			.row
 	// end s-shipping

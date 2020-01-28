@@ -1,6 +1,16 @@
+ .soc-text {
+ 	width: rem(180);
+ 	font-size: 1rem;
+ 	line-height: 1.34;
+ 	// Text style for "С, ледите"
+ 	letter-spacing: rrem(0.72px);
+ 	margin-bottom: rem(15);
+ }
+
  .soc {
  	margin: 0 rem(-5px);
  	display: flex;
+ 	margin-bottom: rem(35);
 
  	&__item {
  		text-decoration: none !important;
@@ -8,16 +18,31 @@
  		vertical-align: middle;
  		@include mt;
  		display: block;
+ 		width: rem(37);
+ 		height: rem(37);
+ 		text-align: center;
+ 		vertical-align: middle;
+ 		line-height: rem(35);
+ 		border-radius: 50%;
+
+ 		&--vk {
+ 			background-color: #4d76a1;
+ 			background-image: linear-gradient(to top, #20afe7 0%, #b4e6ff 100%);
+ 		}
+
+ 		&--instagram {
+ 			background-image: linear-gradient(to top, #ff415e 0%, #ff8fa4 100%);
+ 		}
 
  		&:hover {
  			// box-shadow: 0 0 33px 0px rgba(255, 83, 0, 0.16);
- 			opacity: .6;
+ 			opacity: .8;
  		}
 
  	}
 
  	.icon {
- 		font-size: rem(30);
+ 		font-size: rem(17);
  	}
 
 
@@ -171,10 +196,10 @@
  	}
 
  	&__item {
- 		margin-left: rem(4);
+ 		// margin-left: rem(4);
  		margin-right: rem(4);
- 		width: rem(34);
- 		height: rem(34);
+ 		// width: rem(34);
+ 		// height: rem(34);
  		border: none;
 
  		.icon {
@@ -192,6 +217,10 @@
  		&:hover {}
 
  		&--tel {
+ 			margin-left: rem(4);
+ 			margin-right: rem(4);
+ 			width: rem(34);
+ 			height: rem(34);
  			background-color: #95c131;
 
  			.icon {
@@ -208,6 +237,13 @@
  		&--whatsapp {
 
  			// background-color: #25d366;
+ 			display: inline-block;
+ 			margin-bottom: rem(5);
+
+ 			img {
+ 				width: rem(24);
+ 			}
+
  			.icon {
  				// fill: #2CB742 !important;
  				// filter: drop-shadow(2px 0 0 #fff);

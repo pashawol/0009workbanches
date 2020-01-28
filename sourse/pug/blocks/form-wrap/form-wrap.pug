@@ -181,9 +181,9 @@ mixin polite()
 
 mixin form-body()
 	
+	+inputName()
 	+input("+7 (900) 444-44-44","tel",'Введите телефон:')(required)
 	//- +e.title  Выберите время для звонка
-	+inputName()
 	+b.LABEL.custom-input-time
 		+e.INPUT.input(type='checkbox', name='scr8-time', )
 		+e.SPAN.lab
@@ -196,4 +196,4 @@ mixin form-body()
 	//- +input(" Ваш номер телефона","tel",'Введите Ваш номер телефона для связи')
 
 	.toggle-wrap-input-js
-		+input("Например: во вторник в 14:00","text",'Когда позвонить?','time')
+		+input("Например: во вторник в 14:00","text",'','time')
