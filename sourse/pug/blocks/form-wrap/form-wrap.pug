@@ -80,28 +80,28 @@ mixin order-block(btn="Обсудить заказ")
 mixin form-tabs()
 	.tabs
 		+e.group
-			+e.group-title Как с вами связаться?
+			+e.group-title Куда отправить прайс и каталог?
 			
 			.tabs__caption
 				.tabs__btn.active
-					+icon('tel')
-					| Звонок 
+					+icon('email3')
+					| E-mail
 				.tabs__btn
-					+icon('viber')
-					| Viber
+					+icon('call')
+					| SMS
 				.tabs__btn
 					+icon('whatsapp')
 					| WhatsApp
 		block
 		.tabs__wrap
 			.tabs__content.active
-				+input("+7 (999) 999-99-99","tel",'Введите телефон:',"tel")(required)
+				+input("Ваш email","email",'Введите email:',"email")
  
 			.tabs__content
-				+input("+7 (999) 999-99-99","tel",'Введите viber:',"viber")
+				+input("+7 (999) 999-99-99","tel",'Введите телефон:',"tel")
+				//- .h5.text-secondar Перезвоню в течение рабочего дня
 			.tabs__content
 				+input("+7 (999) 999-99-99","tel",'Введите whatsapp:',"whatsapp")
-		.h5.text-secondar Перезвоню в течение рабочего дня
 
 mixin form-tabs2()
 	.tabs

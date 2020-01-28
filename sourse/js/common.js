@@ -175,7 +175,8 @@ function eventHandler() {
 
 		slidesToShow: 1,
 		dots: true,
-
+		appendArrows: '.control-wrap',
+		appendDots: '.control-wrap',
 		responsive: [{
 			breakpoint: 992,
 			settings: {

@@ -1,6 +1,7 @@
 .s-form,
 .s-form2 {
 	background-color: #f7f7f7;
+	background-position: right center;
 
 	h5 {
 		font-weight: normal;
@@ -13,15 +14,13 @@
 		max-width: rem(490);
 		margin-left: auto;
 		margin-right: auto;
+
 	}
 
-	.col-lg-7 {
-		align-self: flex-end
-	}
 
 	@extend .section-border;
 
-	@include media-breakpoint-up(lg) {}
+
 
 	padding-bottom: 0 !important;
 
@@ -44,8 +43,15 @@
 	}
 
 	h2 {
-		max-width: rem(460);
-		line-height: 1.21;
+		// max-width: rem(460);
+		line-height: 1.16;
+
+		@include media-breakpoint-up(lg) {
+
+			text-align: left;
+		}
+
+		text-align: center;
 	}
 
 	p {
@@ -57,7 +63,22 @@
 	}
 
 	.form-wrap {
-		padding-bottom: rem(40);
+		max-width: rem(478px);
+		box-shadow: 0 0 $h3-font-size 10px rgba(82, 78, 94, 0.04);
+		border-radius: 6px;
+		background-color: #ffffff;
+
+		@include media-breakpoint-up(xl) {
+
+			padding: rem(45) rem(42) rem(40);
+		}
+
+		padding: rem(45) rem(32) rem(40);
+		margin-bottom: rem(125);
+
+		@media (min-width: 1440px) {
+			margin-left: -10px;
+		}
 
 		.form-control,
 		&__input {
@@ -72,14 +93,7 @@
 			}
 		}
 
-		@include media-breakpoint-up(lg) {
-			// margin-left: 0;
-		}
 
-		// margin-left: auto;
-		// margin-right: auto;
-
-		max-width: rem(360);
 	}
 
 	&__label {
@@ -184,7 +198,9 @@
 	}
 
 	//
-	@include media-breakpoint-up(xl) {}
+	@media (min-width: 1440px) {
+		padding-top: rem(125);
+	}
 
 	@include media-breakpoint-up(lg) {}
 
@@ -228,6 +244,7 @@
 		letter-spacing: 0.4px;
 		padding-top: rem(10);
 	}
+
 	.corrective-margin {
 		h5 {
 			margin-bottom: rem(7);

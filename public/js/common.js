@@ -162,6 +162,8 @@ function eventHandler() {
 	$('.s-catalog__slider--js').slick(_objectSpread({}, defaultSlide, {
 		slidesToShow: 1,
 		dots: true,
+		appendArrows: '.control-wrap',
+		appendDots: '.control-wrap',
 		responsive: [{
 			breakpoint: 992,
 			settings: {

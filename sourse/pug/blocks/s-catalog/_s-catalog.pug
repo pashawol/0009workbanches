@@ -21,8 +21,8 @@ mixin s-catalog()
 	+b.SECTION.s-catalog.section#s-catalog&attributes(attributes)
 		.container
 			block
-				
-			+e.slider--js 
+			+e.slider-wrap
+				+e.slider--js 
 					+e.slide
 						+item-prod("sl","1")
 							+item-tr("Цена:","61 900Р")
@@ -51,11 +51,16 @@ mixin s-catalog()
 							+item-tr("Двери:","2 шт")
 							+item-tr("Полки:","1 шт")
 							+item-tr("Габариты (ВхШхГ):","1637.5х1800х620") 
+				.control-wrap
 			+b.catalog-footer
 				.row
-					.col-6
-						+e.btn.btn-outline-accent(href="#") Смотреть все верстаки
-					.col-6
+					.col-md-6
+						+e.btn.btn-outline-brown(href="#") Смотреть все верстаки
+					.col-md-6
+						p 
+							+icon("info") 
+							span #[a(href="#") В&nbsp;каталоге] вы&nbsp;также можете выбрать металлические стеллажи и&nbsp;шкафы, инструментальные тележки, аксессуары
+							
 	// end s-catalog
 
 mixin s-catalog-08(t="Взломостойкие сейфы")
