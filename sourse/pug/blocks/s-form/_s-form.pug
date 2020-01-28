@@ -23,8 +23,8 @@ mixin s-form()
 							+form-tabs() 
 								+e.group-title Какую компанию вы&nbsp;представляете?
 
-								.row.justify-content-between
-									+b.LABEL.type-company.col-sm-auto.col-6
+								+e.row.row.justify-content-between
+									+b.LABEL.type-company.col-auto
 										+e.INPUT.input(type="radio" name="type-company[]" value="Строительная компания" required)
 										+e.icon-wrap
 											+icon("branch")
@@ -33,7 +33,7 @@ mixin s-form()
 											br
 											|  компания&nbsp;/ Завод
 									
-									+b.LABEL.type-company.col-sm-auto.col-6
+									+b.LABEL.type-company.col-auto
 										+e.INPUT.input(type="radio" name="type-company[]" value="Торговая компания" )
 										+e.icon-wrap
 											+icon("wrench")
@@ -41,7 +41,7 @@ mixin s-form()
 											| 
 											br
 											| СТО
-									+b.LABEL.type-company.col-sm-auto.col-6
+									+b.LABEL.type-company.col-auto
 										+e.INPUT.input(type="radio" name="type-company[]" value="Частное лицо" )
 										+e.icon-wrap
 											+icon("users")
