@@ -1,0 +1,24 @@
+mixin s-catalog-menu()
+	// start s-catalog-menu
+	+b.SECTION.s-catalog-menu.section#s-catalog-menu&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h1 У нас вы найдете все&nbsp;необходимое,
+				h3 как для производственных помещений и&nbsp;автомастерских, так и&nbsp;для небольших гаражей
+			.row
+				mixin prod-item(n)
+					.col-md-6.col-lg-4
+						+b.catalog-item
+							img.lazy.res-i(src="" data-src="img/@2x/prod-1.jpg" alt="")
+							+e.description
+								h4= n
+								p Для автосервисов, заводов, производственных&nbsp;компаний и&nbsp;частных лиц
+								+btn-accent('в каталог', a)
+
+				+prod-item('Верстаки слесарные')
+				+prod-item('Стеллажи металлические')
+				+prod-item('Шкафы металлические')
+				+prod-item('Тумбы инструментальные')
+				+prod-item('Мебель для гаража')
+				+prod-item('Аксессуары')
+	// end s-catalog-menu

@@ -55,7 +55,7 @@
 	}
 
 	.ask-questin {
-		box-shadow: rem(3) rem(2) rem(35) rgba(154, 187, 206, 0.17);
+		box-shadow: 0 rem(4) $h2-font-size rgba(154, 187, 206, 0.17);
 		border-radius: 2px;
 		padding: rem(35);
 		max-width: rem(625);
@@ -94,11 +94,14 @@
 			align-items: center;
 			justify-content: center;
 			transition: .36s;
-			border: 1px solid #dfdfdf;
-			border-radius: 0;
+			// border: 1px solid #dfdfdf;
+			color: #ffffff;
+			border-radius: 2px;
+			background-color: #f7f7f7;
+			background-image: linear-gradient(-10deg, #0d64db 0%, #39b1ff 100%);
 			margin-left: rem(16);
 			position: relative;
-
+			@include mt;
 			@include media-breakpoint-down(md) {
 				margin-bottom: rem(20);
 				margin-left: rem(15);
@@ -115,14 +118,14 @@
 			}
 
 			.icon {
-				color: $body-color;
+				color: #fff;
 				font-size: rem(24);
 			}
 
 			span {
 				padding-left: rem(7);
-				@extend h5;
-				color: $body-color;
+				@extend .h5;
+				color: #fff;
 				margin-bottom: 0;
 
 			}
@@ -179,8 +182,8 @@
 		}
 	}
 
-	.how-to-get {
-
+	.how-to-get, .how-to-get-salsk {
+		margin-top: rem(90);
 
 		h2 {
 			@extend h2;
@@ -190,7 +193,8 @@
 		.map-wrap {
 			position: relative;
 
-			#map,
+			#map, 
+			#map-2,
 			iframe {
 
 				height: rem(578);
@@ -212,9 +216,7 @@
 				left: rem(65);
 			}
 
-			img {
-				width: rem(25);
-			}
+
 
 			a {
 				color: $body-color;
@@ -254,10 +256,14 @@
 
 					}
 
-					img {
+					svg {
+						font-size: rem(24);
 						position: absolute;
 						left: 0;
 						top: rem(6);
+					}
+					.icon {
+						fill: url(#primary-gradient);
 					}
 				}
 			}

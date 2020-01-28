@@ -1,33 +1,31 @@
 $output-bourbon-deprecation-warnings: false;
 // @import "mq";
-@import "bourbon/app/assets/stylesheets/bourbon";
+@import 'bourbon/app/assets/stylesheets/bourbon';
 // @import "../../node_modules/rfs/scss";
 
-@import "mixin";
-@import "fonts";
-@import "./public/img/svg/_sprite";
+@import 'mixin';
+@import 'fonts';
+@import './public/img/svg/_sprite';
 // @import "bootstrap-theme/bootstrap";
 
 // Option B: Include parts of Bootstrap
 
-
-@import "vars";
-@import "./node_modules/bootstrap/scss/vendor/rfs";
-@import "./node_modules/bootstrap/scss/functions";
-@import "./node_modules/bootstrap/scss/variables";
-@import "./node_modules/bootstrap/scss/mixins";
-
+@import 'vars';
+@import './node_modules/bootstrap/scss/vendor/rfs';
+@import './node_modules/bootstrap/scss/functions';
+@import './node_modules/bootstrap/scss/variables';
+@import './node_modules/bootstrap/scss/mixins';
 
 // $theme-colors: map-remove($theme-colors, "info", "light", "dark",'warning');
-@import "./node_modules/bootstrap/scss/root";
-@import "./node_modules/bootstrap/scss/reboot";
-@import "./node_modules/bootstrap/scss/type";
+@import './node_modules/bootstrap/scss/root';
+@import './node_modules/bootstrap/scss/reboot';
+@import './node_modules/bootstrap/scss/type';
 // @import "./node_modules/bootstrap/scss/images";
 // @import "./node_modules/bootstrap/scss/code";
-@import "./node_modules/bootstrap/scss/grid";
+@import './node_modules/bootstrap/scss/grid';
 // @import "./node_modules/bootstrap/scss/tables";
-@import "./node_modules/bootstrap/scss/forms";
-@import "./node_modules/bootstrap/scss/buttons";
+@import './node_modules/bootstrap/scss/forms';
+@import './node_modules/bootstrap/scss/buttons';
 // @import "./node_modules/bootstrap/scss/transitions";
 // @import "./node_modules/bootstrap/scss/dropdown";
 // @import "./node_modules/bootstrap/scss/button-group";
@@ -36,7 +34,7 @@ $output-bourbon-deprecation-warnings: false;
 // @import "./node_modules/bootstrap/scss/nav";
 // @import "./node_modules/bootstrap/scss/navbar";
 // @import "./node_modules/bootstrap/scss/card";
-@import "./node_modules/bootstrap/scss/breadcrumb";
+@import './node_modules/bootstrap/scss/breadcrumb';
 
 .breadcrumb {
   @extend .h5;
@@ -77,7 +75,15 @@ $output-bourbon-deprecation-warnings: false;
   }
 }
 
-@import "./node_modules/bootstrap/scss/pagination";
+.inner-page {
+  .breadcrumb {
+    @include media-breakpoint-down(md) {
+      margin-bottom: rem(4);
+    }
+  }
+}
+
+@import './node_modules/bootstrap/scss/pagination';
 
 .pagination-wrapper ul {
   @extend .pagination;
@@ -111,8 +117,7 @@ $output-bourbon-deprecation-warnings: false;
 // @import "./node_modules/bootstrap/scss/popover";
 // @import "./node_modules/bootstrap/scss/carousel";
 // @import "./node_modules/bootstrap/scss/spinners";
-@import "./node_modules/bootstrap/scss/utilities";
-
+@import './node_modules/bootstrap/scss/utilities';
 
 // @import "print";
 
@@ -131,7 +136,7 @@ $output-bourbon-deprecation-warnings: false;
 
 // @import "../libs/ion.rangeSlider/css/ion.rangeSlider.min.css";
 
-@import "base";
-@import "btn";
+@import 'base';
+@import 'btn';
 @import '../pug/blocks/**/*.scss';
-@import "media"; // Всегда в конце
+@import 'media'; // Всегда в конце
