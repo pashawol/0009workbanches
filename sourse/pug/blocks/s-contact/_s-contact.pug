@@ -46,37 +46,17 @@ mixin s-contact()
 							li 
 								| Адрес: <br>
 								span Москва, Котельники, <br> Дзержинское шоссе, 1
-								img.lazy(src="#" data-src="img/svg/maps-and-flags.svg", alt="")
+								+icon("maps-and-flags")
 							li 
 								| Работаем: <br>
 								span пн-пт, с 9:00 до 18:00
-								img.lazy(src="#" data-src="img/svg/clock-circular-outline.svg", alt="")
+								+icon("clock-circular-outline")
 					.map-wrap#map
-						
-					//- <iframe src="https://yandex.ua/map-widget/v1/?um=constructor%3Adb87e64c101c358488e2d4335179bc5033ea071ebbe8c26551fe3a6251514200&amp;source=constructor" height="578"></iframe>
-					<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
-
-			+b.how-to-get.text-center
-				h2 Производство в Сальске
-				.map-wrap
-					+e.contact-block
-						ul
-							li 
-								| Адрес: <br>
-								span Ростовская обл., Сальск, <br>ул. Дружбы, 14
-								img.lazy(src="#" data-src="img/svg/maps-and-flags.svg", alt="")
-							li 
-								| Работаем: <br>
-								span пн-пт, с 9:00 до 18:00
-								img.lazy(src="#" data-src="img/svg/clock-circular-outline.svg", alt="")
-					.map-wrap#map
-						
-					//- <iframe src="https://yandex.ua/map-widget/v1/?um=constructor%3Adb87e64c101c358488e2d4335179bc5033ea071ebbe8c26551fe3a6251514200&amp;source=constructor" height="578"></iframe>
 					<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
 					script.
 						ymaps.ready(function () {
 						var myMap = new ymaps.Map('map', {
-										center: [53.41837457105317,58.993155499999965],
+										center: [55.656666, 37.858806],
 										zoom: 16
 								}, {
 										searchControlProvider: 'yandex#search'
@@ -101,4 +81,50 @@ mixin s-contact()
 						myMap.geoObjects
 								.add(myPlacemark);
 						});
+			+b.how-to-get-salsk.text-center
+				h2 Производство в Сальске
+				.map-wrap
+					+e.contact-block
+						ul
+							li 
+								| Адрес: <br>
+								span Ростовская обл., Сальск, <br>ул. Дружбы, 14
+								+icon("maps-and-flags")
+							li 
+								| Работаем: <br>
+								span пн-пт, с 9:00 до 18:00
+								+icon("clock-circular-outline")
+					.map-wrap#map-2
+					//- почитинь вторую карту 
+
+
+					//- <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+					//- script.
+					//- 	ymaps.ready(function () {
+					//- 	var myMap = new ymaps.Map('map-2', {
+					//- 					center: [46.470305, 41.497935],
+					//- 					zoom: 16
+					//- 			}, {
+					//- 					searchControlProvider: 'yandex#search'
+					//- 			}),
+ 
+					//- 			myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+					//- 					hintContent: 'Собственный значок метки',
+					//- 					balloonContent: 'Это красивая метка'
+					//- 			}, {
+					//- 					// Опции.
+					//- 					// Необходимо указать данный тип макета.
+					//- 					iconLayout: 'default#image',
+					//- 					// Своё изображение иконки метки.
+					//- 					iconImageHref: 'img/@2x/mark.png',
+					//- 					// Размеры метки.
+					//- 					iconImageSize: [185, 165],
+					//- 					// Смещение левого верхнего угла иконки относительно
+					//- 					// её "ножки" (точки привязки).
+					//- 					iconImageOffset: [-95, -80]
+					//- 			});
+
+					//- 	myMap.geoObjects
+					//- 			.add(myPlacemark);
+					//- 	});
 	// end s-contact

@@ -250,30 +250,24 @@
 							<div class="how-to-get__contact-block">
 								<ul>
 									<li>
-										 Адрес: <br><span>Москва, Котельники, <br> Дзержинское шоссе, 1</span><img class="lazy" src="#" data-src="img/svg/maps-and-flags.svg" alt=""/></li>
+										 Адрес: <br><span>Москва, Котельники, <br> Дзержинское шоссе, 1</span>
+										<svg class="icon icon-maps-and-flags ">
+											<use xlink:href="img/svg/sprite.svg#maps-and-flags"></use>
+										</svg>
+									</li>
 									<li>
-										 Работаем: <br><span>пн-пт, с 9:00 до 18:00</span><img class="lazy" src="#" data-src="img/svg/clock-circular-outline.svg" alt=""/></li>
-								</ul>
-							</div>
-							<div class="map-wrap" id="map"></div><script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
-						</div>
-					</div>
-					<div class="how-to-get text-center">
-						<h2>Производство в Сальске</h2>
-						<div class="map-wrap">
-							<div class="how-to-get__contact-block">
-								<ul>
-									<li>
-										 Адрес: <br><span>Ростовская обл., Сальск, <br>ул. Дружбы, 14</span><img class="lazy" src="#" data-src="img/svg/maps-and-flags.svg" alt=""/></li>
-									<li>
-										 Работаем: <br><span>пн-пт, с 9:00 до 18:00</span><img class="lazy" src="#" data-src="img/svg/clock-circular-outline.svg" alt=""/></li>
+										 Работаем: <br><span>пн-пт, с 9:00 до 18:00</span>
+										<svg class="icon icon-clock-circular-outline ">
+											<use xlink:href="img/svg/sprite.svg#clock-circular-outline"></use>
+										</svg>
+									</li>
 								</ul>
 							</div>
 							<div class="map-wrap" id="map"></div><script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
 							<script>
 								ymaps.ready(function () {
 								var myMap = new ymaps.Map('map', {
-												center: [53.41837457105317,58.993155499999965],
+												center: [55.656666, 37.858806],
 												zoom: 16
 										}, {
 												searchControlProvider: 'yandex#search'
@@ -299,6 +293,28 @@
 										.add(myPlacemark);
 								});
 							</script>
+						</div>
+					</div>
+					<div class="how-to-get-salsk text-center">
+						<h2>Производство в Сальске</h2>
+						<div class="map-wrap">
+							<div class="how-to-get-salsk__contact-block">
+								<ul>
+									<li>
+										 Адрес: <br><span>Ростовская обл., Сальск, <br>ул. Дружбы, 14</span>
+										<svg class="icon icon-maps-and-flags ">
+											<use xlink:href="img/svg/sprite.svg#maps-and-flags"></use>
+										</svg>
+									</li>
+									<li>
+										 Работаем: <br><span>пн-пт, с 9:00 до 18:00</span>
+										<svg class="icon icon-clock-circular-outline ">
+											<use xlink:href="img/svg/sprite.svg#clock-circular-outline"></use>
+										</svg>
+									</li>
+								</ul>
+							</div>
+							<div class="map-wrap" id="map-2"></div>
 						</div>
 					</div>
 				</div>
@@ -532,7 +548,7 @@
 		<script src="libs/inputmask/jquery.inputmask.min.js"></script>
 		<script src="js/common.js"></script><svg class="invisible">
 <linearGradient id="primary-gradient" gradientTransform="rotate(60)">
-<stop offset="0%" stop-color="#39b1ff"/>
+<stop offset="50%" stop-color="#39b1ff"/>
 <stop offset="100%" stop-color="#0d64db"/>
 </linearGradient>
 </svg>

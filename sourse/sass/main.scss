@@ -70,6 +70,19 @@ $output-bourbon-deprecation-warnings: false;
     }
   }
 }
+.back-to-main {
+  margin-top: rem(18);
+  font-size: rem(12);
+  @include media-breakpoint-up(md){
+    margin-top: rem(34);
+    font-size: rem(20);
+  }
+  a {
+    color: #333845;
+    text-decoration: underline;
+    font-weight: 400;
+  }
+}
 @import "./node_modules/bootstrap/scss/pagination"; 
   .pagination-wrapper ul{
     @extend .pagination;
