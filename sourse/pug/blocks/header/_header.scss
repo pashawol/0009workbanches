@@ -1,5 +1,7 @@
-.header{
-	
+.header {
+  @include bgs;
+  background-image: url(../img/@2x/header-bg.jpg);
+
   // 
   @include media-breakpoint-up(xl) {}
 
@@ -35,4 +37,4 @@
   @include media-breakpoint-down(sm) {}
 
   @include media-breakpoint-down(xs) {}
- }
+}

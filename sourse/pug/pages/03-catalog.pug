@@ -9,27 +9,21 @@ include ../blocks/s-advantages/_s-advantages.pug
 include ../blocks/s-look/_s-look.pug
 include ../blocks/s-our/_s-our.pug
 include ../blocks/s-shipping/_s-shipping.pug
+include ../blocks/s-catalog-menu/_s-catalog-menu.pug
 
 
 block variables
-	- let  mainPage= null
+	- let  mainPage= 'inner-page'
 block title
-	- let  title= 'Главная'
+	- let  title= 'Каталог'
 	title= title
 block pagecontent 
-	+mob-mnu()
+	//- +mob-mnu()
 	+header()
 		+top-line()
 		+top-nav()
-		+header-block()
-	+s-advantages
+	.container
+		+breadcrumb('Главная', title)
 
-	+s-catalog()(class="section-border ")
-		+b.section-title.text-center
-			h2 #[strong Самые популярные модели] слесарных верстаков
-	//- +s-price
-	+s-form()(class="section-border ")
-	+s-look
-	+s-our
-	+s-shipping
+	+s-catalog-menu()(class="section-border ")
 	+footer()

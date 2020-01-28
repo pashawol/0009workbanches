@@ -70,6 +70,13 @@ $output-bourbon-deprecation-warnings: false;
     }
   }
 }
+.inner-page {
+  .breadcrumb {
+    @include media-breakpoint-down(md) {
+      margin-bottom: rem(4);
+    }
+  }
+}
 .back-to-main {
   margin-top: rem(18);
   font-size: rem(12);

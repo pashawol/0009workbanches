@@ -1,46 +1,57 @@
 
-mixin item-prod(sl)
+mixin item-tr(t1,t2)
+	tr
+		td.text-secondary= t1
+		td.fw-500= t2
+mixin item-prod(sl, i, a="#", t="Верстак слесарный ВМ_1216")
 	+b.item-prod
-		+e.img-wrap(href="#")
+		+e.img-wrap(href= a)
 			-
-				let src= (sl=="sl" ? '#' :'img/@2x/prod-1.jpg')
-				let lazy = (sl=="sl" ? 'img/@2x/prod-1.jpg': null)
-			img.res-i(src= src data-lazy= lazy , alt="")
-			+e.more Подробнее
-		+e.title
-			a(href="#") Сейф Aiko T-17 EL
-		table
-			tr
-				td Цена:
-				td 2000 Р*
-			tr
-				td Взломостойкость:
-				td H0 класс
-			tr
-				td Тип замка:
-				td электронный
-			tr
-				td Внешние размеры: (ВхШхГ)
-				td 170х260х252
-		+e.btn(href="#")
-			+icon("cart")
-			| В корзину
+				let src= (sl=="sl" ? '#' :`img/@2x/prod-${i}.jpg`)
+				let lazy = (sl=="sl" ? `img/@2x/prod-${i}.jpg`: null)
+			img.res-i(src= src data-lazy= lazy , alt="") 
+		+e.caption
+			+e.title
+				a(href= a)= t
+			table
+				block
+			+btn-accent('Подробнее', a)
 mixin s-catalog()
 	// start s-catalog
 	+b.SECTION.s-catalog.section#s-catalog&attributes(attributes)
 		.container
 			block
 				
-			+e.slider--js
-				- for (var x = 0; x < 4; x++)
+			+e.slider--js 
 					+e.slide
-						+item-prod()
-			
-			.row
-				.col-md-4
-					.control-wrap
-				.col-md-4.order-md-first
-					+e.footer-text *При оформлении заказа  уточняйте цену по&nbsp;т: #[a(href="tel:8(3519)22-00-22") 8 (3519) 22-00-22]
+						+item-prod("sl","1")
+							+item-tr("Цена:","61 900Р")
+							+item-tr("Выдвижные ящики:","2 шт ")
+							+item-tr("Двери:","2 шт")
+							+item-tr("Полки:","1 шт")
+							+item-tr("Габариты (ВхШхГ):","1637.5х1800х620") 
+					+e.slide
+						+item-prod("sl","2")
+							+item-tr("Цена:","61 900Р")
+							+item-tr("Выдвижные ящики:","2 шт ")
+							+item-tr("Двери:","2 шт")
+							+item-tr("Полки:","1 шт")
+							+item-tr("Габариты (ВхШхГ):","1637.5х1800х620") 
+					+e.slide
+						+item-prod("sl","3")
+							+item-tr("Цена:","61 900Р")
+							+item-tr("Выдвижные ящики:","2 шт ")
+							+item-tr("Двери:","2 шт")
+							+item-tr("Полки:","1 шт")
+							+item-tr("Габариты (ВхШхГ):","1637.5х1800х620") 
+					+e.slide
+						+item-prod("sl","1")
+							+item-tr("Цена:","61 900Р")
+							+item-tr("Выдвижные ящики:","2 шт ")
+							+item-tr("Двери:","2 шт")
+							+item-tr("Полки:","1 шт")
+							+item-tr("Габариты (ВхШхГ):","1637.5х1800х620") 
+
 	// end s-catalog
 
 mixin s-catalog-08(t="Взломостойкие сейфы")

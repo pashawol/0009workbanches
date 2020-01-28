@@ -34,10 +34,7 @@ mixin s-contact()
 				+e.item--whatsapp(href="#")
 					+icon("whatsapp") 
 					span WhatsApp
-			//- +e.warehouse.text-center
-			//- 	h2 Наш склад-магазин в Магнитогорске
-			//- 	h5 К нам можно доехать за 15 минут из любой точки города
-			//- 	img.lazy(src="#" data-src="img/@2x/ofice.jpg", alt="")
+
 			+b.how-to-get.text-center
 				h2 Наш офис в Москве
 				.map-wrap
@@ -97,34 +94,32 @@ mixin s-contact()
 					.map-wrap#map-2
 					//- почитинь вторую карту 
 
-
-					//- <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
-					//- script.
-					//- 	ymaps.ready(function () {
-					//- 	var myMap = new ymaps.Map('map-2', {
-					//- 					center: [46.470305, 41.497935],
-					//- 					zoom: 16
-					//- 			}, {
-					//- 					searchControlProvider: 'yandex#search'
-					//- 			}),
+					script.
+						ymaps.ready(function () {
+						var myMap = new ymaps.Map('map-2', {
+										center: [46.470305, 41.497935],
+										zoom: 16
+								}, {
+										searchControlProvider: 'yandex#search'
+								}),
  
-					//- 			myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-					//- 					hintContent: 'Собственный значок метки',
-					//- 					balloonContent: 'Это красивая метка'
-					//- 			}, {
-					//- 					// Опции.
-					//- 					// Необходимо указать данный тип макета.
-					//- 					iconLayout: 'default#image',
-					//- 					// Своё изображение иконки метки.
-					//- 					iconImageHref: 'img/@2x/mark.png',
-					//- 					// Размеры метки.
-					//- 					iconImageSize: [185, 165],
-					//- 					// Смещение левого верхнего угла иконки относительно
-					//- 					// её "ножки" (точки привязки).
-					//- 					iconImageOffset: [-95, -80]
-					//- 			});
+								myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+										hintContent: 'Собственный значок метки',
+										balloonContent: 'Это красивая метка'
+								}, {
+										// Опции.
+										// Необходимо указать данный тип макета.
+										iconLayout: 'default#image',
+										// Своё изображение иконки метки.
+										iconImageHref: 'img/@2x/mark.png',
+										// Размеры метки.
+										iconImageSize: [185, 165],
+										// Смещение левого верхнего угла иконки относительно
+										// её "ножки" (точки привязки).
+										iconImageOffset: [-95, -80]
+								});
 
-					//- 	myMap.geoObjects
-					//- 			.add(myPlacemark);
-					//- 	});
+						myMap.geoObjects
+								.add(myPlacemark);
+						});
 	// end s-contact

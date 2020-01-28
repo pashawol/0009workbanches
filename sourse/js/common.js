@@ -125,13 +125,18 @@ function eventHandler() {
 
 	JSCCommon.tabscostume('tabs');
 
+	$(".toggle-menu-mobile--js").click(function () {
+		$('.toggle-menu-mobile').toggleClass('on')
+		$(".menu-mobile--js").toggleClass('active')
+		$("body").toggleClass('fixed')
+	})
 	// JSCCommon.mobileMenu();
 
 	JSCCommon.inputMask();
 
 	// JSCCommon.CustomInputFile();
 	// добавляет подложку для pixel perfect
-	$(".main-wrapper").after('<div class="screen" style="background-image: url(screen/201-320.png);"></div>')
+	$(".main-wrapper").after('<div class="screen" style="background-image: url(screen/03-320.png);"></div>')
 	// /добавляет подложку для pixel perfect
 
 
@@ -170,8 +175,7 @@ function eventHandler() {
 
 		slidesToShow: 1,
 		dots: true,
-		appendArrows: '.control-wrap',
-		appendDots: '.control-wrap',
+
 		responsive: [{
 			breakpoint: 992,
 			settings: {

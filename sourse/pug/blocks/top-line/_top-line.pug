@@ -3,21 +3,15 @@ mixin top-line()
 	+b.top-line.block-with-lazy
 		.container
 			.row 
-				+logo()(class="col-lg-auto col-md")
-				.col-auto.order-last
-					+e.basket
-						+icon("cart")
-						+e.basket-count 99
-						+e.basket-empty Ваша корзина пуста
-				.col-auto.order-lg-last
-					+contact-block()
-							
-				.col-lg.d-lg-flex.flex-lg-column-reverse.order-lg-0.order-last
+				.col-auto.d-sm-none
+					+b.toggle-menu-mobile--js
+							span
+				+logo()(class="col-xl-auto col text-sm-left text-center")
+				.col.d-none.d-xl-block
+					+e.addr
+						+icon("placeholder")
+						+e.addr-title Наш адрес: 
+						+e.text Москва, Котельники,   Дзержинское шоссе, д.&nbsp;1
+				+contact-block()
 
-					ul.d-none.d-lg-flex
-						li: .link взломостойкие
-						li: .link Aiko
-						li: .link айко
-					+search()
-							
 	// end .top-line
