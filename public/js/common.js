@@ -132,7 +132,7 @@ function eventHandler() {
 	JSCCommon.inputMask(); // JSCCommon.CustomInputFile();
 	// добавляет подложку для pixel perfect
 
-	$(".main-wrapper").after('<div class="screen" style="background-image: url(screen/main.jpg);"></div>'); // /добавляет подложку для pixel perfect
+	$(".main-wrapper").after('<div class="screen" style="background-image: url(screen/200-320.png);"></div>'); // /добавляет подложку для pixel perfect
 	// /закрыть/открыть мобильное меню
 	// листалка по стр
 
@@ -162,6 +162,8 @@ function eventHandler() {
 	$('.s-catalog__slider--js').slick(_objectSpread({}, defaultSlide, {
 		slidesToShow: 1,
 		dots: true,
+		appendArrows: '.control-wrap',
+		appendDots: '.control-wrap',
 		responsive: [{
 			breakpoint: 992,
 			settings: {

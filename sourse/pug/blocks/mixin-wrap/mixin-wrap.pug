@@ -231,3 +231,16 @@ mixin btn-accent( t,a="#")
 	+e.btn.btn-blue(href= a) 
 			span.btn-color 
 			span.btn-text= t
+
+			
+mixin button( t)
+	+e.btn.btn.btn-blue(type="submit") 
+			span.btn-color 
+			span.btn-text= t
+
+mixin girl()
+	+b.worker
+		+pic2("girl")
+		+e.label.h6 Валерия Устинова,
+			br
+			| инженер-конструктор 

@@ -10,26 +10,47 @@ mixin man()
 				+e.label-prof руководитель 
 mixin s-form()
 	// start s-form
-	+b.s-form.section.block-with-lazy#s-form&attributes(attributes)
+	+b.s-form.section.block-with-lazy#s-form(style="background-image: url(img/@2x/s-form-bg.jpg);")&attributes(attributes)
 		.container
 			.row
 
-				+man()
-					+b.section-title.d-none.d-lg-block
-						h2 Получите консультацию по&nbsp;интересующим моделям  сейфов
+				.col-xl-6.col-lg-6
+					+b.section-title
+						h2 #[strong Получите полный каталог и&nbsp;прайс] на&nbsp;металлическую  мебель  Виртуоз-групп 
 				.col
-					+e.head-text
-						+b.section-title.d-lg-none
-							.h2 Получите консультацию по&nbsp;интересующим моделям  сейфов
-					
-						p Здравствуйте! Меня зовут Александр, я&nbsp;директор ООО &laquo;Комплексные технологии&raquo;. Мы&nbsp;реализуем сейфы с&nbsp;1990&nbsp;года, знаем о&nbsp;них все. 
-
-						p Готовы ответить на&nbsp;любой ваш вопрос по&nbsp;будням с&nbsp;10:00 до&nbsp;18:00. Оставьте номер телефона, наш специалист вам перезвонит.
-						p И&nbsp;обещаю: мы&nbsp;не&nbsp;присылаем смс с&nbsp;рекламой и&nbsp;не&nbsp;докучаем звонками:) Только консультация.
+					+e.head-text 
 						+form-wrap("Получить каталог и прайс")
 							+form-tabs() 
+								+e.group-title Какую компанию вы&nbsp;представляете?
+
+								+e.row.row.justify-content-between
+									+b.LABEL.type-company.col-auto
+										+e.INPUT.input(type="radio" name="type-company[]" value="Строительная компания" required)
+										+e.icon-wrap
+											+icon("branch")
+										+e.text Производственная
+											| 
+											br
+											|  компания&nbsp;/ Завод
+									
+									+b.LABEL.type-company.col-auto
+										+e.INPUT.input(type="radio" name="type-company[]" value="Торговая компания" )
+										+e.icon-wrap
+											+icon("wrench")
+										+e.text Автосервис
+											| 
+											br
+											| СТО
+									+b.LABEL.type-company.col-auto
+										+e.INPUT.input(type="radio" name="type-company[]" value="Частное лицо" )
+										+e.icon-wrap
+											+icon("users")
+										+e.text Я частное
+											| 
+											br
+											|  лицо
 							+inputName()
-							+e.btn(type="submit") Получить консультацию
+							+button('Получить каталог и прайс')
 							+polite
 
 	// end s-form

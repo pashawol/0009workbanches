@@ -136,7 +136,7 @@ function eventHandler() {
 
 	// JSCCommon.CustomInputFile();
 	// добавляет подложку для pixel perfect
-	$(".main-wrapper").after('<div class="screen" style="background-image: url(screen/main.jpg);"></div>')
+	$(".main-wrapper").after('<div class="screen" style="background-image: url(screen/200-320.png);"></div>')
 	// /добавляет подложку для pixel perfect
 
 
@@ -175,7 +175,8 @@ function eventHandler() {
 
 		slidesToShow: 1,
 		dots: true,
-
+		appendArrows: '.control-wrap',
+		appendDots: '.control-wrap',
 		responsive: [{
 			breakpoint: 992,
 			settings: {
