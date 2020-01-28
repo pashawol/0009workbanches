@@ -11,9 +11,19 @@
 }
 
 .s-catalog {
+	h2 {
+		strong {
+			display: block;
+		}
+	}
+
 	&__slider {
-		margin-left: -15px;
-		margin-right: -15px;
+		margin: -20px -15px;
+
+		.slick-list {
+
+			padding: 20px;
+		}
 	}
 
 	&__slide {
@@ -43,7 +53,8 @@
 	}
 
 	.slick-dots {
-		padding-top: rem(10);
+		// padding-top: rem(10);
+		margin-top: -5px;
 	}
 
 	&__col {

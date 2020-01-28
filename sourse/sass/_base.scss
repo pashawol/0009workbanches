@@ -13,7 +13,7 @@ html {
 	width: 100%;
 	height: 100%;
 	// background-position: center -168px;
-	background-position: center 169px;
+	background-position: center 0;
 	opacity: 0;
 	// opacity: 0.7;
 }
@@ -55,22 +55,15 @@ html {
 
 .section-title {
 
-	// padding-bottom: rem(10);
-	@include media-breakpoint-up(sm) {
 
-		padding-bottom: rem(85 * .8);
-	}
-
-	@media (min-width: 1440px) {
-
-		padding-bottom: rem(85);
-	}
-
-	padding-bottom: rem(85 / 2);
+	padding-bottom: rem(32);
 
 	.h2,
 	h2 {
 		line-height: 1.4;
+		@extend .h1;
+		font-weight: normal;
+		line-height: 1.16;
 
 		@include media-breakpoint-up(md) {}
 	}
@@ -297,7 +290,7 @@ body {
 .slick-arrow {
 	position: absolute;
 	top: 50%;
-	margin-top: rem(-20);
+	margin-top: rem(-65);
 	z-index: 2;
 	cursor: pointer;
 	width: rem(41px);
@@ -317,22 +310,23 @@ body {
 		left: 0;
 		top: 0;
 		z-index: -1;
-		background-image: linear-gradient(to left, $accent 0%, #f99629 100%);
-		opacity: 0;
+		background-color: #e8e8e8;
+		background-image: linear-gradient(-10deg, #0d64db 0%, #39b1ff 100%);
+		opacity: 1;
 		@include mt;
 	}
 
 	&:hover {
-		&::before {
-			opacity: 1;
-		}
 
-		svg {
+		opacity: .9;
 
-			path {
-				@include mt;
-				fill: #fff !important;
-			}
+	}
+
+	svg {
+
+		path {
+			@include mt;
+			fill: #fff !important;
 		}
 	}
 
@@ -344,12 +338,22 @@ body {
 	cursor: pointer;
 
 	&.l {
-		left: 0;
+		@include media-breakpoint-up(md) {
+
+			left: rem(-10);
+		}
+
+		left: rem(0);
 		padding-right: rem(2);
 	}
 
 	&.r {
-		right: 0;
+		@include media-breakpoint-up(md) {
+
+			right: rem(-10);
+		}
+
+		right: rem(0);
 		padding-left: rem(2);
 
 		svg {
@@ -359,7 +363,7 @@ body {
 	}
 
 	svg {
-		width: 17px;
+		width: 14px;
 		height: auto;
 		@include mt;
 	}
@@ -371,22 +375,35 @@ body {
 
 	li {
 		border-radius: 50%;
-		width: 8px;
-		height: 8px;
-		background-color: #dddddd;
+
 		display: inline-block;
 		margin: 5px;
 		@include mt;
 		cursor: pointer;
+		width: rem(23px);
+		height: rem(23px);
+		border: 2px solid currentColor;
+		color: #cdcdcd;
+		position: relative;
+		cursor: pointer;
 
-		button {
-			display: none;
+		&::before {
+			content: '';
+			@include a-cent;
+			width: rem(8px);
+			height: rem(8px);
+			border-radius: 50%;
+			background-color: currentColor;
 		}
 
 		&:hover,
 		&.slick-active {
-			background-color: #f99629;
+			color: $accent;
 		}
+	}
+
+	button {
+		display: none !important;
 	}
 }
 
@@ -599,20 +616,20 @@ a {
 }
 
 
-.h2,
-h2 {
-	letter-spacing: rem(0.66px);
-}
+// .h2,
+// h2 {
+// 	letter-spacing: rem(0.66px);
+// }
 
-.h3,
-h3 {
-	letter-spacing: rem(0.5px);
-}
+// .h3,
+// h3 {
+// 	letter-spacing: rem(0.5px);
+// }
 
-.h4,
-h4 {
-	letter-spacing: rem(0.44px);
-}
+// .h4,
+// h4 {
+// 	letter-spacing: rem(0.44px);
+// }
 
 .btn {
 	font-weight: 600;
@@ -620,19 +637,32 @@ h4 {
 
 .btn-blue {
 	@extend .btn;
-	color: #ffffff !important;
-	border: 2px solid #398bff;
-	background-image: linear-gradient(to bottom, #0a408d 0%, #1c62c4 100%);
-	box-shadow: 0 rem(6) 0 #0749a8,
-		1px 5px 5px 1px rgba(9, 62, 137, 0.17);
-	background-color: #0749a8;
+	border: none;
+
+	background-color: transparent;
 	position: relative;
 	z-index: 2;
 	align-items: center;
 	justify-content: center;
 	padding: rem(2) rem(10);
-	min-height: rem(75);
-	font-size: $h5-font-size;
+
+	@include media-breakpoint-up(md) {
+
+		min-height: rem(84);
+	}
+
+	min-height: rem(64);
+	text-shadow: 0 2px 0 rgba(255, 255, 255, 0.74);
+	color: #614826 !important;
+	font-weight: 700;
+	line-height: rem(2.06);
+	text-transform: uppercase;
+	// Text style for "Подобрать"
+	letter-spacing: rem(2.24px);
+	border-radius: rem(10px);
+	background-image: url(../img/@2x/btn-bg.png);
+	background-size: 100%;
+	box-shadow: none !important;
 
 	&.btn-lg {
 
@@ -642,48 +672,102 @@ h4 {
 	line-height: 1.2;
 	display: flex;
 
+	.btn-color,
 	&::after,
 	&::before {
 		content: '';
 		z-index: -1;
-		left: 0;
-		top: 0;
-		position: absolute;
-		border-radius: $border-radius-lg;
-		width: 100%;
-		height: 100%;
-		opacity: 0;
+		@include a-cent;
 		@include mt;
+		border-radius: 7px;
+		opacity: 0.72;
+		border: 1px solid;
+		// z-index: -1;
 	}
 
 	&::before {
-		background-image: linear-gradient(to bottom, #1e67cd 0%, #2f84fc 100%);
-
+		width: calc(100% - 3px);
+		height: calc(100% - 3px);
+		border-color: #ffffff;
+		z-index: 2;
 	}
 
 	&::after {
-		background-image: linear-gradient(to bottom, #093f8a 0%, #1c61c3 100%);
+		width: calc(100% - 6px);
+		height: calc(100% - 6px);
+		border-color: #887966;
+		opacity: 0.73;
+		z-index: 2;
+	}
 
+	.btn-color {
+		width: 100%;
+		height: 100%;
+		border: none;
+		border-radius: 10px;
+		background-color: #e0e0e0;
+		background-image: linear-gradient(-10deg, #b9a385 0%, #ffebcb 100%);
+
+		&::after {
+			content: '';
+			border-radius: 10px;
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			background-image: linear-gradient(-10deg, #a48e71 0%, #ffe0b0 100%);
+			@include mt;
+		}
+
+		z-index: -1;
+
+		&::before {
+			content: '';
+			position: absolute;
+			z-index: -2;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			border-radius: 10px 10px 15px 15px;
+			box-shadow: 0 rem(6) 0 #97856d;
+			@include mt;
+		}
 	}
 
 	&:hover {
-		&::before {
-			opacity: 1;
+		.btn-color {
+			&::before {
+				box-shadow: 0 rem(0) 0 #97856d;
 
+			}
+
+			&::after {
+				opacity: 0;
+			}
 		}
 	}
 
-	&:focus,
-	&:active {
-		box-shadow: none !important;
+	&:focus {
+		.btn-color {
+			&::before {
+				box-shadow: 0 rem(6) 0 #97856d;
 
-		&::after {
-			opacity: 1;
+			}
+
+			&::after {
+				opacity: 1;
+			}
 		}
 	}
 
+	.btn-text {
+		position: relative;
+		z-index: 3;
+	}
 
-
+	&:hover {}
 }
 
 .control-wrap {
