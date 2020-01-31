@@ -1,0 +1,177 @@
+mixin s-prod-head()
+	- let src= 'img/@2x/prod-1.jpg'
+	mixin img()
+		img.res-i(src="#" data-lazy= src, alt="")
+	// start s-prod-head
+	+b.s-prod-head&attributes(attributes)
+		.container
+			+b.section-title.text-center.d-lg-none
+				h2 Стойка вертикальная/<br>кронштейн
+			.row
+				.col-lg-8
+					.row
+						.col-md-6
+							+b.s-prod-head-images
+								+e.inner
+									+e.slider--lg.--lg-js
+										- for (var x = 0; x < 5; x++)
+											+e.slide--lg
+												a(href= src data-fancybox="prod-gal")
+													+img()
+								+e.slider--sm.--sm-js
+									- for (var x = 0; x < 5; x++)
+										+e.slide
+											+e.img-wrap
+												+img()
+						.col-md-6
+							+e.content
+								h2.d-none.d-lg-block Стойка вертикальная/<br>кронштейн
+								+e.descr 
+									.mobile-down 41 500 руб.
+									.mobile-up
+										table
+											tr
+												td Размеры <br>(ШхВхГ):
+												td 1637.6х1383х620 мм.
+											tr
+												td Цвет:
+												td на выбор по системе RAL
+								.link-modal( data-src="#modal-one-click" href="javascript:;" data-order=`Быстрый заказ- ${title}`)
+									+button('купить в 1 клик')
+								.link-modal(  data-src="#modal-by" href="javascript:;" data-order=`Заказ- ${title}`) 
+									+e.btn.BUTTON.btn-outline-brown заказать
+					+e.equipment
+						h3 Комплектация
+						ul
+							li Выдвижной ящик с&nbsp;установкой на&nbsp;направляющие плавного скольжения&nbsp;&mdash; 1&nbsp;шт.
+							li Полка с&nbsp;регулировкой по&nbsp;высоте в&nbsp;трех положениях&nbsp;&mdash; 1&nbsp;шт.
+							li Дверь с&nbsp;петлями плавного закрывания&nbsp;&mdash; 1&nbsp;шт.
+							li Дополнительная полка в&nbsp;ногах у&nbsp;сидящего&nbsp;&mdash; 1&nbsp;шт.
+				.col-lg-4
+					+e.sales.d-none.d-lg-block
+						+icon('workbench')
+						span В этом месяце продано<br>36 верстаков
+					+b.s-prod-head-sidebar
+						//- +e.price 
+						ul
+							li
+								+icon('check-mark')
+								strong Доставка по Москве:
+								| сегодня-завтра
+							
+							li
+								+icon('check-mark')
+								strong Доставка по России
+								| от 2 до 5 дней
+							
+							li
+								+icon('check-mark')
+								strong Гарантия
+								| 12 месяцев
+							
+							li
+								+icon('check-mark')
+								strong Изготовление на заказ:
+								| по вашим размерам <br>от 3 до 5 дней
+						//- +e.btn(type="button")
+						//- 	+icon('cart')
+						//- 	| В корзину
+					//- +e.footer-text *При оформлении заказа  уточняйте&nbsp;цену по&nbsp;т: #[a(href="tel:8(3519)22-00-22") 8 (3519) 22-00-22]
+	// end s-prod-head
+
+mixin s-prod-head-13()
+	- let src= 'img/@2x/prod-1.jpg'
+	mixin img()
+		img.res-i(src="#" data-lazy= src, alt="")
+	// start s-prod-head
+	+b.s-prod-head&attributes(attributes)
+		.container
+			+b.section-title.text-center.d-lg-none
+				h2 Стойка вертикальная/<br>кронштейн
+			.row
+				.col-lg-8
+					.row
+						.col-md-6
+							+b.s-prod-head-images
+								+e.inner
+									+e.slider--lg.--lg-js
+										- for (var x = 0; x < 5; x++)
+											+e.slide--lg
+												a(href= src data-fancybox="prod-gal")
+													+img()
+								+e.slider--sm.--sm-js
+									- for (var x = 0; x < 5; x++)
+										+e.slide
+											+e.img-wrap
+												+img()
+						.col-md-6
+							+e.content
+								h2.d-none.d-lg-block Стойка вертикальная/<br>кронштейн
+								+e.descr 
+									.mobile-down 5 075 руб. / 870 руб.
+									.mobile-up
+										table
+											tr
+												td Размеры <br>(ШхВхГ):
+												td 2480х130х50 мм. / <br>511.56 мм.
+											tr
+												td Цвет:
+												td на выбор по системе RAL
+									+e.equipment
+										h3 Комплектация
+										ul
+											li Стойка вертикальная — 1 шт.
+											li Кронштейн металлический — 1 шт.
+
+					+e.calculate
+						h3 Рассчитайте стоимость стеллажа
+						.row
+							.col-md-6
+								+b.form-wrap&attributes(attributes)
+									+select("Сколько нужно вертикальных стоек?", "1шт")(id="thickness")
+										+option(" 20 см","20 ")(selected)
+										+option("40 см ","40 ")
+										+option("60 см ","60 ")
+							.col-md-6
+								+b.form-wrap&attributes(attributes)
+									+select("Сколько нужно кронштейнов?", "1шт")(id="thickness")
+										+option(" 20 см","20 ")(selected)
+										+option("40 см ","40 ")
+										+option("60 см ","60 ")
+							.col-md-6
+								h3 Стоимость: 
+									span 0 рублей
+							.col-md-6
+								+button('заказать') 
+
+				.col-lg-4
+					+e.sales.d-none.d-lg-block
+						+icon('workbench')
+						span В этом месяце продано<br>36 верстаков
+					+b.s-prod-head-sidebar
+						//- +e.price 
+						ul
+							li
+								+icon('check-mark')
+								strong Доставка по Москве:
+								| сегодня-завтра
+							
+							li
+								+icon('check-mark')
+								strong Доставка по России
+								| от 2 до 5 дней
+							
+							li
+								+icon('check-mark')
+								strong Гарантия
+								| 12 месяцев
+							
+							li
+								+icon('check-mark')
+								strong Изготовление на заказ:
+								| по вашим размерам <br>от 3 до 5 дней
+						//- +e.btn(type="button")
+						//- 	+icon('cart')
+						//- 	| В корзину
+					//- +e.footer-text *При оформлении заказа  уточняйте&nbsp;цену по&nbsp;т: #[a(href="tel:8(3519)22-00-22") 8 (3519) 22-00-22]
+	// end s-prod-head

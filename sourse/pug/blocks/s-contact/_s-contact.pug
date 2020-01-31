@@ -1,40 +1,41 @@
 mixin s-contact()
 	// start s-contact
 	+b.s-contact.section.block-with-lazy#s-contact&attributes(attributes)
+		.section-border
+			.container
+				+b.section-title.text-center
+					h1 Контакты
+				.row.justify-content-center
+					.col-md-4
+						+e.connection
+							h3 Звоните:
+							+e.connection-item
+								.img-wrap
+									+icon("telephone")
+								ul
+									li
+										a(href="tel:8 (495) 266-60-73") 8 (495) 266-60-73
+									li
+										a(href="tel:8 (495) 266-60-73") 8 (495) 266-60-73
+					.col-md-4
+						+e.connection.mail
+							h3 Пишите:
+							+e.connection-item
+								.img-wrap
+									+icon("envelope-shape")
+									// img(src="img/svg/envelope-shape.svg" data-src="", alt="")
+								ul
+									li
+										a(href="mailto:sitesite@mail.ru") sitesite@mail.ru
+									li
+										a(href="mailto:sitesite@yandex.ru") sitesite@yandex.ru
+				+b.ask-questin
+					+e.question
+						h3 Задавайте&nbsp;вопросы, мы всегда на связи
+					+e.item--whatsapp(href="#")
+						+icon("whatsapp") 
+						span WhatsApp
 		.container
-			+b.section-title.text-center
-				h1 Контакты
-			.row.justify-content-center
-				.col-md-5
-					+e.connection
-						h4 Звоните:
-						+e.connection-item
-							.img-wrap
-								+icon("telephone")
-							ul
-								li
-									a(href="tel:8 (495) 266-60-73") 8 (495) 266-60-73
-								li
-									a(href="tel:8 (495) 266-60-73") 8 (495) 266-60-73
-				.col-md-3
-					+e.connection
-						h4 Пишите:
-						+e.connection-item
-							.img-wrap
-								+icon("envelope-shape")
-								// img(src="img/svg/envelope-shape.svg" data-src="", alt="")
-							ul
-								li
-									a(href="mailto:sitesite@mail.ru") sitesite@mail.ru
-								li
-									a(href="mailto:sitesite@yandex.ru") sitesite@yandex.ru
-			+b.ask-questin
-				+e.question
-					h4 Задавайте вопросы, мы всегда на связи
-				+e.item--whatsapp(href="#")
-					+icon("whatsapp") 
-					span WhatsApp
-
 			+b.how-to-get.text-center
 				h2 Наш офис в Москве
 				.map-wrap
@@ -72,7 +73,7 @@ mixin s-contact()
 										iconImageSize: [185, 165],
 										// Смещение левого верхнего угла иконки относительно
 										// её "ножки" (точки привязки).
-										iconImageOffset: [-95, -80]
+										iconImageOffset: [-110, -20]
 								});
 
 						myMap.geoObjects
@@ -116,7 +117,7 @@ mixin s-contact()
 										iconImageSize: [185, 165],
 										// Смещение левого верхнего угла иконки относительно
 										// её "ножки" (точки привязки).
-										iconImageOffset: [-95, -80]
+										iconImageOffset: [-110, -20]
 								});
 
 						myMap.geoObjects

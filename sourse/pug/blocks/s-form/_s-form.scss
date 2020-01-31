@@ -1,6 +1,11 @@
 .s-form,
 .s-form2 {
 	background-color: #f7f7f7;
+
+	@include media-breakpoint-up(lg) {
+		background-position: center bottom;
+	}
+
 	background-position: right center;
 
 	h5 {
@@ -73,8 +78,14 @@
 			padding: rem(45) rem(42) rem(40);
 		}
 
-		padding: rem(45) rem(32) rem(40);
-		margin-bottom: rem(125);
+		@include media-breakpoint-up(sm) {
+
+			padding: rem(45) rem(32) rem(40);
+			margin-bottom: rem(125);
+		}
+
+		margin-bottom: rem(125 / 2);
+		padding: rem(45) rem(22) rem(40);
 
 		@media (min-width: 1440px) {
 			margin-left: -10px;

@@ -65,6 +65,10 @@ html {
 		font-weight: normal;
 		line-height: 1.16;
 
+		@include media-breakpoint-down(xs) {
+			font-size: 24px;
+		}
+
 		@include media-breakpoint-up(md) {}
 	}
 }
@@ -635,17 +639,19 @@ a {
 
 // Кнопка вернутся на главную
 .back-to-main {
-  margin-top: rem(18);
-  font-size: rem(12);
-  @include media-breakpoint-up(md) {
-    margin-top: rem(34);
-    font-size: rem(20);
-  }
-  a {
-    color: #333845;
-    text-decoration: underline;
-    font-weight: 400;
-  }
+	margin-top: rem(18);
+	font-size: rem(12);
+
+	@include media-breakpoint-up(md) {
+		margin-top: rem(34);
+		font-size: rem(20);
+	}
+
+	a {
+		color: #333845;
+		text-decoration: underline;
+		font-weight: 400;
+	}
 }
 
 .control-wrap {

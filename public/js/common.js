@@ -132,7 +132,7 @@ function eventHandler() {
 	JSCCommon.inputMask(); // JSCCommon.CustomInputFile();
 	// добавляет подложку для pixel perfect
 
-	$(".main-wrapper").after('<div class="screen" style="background-image: url(screen/200-320.png);"></div>'); // /добавляет подложку для pixel perfect
+	$(".main-wrapper").after('<div class="screen" style="background-image: url(screen/07-320.png);"></div>'); // /добавляет подложку для pixel perfect
 	// /закрыть/открыть мобильное меню
 	// листалка по стр
 
@@ -177,7 +177,7 @@ function eventHandler() {
 		}]
 	}));
 	$('.s-prod-head-images__slider--lg-js').slick(_objectSpread({}, defaultSlide, {
-		// arrows: false,
+		arrows: false,
 		dots: false,
 		asNavFor: '.s-prod-head-images__slider--sm-js'
 	}));

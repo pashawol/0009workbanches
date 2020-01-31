@@ -2,6 +2,9 @@
   font-weight: 600;
   text-transform: uppercase;
 
+  @include media-breakpoint-down(sm) {
+    font-size: 12px;
+  }
 }
 
 .btn-blue {
@@ -14,6 +17,7 @@
   align-items: center;
   justify-content: center;
   padding: rem(2) rem(10);
+  background-color: #e0e0e0;
 
   @include media-breakpoint-up(md) {
 
@@ -29,9 +33,10 @@
   // Text style for "Подобрать"
   letter-spacing: rem(2.24px);
   border-radius: rem(10px);
-  background-image: url(../img/@2x/btn-bg.png);
+
   background-size: 100%;
   box-shadow: none !important;
+  background-image: url(../img/@2x/btn-bg.png);
 
   &.btn-lg {
 
