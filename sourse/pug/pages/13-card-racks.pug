@@ -9,13 +9,13 @@ include ../blocks/s-advantages/_s-advantages.pug
 include ../blocks/s-look/_s-look.pug
 include ../blocks/s-our/_s-our.pug
 include ../blocks/s-shipping/_s-shipping.pug
-include ../blocks/s-shiping-and-payment/_s-shiping-and-payment.pug
+include ../blocks/s-prod-head/_s-prod-head.pug
 
 
 block variables
 	- let  mainPage= null
 block title
-	- let  title= 'Контакты'
+	- let  title= 'Стеллажи металлические'
 	title= title
 block pagecontent 
 	//- +mob-mnu()
@@ -23,8 +23,8 @@ block pagecontent
 		+top-line()
 		+top-nav()
 	.container
-		+breadcrumb('Главная', title)
+		+breadcrumb('Главная', 'Каталог', title)
 
-	+s-contact()(class="section-border ")
-	//- +s-form()(class="section-border ")
+	+s-prod-head-13()(class="section-border ")
+	+s-form()(class="section-border ")
 	+footer()

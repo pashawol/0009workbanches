@@ -1,37 +1,77 @@
 .s-contact {
-	padding-top: rem(55);
 	font-weight: 500;
-	padding-bottom: rem(85);
+	padding-top: rem(0) !important;
+	padding-bottom: rem(75) !important;
+
+	@include media-breakpoint-up(lg) {
+		padding-bottom: rem(130) !important;
+	}
 
 	iframe {
 		border: none;
 	}
-
+	.section-title {
+		padding-bottom: rem(21);
+		@include media-breakpoint-up(md) {
+			padding-bottom: rem(50);
+		}
+		@include media-breakpoint-down(md) {
+			h1 {
+				font-size: rem(24);
+			}
+		}
+	}
+	@include media-breakpoint-up(lg) {
+		.mail {
+			padding-left: rem(76);
+		}
+	}
 
 	&__connection {
-		padding-bottom: rem(30);
+		padding-bottom: rem(20);
+		@include media-breakpoint-up(md) {
+			padding-bottom: rem(30);
+		}
+		h3 {
+			margin-bottom: 0;
+			@include media-breakpoint-up(md) {
+				margin-bottom: rem(13);
+			}
+		}
 
 		&-item {
 			display: flex;
+			.img-wrap {
+				align-self: center;
+			}
 
 			svg {
 				flex-shrink: 0;
 				max-width: rem(32);
 				max-height: rem(32);
 			}
+
 			.icon {
 				fill: url(#primary-gradient);
 			}
 
 			ul {
 				padding-top: rem(20);
-				padding-left: rem(30);
-
+				font-weight: 400;
+				padding-left: rem(28);
+				@include media-breakpoint-up(md) {
+					padding-left: rem(25);
+				}
 				li {
 					list-style: none;
 					// padding-bottom: rem(5);
-					letter-spacing: rem(0.5);
-					@extend h3;
+					letter-spacing: rem(0.6);
+					font-size: rem(25);
+					line-height: 1.33;
+					margin-bottom: rem(3) !important;
+					@include media-breakpoint-up(md) {
+						font-size: rem(30);
+					}
 
 					a {
 						color: $body-color;
@@ -48,14 +88,10 @@
 				}
 			}
 		}
-
-		.img-wrap {
-			align-self: center;
-		}
 	}
 
 	.ask-questin {
-		box-shadow: 0 rem(4) $h2-font-size rgba(154, 187, 206, 0.17);
+		box-shadow: 0 4px $h2-font-size rgba(154, 187, 206, 0.17);
 		border-radius: 2px;
 		padding: rem(35);
 		max-width: rem(625);
@@ -64,44 +100,49 @@
 		flex-wrap: wrap;
 		justify-content: space-around;
 		align-items: center;
+		margin-bottom: rem(50);
 
 		@include media-breakpoint-up(xl) {
-			padding: rem(37) rem(83) rem(39) rem(83);
+			margin-bottom: rem(105);
+			padding: rem(45) rem(60) rem(39);
 		}
-
-		margin-bottom: rem(65);
 
 		&__question {
 			max-width: rem(213);
 			flex-shrink: 0;
 
-			h4 {
-				line-height: 1.36;
-				letter-spacing: rem(0.44);
+			h3 {
+				line-height: 1.24;
+				font-weight: 400;
+				letter-spacing: rem(0.2);
 
-				@include media-breakpoint-down(sm) {
-					padding-bottom: rem(10);
+				@include media-breakpoint-down(md) {
+					padding-bottom: rem(28);
 				}
 			}
 		}
 
 		&__item {
-			display: inline-block;
-			height: rem(60);
+			height: rem(70);
+			// width: rem(150);
+
+			width: rem(213);
+			@include media-breakpoint-up(md) {
+				height: rem(60);
+			}
+			// @include a-cent;
 			display: flex;
-			flex-grow: 1;
-			width: rem(188);
+			// margin-left: rem(10);
+			// flex-grow: 1;
 			align-items: center;
 			justify-content: center;
-			transition: .36s;
-			// border: 1px solid #dfdfdf;
+			@include mt;
 			color: #ffffff;
 			border-radius: 2px;
 			background-color: #f7f7f7;
 			background-image: linear-gradient(-10deg, #0d64db 0%, #39b1ff 100%);
 			margin-left: rem(16);
 			position: relative;
-			@include mt;
 			@include media-breakpoint-down(md) {
 				margin-bottom: rem(20);
 				margin-left: rem(15);
@@ -114,7 +155,7 @@
 			}
 
 			&:active {
-				box-shadow: inset 0 0 0 1px #0075ff
+				box-shadow: inset 0 0 0 1px #0075ff;
 			}
 
 			.icon {
@@ -123,32 +164,20 @@
 			}
 
 			span {
-				padding-left: rem(7);
+				padding-left: rem(10);
 				@extend .h5;
 				color: #fff;
 				margin-bottom: 0;
-
 			}
-
 
 			&--whatsapp {
 				background-color: transparent;
 				margin: 0;
 
-				// flex-shrink: 1;
 				@include media-breakpoint-down(sm) {
-					flex-basis: 100%;
+					// flex-basis: 100%;
 					margin-left: 0;
 					margin-right: 0;
-				}
-			}
-
-
-
-			&--whatsapp {
-				@include media-breakpoint-up(lg) {
-					// margin-right: rem(20);
-					// margin-left: rem(40);
 				}
 			}
 
@@ -160,63 +189,68 @@
 		}
 	}
 
-	&__warehouse {
+	// &__warehouse {
+	// 	h2 {
+	// 		letter-spacing: rem(0.66);
+	// 		// line-height: 0.67;
+	// 		padding-bottom: rem(13);
+	// 	}
+
+	// 	h5 {
+	// 		letter-spacing: rem(0.4);
+	// 		padding-bottom: rem(35);
+	// 	}
+
+	// 	img {
+	// 		width: 100%;
+	// 		padding-bottom: rem(60);
+
+	// 		@include media-breakpoint-up(lg) {
+	// 			padding-bottom: rem(110);
+	// 		}
+	// 	}
+	// }
+
+	.how-to-get,
+	.how-to-get-salsk {
+		margin-top: rem(29);
+		@include media-breakpoint-up(md) {
+			margin-top: rem(70);
+		}
 		h2 {
-			letter-spacing: rem(0.66);
-			// line-height: 0.67;
-			padding-bottom: rem(13);
-		}
-
-		h5 {
-			letter-spacing: rem(0.4);
-			padding-bottom: rem(35);
-		}
-
-		img {
-			width: 100%;
-			padding-bottom: rem(60);
-
-			@include media-breakpoint-up(lg) {
-				padding-bottom: rem(110);
+			font-size: rem(27);
+			padding-bottom: rem(15);
+			@include media-breakpoint-up(md) {
+				font-size: rem(40);
+				padding-bottom: rem(50);
 			}
-		}
-	}
-
-	.how-to-get, .how-to-get-salsk {
-		margin-top: rem(90);
-
-		h2 {
-			@extend h2;
-			padding-bottom: rem(40);
+			font-weight: 400;
 		}
 
 		.map-wrap {
 			position: relative;
 
-			#map, 
+			#map,
 			#map-2,
 			iframe {
-
-				height: rem(578);
+				height: rem(315);
+				@include media-breakpoint-up(md) {
+					height: rem(578);
+				}
 				// width: 100%;
 			}
 		}
 
 		&__contact-block {
-			position: absolute;
-			z-index: 4;
-
-			@include media-breakpoint-down(md) {
-				position: inherit;
-				margin-bottom: rem(60);
-			}
+			margin-bottom: rem(25);
 
 			@include media-breakpoint-up(lg) {
-				top: 8%;
-				left: rem(65);
+				position: absolute;
+				z-index: 4;
+				top: 9%;
+				left: rem(75);
+				margin-bottom: 0;
 			}
-
-
 
 			a {
 				color: $body-color;
@@ -233,7 +267,10 @@
 
 			ul {
 				max-width: rem(390);
-				padding: rem(54) rem(45) rem(46) rem(33);
+				padding: rem(24) rem(16) rem(28);
+				@include media-breakpoint-up(md) {
+					padding: rem(51) rem(57) rem(65) rem(40);
+				}
 				background-color: #fff;
 				box-shadow: 3px 2px rem(35) rgba(154, 187, 206, 0.17);
 				border-radius: $border-radius-lg;
@@ -242,9 +279,14 @@
 					position: relative;
 					text-align: left;
 					list-style: none;
-					padding-left: rem(47);
+					padding-left: rem(50);
+					padding-bottom: rem(15);
+
+					@include media-breakpoint-up(md) {
+						padding-bottom: rem(37);
+						padding-left: rem(45);
+					}
 					font-size: rem(18);
-					padding-bottom: rem(38);
 
 					&:nth-last-child(1) {
 						padding-bottom: 0;
@@ -253,7 +295,6 @@
 					span {
 						font-weight: 400;
 						letter-spacing: rem(0.36);
-
 					}
 
 					svg {
@@ -269,29 +310,49 @@
 			}
 		}
 	}
+	.how-to-get-salsk {
+		margin-top: rem(68);
+		@include media-breakpoint-up(md) {
+			margin-top: rem(83);
+		}
+	}
 
-	@include media-breakpoint-up(xl) {}
-	@include media-breakpoint-up(lg) {}
-	@include media-breakpoint-up(md) {}
-	@include media-breakpoint-up(sm) {}
-	@include media-breakpoint-up(xs) {}
-	
-	//
-	@include media-breakpoint-between(md, xl) { }
-	
-	
-	//
-	@include media-breakpoint-only(xs) {}
-	@include media-breakpoint-only(sm) {}
-	@include media-breakpoint-only(md) {}
-	@include media-breakpoint-only(lg) {}
-	@include media-breakpoint-only(xl) {}
-	
-	//
-	@include media-breakpoint-down(xl) {}
-	@include media-breakpoint-down(lg) {}
-	@include media-breakpoint-down(md) {}
-	@include media-breakpoint-down(sm) {}
-	@include media-breakpoint-down(xs) {} 
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(lg) {
+	}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-up(xs) {
+	}
 
+	//
+	@include media-breakpoint-between(md, xl) {
+	}
+
+	//
+	@include media-breakpoint-only(xs) {
+	}
+	@include media-breakpoint-only(sm) {
+	}
+	@include media-breakpoint-only(md) {
+	}
+	@include media-breakpoint-only(lg) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+
+	//
+	@include media-breakpoint-down(xl) {
+	}
+	@include media-breakpoint-down(lg) {
+	}
+	@include media-breakpoint-down(md) {
+	}
+	@include media-breakpoint-down(sm) {
+	}
+	@include media-breakpoint-down(xs) {
+	}
 }

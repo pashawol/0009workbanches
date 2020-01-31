@@ -1,0 +1,216 @@
+// start .s-prod-head
+.s-prod-head {
+	@include media-breakpoint-up(sm) {
+		padding-top: rem(40);
+	}
+
+	h2 {
+		font-weight: 400;
+		// @extend h2;
+	}
+
+	// &__type {
+	// 	color: #808080;
+	// 	font-family: Raleway;
+	// 	font-size: $em-base;
+	// 	font-weight: 500;
+	// 	line-height: 1.38;
+	// 	// Text style for "Взломостой"
+	// 	letter-spacing: rem(0.32px);
+	// 	margin-bottom: rem(20);
+	// }
+
+	table {
+		font-size: rem(14);
+		margin-bottom: rem(45);
+		width: 100%;
+	}
+
+	td {
+		padding-bottom: rem(10);
+		@extend .h6;
+		font-weight: 400;
+		letter-spacing: rem(0.36);
+		&:nth-child(1){
+			color: #5d5d5d;
+			width: 35%;
+		}
+		&:nth-child(2){
+			font-weight: 500;
+		}
+	}
+
+	&__equipment{
+		padding-bottom: rem(60);
+		h3 {
+			letter-spacing: rem(0.5);
+			padding-bottom: rem(39);
+		}
+		li {
+			list-style: none;
+			letter-spacing: rem(0.36);
+			line-height: 1.5;
+			color: #5d5d5d;
+		}
+	}
+
+	// &__availability {
+	// 	font-size: rem(14px);
+	// 	font-weight: 600;
+	// 	line-height: 1.57;
+	// 	// Text style for "В наличии"
+	// 	letter-spacing: rem(0.28px);
+	// 	padding-left: rem(14);
+	// 	position: relative;
+	// 	margin-bottom: rem(20);
+
+	// 	&::before {
+	// 		content: '';
+	// 		position: absolute;
+	// 		left: 0;
+	// 		top: rem(5);
+	// 		width: rem(8px);
+	// 		height: rem(8px);
+	// 		border-radius: 50%;
+	// 		background-color: currentColor;
+	// 	}
+	// }
+
+	// &__footer-text {
+	// 	max-width: rem(320);
+	// 	font-weight: 300;
+	// 	line-height: 1.29;
+	// 	// Text style for "*При оформ"
+	// 	letter-spacing: rem(0.34px);
+	// 	color: #111111;
+	// 	font-family: 'Open Sans';
+	// 	margin-bottom: rem(20);
+
+	// 	a {
+	// 		@extend .link-body;
+	// 	}
+	// }
+
+	&__content {
+		max-width: rem(340);
+	}
+	&__descr {
+		padding-top: rem(30);
+		.mobile-down {
+			@extend .h4;
+			padding-bottom: rem(30);
+		}
+	}
+	.link-modal {
+		display: inline-block;
+	}
+	&__btn {
+		@extend .btn;
+		font-size: rem(14);
+	}
+	.btn-outline-brown {
+		margin-top: rem(5);
+		margin-left: rem(20);
+		padding: rem(18) rem(28);
+	}
+	.btn-blue {
+		min-height: rem(56);
+	}
+	&__sales{
+		position: relative;
+		box-shadow: 0 $h6-font-size rem(40) rgba(255, 255, 255, 0.38);
+		border: 1px solid #eeeeee;
+		border-radius: rem(10);
+		padding: rem(30);
+		@extend .h6;
+		line-height: 1.22;
+		font-weight: 400;
+		color: #5d5d5d;
+		letter-spacing: rem(0.36);
+		margin-bottom: rem(20);
+		&::after {
+			content: '';
+			position: absolute;
+			width: rem(36);
+			height: rem(36);
+			border-top: 1px solid #eeeeee;
+			border-right: 1px solid #eeeeee;
+			top: 30%;
+			left: -18px;
+			background-color: #fff;
+			transform: rotate(45deg);
+			border-top-right-radius: rem(5)
+
+		}
+		svg {
+			font-size: rem(43);
+			vertical-align: top;
+		}
+		.icon {
+			fill: url(#gold-gradient);
+			margin-right: rem(27);
+			margin-left: rem(10);
+		}
+		span {
+			display: inline-block;
+		}
+	}
+	
+
+
+	@include media-breakpoint-up(xl) {
+	}
+
+	@include media-breakpoint-up(lg) {
+	}
+
+	@include media-breakpoint-up(md) {
+	}
+
+	@include media-breakpoint-up(sm) {
+	}
+
+	@include media-breakpoint-up(xs) {
+	}
+
+	//
+	@include media-breakpoint-between(md, xl) {
+	}
+
+	//
+	@include media-breakpoint-only(xs) {
+	}
+
+	@include media-breakpoint-only(sm) {
+	}
+
+	@include media-breakpoint-only(md) {
+	}
+
+	@include media-breakpoint-only(lg) {
+	}
+
+	@include media-breakpoint-only(xl) {
+	}
+
+	//
+	@include media-breakpoint-down(xl) {
+	}
+
+	@include media-breakpoint-down(lg) {
+	}
+
+	@include media-breakpoint-down(md) {
+		// margin-left: auto;
+		// margin-right: auto;
+		// max-width: rem(440);
+	}
+
+	@include media-breakpoint-down(sm) {
+	}
+
+	@include media-breakpoint-down(xs) {
+	}
+}
+
+// end.s-prod-head
