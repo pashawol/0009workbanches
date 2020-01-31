@@ -60,18 +60,13 @@ mixin arrow()
 
 //- scial buttons
 mixin soc()
-	+b.soc
-		mixin item()
-			+e.A.item(href="№" target="_blank")
-				block
-		+item()
-			+icon('fb')
-		
-		+item()
-			+icon('insta')
-		
-		+item()
+	+b.soc-text Следите за&nbsp;нашими новостями в&nbsp;соцсетях:
+	+b.soc 
+		+e.A.item--vk(href="#" target="_blank")
 			+icon('vk')
+		
+		+e.A.item--instagram(href="#" target="_blank")
+			+icon('instagram') 
 //- /scial buttons
 //- WP menu
 mixin mnu()
@@ -211,22 +206,27 @@ mixin contact-block()
 			.col-auto.d-sm-block.d-none
 				.d-none.d-md-block
 					+e.item--whatsapp(href="#")
-						svg.icon(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewBox='0 0 58 58', style='enable-background:new 0 0 58 58;', xml:space='preserve')
-							style(type='text/css').
-								.st0{fill:#2CB742;}
-								.st1{fill:#FFFFFF;}
-							g
-								path.st0(d='M0,58l5-15c-2.5-4.3-4-9.2-4-14.5C1,12.8,13.8,0,29.5,0S58,12.8,58,28.5S45.2,57,29.5,57\
-								c-4.8,0-9.3-1.2-13.3-3.3L0,58z')
-								path.st1(d='M47.7,38c-1.3-2.5-6.2-5.3-6.2-5.3c-1.1-0.6-2.4-0.7-3,0.4c0,0-1.6,1.9-2,2.2c-1.8,1.2-3.5,1.2-5.2-0.5l-4-4\
-								l-4-4c-1.7-1.7-1.8-3.4-0.5-5.2c0.3-0.4,2.2-2,2.2-2c1.1-0.6,1-2,0.4-3c0,0-2.8-4.9-5.3-6.2c-1.1-0.6-2.4-0.4-3.2,0.5l-1.8,1.8\
-								c-5.6,5.6-2.8,11.9,2.7,17.5l5.1,5.1l5.1,5.1c5.6,5.6,11.9,8.3,17.5,2.7l1.8-1.8C48,40.3,48.2,39,47.7,38z')
+						img(src="img/svg/whatsapp2.svg", alt="")
 
 				.d-none.d-sm-block
 					+e.link.link-modal(href="#modal-call") Заказать звонок 
 			.col-auto.d-md-none
 				+e.item--tel(href="tel:8(495)266-60-73")
 					+icon("call")
+mixin contact-block-footer()
+	+b.contact-block.col- 
+		.row.no-gutters 
+			.col-auto 
+				+e.item--whatsapp(href="#")
+					img(src="img/svg/whatsapp2.svg", alt="")
+			.col-auto
+				+e.tel(href="tel:8(495)266-60-73") 8 (495) #[strong 266-60-73]
+				br
+				+e.tel(href="tel:8(495)266-60-73") 8 (495) #[strong 266-60-73]
+				br 
+				+e.link.link-modal(href="#modal-call") Заказать звонок 
+
+
 mixin btn-accent( t,a="#")
 	+e.btn.btn-blue(href= a) 
 			span.btn-color 

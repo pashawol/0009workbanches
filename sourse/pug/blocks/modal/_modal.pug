@@ -5,11 +5,11 @@ mixin modal()
 		+form-wrap()(id="modal-call" class="  modal-win modal-form" ) 
 			+e.top-title Укажите контактные данные   и&nbsp;удобное время для звонка
 			//- +e.text.h6 Администратор Ольга позвонит вам прямо сейчас или в&nbsp;другое рабочее время:
-			+e.text--sm Менеджер компании позвонит вам прямо сейчасили в&nbsp;другое рабочее время: мы&nbsp;работаем пн-пт с&nbsp;10:00 до&nbsp;18:00
+			+e.text--sm Специалист компании &laquo;Виртуоз-групп&raquo;  позвонит вам прямо сейчас  или в&nbsp;другое рабочее время: мы&nbsp;работаем ежедневно с&nbsp;09:00 до&nbsp;18:00 по&nbsp;Мск
 			input(type="hidden" name="formwithtime" value="formwithtime") 
 			+form-body()
 			
-			+e.btn(type='submit') Заказать звонок
+			+button("Заказать звонок")
 			+polite
 		// #modal-call
 		
