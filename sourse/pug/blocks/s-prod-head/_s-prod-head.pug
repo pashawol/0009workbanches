@@ -79,12 +79,15 @@ mixin s-prod-head()
 					//- +e.footer-text *При оформлении заказа  уточняйте&nbsp;цену по&nbsp;т: #[a(href="tel:8(3519)22-00-22") 8 (3519) 22-00-22]
 	// end s-prod-head
 
+
+
+
 mixin s-prod-head-13()
 	- let src= 'img/@2x/prod-1.jpg'
 	mixin img()
 		img.res-i(src="#" data-lazy= src, alt="")
 	// start s-prod-head
-	+b.s-prod-head&attributes(attributes)
+	+b.s-prod-head.s-prod-racks&attributes(attributes)
 		.container
 			+b.section-title.text-center.d-lg-none
 				h2 Стойка вертикальная/<br>кронштейн
@@ -123,31 +126,25 @@ mixin s-prod-head-13()
 											li Стойка вертикальная — 1 шт.
 											li Кронштейн металлический — 1 шт.
 
-					+e.calculate
+					+b.s-prod-head-calculate
 						h3 Рассчитайте стоимость стеллажа
-						.row
-							.col-md-6
-								+b.form-wrap&attributes(attributes)
-									+select("Сколько нужно вертикальных стоек?", "1шт")(id="thickness")
-										+option(" 20 см","20 ")(selected)
-										+option("40 см ","40 ")
-										+option("60 см ","60 ")
-							.col-md-6
-								+b.form-wrap&attributes(attributes)
-									+select("Сколько нужно кронштейнов?", "1шт")(id="thickness")
-										+option(" 20 см","20 ")(selected)
-										+option("40 см ","40 ")
-										+option("60 см ","60 ")
-							.col-md-6
-								h3 Стоимость: 
-									span 0 рублей
-							.col-md-6
-								+button('заказать') 
+						+b.form-wrap
+							.row
+								.col-md-6
+									+select("Сколько нужно вертикальных стоек?", "1шт","2шт","3шт","4шт","5шт","6шт","7шт","8шт","9шт","10шт","12шт","13шт","14шт","15шт","16шт","17шт","18шт","19шт","20шт")(id="thickness")
+								.col-md-6
+									+select("Сколько нужно кронштейнов?", "2шт","4шт","6шт","8шт","10шт","12шт","14шт","16шт","18шт","20шт","22шт","24шт","26шт","28шт","30шт","32шт","34шт","36шт","38шт","40шт","42шт","44шт","46шт","48шт","50шт","52шт","54шт","56шт","58шт","60шт","62шт","64шт","68шт","70шт","72шт","74шт","76шт","78шт","80шт","80шт","84шт","86шт","88шт","90шт","92шт","94шт","96шт","98шт","100шт")(id="thickness")
+
+								.col-md-6.align-self-center
+									h3 Стоимость: 
+										span 0 рублей
+								.col-md-6
+									+button('заказать') 
 
 				.col-lg-4
 					+e.sales.d-none.d-lg-block
-						+icon('workbench')
-						span В этом месяце продано<br>36 верстаков
+						+icon('rack')
+						span В этом месяце продано<br>38 стеллажей
 					+b.s-prod-head-sidebar
 						//- +e.price 
 						ul

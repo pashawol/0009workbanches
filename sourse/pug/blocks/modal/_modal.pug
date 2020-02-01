@@ -29,28 +29,31 @@ mixin modal()
 				+e.tel(href="tel:+7(3519)22-00-22") +7 (3519) 22-00-22
 		// #modal-pdf
 
-		+b.modal-by--sm(id="modal-one-click" )
+		+b.modal-one-click(id="modal-one-click" )
 			//- +pic('modal-clean-img','jpg','','')
 			+e.title Введите номер телефона
 			+e.text Специалист перезвонит и оформит заказ.
-			+input(type="tel" name="tel")
-				+btn-accent('ок','#')
-			+polite
+			+form-wrap
+				+e.input-group
+					+input("+7 (900) 444-44-44 ","tel")(required)
+					+button('ok')
+				+polite
 
 		// #modal-pdf
 
-		+b.modal-by--lg(id="modal-by" )
-			//- +pic('modal-clean-img','jpg','','')
-			+e.title Для оформления заказа <br>оставьте ваши контакты
-			.form-wrap
-				+e.text Как к вам обращаться?
-				+input(type="text" name="text" placeholder="Иван")
-				+e.text Введите телефон
-				+input(type="tel" name="tel")
-				+e.text Напишите комментарий, если хотите
-				+input(type="textarea" name="text" placeholder="Текст сообщения")
-					+btn-accent('ок','#')
-			+polite
+		+b.modal-by(id="modal-by" )
+				.col
+					+e.head-text 
+						+form-wrap("обсудить заказ")
+							.title Для оформления заказа 
+								br
+								|оставьте ваши контакты
+							+inputName()
+							+form-modal() 
+							.comment
+								+input("Текст сообщения","textarea",'Напишите комментарий, если хотите')
+							+button('обсудить заказ')
+							+polite
 
 		// #modal-pdf
 	

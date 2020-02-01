@@ -262,3 +262,34 @@
 		}
 	}
 }
+
+
+
+
+	// форма с 5-й страницы
+
+.s-form--05 {
+	background-color: #fff;
+	h2 {
+		text-align: center !important;
+		@extend .h1;
+	}
+	h3 {
+		font-weight: 400;
+		line-height: 1.28;
+	}
+	.section-title {
+		padding-bottom: rem(60);
+	}
+	.form-wrap {
+		margin-bottom: rem(60) !important;
+	}
+	.worker {
+		margin-top: rem(-20);
+		margin-left: rem(-20);
+		picture {
+			// position: absolute;
+			// top: rem(50);
+		}
+	}
+}
