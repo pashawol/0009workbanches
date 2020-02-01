@@ -10,6 +10,7 @@ include ../blocks/s-look/_s-look.pug
 include ../blocks/s-our/_s-our.pug
 include ../blocks/s-shipping/_s-shipping.pug
 include ../blocks/s-prod-head/_s-prod-head.pug
+include ../blocks/s-other-products/_s-other-products.pug
 
 
 block variables
@@ -26,6 +27,7 @@ block pagecontent
 		+breadcrumb('Главная', 'Каталог', 'Верстаки слесарные', title)
 
 	+s-prod-head()(class="section-border ")
-	+s-catalog
-	+s-form
+	+s-catalog05
+	+s-other-products.section-border
+	+s-form05
 	+footer()

@@ -1,0 +1,70 @@
+// start .s-prod-head
+.s-prod-head-calculate{
+
+	box-shadow: 0 0 $h3-font-size 10px rgba(82, 78, 94, 0.04);
+	border-radius: rem(10);
+	padding: rem(30) rem(18);
+	margin-bottom: rem(50);
+
+	@include media-breakpoint-up(lg){
+		padding: rem(45) rem(33);
+		margin-bottom: rem(97);
+	}
+	&__btn{
+		min-height: rem(67);
+	}
+
+	
+	@include media-breakpoint-up(xl) {
+	}
+
+	@include media-breakpoint-up(lg) {
+	}
+
+	@include media-breakpoint-up(md) {
+	}
+
+	@include media-breakpoint-up(sm) {
+	}
+
+	@include media-breakpoint-up(xs) {
+	}
+
+	//
+	@include media-breakpoint-between(md, xl) {
+	}
+
+	//
+	@include media-breakpoint-only(xs) {
+	}
+
+	@include media-breakpoint-only(sm) {
+	}
+
+	@include media-breakpoint-only(md) {
+	}
+
+	@include media-breakpoint-only(lg) {
+	}
+
+	@include media-breakpoint-only(xl) {
+	}
+
+	//
+	@include media-breakpoint-down(xl) {
+	}
+
+	@include media-breakpoint-down(lg) {
+	}
+
+	@include media-breakpoint-down(md) {
+	}
+
+	@include media-breakpoint-down(sm) {
+	}
+
+	@include media-breakpoint-down(xs) {
+	}
+}
+
+// end.s-prod-head

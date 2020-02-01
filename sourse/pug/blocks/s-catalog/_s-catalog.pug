@@ -63,6 +63,44 @@ mixin s-catalog()
 							
 	// end s-catalog
 
+mixin s-catalog05()
+	// start s-catalog
+	+b.SECTION.s-catalog.section#s-catalog&attributes(attributes)
+		.container
+			block
+			+e.slider-wrap
+				+e.slider--js 
+					+e.slide
+						+item-prod("sl","1")
+							+item-tr("Цена:","61 900Р")
+							+item-tr("Выдвижные ящики:","2 шт ")
+							+item-tr("Двери:","2 шт")
+							+item-tr("Полки:","1 шт")
+							+item-tr("Габариты (ВхШхГ):","1637.5х1800х620") 
+					+e.slide
+						+item-prod("sl","2")
+							+item-tr("Цена:","61 900Р")
+							+item-tr("Выдвижные ящики:","2 шт ")
+							+item-tr("Двери:","2 шт")
+							+item-tr("Полки:","1 шт")
+							+item-tr("Габариты (ВхШхГ):","1637.5х1800х620") 
+					+e.slide
+						+item-prod("sl","3")
+							+item-tr("Цена:","61 900Р")
+							+item-tr("Выдвижные ящики:","2 шт ")
+							+item-tr("Двери:","2 шт")
+							+item-tr("Полки:","1 шт")
+							+item-tr("Габариты (ВхШхГ):","1637.5х1800х620") 
+					+e.slide
+						+item-prod("sl","1")
+							+item-tr("Цена:","61 900Р")
+							+item-tr("Выдвижные ящики:","2 шт ")
+							+item-tr("Двери:","2 шт")
+							+item-tr("Полки:","1 шт")
+							+item-tr("Габариты (ВхШхГ):","1637.5х1800х620") 
+				.control-wrap
+
+
 mixin s-catalog-08(t="Взломостойкие сейфы")
 	// start s-catalog
 	+b.s-catalog--page&attributes(attributes) 

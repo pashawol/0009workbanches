@@ -10,6 +10,8 @@ include ../blocks/s-look/_s-look.pug
 include ../blocks/s-our/_s-our.pug
 include ../blocks/s-shipping/_s-shipping.pug
 include ../blocks/s-prod-head/_s-prod-head.pug
+include ../blocks/s-what-workbenches/_s-what-workbenches.pug
+include ../blocks/s-other-products/_s-other-products.pug
 
 
 block variables
@@ -25,6 +27,8 @@ block pagecontent
 	.container
 		+breadcrumb('Главная', 'Каталог', title)
 
-	+s-prod-head-13()(class="section-border ")
-	+s-form()(class="section-border ")
+	+s-prod-head-13()
+	+s-other-products-13.section-border
+	+s-form-13()
+	+s-what-workbenches
 	+footer()

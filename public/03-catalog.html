@@ -305,39 +305,87 @@
 				</div>
 			</div>
 			<!-- #modal-pdf-->
-			<div class="modal-by modal-by--sm" id="modal-one-click">
-				<div class="modal-by__title">Введите номер телефона
+			<div class="modal-one-click" id="modal-one-click">
+				<div class="modal-one-click__title">Введите номер телефона
 				</div>
-				<div class="modal-by__text">Специалист перезвонит и оформит заказ.
+				<div class="modal-one-click__text">Специалист перезвонит и оформит заказ.
 				</div>
-				<div class="modal-by__input-wrap form-group"><input class="modal-by__input form-control" type="tel" name="tel"/><a class="modal-by__btn btn-blue" href="#"> <span class="btn-color"> </span><span class="btn-text">ок</span></a>
-				</div>
-				<!-- +e.input-wrap-->
-				<div class="modal-by__polite text-secondary"> Нажимая на&nbsp;кнопку, вы&nbsp;даете согласие на&nbsp;обработку своих персональных данных и&nbsp;соглашаетесь с&nbsp;<a class="tdu text-secondary" href="privacy-policy.pdf" target="_blank">Политикой конфиденциальности</a>
+				<div class="form-wrap">
+					<form>
+						<input class="order" type="hidden" name="order"/>
+						<div class="form-wrap__input-group">
+							<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="tel" placeholder="+7 (900) 444-44-44 " name="tel" required="required"/>
+							</div>
+							<!-- +e.input-wrap-->
+							<button class="form-wrap__btn btn btn-blue" type="submit"> <span class="btn-color"> </span><span class="btn-text">ok</span>
+							</button>
+						</div>
+						<div class="form-wrap__polite text-secondary"> Нажимая на&nbsp;кнопку, вы&nbsp;даете согласие на&nbsp;обработку своих персональных данных и&nbsp;соглашаетесь с&nbsp;<a class="tdu text-secondary" href="privacy-policy.pdf" target="_blank">Политикой конфиденциальности</a>
+						</div>
+					</form>
 				</div>
 			</div>
 			<!-- #modal-pdf-->
-			<div class="modal-by modal-by--lg" id="modal-by">
-				<div class="modal-by__title">Для оформления заказа <br>оставьте ваши контакты
-				</div>
-				<div class="form-wrap">
-					<div class="modal-by__text">Как к вам обращаться?
+			<div class="modal-by" id="modal-by">
+				<div class="col">
+					<div class="modal-by__head-text"> 
+						<div class="form-wrap">
+							<form>
+								<input class="order" type="hidden" name="order" value="обсудить заказ"/>
+								<div class="title">Для оформления заказа <br/>оставьте ваши контакты</div>
+								<div class="form-wrap__input-wrap form-group">
+									<label><span class="form-wrap__title">Как к вам обращаться?</span><input class="form-wrap__input form-control" type="text" placeholder="Иван" name="name" required="required"/>
+									</label>
+								</div>
+								<!-- +e.input-wrap-->
+								<div class="tabs">
+									<div class="form-wrap__group">
+										<div class="form-wrap__group-title">Как с вами связаться?
+										</div>
+										<div class="tabs__caption">
+											<div class="tabs__btn active">
+												<svg class="icon icon-call ">
+													<use xlink:href="img/svg/sprite.svg#call"></use>
+												</svg>Звонок
+											</div>
+											<div class="tabs__btn">
+												<svg class="icon icon-whatsapp ">
+													<use xlink:href="img/svg/sprite.svg#whatsapp"></use>
+												</svg>WhatsApp
+											</div>
+										</div>
+									</div> 
+									<div class="tabs__wrap">
+										<div class="tabs__content active">
+											<div class="form-wrap__input-wrap form-group">
+												<label><span class="form-wrap__title">Введите телефон:</span><input class="form-wrap__input form-control" type="tel" placeholder="+7 (999) 999-99-99" name="tel" required="required"/>
+												</label>
+											</div>
+											<!-- +e.input-wrap-->
+										</div>
+										<div class="tabs__content">
+											<div class="form-wrap__input-wrap form-group">
+												<label><span class="form-wrap__title">Введите whatsapp:</span><input class="form-wrap__input form-control" type="tel" placeholder="+7 (999) 999-99-99" name="whatsapp"/>
+												</label>
+											</div>
+											<!-- +e.input-wrap-->
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<div class="form-wrap__input-wrap form-group">
+										<label><span class="form-wrap__title">Напишите комментарий, если хотите</span><textarea class="form-wrap__input form-control" placeholder="Текст сообщения" name="textarea"></textarea>
+										</label>
+									</div>
+									<!-- +e.input-wrap-->
+								</div>
+								<button class="form-wrap__btn btn btn-blue" type="submit"> <span class="btn-color"> </span><span class="btn-text">обсудить заказ</span>
+								</button>
+								<div class="form-wrap__polite text-secondary"> Нажимая на&nbsp;кнопку, вы&nbsp;даете согласие на&nbsp;обработку своих персональных данных и&nbsp;соглашаетесь с&nbsp;<a class="tdu text-secondary" href="privacy-policy.pdf" target="_blank">Политикой конфиденциальности</a>
+								</div>
+							</form>
+						</div>
 					</div>
-					<div class="modal-by__input-wrap form-group"><input class="modal-by__input form-control" type="text" placeholder="Иван" name="text"/>
-					</div>
-					<!-- +e.input-wrap-->
-					<div class="modal-by__text">Введите телефон
-					</div>
-					<div class="modal-by__input-wrap form-group"><input class="modal-by__input form-control" type="tel" name="tel"/>
-					</div>
-					<!-- +e.input-wrap-->
-					<div class="modal-by__text">Напишите комментарий, если хотите
-					</div>
-					<div class="modal-by__input-wrap form-group"><input class="modal-by__input form-control" type="textarea" placeholder="Текст сообщения" name="text"/><a class="modal-by__btn btn-blue" href="#"> <span class="btn-color"> </span><span class="btn-text">ок</span></a>
-					</div>
-					<!-- +e.input-wrap-->
-				</div>
-				<div class="modal-by__polite text-secondary"> Нажимая на&nbsp;кнопку, вы&nbsp;даете согласие на&nbsp;обработку своих персональных данных и&nbsp;соглашаетесь с&nbsp;<a class="tdu text-secondary" href="privacy-policy.pdf" target="_blank">Политикой конфиденциальности</a>
 				</div>
 			</div>
 			<!-- #modal-pdf-->
