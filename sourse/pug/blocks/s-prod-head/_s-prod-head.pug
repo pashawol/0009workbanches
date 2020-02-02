@@ -37,10 +37,8 @@ mixin s-prod-head()
 												td на выбор по системе RAL
 									.mobile-down.order-lg-first 41 500 руб.
 								+e.form-wrap
-									.link-modal( data-src="#modal-one-click" href="javascript:;" data-order=`Быстрый заказ- ${title}`)
-										+button('купить в 1 клик')
-									.link-modal(  data-src="#modal-by" href="javascript:;" data-order=`Заказ- ${title}`) 
-										+e.btn.BUTTON.btn-outline-brown заказать
+									+btn-accent('купить в 1 клик', '#modal-one-click')(class="link-modal" data-order=`Быстрый заказ- ${title}`)
+									+e.btn.btn-outline-brown.link-modal(  data-src="#modal-by" href="javascript:;" data-order=`Заказ- ${title}`) заказать
 					+e.equipment
 						h3 Комплектация
 						ul
