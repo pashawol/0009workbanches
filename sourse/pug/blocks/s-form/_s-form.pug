@@ -61,10 +61,10 @@ mixin s-form()
 //- форма страницы 05
 mixin s-form05()
 	// start s-form05
-	+b.s-form--05.section.block-with-lazy#s-form--05&attributes(attributes)
+	+b.s-form--05.section.block-with-lazy#s-form&attributes(attributes)
 		.container
 			+b.section-title.text-center
-				h2 Нужна помощь в подборе верстаков?
+				h2 Нужна помощь в&nbsp;подборе верстаков?
 				h3 Наш специалист проконсультирует вас, ответит на&nbsp;все вопросы
 					br
 					| и&nbsp;поможет подобрать необходимые инструменты
@@ -93,7 +93,7 @@ mixin s-form-13()
 					br
 					| и&nbsp;поможет подобрать необходимые инструменты
 			.row
-				.col.d-non.d-lg-block
+				.col
 					+girl()
 
 				.col-xl-6.col-lg-7
@@ -104,13 +104,15 @@ mixin s-form-13()
 							+button('получить помощь в подборе стеллажа')
 							+polite
 
+
+
 //- форма страницы 06
 mixin s-form-06()
 	// start s-form05
-	+b.s-form--05.section.block-with-lazy#s-form--05&attributes(attributes)
+	+b.s-form--05.shiping-form.section.block-with-lazy#s-form&attributes(attributes)
 		.container
 			+b.section-title.text-center
-				h2 Есть вопросы по доставке и оплате?
+				h2 Есть вопросы по&nbsp;доставке и оплате?
 				h3 Наш специалист проконсультирует вас, ответит на&nbsp;все вопросы
 			.row
 				.col.d-non.d-lg-block
@@ -120,7 +122,7 @@ mixin s-form-06()
 					+e.head-text 
 						+form-wrap("получить помощь в подборе верстака")
 							+input("Введите текст","textarea",'Напишите ваш вопрос:')
-							+form-modal() 
+							+form-modal-06() 
 							+button('Задать вопрос')
 							+polite
 

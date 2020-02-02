@@ -1,49 +1,103 @@
+// start .s-what-workbenches
+.s-what-workbenches {
+	padding-top: rem(37) !important;
+	@include media-breakpoint-up(lg) {
+	padding-top: rem(65) !important;
+	}
+	@include media-breakpoint-down(lg){
+		padding-bottom: rem(30);
+	}
+	position: relative;
+	background-color: #fff;
 
-	// start .s-what-workbenches
-	.s-what-workbenches {
-		h5 {
-			font-weight: 700;
+	.section-title {
+		padding-bottom: rem(10);
+		@include media-breakpoint-up(lg) {
+			padding-bottom: rem(23);
 		}
-		a {
-			text-decoration: underline;
-			font-size: 1rem;
+	}
+	h5 {
+		font-weight: 700;
+		@include media-breakpoint-down(sm) {
+			font-size: rem(14);
+		}
+	}
+	a {
+		text-decoration: underline;
+		font-size: 1rem;
+		margin-top: 0;
+		@include media-breakpoint-up(lg){
 			margin-top: rem(5);
-			display: inline-block;
-			color: #226ab4;
 		}
-		p {
-			@extend .h5;
-			font-weight: 400;
-			opacity: 0.7;
+		display: inline-block;
+		color: #226ab4;
+	}
+	p {
+		font-size: rem(14);
+		line-height: 1.17;
+		@include media-breakpoint-up(md) {
+			font-size: rem(20);
 			line-height: 1.4;
-			&:nth-child(2n){
-
-				padding-top: rem(34);
+			max-width: rem(440);
+			span {
+				display: none;
 			}
 		}
+		
+		font-weight: 400;
+		opacity: 0.7;
+		&:nth-child(2n) {
+			padding-top: rem(0);
+			@include media-breakpoint-up(lg){
+				padding-top: rem(20);
+			}
+		}
+	}
+	.d-non {
+		display: none;
+	}
+	@include media-breakpoint-up(lg) {
+		&__left-block {
+			padding-left: rem(62);
+		}
+	}
 
-	@include media-breakpoint-up(xl) {}
-	@include media-breakpoint-up(lg) {}
-	@include media-breakpoint-up(md) {}
-	@include media-breakpoint-up(sm) {}
-	@include media-breakpoint-up(xs) {}
-	
-	//
-	@include media-breakpoint-between(md, xl) { }
-	
-	
-	//
-	@include media-breakpoint-only(xs) {}
-	@include media-breakpoint-only(sm) {}
-	@include media-breakpoint-only(md) {}
-	@include media-breakpoint-only(lg) {}
-	@include media-breakpoint-only(xl) {}
-	
-	//
-	@include media-breakpoint-down(xl) {}
-	@include media-breakpoint-down(lg) {}
-	@include media-breakpoint-down(md) {}
-	@include media-breakpoint-down(sm) {}
-	@include media-breakpoint-down(xs) {} 
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(lg) {
+	}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-up(xs) {
+	}
 
+	//
+	@include media-breakpoint-between(md, xl) {
+	}
+
+	//
+	@include media-breakpoint-only(xs) {
+	}
+	@include media-breakpoint-only(sm) {
+	}
+	@include media-breakpoint-only(md) {
+	}
+	@include media-breakpoint-only(lg) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+
+	//
+	@include media-breakpoint-down(xl) {
+	}
+	@include media-breakpoint-down(lg) {
+	}
+	@include media-breakpoint-down(md) {
+	}
+	@include media-breakpoint-down(sm) {
+	}
+	@include media-breakpoint-down(xs) {
+	}
 } // end.s-what-workbenches
