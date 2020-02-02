@@ -151,17 +151,18 @@
 			}
 		}
 	}
-	.link-modal {
-		display: inline-block;
-	}
+	// .link-modal {
+	// 	display: inline-block;
+	// }
 	&__btn {
 		@extend .btn;
 		font-size: rem(14);
 	}
 
-	// для того что б поставить прозрачную кнопку на свое место
-	@include media-breakpoint-up(lg) {
-		&__form-wrap {
+	&__form-wrap {
+		display: flex;
+		// для того что б поставить прозрачную кнопку на свое место
+		@include media-breakpoint-up(lg) {
 			margin-right: rem(-10);
 		}
 	}
@@ -180,12 +181,7 @@
 	}
 	.btn-blue {
 		min-height: rem(56);
-		@include media-breakpoint-up(xl) {
-		}
-		padding: rem(7) rem(18);
-		@include media-breakpoint-between(lg, xl) {
-			padding: rem(7) rem(10);
-		}
+		padding: rem(7) rem(20);
 	}
 	&__sales {
 		position: relative;
