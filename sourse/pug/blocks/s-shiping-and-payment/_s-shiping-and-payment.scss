@@ -3,7 +3,7 @@
 	padding-bottom: rem(50);
 	@include media-breakpoint-up(lg){
 
-		padding-bottom: rem(47);
+		padding-bottom: rem(60);
 	}
 	letter-spacing: rem(0.4);
 	h1 {
@@ -29,6 +29,7 @@
 		}
 	}
 	&__delivery-terms {
+		max-width: rem(790);
 		background-color: #f7f7f7;
 		padding: rem(18) rem(18) rem(19);
 		@include media-breakpoint-up(md) {
@@ -57,7 +58,10 @@
 		}
 		.col-lg-7 {
 			padding-left: rem(56);
-			font-size: 1rem;
+			@include media-breakpoint-down(md) {
+				font-size: 1rem;
+
+			}
 			@include media-breakpoint-up(lg) {
 				padding-left: rem(33);
 				margin-bottom: rem(15);
@@ -96,6 +100,7 @@
 	.convenient-way {
 		@include media-breakpoint-up(lg){
 			padding-left: rem(27);
+			margin-bottom: rem(25);
 		}
 		letter-spacing: rem(0.5);
 		margin-bottom: rem(25);
@@ -103,9 +108,9 @@
 	&__payment-metod {
 		padding-left: rem(8);
 		font-size: rem(20);
+		line-height: 1.1;
 		@include media-breakpoint-down(lg){
 			font-size: rem(18);
-			line-height: 1.1;
 			ol {
 				padding-left: rem(10);
 			}

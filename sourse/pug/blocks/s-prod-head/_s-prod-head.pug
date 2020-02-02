@@ -139,7 +139,7 @@ mixin s-prod-head-13()
 									h3 Стоимость: 
 										span 0 рублей
 								.col-md-6
-									+button('заказать') 
+									+btn-accent('заказать', '#modal-by')(class="link-modal" data-order=`Быстрый заказ- ${title}`) 
 
 				.col-lg-4.shiping-time
 					+e.sales.d-none.d-lg-block

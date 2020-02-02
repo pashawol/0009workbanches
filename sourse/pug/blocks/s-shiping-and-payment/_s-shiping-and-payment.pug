@@ -5,23 +5,21 @@ mixin s-shiping-and-payment()
 			+b.section-title.text-center
 				h1 Доставка и оплата
 				h3 Доставим ваш заказ в&nbsp;любую точку России и&nbsp;в&nbsp;страны ближнего зарубежья
-			.row
-				.col-lg-8
-					+e.delivery-terms
-						h3 Сроки доставки
-						+e.timing.row
-							.col-lg-5
-								+icon('check-mark')
-								span Доставка по Москве:
-							.col-lg-7 в день заказа или на следующий
-							.col-lg-5 
-								+icon('check-mark')
-								span Доставка по Росии:
-							.col-lg-7 от 2 до 5 дней (транспортной&nbsp;компанией)*
-							.col-lg-5
-								+icon('check-mark')
-								span Доставка по СНГ:
-							.col-lg-7 от 3 до 7 дней (транспортной&nbsp;компанией)*
+			+e.delivery-terms
+				h3 Сроки доставки
+				+e.timing.row
+					.col-lg-5
+						+icon('check-mark')
+						span Доставка по Москве:
+					.col-lg-7 в день заказа или на следующий
+					.col-lg-5 
+						+icon('check-mark')
+						span Доставка по Росии:
+					.col-lg-7 от 2 до 5 дней (транспортной&nbsp;компанией)*
+					.col-lg-5
+						+icon('check-mark')
+						span Доставка по СНГ:
+					.col-lg-7 от 3 до 7 дней (транспортной&nbsp;компанией)*
 			p *Доставка <span>за&nbsp;пределы Москвы</span> обсуждается&nbsp;индивидуально
 			h3.convenient-way Оплачивайте удобным для&nbsp;вас&nbsp;способом
 			+e.payment-metod.row

@@ -39,7 +39,10 @@
 			padding-right: rem(21);
 		}
 		margin-bottom: rem(15);
-
+		@include media-breakpoint-down(md) {
+			@include roww(5);
+			min-height: rem(55);
+		}
 		a {
 			box-shadow: 0 0 $h4-font-size 5px rgba(166, 166, 166, 0.13);
 			background-color: #ffffff;

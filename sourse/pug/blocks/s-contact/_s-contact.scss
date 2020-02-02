@@ -25,12 +25,20 @@
 		.mail {
 			padding-left: rem(76);
 		}
+		.corrective-margin {
+			margin-left: rem(110);
+		}
 	}
-
+	
 	&__connection {
 		padding-bottom: rem(20);
 		@include media-breakpoint-up(md) {
 			padding-bottom: rem(30);
+		}
+		@include media-breakpoint-up(xl){
+			&:nth-child(1) {
+				padding-left: rem(90);
+			}
 		}
 		h3 {
 			margin-bottom: 0;
@@ -149,7 +157,7 @@
 			}
 
 			&:hover {
-				border: 1px solid #398bff;
+				background-image: linear-gradient(-10deg, #0d49db 0%, #39b1ff 100%);
 				border-radius: 2px;
 				text-decoration: none;
 			}
