@@ -1,17 +1,18 @@
 
 	// start .s-thanks
 	.s-thanks {
-		padding-top: rem(50) !important;
+		padding-top: rem(46);
 		@include media-breakpoint-up(md){
-			padding-top: rem(65) !important;
-			padding-bottom: rem(40) !important;
+			padding-top: rem(65);
+			padding-bottom: rem(90);
 		}
 		h2 {
 			font-weight: 400;
-			margin-bottom: rem(25);
 			font-size: rem(26);
 			line-height: 1.08;
+			margin-bottom: rem(22);
 			@include media-breakpoint-up(md){
+				margin-bottom: rem(25);
 				letter-spacing: rem(0.1);
 				font-size: rem(40);
 			}
@@ -19,14 +20,17 @@
 		h3 {
 			font-weight: 400;
 			line-height: 1.09;
-			margin-bottom: rem(40);
+			margin-bottom: rem(35);
+			@include media-breakpoint-up(md){
+				margin-bottom: rem(40);
+
+			}
 			@include media-breakpoint-down(md){
-				margin-bottom: rem(35);
 				font-size: rem(25);
 			}
 		}
 		.good-day {
-			margin-bottom: rem(40);
+			margin-bottom: rem(47);
 			@include media-breakpoint-up(md){
 				margin-bottom: rem(27);
 			}
@@ -64,17 +68,17 @@
 
 .s-thanks2 {
 	@include media-breakpoint-up(md){
-		padding-bottom: rem(50) !important;
+		padding-bottom: rem(50);
 	}
 	h2 {
 		@include media-breakpoint-down(md){
-			margin-bottom: rem(70) ;
+			margin-bottom: rem(72) ;
 		}
 	}
 	h3 {
 		// max-width: rem(1000);
 		margin: 0 auto;
-		margin-bottom: rem(35);
+		margin-bottom: rem(50);
 		line-height: 1.09;
 		@include media-breakpoint-up(md){
 			margin-bottom: rem(22);
@@ -86,13 +90,13 @@
 			margin: 0 auto;
 			// margin-top: rem(20);
 			@include media-breakpoint-down(md) {
-				margin-top: rem(30);
+				margin-top: rem(33);
 				
 			}
 		}
 	}
 	.good-day {
-		margin-bottom: rem(53) !important;
+		margin-bottom: rem(31);
 		// не очень понял почему не получалось без important
 		@include media-breakpoint-up(md) {
 			margin-bottom: rem(27);

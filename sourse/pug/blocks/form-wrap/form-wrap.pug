@@ -149,6 +149,27 @@ mixin form-modal()
 			.tabs__content
 				+input("+7 (999) 999-99-99","tel",'Введите whatsapp:',"whatsapp")
 
+mixin form-modal-06()
+	.tabs
+		+e.group
+			+e.group-title Как вам удобно получить ответ?
+			
+			.tabs__caption
+				.tabs__btn.active
+					+icon('call')
+					| Звонок
+				.tabs__btn
+					+icon('whatsapp')
+					| WhatsApp
+		block
+		.tabs__wrap
+			.tabs__content.active
+				+input("+7 (999) 999-99-99","tel",'Введите телефон:',"tel")(required)
+				//- .h5.text-secondar Перезвоню в течение рабочего дня
+			.tabs__content
+				+input("+7 (999) 999-99-99","tel",'Введите whatsapp:',"whatsapp")
+
+
 mixin form-tabs-qwiz()
 	.tabs
 		+e.group

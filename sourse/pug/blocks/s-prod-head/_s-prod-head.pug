@@ -6,7 +6,7 @@ mixin s-prod-head()
 	+b.s-prod-head&attributes(attributes)
 		.container
 			+b.section-title.text-center.d-lg-none
-				h2 Стойка вертикальная/<br>кронштейн
+				h2 Верстак слесарный<br>ВМ_1214
 			.row
 				.col-lg-8
 					.row
@@ -25,21 +25,22 @@ mixin s-prod-head()
 												+img()
 						.col-md-6
 							+e.content
-								h2.d-none.d-lg-block Стойка вертикальная/<br>кронштейн
+								h2.d-none.d-lg-block Верстак слесарный<br>ВМ_1214
 								+e.descr 
-									.mobile-down 41 500 руб.
 									.mobile-up
 										table
 											tr
-												td Размеры <br>(ШхВхГ):
+												td Размеры <span>(ШхВхГ):</span>
 												td 1637.6х1383х620 мм.
 											tr
 												td Цвет:
 												td на выбор по системе RAL
-								.link-modal( data-src="#modal-one-click" href="javascript:;" data-order=`Быстрый заказ- ${title}`)
-									+button('купить в 1 клик')
-								.link-modal(  data-src="#modal-by" href="javascript:;" data-order=`Заказ- ${title}`) 
-									+e.btn.BUTTON.btn-outline-brown заказать
+									.mobile-down.order-lg-first 41 500 руб.
+								+e.form-wrap
+									.link-modal( data-src="#modal-one-click" href="javascript:;" data-order=`Быстрый заказ- ${title}`)
+										+button('купить в 1 клик')
+									.link-modal(  data-src="#modal-by" href="javascript:;" data-order=`Заказ- ${title}`) 
+										+e.btn.BUTTON.btn-outline-brown заказать
 					+e.equipment
 						h3 Комплектация
 						ul
@@ -47,7 +48,7 @@ mixin s-prod-head()
 							li Полка с&nbsp;регулировкой по&nbsp;высоте в&nbsp;трех положениях&nbsp;&mdash; 1&nbsp;шт.
 							li Дверь с&nbsp;петлями плавного закрывания&nbsp;&mdash; 1&nbsp;шт.
 							li Дополнительная полка в&nbsp;ногах у&nbsp;сидящего&nbsp;&mdash; 1&nbsp;шт.
-				.col-lg-4
+				.col-lg-4.shiping-time
 					+e.sales.d-none.d-lg-block
 						+icon('workbench')
 						span В этом месяце продано<br>36 верстаков
@@ -111,7 +112,6 @@ mixin s-prod-head-13()
 							+e.content
 								h2.d-none.d-lg-block Стойка вертикальная/<br>кронштейн
 								+e.descr 
-									.mobile-down 5 075 руб. / 870 руб.
 									.mobile-up
 										table
 											tr
@@ -120,14 +120,16 @@ mixin s-prod-head-13()
 											tr
 												td Цвет:
 												td на выбор по системе RAL
+									.mobile-down.order-lg-first 5 075 руб. / 870 руб.
 									+e.equipment
 										h3 Комплектация
 										ul
 											li Стойка вертикальная — 1 шт.
 											li Кронштейн металлический — 1 шт.
 
+
 					+b.s-prod-head-calculate
-						h3 Рассчитайте стоимость стеллажа
+						h3 Рассчитайте стоимость&nbsp;стеллажа
 						+b.form-wrap
 							.row
 								.col-md-6
@@ -135,13 +137,13 @@ mixin s-prod-head-13()
 								.col-md-6
 									+select("Сколько нужно кронштейнов?", "2шт","4шт","6шт","8шт","10шт","12шт","14шт","16шт","18шт","20шт","22шт","24шт","26шт","28шт","30шт","32шт","34шт","36шт","38шт","40шт","42шт","44шт","46шт","48шт","50шт","52шт","54шт","56шт","58шт","60шт","62шт","64шт","68шт","70шт","72шт","74шт","76шт","78шт","80шт","80шт","84шт","86шт","88шт","90шт","92шт","94шт","96шт","98шт","100шт")(id="thickness")
 
-								.col-md-6.align-self-center
+								+e.cost.col-md-6.align-self-center
 									h3 Стоимость: 
 										span 0 рублей
 								.col-md-6
 									+button('заказать') 
 
-				.col-lg-4
+				.col-lg-4.shiping-time
 					+e.sales.d-none.d-lg-block
 						+icon('rack')
 						span В этом месяце продано<br>38 стеллажей

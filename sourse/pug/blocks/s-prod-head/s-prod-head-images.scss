@@ -2,7 +2,10 @@
 .s-prod-head-images {
 	text-align: center;
 	position: relative;
-	margin-bottom: rem(70);
+	margin-bottom: rem(10);
+	@include media-breakpoint-up(md){
+		margin-bottom: rem(58);
+	}
 
 	.icon {
 		color: #808080;
