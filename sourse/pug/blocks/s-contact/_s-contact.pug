@@ -5,8 +5,8 @@ mixin s-contact()
 			.container
 				+b.section-title.text-center
 					h1 Контакты
-				.row.justify-content-center
-					.col-md-4
+				.row
+					.col-lg-5.corrective-margin
 						+e.connection
 							h3 Звоните:
 							+e.connection-item
@@ -17,7 +17,7 @@ mixin s-contact()
 										a(href="tel:8(495)266-60-73") 8 (495) 266-60-73
 									li
 										a(href="tel:8(495)266-60-73") 8 (495) 266-60-73
-					.col-md-4
+					.col-lg-4
 						+e.connection.mail
 							h3 Пишите:
 							+e.connection-item

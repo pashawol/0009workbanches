@@ -305,7 +305,10 @@
 		margin-bottom: rem(50) !important;
 
 		@include media-breakpoint-up(md) {
-			margin-bottom: rem(60) !important;
+			margin-bottom: rem(60);
+		}
+		&__group-title {
+			font-weight: 400;
 		}
 		@include media-breakpoint-down(md) {
 			&__input-wrap {
@@ -329,6 +332,9 @@
 		display: none;
 		@include media-breakpoint-up(lg) {
 			display: block;
+		}
+		@include media-breakpoint-down(lg){
+			top: 19%;
 		}
 		&__label {
 			top: 75%;
