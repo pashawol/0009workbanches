@@ -48,6 +48,7 @@
 			min-height: rem(70);
 		}
 		&__cost {
+			color: #242424;
 			margin-top: rem(7);
 			@include media-breakpoint-up(lg) {
 				margin-top: rem(20);
@@ -61,6 +62,7 @@
 				}
 			}
 			span {
+				font-weight: 700;
 				display: block;
 			}
 		}

@@ -3,10 +3,10 @@
 	@include media-breakpoint-up(sm) {
 		padding-top: rem(30);
 	}
+	color: #333845;
 
 	h2 {
 		font-weight: 400;
-		// @extend h2;
 	}
 	@include media-breakpoint-down(md) {
 		.section-title {

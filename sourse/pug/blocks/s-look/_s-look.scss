@@ -13,7 +13,8 @@
 
 	.section-title {
 		max-width: rem(550);
-
+		color: #333845;
+		
 		@include media-breakpoint-up(lg) {
 			margin-left: 0;
 		}

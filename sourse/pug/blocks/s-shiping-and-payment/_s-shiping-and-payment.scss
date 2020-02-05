@@ -6,6 +6,7 @@
 		padding-bottom: rem(60);
 	}
 	letter-spacing: rem(0.4);
+	color: #333845;
 	h1 {
 		font-weight: 400;
 		margin-bottom: rem(10);
@@ -17,6 +18,7 @@
 	h3 {
 		letter-spacing: rem(0.01);
 		font-weight: 400;
+		color: #373b49;
 		@include media-breakpoint-down(md) {
 			line-height: 1.11;
 			letter-spacing: rem(0.3);
