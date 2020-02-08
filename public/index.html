@@ -118,14 +118,14 @@
 							<div class="col">
 								<div class="header-block__img-wrap">
 									<div class="header-block__mat"> 
-										<div class="text"> <a href="">Резиновый коврик</a></div>
+										<div class="text"> <a class="link-modal" href="#modal-mat">Резиновый коврик</a></div>
 										<div class="header-block__line-wrap"><img class="line" src="img/svg/header-line-1.svg" alt=""/>
 											<div class="dot pulse animated"></div>
 										</div>
 										<div class="mobile-line"></div>
 									</div>
 									<div class="header-block__guides"> 
-										<div class="text"> <a href="">Направляющие плавного скольжения</a></div>
+										<div class="text"> <a class="link-modal" href="#modal-guides">Направляющие плавного скольжения</a></div>
 										<div class="header-block__line-wrap"><img class="line" src="img/svg/header-line-2.svg" alt=""/>
 											<div class="dot-1 pulse animated"></div>
 											<div class="dot-2 pulse animated"></div>
@@ -133,33 +133,37 @@
 										<div class="mobile-line"></div>
 									</div>
 									<div class="header-block__countertop"> 
-										<div class="text"> <a href="">Столешница</a></div>
+										<div class="text"> <a href="#">Столешница</a></div>
 										<div class="header-block__line-wrap"><img class="line" src="img/svg/header-line-3.svg" alt=""/>
 											<div class="dot pulse animated"></div>
 										</div>
 										<div class="mobile-line"></div>
 									</div>
 									<div class="header-block__display"> 
-										<div class="text"> <a href="">Экран</a></div>
+										<div class="text"> <a class="link-modal" href="#modal-display">Экран</a></div>
 										<div class="header-block__line-wrap">
 											<div class="dot pulse animated"></div>
 										</div>
 										<div class="mobile-line"></div>
 									</div>
 									<div class="header-block__accessories"> 
-										<div class="text"> <a href="">Аксессуары</a></div>
+										<div class="text"> <a class="link-modal" href="#modal-accessories">Аксессуары</a></div>
 										<div class="header-block__line-wrap"><img class="line" src="img/svg/header-line-4.svg" alt=""/>
 											<div class="dot-1 pulse animated"></div>
 											<div class="dot-2 pulse animated"></div>
 										</div>
 										<div class="mobile-line"></div>
-									</div><a class="header-block__find-out animated bounce" data-fancybox="data-fancybox" href="https://www.youtube.com/watch?v=I1_ip3epXv4&amp;feature=emb_logo">
-									<div class="header-block__find-out-wrap"><span>
-											<svg class="icon icon-play-button ">
-												<use xlink:href="img/svg/sprite.svg#play-button"></use>
-											</svg></span>
-										<p><strong>Узнайте за&nbsp;2&nbsp;минуты,</strong> как наши верстаки помогают сократить производственные затраты до&nbsp;40%</p>
-									</div></a>
+									</div>
+									<!-- анимации находятся в base-->
+									<div class="header-block__find-out animated bounce">
+										<div class="header-block__find-out-wrap"><a data-fancybox="data-fancybox" href="https://www.youtube.com/watch?v=I1_ip3epXv4&amp;feature=emb_logo">
+												<svg class="icon icon-play-button ">
+													<use xlink:href="img/svg/sprite.svg#play-button"></use>
+												</svg></a>
+											<p><strong>Узнайте за&nbsp;2&nbsp;минуты,</strong> как наши верстаки помогают сократить производственные затраты до&nbsp;40%</p>
+											<button class="disable-button" type="button"><img src="img/svg/close.svg" alt=""/></button>
+										</div>
+									</div>
 									<!-- picture-->
 									<picture> 
 										<source srcset="img/@2x/header-img1.png" type="image/png" media="(min-width:576px)"/>
@@ -761,6 +765,27 @@
 						</div>
 					</div>
 				</div>
+			</div>
+			<!-- обозначения на верстаке-->
+			<!-- Резиновый коврик-->
+			<div class="modal-header-block modal-mat" id="modal-mat"><img class="res-i lazy" src="#" data-src="img/@2x/modal-mat.jpg" alt=""/>
+				<h4>Коврик резиновый противоскользящий.</h4>
+				<p>Защищает от&nbsp;царапин и&nbsp;дефектов, продлевает срок службы верстака</p>
+			</div>
+			<!-- Направляющие плавного скольжения-->
+			<div class="modal-header-block modal-guides" id="modal-guides"><img class="res-i lazy" src="#" data-src="img/@2x/modal-guides.jpg" alt=""/>
+				<h4>Выдвижные ящики оснащены направляющими плавного скольжения  с&nbsp;системой доводчиков.</h4>
+				<p>Чем больше нагрузка на&nbsp;ящик, тем плавнее работают направляющие.</p>
+			</div>
+			<!-- Экран-->
+			<div class="modal-header-block modal-display" id="modal-display"><img class="res-i lazy" src="#" data-src="img/@2x/modal-display.jpg" alt=""/>
+				<h4>Каждый верстак оснащен перфорированным экраном,</h4>
+				<p>для размещения дополнительных запчастей, инструментов, документов</p>
+			</div>
+			<!-- Аксессуары-->
+			<div class="modal-header-block modal-accessories" id="modal-accessories"><img class="res-i lazy" src="#" data-src="img/@2x/modal-accessories.jpg" alt=""/>
+				<h4>Каждый верстак оснащен перфорированным экраном,</h4>
+				<p>Коврик резиновый, экран, держатель для свёрл, полку малую, полку большую, контейнер для мелочей, карман для чертежей, держатель отвёрток и&nbsp;ключей, крючок для инструмента</p>
 			</div>
 			<!-- #modal-pdf-->
 			<!-- modal-->
