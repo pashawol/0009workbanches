@@ -12,7 +12,9 @@ mixin s-our()
 				.col.text-lg-left.text-center.order-lg-first.align-self-end
 					+girl()
 					
-			+form-wrap
+			+form-wrap("Обсудить задачу")
+				input(type="hidden" name="SB3" value="SB3")
+				
 				.h3 #[strong Давайте обсудим вашу задачу.] Мы&nbsp;подскажем, какие верстаки вам подойдут и&nbsp;подберем оптимальный вариант по&nbsp;размеру
 				+e.input-group
 					+input("+7 (900) 444-44-44 ","tel")(required)
