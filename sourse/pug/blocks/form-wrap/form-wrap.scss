@@ -54,6 +54,7 @@
 	&__title {
 		@extend .h5;
 		font-weight: normal;
+		color: #5d5d5d;
 
 		@include media-breakpoint-down(xs) {
 			font-size: 12px;
@@ -78,11 +79,11 @@
 
 		max-width: rem(370);
 		font-size: rem(13);
-		color: #9b9b9b;
+		color: $secondary;
 		text-align: center;
 
 		a {
-			color: #9b9b9b !important;
+			// color: #9b9b9b !important;
 			@extend .tdu;
 			display: inline-block;
 
@@ -224,6 +225,8 @@
 
 	&__group-title {
 		@extend .h6;
+		color: #5d5d5d;
+		font-weight: 400;
 
 		@include media-breakpoint-down(xs) {
 			font-size: 12px;
@@ -643,7 +646,7 @@
 
 	&__input:checked~&__icon-wrap {
 		background-color: $accent;
-		color: #ffffff;
+		// color: #ffffff;
 	}
 
 	&__icon-wrap {

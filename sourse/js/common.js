@@ -136,7 +136,7 @@ function eventHandler() {
 
 	// JSCCommon.CustomInputFile();
 	// добавляет подложку для pixel perfect
-	$(".main-wrapper").after('<div class="screen" style="background-image: url(screen/05-320.png);"></div>')
+	$(".main-wrapper").after('<div class="screen" style="background-image: url(screen/main-320.png);"></div>')
 	// /добавляет подложку для pixel perfect
 
 
@@ -269,6 +269,75 @@ function eventHandler() {
 		$(".s-filter-wrap").toggle();
 	})
 
+	var gets = (function () {
+		var a = window.location.search;
+		var b = new Object();
+		a = a.substring(1).split("&");
+		for (var i = 0; i < a.length; i++) {
+			let c = a[i].split("=");
+			b[c[0]] = c[1];
+		}
+		return b;
+	})();
+	// form
+	$("form").each(function () { //Change
+		var th = $(this);
+		th.find('.utm_source').val(decodeURIComponent(gets['utm_source'] || ''));
+		th.find('.utm_term').val(decodeURIComponent(gets['utm_term'] || ''));
+		th.find('.utm_medium').val(decodeURIComponent(gets['utm_medium'] || ''));
+		th.find('.utm_campaign').val(decodeURIComponent(gets['utm_campaign'] || ''));
+		$(this).attr({
+			"action": 'thanks.php',
+			"method": "post",
+		})
+	});
+
+
+	$(".link-modal").click(function () {
+		var modal = $(this).attr('href');
+		$(modal).find(".order").val($(this).data("order"));
+		// $(this).parents('.s-prod-head')
+		// 		? $($(this).data("src")).find(".color").val($(this).parents('.s-prod-head').find(".radio-input__input:checked").val())
+		// 		: $($(this).data("src")).find(".color").val('')
+
+	})
+
+	// калькулятор
+	function getCost(x, id) {
+		var option = document.getElementById(id);
+		var i;
+		for (i = 0; i < option.length; i++) {
+			// x = option.options[i].dataset.price;
+			x = option.options[i].value;
+		}
+		return x;
+	}
+	if ($("div").is(".form-calc")) {
+		function change() {
+			let vertical, horizontal, cost, result;
+			vertical = document.querySelector('.stoika-price').textContent.replace(" ", "");
+			horizontal = document.querySelector('.kronshtain-price').textContent.replace(" ", "");
+			result = (+document.getElementById("vertical").value * +vertical) + (+document.getElementById("horizontal").value * +horizontal);
+			document.getElementById("result").innerText = result;
+		}
+
+		change();
+
+		$(".form-calc").on('input change input cut copy paste', 'input, select', function () {
+			change();
+		})
+
+		$(".form-calc .link-modal").click(function () {
+			$("#modal-by").find('[name="stoyki"]').val($(this).parents(".form-calc").find("#vertical").val() + "шт.")
+			$("#modal-by").find('[name="kranshtein"]').val($(this).parents(".form-calc").find("#horizontal").val() + "шт.")
+			$("#modal-by").find('[name="price"]').val($("#result").text() + "руб.")
+
+		})
+	}
+	// подстановка числа купленных
+	let now = new Date();
+	let date = now.getDate();
+	$(".counter").text(+$(".counter").data("start") + +date);
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

@@ -40,6 +40,7 @@
 	}
 
 	.section-title {
+		color: #373b49;
 		padding-bottom: rem(20);
 	}
 
@@ -278,6 +279,7 @@
 	}
 	h2 {
 		text-align: center !important;
+		color: #373b49;
 		@extend .h1;
 		@include media-breakpoint-down(md) {
 			margin: 0 auto;
@@ -288,6 +290,7 @@
 	}
 	h3 {
 		font-weight: 400;
+		color: #373b49;
 		@include media-breakpoint-up(md) {
 			line-height: 1.25;
 		}

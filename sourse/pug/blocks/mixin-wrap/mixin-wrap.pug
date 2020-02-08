@@ -205,7 +205,7 @@ mixin contact-block()
 				+e.tel(href="tel:8(495)266-60-73") 8 (495) #[strong 266-60-73]
 			.col-auto.d-sm-block.d-none
 				.d-none.d-md-block
-					+e.item--whatsapp(href="#")
+					+e.item--whatsapp(target="_blank" href="https://wa.me/+79068988888")
 						img(src="img/svg/whatsapp2.svg", alt="")
 
 				.d-none.d-sm-block
@@ -214,10 +214,10 @@ mixin contact-block()
 				+e.item--tel(href="tel:8(495)266-60-73")
 					+icon("call")
 mixin contact-block-footer()
-	+b.contact-block.col- 
+	+b.contact-block.col
 		.row.no-gutters 
 			.col-auto 
-				+e.item--whatsapp(href="#")
+				+e.item--whatsapp(target="_blank" href="https://wa.me/+79068988888")
 					img(src="img/svg/whatsapp2.svg", alt="")
 			.col-auto
 				+e.tel(href="tel:8(495)266-60-73") 8 (495) #[strong 266-60-73]
@@ -240,7 +240,7 @@ mixin button( t)
 
 mixin girl()
 	+b.worker
-		+pic2("girl-2.png")
+		+pic2("girl-2.png",'','')
 		+e.label.h6 Валерия Устинова,
 			br
 			| инженер-конструктор 

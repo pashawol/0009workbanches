@@ -1,12 +1,41 @@
+mixin sidebar()
+	+b.s-prod-head-sidebar
+		//- +e.price 
+		ul
+			li
+				+icon('check-mark')
+				
+				span Доставка по Москве:
+				| сегодня-завтра
+			
+			li
+				+icon('check-mark')
+				
+				span Доставка по России
+				| от 2 до 5 дней
+			
+			li
+				+icon('check-mark')
+				
+				span Гарантия
+				| 12 месяцев
+			
+			li
+				+icon('check-mark')
+				
+				span Изготовление на заказ:
+				| по вашим размерам <br>от 3 до 5 дней
 mixin s-prod-head()
-	- let src= 'img/@2x/prod-1.jpg'
+	-
+		let src= 'img/@2x/prod-1.jpg'
+		let title = "Верстак слесарный ВМ_1214"
 	mixin img()
 		img.res-i(src="#" data-lazy= src, alt="")
 	// start s-prod-head
 	+b.s-prod-head&attributes(attributes)
 		.container
 			+b.section-title.text-center.d-lg-none
-				h2 Верстак слесарный<br>ВМ_1214
+				h1= title
 			.row
 				.col-lg-8
 					.row
@@ -25,12 +54,12 @@ mixin s-prod-head()
 												+img()
 						.col-md-6
 							+e.content
-								h2.d-none.d-lg-block Верстак слесарный<br>ВМ_1214
+								.h1.d-none.d-lg-block= title
 								+e.descr 
 									.mobile-up
 										table
 											tr
-												td Размеры <span>(ШхВхГ):</span>
+												td Размеры  (ШхВхГ): 
 												td 1637.6х1383х620 мм.
 											tr
 												td Цвет:
@@ -38,7 +67,7 @@ mixin s-prod-head()
 									.mobile-down.order-lg-first 41 500 руб.
 								+e.form-wrap
 									+btn-accent('купить в 1 клик', '#modal-one-click')(class="link-modal" data-order=`Быстрый заказ- ${title}`)
-									+e.btn.btn-outline-brown.link-modal(  data-src="#modal-by" href="javascript:;" data-order=`Заказ- ${title}`) заказать
+									+e.btn.btn-outline-brown.link-modal(    href="#modal-by" data-order=`Заказ- ${title}`) заказать
 					+e.equipment
 						h3 Комплектация
 						ul
@@ -49,47 +78,24 @@ mixin s-prod-head()
 				.col-lg-4.shiping-time
 					+e.sales.d-none.d-lg-block
 						+icon('workbench')
-						span В этом месяце продано<br>36 верстаков
-					+b.s-prod-head-sidebar
-						//- +e.price 
-						ul
-							li
-								+icon('check-mark')
-								strong Доставка по Москве:
-								| сегодня-завтра
-							
-							li
-								+icon('check-mark')
-								strong Доставка по России
-								| от 2 до 5 дней
-							
-							li
-								+icon('check-mark')
-								strong Гарантия
-								| 12 месяцев
-							
-							li
-								+icon('check-mark')
-								strong Изготовление на заказ:
-								| по вашим размерам <br>от 3 до 5 дней
-						//- +e.btn(type="button")
-						//- 	+icon('cart')
-						//- 	| В корзину
-					//- +e.footer-text *При оформлении заказа  уточняйте&nbsp;цену по&nbsp;т: #[a(href="tel:8(3519)22-00-22") 8 (3519) 22-00-22]
+						span В этом месяце продано <br> #[span.counter(data-start="5") 36] верстаков
+					+sidebar
 	// end s-prod-head
 
 
 
 
 mixin s-prod-head-13()
-	- let src= 'img/@2x/prod-1.jpg'
+	-
+		let src= 'img/@2x/prod-1.jpg'
+		let title = "Стойка вертикальная/ кронштейн"
 	mixin img()
 		img.res-i(src="#" data-lazy= src, alt="")
 	// start s-prod-head
 	+b.s-prod-head.s-prod-racks&attributes(attributes)
 		.container
 			+b.section-title.text-center.d-lg-none
-				h2 Стойка вертикальная/<br>кронштейн
+				h1= title
 			.row
 				.col-lg-8
 					.row
@@ -108,7 +114,7 @@ mixin s-prod-head-13()
 												+img()
 						.col-md-6
 							+e.content
-								h2.d-none.d-lg-block Стойка вертикальная/<br>кронштейн
+								.h1.d-none.d-lg-block= title
 								+e.descr 
 									.mobile-up
 										table
@@ -118,7 +124,7 @@ mixin s-prod-head-13()
 											tr
 												td Цвет:
 												td на выбор по системе RAL
-									.mobile-down.order-lg-first 5 075 руб. / 870 руб.
+									.mobile-down.order-lg-first #[span.stoika-price 5 075] руб. / #[span.kronshtain-price 870] руб.
 									+e.equipment
 										h3 Комплектация
 										ul
@@ -126,47 +132,103 @@ mixin s-prod-head-13()
 											li Кронштейн металлический — 1 шт.
 
 
-					+b.s-prod-head-calculate
+					+b.s-prod-head-calculate.form-calc
 						h3 Рассчитайте стоимость&nbsp;стеллажа
 						+b.form-wrap
 							.row
 								.col-md-6
-									+select("Сколько нужно вертикальных стоек?", "1шт","2шт","3шт","4шт","5шт","6шт","7шт","8шт","9шт","10шт","12шт","13шт","14шт","15шт","16шт","17шт","18шт","19шт","20шт")(id="thickness")
+									+e.input-wrap
+										label
+											+e.SPAN.title Сколько нужно вертикальных стоек?
+											+e.SELECT.input(id="vertical")
+												option(value="1") 1шт.
+												option(value="2") 2шт.
+												option(value="3") 3шт.
+												option(value="4") 4шт.
+												option(value="5") 5шт.
+												option(value="6") 6шт.
+												option(value="7") 7шт.
+												option(value="8") 8шт.
+												option(value="9") 9шт.
+												option(value="10"  ) 10шт.
+												option(value="11"  ) 11шт.
+												option(value="12"  ) 12шт.
+												option(value="13"  ) 13шт.
+												option(value="14"  ) 14шт.
+												option(value="15"  ) 15шт.
+												option(value="16"  ) 16шт.
+												option(value="17"  ) 17шт.
+												option(value="18"  ) 18шт.
+												option(value="19"  ) 19шт.
+												option(value="20"  ) 20шт. 
+												 
 								.col-md-6
-									+select("Сколько нужно кронштейнов?", "2шт","4шт","6шт","8шт","10шт","12шт","14шт","16шт","18шт","20шт","22шт","24шт","26шт","28шт","30шт","32шт","34шт","36шт","38шт","40шт","42шт","44шт","46шт","48шт","50шт","52шт","54шт","56шт","58шт","60шт","62шт","64шт","68шт","70шт","72шт","74шт","76шт","78шт","80шт","80шт","84шт","86шт","88шт","90шт","92шт","94шт","96шт","98шт","100шт")(id="thickness")
-
+								
+									+e.input-wrap
+										label
+											+e.SPAN.title Сколько нужно кронштейнов?
+											+e.SELECT.input(id="horizontal")
+												option(value="2" ) 2шт.
+												option(value="4" ) 4шт.
+												option(value="6" ) 6шт.
+												option(value="8" ) 8шт.
+												option(value="10" ) 10шт. 
+												option(value="12" ) 12шт.
+												option(value="14" ) 14шт.
+												option(value="16" ) 16шт.
+												option(value="18" ) 18шт.
+												option(value="20" ) 20шт.
+												option(value="22" ) 22шт.
+												option(value="24" ) 24шт.
+												option(value="26" ) 26шт.
+												option(value="28" ) 28шт.
+												option(value="30" ) 30шт.
+												option(value="32" ) 32шт. 
+												option(value="34" ) 34шт. 
+												option(value="36" ) 36шт. 
+												option(value="38" ) 38шт. 
+												option(value="40" ) 40шт. 
+												option(value="42" ) 42шт. 
+												option(value="44" ) 44шт. 
+												option(value="46" ) 46шт. 
+												option(value="48" ) 48шт. 
+												option(value="50" ) 50шт. 
+												option(value="52" ) 52шт. 
+												option(value="54" ) 54шт. 
+												option(value="56" ) 56шт. 
+												option(value="58" ) 58шт. 
+												option(value="60" ) 60шт. 
+												option(value="62" ) 62шт. 
+												option(value="64" ) 64шт. 
+												option(value="66" ) 66шт. 
+												option(value="68" ) 68шт. 
+												option(value="70" ) 70шт. 
+												option(value="72" ) 72шт. 
+												option(value="74" ) 74шт. 
+												option(value="76" ) 76шт. 
+												option(value="78" ) 78шт. 
+												option(value="80" ) 80шт. 
+												option(value="82" ) 82шт. 
+												option(value="84" ) 84шт. 
+												option(value="86" ) 86шт. 
+												option(value="88" ) 88шт. 
+												option(value="90" ) 90шт. 
+												option(value="92" ) 92шт. 
+												option(value="94" ) 94шт. 
+												option(value="96" ) 96шт. 
+												option(value="98" ) 98шт. 
+												option(value="100") 100шт.  
 								+e.cost.col-md-6.align-self-center
 									h3 Стоимость: 
-										span 0 рублей
+										span #[strong#result 0] рублей
 								.col-md-6
-									+btn-accent('заказать', '#modal-by')(class="link-modal" data-order=`Быстрый заказ- ${title}`) 
+									+btn-accent('заказать', '#modal-by')(class="link-modal btn-calc" data-order=`Заказ стеллажа ${title}`) 
 
 				.col-lg-4.shiping-time
 					+e.sales.d-none.d-lg-block
 						+icon('rack')
-						span В этом месяце продано<br>38 стеллажей
-					+b.s-prod-head-sidebar
-						//- +e.price 
-						ul
-							li
-								+icon('check-mark')
-								strong Доставка по Москве:
-								| сегодня-завтра
-							
-							li
-								+icon('check-mark')
-								strong Доставка по России
-								| от 2 до 5 дней
-							
-							li
-								+icon('check-mark')
-								strong Гарантия
-								| 12 месяцев
-							
-							li
-								+icon('check-mark')
-								strong Изготовление на заказ:
-								| по вашим размерам <br>от 3 до 5 дней
+						span В этом месяце продано<br> #[span.counter(data-start="5") 6] стеллажей
+					+sidebar()
 						//- +e.btn(type="button")
 						//- 	+icon('cart')
 						//- 	| В корзину

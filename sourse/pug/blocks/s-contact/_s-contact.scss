@@ -6,7 +6,10 @@
 	@include media-breakpoint-up(lg) {
 		padding-bottom: rem(130) !important;
 	}
-
+	color: #333845;
+	h1 {
+		font-weight: 400;
+	}
 	iframe {
 		border: none;
 	}

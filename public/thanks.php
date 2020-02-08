@@ -1,4 +1,147 @@
 <!DOCTYPE html>
+<div class="d-none">
+	<?php
+		if(!empty($_POST)){
+				ini_set( 'display_errors', 1 );
+				require __DIR__ . '/vendor/autoload.php';
+				// $to='trifectahealthnyc@gmail.com';
+				$mail = new PHPMailer(true);
+				$mail->IsMail();
+				$mail->IsHTML(true);
+				$mail->Priority = '1';
+				$mail->Encoding = 'base64';
+				$mail->CharSet = 'utf-8';
+	
+		///от кого письмо
+				$mail->setFrom('info@info.com');
+	
+				$mail->addAddress('wol1414@gmail.com');
+				// $mail->addAddress('rocketsstat@yandex.ru');
+				// $mail->addAddress('455203@mail.ru');
+	
+	
+		//Субъект
+				$mail->Subject = 'Заявка с сайта moibloki';
+	
+				$time = date('d.m.Y в H:i');
+				$html = '
+	
+		<table style="width: 100%;">';
+				if (!empty($_POST['order'])) {
+						$html .= ' <tr style="background-color: #f8f8f8;">  <td style="padding: 10px; border: #e9e9e9 1px solid;">Вид формы:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['order'] . '</b></td></tr>';
+				}
+	
+				
+				if (!empty($_POST['stoyki'])) {
+						$html .= ' <tr style="background-color: #f8f8f8;">  <td style="padding: 10px; border: #e9e9e9 1px solid;">Количество стоек:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['stoyki'] . '</b></td></tr>';
+				}
+	
+				
+				if (!empty($_POST['kranshtein'])) {
+						$html .= ' <tr style="background-color: #f8f8f8;">  <td style="padding: 10px; border: #e9e9e9 1px solid;">Количество кронштейнов:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['kranshtein'] . '</b></td></tr>';
+				}
+	
+				
+		 
+				if (!empty($_POST['price'])) {
+						$html .= ' <tr style="background-color: #f8f8f8;">  <td style="padding: 10px; border: #e9e9e9 1px solid;">Стоимость:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['price'] . '</b></td></tr>';
+				}
+	
+				
+		 
+				if (!empty($_POST['color'])) {
+						$html .= ' <tr style="background-color: #f8f8f8;">  <td style="padding: 10px; border: #e9e9e9 1px solid;">Цвет:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['color'] . '</b></td></tr>';
+				}
+	
+				if (!empty($_POST['name'])) {
+						$html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;">Имя:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['name'] . '</b></td></tr>';
+				}
+	
+				if (!empty($_POST['tel'])) {
+						$html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> Телефон:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['tel'] . '</b></td></tr>';
+				}
+				
+				if (!empty($_POST['email'])) {
+						$html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> Email:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['email'] . '</b></td></tr>';
+				}
+				
+				if (!empty($_POST['whatsapp'])) {
+						$html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> Whatsapp:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['whatsapp'] . '</b></td></tr>';
+				}
+				
+				if (!empty($_POST['viber'])) {
+						$html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> Viber:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['viber'] . '</b></td></tr>';
+				}
+				if (!empty($_POST['time'])) {
+						$html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> Время для звонка:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['time'] . '</b></td></tr>';
+				}
+	
+	
+				if (!empty($_POST['choose-type'])) {
+						$html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> Тип шлакоблок:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['choose-type'] . '</b></td></tr>';
+				}
+	
+				if (!empty($_POST['result'])) {
+						$html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> Объем:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['result'] . '</b></td></tr>';
+				}
+				if (!empty($_POST['comment'])) {
+						$html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> Текст сообщения:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['comment'] . '</b></td></tr>';
+				}
+	
+	
+				if (!empty($_POST['type-company'])) {
+						$html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> Вид компании: </td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . implode(", ",$_POST['type-company']) .  '</b></td>';
+				}
+	
+				if (!empty($_POST['utm_source'])) {
+						$html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;">utm_source:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['utm_source'] . '</b></td>';
+				}
+	
+				if (!empty($_POST['utm_term'])) {
+						$html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> utm_term:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['utm_term'] . '</b></td>';
+				}
+				
+				if (!empty($_POST['utm_medium'])) {
+						$html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> utm_medium:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['utm_medium'] . '</b></td>';
+				}
+				if (!empty($_POST['utm_campaign'])) {
+						$html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> utm_campaign:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['utm_campaign'] . '</b></td>';
+				}
+	
+				// if (!empty($_POST['tech'])) {
+				//     $html .= ' <tr style="background-color: #f8f8f8;">  <td style="padding: 10px; border: #e9e9e9 1px solid;"> Техника:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . implode(", ",$_POST['tech']) . '</b></td></tr>';
+				// }
+	
+	
+				$html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;">  Время отправки:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $time . '</b></td>
+					<tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> IP:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_SERVER['REMOTE_ADDR'] . '</b></td> 
+		</table>
+		';
+				$mail->Body = $html;
+	
+				$uploaddir = __DIR__ . '/upload/';
+	
+				// if ($_FILES['file']['tmp_name']) {
+				// 		$mail->addAttachment($_FILES['file']['tmp_name'],$_FILES['file']['name']);
+				// }
+	
+		// if ($_FILES['file2']['tmp_name']) {
+		//  $mail->addAttachment($_FILES['file2']['tmp_name'],$_FILES['file2']['name']);
+		// }
+	
+		//send the message, check for errors
+			 
+				if (!$mail->send()) {
+		//        echo "Mailer Error: " . $mail->ErrorInfo;
+				} else {
+		//        echo "Message sent!";
+				}
+				if (isset($uploadfile))unlink($uploadfile);
+				if (isset($uploadfile2))unlink($uploadfile2);
+	 
+		}
+		?>
+</div>
 <html lang="ru">
 	<head>
 		<meta charset="utf-8">
@@ -105,17 +248,70 @@
 			<div class="container">
 				<div class="back-to-main"><a href="">Вернуться на сайт</a></div>
 			</div>
-			<!-- start s-thanks2-->
-			<section class="s-thanks section section-border" id="s-thanks">
+			<!-- start s-thanks-->
+			<section class="s-thanks section section-border">
 				<div class="container">
-					<div class="section-title text-center s-thanks2">
-						<h2>Иван, спасибо, мы&nbsp;приняли&nbsp;вашу заявку!</h2>
-						<h3>В&nbsp;ближайшее время мы&nbsp;отправим&nbsp;вам полный&nbsp;каталог и&nbsp;прайс на&nbsp;металлическую мебель. <span>Наш специалист перезвонит&nbsp;вам, чтобы&nbsp;обсудить с&nbsp;вами объем&nbsp;материала, стоимость и&nbsp;условия поставки.</span></h3>
-						<h3 class="good-day">Удачного дня!</h3><img class="res-i" src="img/@2x/thanks-2.png" alt=""/>
+					<div class="section-title text-center">
+						<?php
+							$name="";
+						 
+							if(isset($_POST['name'])) {
+								$name= $_POST['name']
+									?> 
+								<h2><?php echo $name; ?>, спасибо, мы&nbsp;приняли вашу заявку!</h2>
+								<?php
+							}
+							else{	?> 
+								<h2>Cпасибо, мы&nbsp;приняли вашу заявку!</h2>
+									<?php
+							}
+						if(isset($_POST['SB3'])) {
+									?>  
+								<h3>Наш специалист перезвонит в&nbsp;ближайшее время и&nbsp;обсудит с&nbsp;вами заказ.</h3> 
+						<?php } 
+						 
+						if(isset($_POST['SB4'])) {
+									?>  
+								<h3>Наш специалист перезвонит в ближайшее время и обсудит с вами заказ.</h3> 
+						<?php } 
+						 
+						if(isset($_POST['SB5'])) {
+									?>  
+								<h3>Наш специалист перезвонит в&nbsp;ближайшее время и&nbsp;ответит на&nbsp;ваши вопросы.</h3> 
+						
+						<?php } 
+						 if(isset($_POST['formwithtime'])){
+						
+							if(!empty($_POST['time'])) {
+								 ?> 
+								<h3 class="section-title__text">Наш специалист перезвонит в&nbsp;указанное время и&nbsp;ответит на&nbsp;ваши вопросы.</h3>
+								<?php
+							}
+							else{
+									?> 
+									<h3>Наш специалист перезвонит в&nbsp;ближайшее время и&nbsp;ответит на&nbsp;ваши вопросы.</h3> 
+									<?php
+							}
+								 }
+						if(isset($_POST['formprice'])) {
+									?> 
+								<div class="s-thanks2">
+									<h3>В&nbsp;ближайшее время мы&nbsp;отправим&nbsp;вам полный&nbsp;каталог и&nbsp;прайс на&nbsp;металлическую мебель. <span>Наш специалист перезвонит&nbsp;вам, чтобы&nbsp;обсудить с&nbsp;вами объем&nbsp;материала, стоимость и&nbsp;условия поставки.</span></h3>
+									<h3 class="good-day ">Удачного дня!</h3> 
+									<img class="res-i" src="img/@2x/thanks-2.png" alt=""> 
+								</div>
+						<?php }
+						else{
+							?> 
+								<h3 class="good-day ">Удачного дня!</h3> 
+								<img class="res-i" src="img/@2x/thanks-1.png" alt=""> 
+							<?php
+							}
+							?> 
 					</div>
 				</div>
 			</section>
-			<!-- end s-thanks2-->
+			<!-- end s-thanks-->
 			<footer class="footer block-with-lazy">
 				<div class="container">
 					<div class="footer__row row">

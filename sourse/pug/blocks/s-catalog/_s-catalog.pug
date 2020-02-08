@@ -16,7 +16,7 @@ mixin item-prod(sl, i, a="#", t="Верстак слесарный ВМ_1216")
 			table
 				block
 			+btn-accent('Подробнее', a)
-mixin s-catalog()
+mixin s-catalog(prodPage)
 	// start s-catalog
 	+b.SECTION.s-catalog.section#s-catalog&attributes(attributes)
 		.container
@@ -52,82 +52,14 @@ mixin s-catalog()
 							+item-tr("Полки:","1 шт")
 							+item-tr("Габариты (ВхШхГ):","1637.5х1800х620") 
 				.control-wrap
-			+b.catalog-footer
-				.row
-					.col-md-6
-						+e.btn.btn-outline-brown(href="#") Смотреть все верстаки
-					.col-md-6
-						p 
-							+icon("info") 
-							span #[a(href="#") В&nbsp;каталоге] вы&nbsp;также можете выбрать металлические стеллажи и&nbsp;шкафы, инструментальные тележки, аксессуары
+			if  !prodPage
+				+b.catalog-footer
+					.row
+						.col-md-6
+							+e.btn.btn-outline-brown(href="#") Смотреть все верстаки
+						.col-md-6
+							p 
+								+icon("info") 
+								span #[a(href="#") В&nbsp;каталоге] вы&nbsp;также можете выбрать металлические стеллажи и&nbsp;шкафы, инструментальные тележки, аксессуары
 							
 	// end s-catalog
-
-mixin s-catalog05()
-	// start s-catalog
-	+b.SECTION.s-catalog--workbench.section#s-catalog&attributes(attributes)
-		.container
-			+b.section-title.text-center
-				h2 Самые популярные модели
-					span слесарных верстаков
-			block
-			+e.slider-wrap
-				+e.slider--js 
-					+e.slide
-						+item-prod("sl","1")
-							+item-tr("Цена:","61 900Р")
-							+item-tr("Выдвижные ящики:","2 шт ")
-							+item-tr("Двери:","2 шт")
-							+item-tr("Полки:","1 шт")
-							+item-tr("Габариты (ВхШхГ):","1637.5х1800х620") 
-					+e.slide
-						+item-prod("sl","2")
-							+item-tr("Цена:","61 900Р")
-							+item-tr("Выдвижные ящики:","2 шт ")
-							+item-tr("Двери:","2 шт")
-							+item-tr("Полки:","1 шт")
-							+item-tr("Габариты (ВхШхГ):","1637.5х1800х620") 
-					+e.slide
-						+item-prod("sl","3")
-							+item-tr("Цена:","61 900Р")
-							+item-tr("Выдвижные ящики:","2 шт ")
-							+item-tr("Двери:","2 шт")
-							+item-tr("Полки:","1 шт")
-							+item-tr("Габариты (ВхШхГ):","1637.5х1800х620") 
-					+e.slide
-						+item-prod("sl","1")
-							+item-tr("Цена:","61 900Р")
-							+item-tr("Выдвижные ящики:","2 шт ")
-							+item-tr("Двери:","2 шт")
-							+item-tr("Полки:","1 шт")
-							+item-tr("Габариты (ВхШхГ):","1637.5х1800х620") 
-				.control-wrap
-
-
-mixin s-catalog-08(t="Взломостойкие сейфы")
-	// start s-catalog
-	+b.s-catalog--page&attributes(attributes) 
-			h1= t
-			+b.sort-catalog 
-				.row 
-					.col-auto Сортировать:    
-					.col-auto 
-						+b.LABEL.sort-input
-							+e.INPUT.input(type="radio" name="sort")
-							+e.text сначала дешевые    
-					.col-auto 
-						+b.LABEL.sort-input
-							+e.INPUT.input(type="radio" name="sort")
-							+e.text сначала дорогие
-			.row
-				- for (var x = 0; x < 4; x++)
-					+e.col.col-sm-6
-						+item-prod()
-			+e.footer
-				+e.footer-text---page.text-center *При оформлении заказа  уточняйте цену по&nbsp;т: #[a(href="tel:8(3519)22-00-22") 8 (3519) 22-00-22]
-				+e.btn-more(type="button")
-					+icon("refresh")
-					| Загрузить еще
-				+pugin()
-	// end s-catalog
-

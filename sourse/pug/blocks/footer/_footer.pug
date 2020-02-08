@@ -29,7 +29,8 @@ mixin footer()
 						+e.logo(href="#")
 							img.res-i.lazy(src="#" data-src="img/@2x/logo.png", alt="")
 						+e.logo-caption Производство и продажа металлической мебели с доставкой по всей России 
-						+soc()
+						.d-sm-none
+							+soc()
 						+e.secondary-menu
 							ul
 								li: a(href="#") Политика конфиденциальности
