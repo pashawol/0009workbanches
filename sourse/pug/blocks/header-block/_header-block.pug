@@ -14,5 +14,43 @@ mixin header-block()
 							
 				.col
 					+e.img-wrap
+						+e.mat 
+							.text Резиновый <br>коврик
+							+e.line-wrap
+								img.line(src='img/svg/header-line-1.svg' alt="")
+								img.dot(src='img/svg/header-dot.svg' alt="")
+								.mobile-line
+						+e.guides 
+							.text Направляющие <br> плавного <span>скольжения</span>
+							+e.line-wrap
+								img.line(src='img/svg/header-line-2.svg' alt="")
+								img.dot-1(src='img/svg/header-dot.svg' alt="")
+								img.dot-2(src='img/svg/header-dot.svg' alt="")
+								.mobile-line
+						+e.countertop 
+							.text Столешница
+							+e.line-wrap
+								img.line(src='img/svg/header-line-3.svg' alt="")
+								img.dot(src='img/svg/header-dot.svg' alt="")
+								.mobile-line
+						+e.display 
+							.text Экран
+							+e.line-wrap
+								img.dot(src='img/svg/header-dot.svg' alt="")
+								.mobile-line
+
+						+e.accessories 
+							.text Аксессуары
+							+e.line-wrap
+								img.line(src='img/svg/header-line-4.svg' alt="")
+								img.dot-1(src='img/svg/header-dot.svg' alt="")
+								img.dot-2(src='img/svg/header-dot.svg' alt="")
+								.mobile-line
+
+						+e.find-out.animated.bounce
+							+e.find-out-wrap
+								a(class="button-play" data-fancybox href="https://www.youtube.com/watch?v=I1_ip3epXv4&feature=emb_logo")
+									+icon('play-button')
+								p #[strong Узнайте за&nbsp;2&nbsp;минуты,] как наши верстаки помогают сократить производственные затраты до&nbsp;40%
 						+pic("header-img1.png",'','','576px')
 	// end header-block
