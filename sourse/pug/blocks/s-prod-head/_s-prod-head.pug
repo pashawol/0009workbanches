@@ -37,49 +37,47 @@ mixin s-prod-head()
 			+b.section-title.text-center.d-lg-none
 				h1= title
 			.row
-				.col-lg-8
-					.row
-						.col-md-6
-							+b.s-prod-head-images
-								+e.inner
-									+e.slider--lg.--lg-js
-										- for (var x = 0; x < 5; x++)
-											+e.slide--lg
-												a(href= src data-fancybox="prod-gal")
-													+img()
-								+e.slider--sm.--sm-js
-									- for (var x = 0; x < 5; x++)
-										+e.slide
-											+e.img-wrap
-												+img()
-						.col-md-6
-							+e.content
-								.h1.d-none.d-lg-block= title
-								+e.descr 
-									.mobile-up
-										table
-											tr
-												td Размеры  (ШхВхГ): 
-												td 1637.6х1383х620 мм.
-											tr
-												td Цвет:
-												td на выбор по системе RAL
-									.mobile-down.order-lg-first 41 500 руб.
-								+e.form-wrap
-									+btn-accent('купить в 1 клик', '#modal-one-click')(class="link-modal" data-order=`Быстрый заказ- ${title}`)
-									+e.btn.btn-outline-brown.link-modal(    href="#modal-by" data-order=`Заказ- ${title}`) заказать
-					+e.equipment
-						h3 Комплектация
-						ul
-							li Выдвижной ящик с&nbsp;установкой на&nbsp;направляющие плавного скольжения&nbsp;&mdash; 1&nbsp;шт.
-							li Полка с&nbsp;регулировкой по&nbsp;высоте в&nbsp;трех положениях&nbsp;&mdash; 1&nbsp;шт.
-							li Дверь с&nbsp;петлями плавного закрывания&nbsp;&mdash; 1&nbsp;шт.
-							li Дополнительная полка в&nbsp;ногах у&nbsp;сидящего&nbsp;&mdash; 1&nbsp;шт.
-				.col-lg-4.shiping-time
+				.col-lg-4.col-md-6
+					+b.s-prod-head-images
+						+e.inner
+							+e.slider--lg.--lg-js
+								- for (var x = 0; x < 5; x++)
+									+e.slide--lg
+										a(href= src data-fancybox="prod-gal")
+											+img()
+						+e.slider--sm.--sm-js
+							- for (var x = 0; x < 5; x++)
+								+e.slide
+									+e.img-wrap
+										+img()
+				.col-lg-4.col-md-6
+					+e.content
+						.h1.d-none.d-lg-block= title
+						+e.descr 
+							.mobile-up
+								table
+									tr
+										td Размеры  (ШхВхГ): 
+										td 1637.6х1383х620 мм.
+									tr
+										td Цвет:
+										td на выбор по системе RAL
+							.mobile-down.order-lg-first 41 500 руб.
+						+e.form-wrap
+							+btn-accent('купить в 1 клик', '#modal-one-click')(class="link-modal" data-order=`Быстрый заказ- ${title}`)
+							+e.btn.btn-outline-brown.link-modal(    href="#modal-by" data-order=`Заказ- ${title}`) заказать
+				.col-lg-4.col-sm-6.shiping-time.md-order-last
 					+e.sales.d-none.d-lg-block
 						+icon('workbench')
 						span В этом месяце продано <br> #[span.counter(data-start="5") 36] верстаков
 					+sidebar
+				+e.equipment.col-lg-8.col-sm-6.md-order-penultimate
+					h3 Комплектация
+					ul
+						li Выдвижной ящик с&nbsp;установкой на&nbsp;направляющие плавного скольжения&nbsp;&mdash; 1&nbsp;шт.
+						li Полка с&nbsp;регулировкой по&nbsp;высоте в&nbsp;трех положениях&nbsp;&mdash; 1&nbsp;шт.
+						li Дверь с&nbsp;петлями плавного закрывания&nbsp;&mdash; 1&nbsp;шт.
+						li Дополнительная полка в&nbsp;ногах у&nbsp;сидящего&nbsp;&mdash; 1&nbsp;шт.
 	// end s-prod-head
 
 
