@@ -13,6 +13,7 @@
 .s-catalog {
 	h2 {
 		color: #333845;
+
 		strong {
 			display: block;
 		}
@@ -31,9 +32,20 @@
 		}
 	}
 
+	.slick-track {
+		display: flex;
+
+		&::before,
+		&::after {
+			display: none;
+
+		}
+	}
+
 	&__slide {
 		padding: 15px;
 		margin-bottom: rem(44);
+		height: initial;
 	}
 
 	&__footer-text {
@@ -116,17 +128,22 @@
 			font-size: rem(50);
 			font-weight: 700;
 			padding-bottom: rem(10);
-			@include media-breakpoint-down(md){
+
+			@include media-breakpoint-down(md) {
 				line-height: 1;
 			}
+
 			span {
 				display: block;
 				font-weight: 400;
 			}
 		}
+
 		padding-bottom: rem(30) !important;
-		@include media-breakpoint-down(md){
+
+		@include media-breakpoint-down(md) {
 			padding-top: rem(0) !important;
+
 			.section-title {
 				padding-bottom: rem(15) !important;
 			}

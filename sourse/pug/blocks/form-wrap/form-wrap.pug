@@ -121,7 +121,7 @@ mixin form-tabs2()
 		block
 		.tabs__wrap
 			.tabs__content.active
-				+input("+7 (999) 999-99-99","tel",'Введите телефон:',"tel")(required)
+				+input("+7 (999) 999-99-99","tel",'Введите телефон:',"tel")
  
 			.tabs__content
 				+input("+7 (999) 999-99-99","tel",'Введите viber:',"viber")
@@ -144,7 +144,7 @@ mixin form-modal()
 		block
 		.tabs__wrap
 			.tabs__content.active
-				+input("+7 (999) 999-99-99","tel",'Введите телефон:',"tel")(required)
+				+input("+7 (999) 999-99-99","tel",'Введите телефон:',"tel")
 				//- .h5.text-secondar Перезвоню в течение рабочего дня
 			.tabs__content
 				+input("+7 (999) 999-99-99","tel",'Введите whatsapp:',"whatsapp")
@@ -164,7 +164,7 @@ mixin form-modal-06()
 		block
 		.tabs__wrap
 			.tabs__content.active
-				+input("+7 (999) 999-99-99","tel",'Введите телефон:',"tel")(required)
+				+input("+7 (999) 999-99-99","tel",'Введите телефон:',"tel")
 				//- .h5.text-secondar Перезвоню в течение рабочего дня
 			.tabs__content
 				+input("+7 (999) 999-99-99","tel",'Введите whatsapp:',"whatsapp")
@@ -197,7 +197,7 @@ mixin form-tabs-qwiz()
 			.tabs__content
 				+input("+7 (999) 999-99-99","tel",'Введите whatsapp:',"whatsapp")
 			.tabs__content
-				+input("Ваш telegram","tel",'Введите telegram:',"telegram")(required)
+				+input("Ваш telegram","tel",'Введите telegram:',"telegram")
  
 			.tabs__content
 				+input("Ваш email","email",'Введите email:',"email")
@@ -223,7 +223,7 @@ mixin polite()
 mixin form-body()
 	
 	+inputName()
-	+input("+7 (900) 444-44-44","tel",'Введите телефон:')(required)
+	+input("+7 (900) 444-44-44","tel",'Введите телефон:')
 	//- +e.title  Выберите время для звонка
 	+b.LABEL.custom-input-time
 		+e.INPUT.input(type='checkbox', name='scr8-time', )
