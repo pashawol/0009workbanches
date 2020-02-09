@@ -47,29 +47,41 @@ mixin modal()
 		// обозначения на верстаке
 
 		// Резиновый коврик
-		+b.modal-header-block.modal-mat(id="modal-mat")
-			img.res-i.lazy(src="#" data-src="img/@2x/modal-mat.jpg" alt="")
+		+b.modal-header-block.modal-mat(id="modal-mat").modal-white-close
+			img.res-i(src="img/@2x/modal-mat.jpg" alt="")
 			h4 Коврик резиновый противоскользящий.
 			p Защищает от&nbsp;царапин и&nbsp;дефектов, продлевает срок службы верстака
 
 		// Направляющие плавного скольжения
-		+b.modal-header-block.modal-guides(id="modal-guides")
-			img.res-i.lazy(src="#" data-src="img/@2x/modal-guides.jpg" alt="")
+		+b.modal-header-block.modal-guides(id="modal-guides").modal-white-close
+			img.res-i(src="img/@2x/modal-guides.jpg" alt="")
 			h4 Выдвижные ящики оснащены направляющими плавного скольжения  с&nbsp;системой доводчиков.
 			p Чем больше нагрузка на&nbsp;ящик, тем плавнее работают направляющие.
 
 		// Экран
-		+b.modal-header-block.modal-display(id="modal-display")
-			img.res-i.lazy(src="#" data-src="img/@2x/modal-display.jpg" alt="")
+		+b.modal-header-block.modal-display(id="modal-display").modal-white-close
+			img.res-i(src="img/@2x/modal-display.jpg" alt="")
 			h4 Каждый верстак оснащен перфорированным экраном,
 			p для размещения дополнительных запчастей, инструментов, документов
 
 		// Аксессуары
-		+b.modal-header-block.modal-accessories(id="modal-accessories")
-			img.res-i.lazy(src="#" data-src="img/@2x/modal-accessories.jpg" alt="")
+		+b.modal-header-block.modal-accessories(id="modal-accessories").modal-white-close
+			img.res-i(src="img/@2x/modal-accessories.jpg" alt="")
+			h4 Каждый верстак оснащен перфорированным экраном,
+			p Коврик резиновый, экран, держатель для свёрл, полку малую, полку большую, контейнер для мелочей, карман для чертежей, держатель отвёрток и&nbsp;ключей, крючок для инструмента
+		// Аксессуары
+		+b.modal-header-block--accessories(id="modal-accessories").modal-white-close
+			img.res-i(src="img/@2x/modal-accessories.jpg" alt="")
 			h4 Каждый верстак оснащен перфорированным экраном,
 			p Коврик резиновый, экран, держатель для свёрл, полку малую, полку большую, контейнер для мелочей, карман для чертежей, держатель отвёрток и&nbsp;ключей, крючок для инструмента
 
-		// #modal-pdf
+ 
+		// Столешница
+		+b.modal-header-block.modal-accessories(id="countertop").modal-white-close
+			img.res-i(src="img/@2x/modal-accessories.jpg" alt="")
+			h4 Каждый верстак оснащен перфорированным экраном,
+			p Коврик резиновый, экран, держатель для свёрл, полку малую, полку большую, контейнер для мелочей, карман для чертежей, держатель отвёрток и&nbsp;ключей, крючок для инструмента
+
+ 
 	
 		// modal
