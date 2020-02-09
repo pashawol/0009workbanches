@@ -291,6 +291,7 @@ function eventHandler() {
 			vertical = document.querySelector('.stoika-price').textContent.replace(" ", "");
 			horizontal = document.querySelector('.kronshtain-price').textContent.replace(" ", "");
 			result = +document.getElementById("vertical").value * +vertical + +document.getElementById("horizontal").value * +horizontal;
+			if (isNaN(result)) result = 0;
 			document.getElementById("result").innerText = result;
 		};
 
