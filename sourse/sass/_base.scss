@@ -649,8 +649,13 @@ a {
 
 	a {
 		color: #333845;
-		text-decoration: underline;
 		font-weight: 400;
+		@include mt(1s);
+		text-decoration: none;
+		border-bottom: solid 1px;
+		&:hover {
+			border-color: transparent;
+		}
 	}
 }
 

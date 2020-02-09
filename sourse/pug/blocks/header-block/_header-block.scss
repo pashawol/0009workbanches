@@ -627,7 +627,6 @@
 	&__accessories {
 		right: 0%;
 		top: -31%;
-
 		@include media-breakpoint-up(sm) {
 			right: 8%;
 			top: 9%;
@@ -640,6 +639,9 @@
 
 		@include media-breakpoint-up(lg) {
 			right: 12%;
+		}
+		@include media-breakpoint-only(lg) {
+			right: 22%;
 		}
 
 		.line {

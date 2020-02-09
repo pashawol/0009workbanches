@@ -66,11 +66,23 @@
 		}
 	}
 
+	@include media-breakpoint-between(sm, md){
+		.md-order-penultimate {
+			order: 1;
+		}
+		.md-order-last {
+			order: 2;
+		}
+	}
 	&__equipment {
 		padding-bottom: rem(10);
-
+		
 		@include media-breakpoint-up(md) {
 			padding-bottom: rem(40);
+		}
+		@include media-breakpoint-up(lg){
+			margin-top: rem(-70);
+
 		}
 
 		h3 {
@@ -186,7 +198,15 @@
 	// }
 	&__btn {
 		@extend .btn;
+
 		font-size: rem(14);
+		letter-spacing: rem(1.6);
+
+		@include media-breakpoint-between(md, lg){
+
+			letter-spacing: rem(1.5);
+		}
+
 	}
 
 	&__form-wrap {
@@ -216,7 +236,12 @@
 
 	.btn-blue {
 		min-height: rem(56);
+		
 		padding: rem(7) rem(20);
+		@include media-breakpoint-between(md, lg){
+			padding: rem(6) rem(15);
+
+		}
 	}
 
 	&__sales {

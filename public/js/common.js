@@ -132,7 +132,7 @@ function eventHandler() {
 	JSCCommon.inputMask(); // JSCCommon.CustomInputFile();
 	// добавляет подложку для pixel perfect
 
-	$(".main-wrapper").after('<div class="screen" style="background-image: url(screen/03.png);"></div>'); // /добавляет подложку для pixel perfect
+	$(".main-wrapper").after('<div class="screen" style="background-image: url(screen/05.png);"></div>'); // /добавляет подложку для pixel perfect
 	// убирает прыгающую кнопку
 
 	$(".disable-button").click(function () {
@@ -291,6 +291,7 @@ function eventHandler() {
 			vertical = document.querySelector('.stoika-price').textContent.replace(" ", "");
 			horizontal = document.querySelector('.kronshtain-price').textContent.replace(" ", "");
 			result = +document.getElementById("vertical").value * +vertical + +document.getElementById("horizontal").value * +horizontal;
+			if (isNaN(result)) result = 0;
 			document.getElementById("result").innerText = result;
 		};
 
