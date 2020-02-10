@@ -1,8 +1,9 @@
 // start .s-shipping
 .s-shipping {
 	color: #333845;
+
 	h2 {
-		margin-bottom: rem(45);
+		margin-bottom: rem(15);
 
 		@include media-breakpoint-up(md) {
 			text-align: left;
@@ -27,6 +28,118 @@
 
 	.row {
 		padding-bottom: rem(25);
+	}
+
+	&__img-wrap {
+		@include media-breakpoint-up(xl) {
+
+			margin-left: -30px;
+			margin-right: -30px;
+		}
+
+		@include media-breakpoint-up(sm) {
+
+			margin-left: 20%;
+			margin-bottom: 0;
+		}
+
+		margin-bottom: rem(60);
+
+		position: relative;
+		margin-top: rem(70);
+	}
+
+	&__text {
+		position: absolute;
+		opacity: 0.7;
+		color: #333845;
+		// font-size: $h5-font-size;
+		@extend .h5;
+		font-weight: 400;
+		line-height: 1.4;
+
+		&::before {
+			content: '';
+			position: absolute;
+			background-size: 100% 100%;
+			background-repeat: no-repeat;
+		}
+
+		&--1 {
+			@include media-breakpoint-up(lg) {
+
+				left: rem(120);
+			}
+
+			@include media-breakpoint-up(md) {
+				left: 28%;
+
+			}
+
+			@include media-breakpoint-up(sm) {
+				left: 15%;
+				right: auto;
+			}
+
+			right: 60px;
+			max-width: rem(140);
+			top: rem(-60);
+
+			&::before {
+				@include media-breakpoint-up(sm) {
+
+					width: rem(66);
+					height: rem(106);
+					background-image: url(../img/svg/line-1.svg);
+					// content: '';
+					left: 105%;
+					top: rem(25);
+				}
+
+				// @include media-breakpoint-down(xs) {
+				// 	top: rem(50);
+				// 	background-color: #1f2229;
+				// 	opacity: 0.55;
+				// 	width: 1px;
+				// 	height: 70px;
+				// }
+			}
+		}
+
+		&--2 {
+
+			// bottom: 0;
+			@include media-breakpoint-up(sm) {
+
+				left: rem(-100);
+				top: 65%;
+			}
+
+			top: 90%;
+			left: 40px;
+			max-width: rem(240);
+
+			&::before {
+				@include media-breakpoint-up(sm) {
+
+					width: rem(110);
+					height: rem(119);
+					background-image: url(../img/svg/line-2.svg);
+					// content: '';
+				}
+
+				left: 25%;
+				bottom: 100%;
+
+				// @include media-breakpoint-down(xs) {
+
+				// 	background-color: #1f2229;
+				// 	opacity: 0.55;
+				// 	width: 1px;
+				// 	height: 120px;
+				// }
+			}
+		}
 	}
 
 	@include media-breakpoint-up(xl) {}
@@ -63,7 +176,12 @@
 
 	@include media-breakpoint-down(sm) {}
 
-	@include media-breakpoint-down(xs) {}
+	@include media-breakpoint-down(xs) {
+		&__img-wrap {
+			margin-right: -60px;
+			margin-left: -30px;
+		}
+	}
 
 }
 

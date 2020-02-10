@@ -152,7 +152,7 @@
 
 	&__btn-more {
 		@extend .btn;
-		@include mt(.6);
+		@include mt(.9);
 
 		@include media-breakpoint-up(md) {
 
@@ -326,7 +326,7 @@
 
 		margin-bottom: rem(30);
 		margin-right: auto;
-		@include mt(.6);
+		@include mt(.9);
 	}
 }
 
