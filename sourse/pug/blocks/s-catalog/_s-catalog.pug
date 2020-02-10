@@ -63,3 +63,34 @@ mixin s-catalog(prodPage)
 								span #[a(href="#") В&nbsp;каталоге] вы&nbsp;также можете выбрать металлические стеллажи и&nbsp;шкафы, инструментальные тележки, аксессуары
 							
 	// end s-catalog
+mixin s-catalog-4(prodPage)
+	// start s-catalog
+	+b.SECTION.s-catalog.section#s-catalog&attributes(attributes)
+		.container
+			block
+			.row
+				- for (var x = 0; x < 3; x++)
+					+e.col.col-xl-4.col-md-6
+						+item-prod("","1")
+							+item-tr("Цена:","61 900Р")
+							+item-tr("Выдвижные ящики:","2 шт ")
+							+item-tr("Двери:","2 шт")
+							+item-tr("Полки:","1 шт")
+							+item-tr("Габариты (ВхШхГ):","1637.5х1800х620") 
+					+e.col.col-xl-4.col-md-6
+						+item-prod("","2")
+							+item-tr("Цена:","61 900Р")
+							+item-tr("Выдвижные ящики:","2 шт ")
+							+item-tr("Двери:","2 шт")
+							+item-tr("Полки:","1 шт")
+							+item-tr("Габариты (ВхШхГ):","1637.5х1800х620") 
+					+e.col.col-xl-4.col-md-6
+						+item-prod("","3")
+							+item-tr("Цена:","61 900Р")
+							+item-tr("Выдвижные ящики:","2 шт ")
+							+item-tr("Двери:","2 шт")
+							+item-tr("Полки:","1 шт")
+							+item-tr("Габариты (ВхШхГ):","1637.5х1800х620") 
+			+e.footer
+				+e.btn-more--js.btn-outline-brown(type="button") Смотреть все верстаки
+	// end s-catalog

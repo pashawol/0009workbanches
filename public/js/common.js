@@ -309,7 +309,17 @@ function eventHandler() {
 
 	var now = new Date();
 	var date = now.getDate();
-	$(".counter").text(+$(".counter").data("start") + +date);
+	$(".counter").text(+$(".counter").data("start") + +date); // показать все карточки в каталоге
+
+	$(".s-catalog__btn-more--js").click(function () {
+		$(this).parents('.s-catalog').find('.s-catalog__col:hidden').fadeIn(function () {
+			$(".s-catalog__btn-more--js").fadeOut();
+		});
+	});
+	$(".link-more-js").click(function (e) {
+		e.preventDefault();
+		$(this).hide().prev().slideDown();
+	});
 }
 
 ;
