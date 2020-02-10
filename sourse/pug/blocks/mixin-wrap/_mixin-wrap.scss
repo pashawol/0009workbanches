@@ -24,6 +24,7 @@
  		vertical-align: middle;
  		line-height: rem(35);
  		border-radius: 50%;
+ 		color: #ffffff !important;
 
  		&--vk {
  			background-color: #4d76a1;
@@ -36,7 +37,7 @@
 
  		&:hover {
  			// box-shadow: 0 0 33px 0px rgba(255, 83, 0, 0.16);
- 			opacity: .8;
+ 			opacity: .9;
  		}
 
  	}

@@ -264,7 +264,8 @@
 			line-height: 1.65;
 			margin-bottom: 0;
 			text-decoration: none !important;
-			color: #5d5d5d;
+			color: #5d5d5d !important;
+			height: initial;
 
 			&:hover {
 				background-color: #eeeeee;
