@@ -16,8 +16,8 @@ mixin s-form()
 							<input type="hidden" name="formprice" value="formprice"/>
 							+form-tabs() 
 								+e.group-title Какую компанию вы&nbsp;представляете?
-
-								+e.row.row.justify-content-between
+								
+								+e.row-wrap: +e.row.row.justify-content-between
 									+b.LABEL.type-company.col-auto
 										+e.INPUT.input(type="radio" name="type-company[]" value="Производственная компания/ Завод" required)
 										+e.icon-wrap

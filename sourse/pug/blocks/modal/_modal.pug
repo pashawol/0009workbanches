@@ -3,9 +3,10 @@ mixin modal()
 	 
 	.d-none
 		+form-wrap("Заказать звонок")(id="modal-call" class="  modal-win modal-form" )  
-			+e.top-title Укажите контактные данные   и&nbsp;удобное время для звонка
+			+e.top-title Укажите контактные данные  
+				span и&nbsp;удобное время для звонка
 			//- +e.text.h6 Администратор Ольга позвонит вам прямо сейчас или в&nbsp;другое рабочее время:
-			+e.text--sm Специалист компании &laquo;Виртуоз-групп&raquo;  позвонит вам прямо сейчас  или в&nbsp;другое рабочее время: мы&nbsp;работаем ежедневно с&nbsp;09:00 до&nbsp;18:00 по&nbsp;Мск
+			+e.text--sm Специалист компании &laquo;Виртуоз-групп&raquo; <br>  позвонит вам прямо сейчас  <br>или в&nbsp;другое рабочее время: <br> мы&nbsp;работаем ежедневно с&nbsp;09:00 до&nbsp;18:00 по&nbsp;Мск
 			input(type="hidden" name="formwithtime" value="formwithtime") 
 			+form-body()
 			

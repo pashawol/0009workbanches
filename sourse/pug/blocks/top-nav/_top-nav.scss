@@ -54,8 +54,11 @@
 }
 
 .menu-top {
+	display: flex;
+
 	ul {
 		list-style-type: none;
+		flex-grow: 1;
 
 		@include media-breakpoint-up(md) {
 			max-width: rem(350);
@@ -136,6 +139,7 @@
 
 	&__toggle {
 		color: #ffffff;
+		padding-right: rem(78);
 
 		&:hover,
 		&.active {

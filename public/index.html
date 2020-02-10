@@ -65,7 +65,7 @@
 									<div class="col-auto d-none d-md-block"><a class="contact-block__tel" href="tel:8(495)266-60-73">8 (495) <strong>266-60-73</strong></a><br/><a class="contact-block__tel" href="tel:8(495)266-60-73">8 (495) <strong>266-60-73</strong></a>
 									</div>
 									<div class="col-auto d-sm-block d-none">
-										<div class="d-none d-md-block"><a class="contact-block__item contact-block__item--whatsapp" target="_blank" href="https://wa.me/+79068988888"><img src="img/svg/whatsapp2.svg" alt=""/></a>
+										<div class="d-none d-md-block"><a class="contact-block__item contact-block__item--whatsapp" target="_blank" href="https://wa.me/74952666073"><img src="img/svg/whatsapp2.svg" alt=""/></a>
 										</div>
 										<div class="d-none d-sm-block"><a class="contact-block__link link-modal" href="#modal-call">Заказать звонок </a>
 										</div>
@@ -83,26 +83,20 @@
 				<!-- end .top-line-->
 				<!-- start top-nav-->
 				<div class="top-nav block-with-lazy d-none d-sm-block">
-					<div class="container">
-						<div class="row no-gutters">
-							<div class="col-xl-2 col-sm-auto">
-								<div class="catalog-menu">
-									<div class="catalog-menu__toggle">
-										<div class="catalog-menu__toggle-text"> <span></span>Каталог
-										</div>
-									</div>
-									<div class="catalog-menu__dropdown catalog-menu__dropdown--tabs"><a href="#">Верстаки слесарные</a><a href="#"> Стеллажи металлические</a><a href="#"> Шкафы металлические</a><a href="#"> Тумбы инструментальные </a><a href="#"> Мебель для гаража</a><a href="#"> Аксессуары </a>
+					<div class="container"> 
+						<div class="menu-top">
+							<div class="catalog-menu">
+								<div class="catalog-menu__toggle">
+									<div class="catalog-menu__toggle-text"> <span></span>Каталог
 									</div>
 								</div>
-							</div>
-							<div class="col">
-								<div class="menu-top">
-									<ul> 
-										<li><a href="#">Доставка и оплата</a></li>
-										<li><a href="07-contacts.html">Контакты</a></li>
-									</ul>
+								<div class="catalog-menu__dropdown catalog-menu__dropdown--tabs"><a href="#">Верстаки слесарные</a><a href="#"> Стеллажи металлические</a><a href="#"> Шкафы металлические</a><a href="#"> Тумбы инструментальные </a><a href="#"> Мебель для гаража</a><a href="#"> Аксессуары </a>
 								</div>
 							</div>
+							<ul> 
+								<li><a href="#">Доставка и оплата</a></li>
+								<li><a href="07-contacts.html">Контакты</a></li>
+							</ul>
 						</div>
 					</div>
 				</div>
@@ -385,8 +379,13 @@
 						<div class="col">
 							<div class="s-form__head-text"> 
 								<div class="form-wrap">
-									<form>
-										<input class="order" type="hidden" name="order" value="Получить каталог и прайс"/><input type="hidden" name="formprice" value="formprice"/>
+									<form> 
+										<input type="hidden" name="order-varibles" value=""/>
+										<input class="order" type="hidden" name="order" value="Получить каталог и прайс"/>
+										<input class="utm_source" type="hidden" name="utm_source"/>
+										<input class="utm_term" type="hidden" name="utm_term"/>
+										<input class="utm_medium" type="hidden" name="utm_medium"/>
+										<input class="utm_campaign" type="hidden" name="utm_campaign"/><input type="hidden" name="formprice" value="formprice"/>
 										<div class="tabs">
 											<div class="form-wrap__group">
 												<div class="form-wrap__group-title">Куда отправить прайс и каталог?
@@ -411,25 +410,27 @@
 											</div> 
 											<div class="form-wrap__group-title">Какую компанию вы&nbsp;представляете?
 											</div>
-											<div class="form-wrap__row row justify-content-between">
-												<label class="type-company col-auto"><input class="type-company__input" type="radio" name="type-company[]" value="Производственная компания/ Завод" required="required"/><span class="type-company__icon-wrap">
-													<svg class="icon icon-branch ">
-														<use xlink:href="img/svg/sprite.svg#branch"></use>
-													</svg></span><span class="type-company__text">
-													Производственная <br/> компания&nbsp;/ Завод</span>
-												</label>
-												<label class="type-company col-auto"><input class="type-company__input" type="radio" name="type-company[]" value="Автосервис СТО"/><span class="type-company__icon-wrap">
-													<svg class="icon icon-wrench ">
-														<use xlink:href="img/svg/sprite.svg#wrench"></use>
-													</svg></span><span class="type-company__text">
-													Автосервис <br/>СТО</span>
-												</label>
-												<label class="type-company col-auto"><input class="type-company__input" type="radio" name="type-company[]" value="Частное лицо"/><span class="type-company__icon-wrap">
-													<svg class="icon icon-users ">
-														<use xlink:href="img/svg/sprite.svg#users"></use>
-													</svg></span><span class="type-company__text">
-													Я частное <br/> лицо</span>
-												</label>
+											<div class="form-wrap__row-wrap">
+												<div class="form-wrap__row row justify-content-between">
+													<label class="type-company col-auto"><input class="type-company__input" type="radio" name="type-company[]" value="Производственная компания/ Завод" required="required"/><span class="type-company__icon-wrap">
+														<svg class="icon icon-branch ">
+															<use xlink:href="img/svg/sprite.svg#branch"></use>
+														</svg></span><span class="type-company__text">
+														Производственная <br/> компания&nbsp;/ Завод</span>
+													</label>
+													<label class="type-company col-auto"><input class="type-company__input" type="radio" name="type-company[]" value="Автосервис СТО"/><span class="type-company__icon-wrap">
+														<svg class="icon icon-wrench ">
+															<use xlink:href="img/svg/sprite.svg#wrench"></use>
+														</svg></span><span class="type-company__text">
+														Автосервис <br/>СТО</span>
+													</label>
+													<label class="type-company col-auto"><input class="type-company__input" type="radio" name="type-company[]" value="Частное лицо"/><span class="type-company__icon-wrap">
+														<svg class="icon icon-users ">
+															<use xlink:href="img/svg/sprite.svg#users"></use>
+														</svg></span><span class="type-company__text">
+														Я частное <br/> лицо</span>
+													</label>
+												</div>
 											</div>
 											<div class="tabs__wrap">
 												<div class="tabs__content active">
@@ -523,8 +524,13 @@
 						</div>
 					</div>
 					<div class="form-wrap">
-						<form>
+						<form> 
+							<input type="hidden" name="order-varibles" value=""/>
 							<input class="order" type="hidden" name="order" value="Обсудить задачу"/>
+							<input class="utm_source" type="hidden" name="utm_source"/>
+							<input class="utm_term" type="hidden" name="utm_term"/>
+							<input class="utm_medium" type="hidden" name="utm_medium"/>
+							<input class="utm_campaign" type="hidden" name="utm_campaign"/>
 							<input type="hidden" name="SB3" value="SB3"/>
 							<div class="h3"><strong>Давайте обсудим вашу задачу.</strong> Мы&nbsp;подскажем, какие верстаки вам подойдут и&nbsp;подберем оптимальный вариант по&nbsp;размеру</div>
 							<div class="form-wrap__input-group">
@@ -559,13 +565,13 @@
 			<!-- end s-shipping-->
 			<footer class="footer block-with-lazy">
 				<div class="container">
-					<div class="footer__row row">
+					<div class="footer__row row"> 
 						<div class="col-xl-auto col-sm">
 							<div class="footer__menu">
 								<div class="row">
 									<div class="col-xl-auto">
 										<ul>
-											<li><a class="text-accent strong" href="#"> Каталог </a></li>
+											<li><a class="strong" href="#"> Каталог </a></li>
 											<li><a href="#"> Верстаки слесарные</a></li>
 											<li><a href="#"> Стеллажи металлические</a></li>
 											<li><a href="#"> Шкафы металлические</a></li>
@@ -588,7 +594,7 @@
 								<div class="col-lg-auto order-lg-last">
 									<div class="contact-block col">
 										<div class="row no-gutters"> 
-											<div class="col-auto"> <a class="contact-block__item contact-block__item--whatsapp" target="_blank" href="https://wa.me/+79068988888"><img src="img/svg/whatsapp2.svg" alt=""/></a>
+											<div class="col-auto"> <a class="contact-block__item contact-block__item--whatsapp" target="_blank" href="https://wa.me/74952666073"><img src="img/svg/whatsapp2.svg" alt=""/></a>
 											</div>
 											<div class="col-auto"><a class="contact-block__tel" href="tel:8(495)266-60-73">8 (495) <strong>266-60-73</strong></a><br/><a class="contact-block__tel" href="tel:8(495)266-60-73">8 (495) <strong>266-60-73</strong></a><br/><a class="contact-block__link link-modal" href="#modal-call">Заказать звонок </a>
 											</div>
@@ -609,7 +615,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="col-sm-auto order-sm-first"><a class="footer__logo" href="#"><img class="res-i lazy" src="#" data-src="img/@2x/logo.png" alt=""/></a>
+						<div class="col-lg-auto col-sm order-sm-first"><a class="footer__logo" href="#"><img class="res-i lazy" src="#" data-src="img/@2x/logo.png" alt=""/></a>
 							<div class="footer__logo-caption">Производство и продажа металлической мебели с доставкой по всей России 
 							</div>
 							<div class="d-sm-none">
@@ -628,6 +634,7 @@
 								<ul>
 									<li><a href="#">Политика конфиденциальности</a></li>
 									<li><a href="#">Пользовательское соглашение</a></li>
+									<li><a href="#">Карта сайта</a></li>
 								</ul>
 							</div>
 						</div>
@@ -647,11 +654,16 @@
 		</div>
 		<div class="d-none">
 			<div class="form-wrap modal-win modal-form" id="modal-call">
-				<form>
-					<input class="order" type="hidden" name="order" value="Заказать звонок"/> 
-					<div class="form-wrap__top-title">Укажите контактные данные   и&nbsp;удобное время для звонка
+				<form> 
+					<input type="hidden" name="order-varibles" value=""/>
+					<input class="order" type="hidden" name="order" value="Заказать звонок"/>
+					<input class="utm_source" type="hidden" name="utm_source"/>
+					<input class="utm_term" type="hidden" name="utm_term"/>
+					<input class="utm_medium" type="hidden" name="utm_medium"/>
+					<input class="utm_campaign" type="hidden" name="utm_campaign"/> 
+					<div class="form-wrap__top-title">Укажите контактные данные  <span>и&nbsp;удобное время для звонка</span>
 					</div>
-					<div class="form-wrap__text form-wrap__text--sm">Специалист компании &laquo;Виртуоз-групп&raquo;  позвонит вам прямо сейчас  или в&nbsp;другое рабочее время: мы&nbsp;работаем ежедневно с&nbsp;09:00 до&nbsp;18:00 по&nbsp;Мск
+					<div class="form-wrap__text form-wrap__text--sm">Специалист компании &laquo;Виртуоз-групп&raquo; <br>  позвонит вам прямо сейчас  <br>или в&nbsp;другое рабочее время: <br> мы&nbsp;работаем ежедневно с&nbsp;09:00 до&nbsp;18:00 по&nbsp;Мск
 					</div>
 					<input type="hidden" name="formwithtime" value="formwithtime"/>
 					<div class="form-wrap__input-wrap form-group">
@@ -684,8 +696,13 @@
 				<div class="modal-one-click__text">Специалист перезвонит и оформит заказ.
 				</div>
 				<div class="form-wrap">
-					<form>
-						<input class="order" type="hidden" name="order"/>
+					<form> 
+						<input type="hidden" name="order-varibles" value=""/>
+						<input class="order" type="hidden" name="order" value="Заявка  с сайта"/>
+						<input class="utm_source" type="hidden" name="utm_source"/>
+						<input class="utm_term" type="hidden" name="utm_term"/>
+						<input class="utm_medium" type="hidden" name="utm_medium"/>
+						<input class="utm_campaign" type="hidden" name="utm_campaign"/>
 						<input type="hidden" name="SB3" value="SB3"/>
 						<div class="form-wrap__input-group">
 							<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="tel" placeholder="+7 (900) 444-44-44 " name="tel" required="required"/>
@@ -704,8 +721,13 @@
 				<div class="col">
 					<div class="modal-by__head-text"> 
 						<div class="form-wrap">
-							<form>
+							<form> 
+								<input type="hidden" name="order-varibles" value=""/>
 								<input class="order" type="hidden" name="order" value="обсудить заказ"/>
+								<input class="utm_source" type="hidden" name="utm_source"/>
+								<input class="utm_term" type="hidden" name="utm_term"/>
+								<input class="utm_medium" type="hidden" name="utm_medium"/>
+								<input class="utm_campaign" type="hidden" name="utm_campaign"/>
 								<input type="hidden" name="SB3" value="SB3"/>
 								<div class="title">Для оформления заказа  оставьте&nbsp;ваши контакты</div>
 								<div class="form-wrap__input-wrap form-group">

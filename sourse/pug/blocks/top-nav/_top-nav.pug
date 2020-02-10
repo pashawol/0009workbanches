@@ -22,19 +22,16 @@ mixin mob-mnu()
 mixin top-nav() 
 	// start top-nav
 	+b.top-nav.block-with-lazy.d-none.d-sm-block
-		.container
-			.row.no-gutters
-				.col-xl-2.col-sm-auto
-					+b.catalog-menu
-						+e.toggle
-							+e.toggle-text 
-								span
-								| Каталог
-						+e.dropdown--tabs
-							
-							+item-menu()
-				.col
+		.container 
 					+b.menu-top
+						+b.catalog-menu
+							+e.toggle
+								+e.toggle-text 
+									span
+									| Каталог
+							+e.dropdown--tabs
+								
+								+item-menu()
 						ul 
 							li: a(href="#") Доставка и оплата
 							li: a(href="07-contacts.html") Контакты
