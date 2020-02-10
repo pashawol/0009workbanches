@@ -131,8 +131,8 @@ function eventHandler() {
 
 	JSCCommon.inputMask(); // JSCCommon.CustomInputFile();
 	// добавляет подложку для pixel perfect
-
-	$(".main-wrapper").after('<div class="screen" style="background-image: url(screen/05.png);"></div>'); // /добавляет подложку для pixel perfect
+	// $(".main-wrapper").after('<div class="screen" style="background-image: url(screen/05.png);"></div>')
+	// /добавляет подложку для pixel perfect
 	// убирает прыгающую кнопку
 
 	$(".disable-button").click(function () {

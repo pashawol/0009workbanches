@@ -1,6 +1,7 @@
 .header {
   @include bgs;
   background-image: url(../img/@2x/header-bg.jpg);
+  background-color: $body-color;
 
   // 
   @include media-breakpoint-up(xl) {}
