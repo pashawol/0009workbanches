@@ -2,7 +2,7 @@ extends layout/main.pug
 
 
 include ../blocks/s-content/_s-content.pug
-include ../blocks/s-contact/_s-contact.pug
+include ../blocks/s-contact/_s-contact.pug 
 include ../blocks/s-catalog/_s-catalog.pug
 include ../blocks/s-price/_s-price.pug
 include ../blocks/s-advantages/_s-advantages.pug
@@ -10,16 +10,14 @@ include ../blocks/s-look/_s-look.pug
 include ../blocks/s-our/_s-our.pug
 include ../blocks/s-shipping/_s-shipping.pug
 include ../blocks/s-prod-head/_s-prod-head.pug
-include ../blocks/s-what-workbenches/_s-what-workbenches.pug
 include ../blocks/s-other-products/_s-other-products.pug
 
 
 block variables
 	- let  mainPage= null
 block title
-	- let  title= 'Стеллажи металлические'
+	- let  title= 'Верстак слесарный ВМ_1214'
 	title= title
-
 block description 
 	meta(name="description", content= "" )
 
@@ -31,10 +29,12 @@ block pagecontent
 		+top-line()
 		+top-nav()
 	.container
-		+breadcrumb('Главная', 'Каталог', title)
+		+breadcrumb('Главная', 'Каталог', 'Верстаки слесарные', title)
 
-	+s-prod-head-13()
-	+s-other-products-13.section-border
-	+s-form-13()
-	+s-what-workbenches
+	+s-prod-head()(class="section-border ")
+	+s-catalog('prodPage')
+		+b.section-title.text-center
+			h2 #[strong Самые популярные модели] слесарных верстаков
+	+s-other-products.section-border
+	+s-form05
 	+footer()

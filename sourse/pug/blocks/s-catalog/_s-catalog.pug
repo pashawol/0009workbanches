@@ -3,7 +3,7 @@ mixin item-tr(t1,t2)
 	tr
 		td.text-secondary= t1
 		td.fw-500= t2
-mixin item-prod(sl, i, a="#", t="Верстак слесарный ВМ_1216")
+mixin item-prod(sl, i, a="#", t="Верстак слесарный ВМ_1212")
 	+b.item-prod
 		+e.img-wrap(href= a)
 			-
@@ -16,6 +16,21 @@ mixin item-prod(sl, i, a="#", t="Верстак слесарный ВМ_1216")
 			table
 				block
 			+btn-accent('Подробнее', a)
+//- Популярные модели
+mixin item-prod-1211(sl, i, a="verstak-1211.html", t="Верстак слесарный ВМ_1211")
+	+b.item-prod
+		+e.img-wrap(href= a)
+			-
+				let src= (sl=="sl" ? '#' :`img/@2x/prod-${i}.jpg`)
+				let lazy = (sl=="sl" ? `img/@2x/prod-${i}.jpg`: null)
+			img.res-i(src= src data-lazy= lazy , alt="Верстак слесарный ВМ_1211") 
+		+e.caption
+			+e.title
+				a(href= a)= t
+			table
+				block
+			+btn-accent('Подробнее', a)
+
 mixin s-catalog(prodPage)
 	// start s-catalog
 	+b.SECTION.s-catalog.section#s-catalog&attributes(attributes)
@@ -24,10 +39,10 @@ mixin s-catalog(prodPage)
 			+e.slider-wrap
 				+e.slider--js 
 					+e.slide
-						+item-prod("sl","1")
-							+item-tr("Цена:","61 900Р")
-							+item-tr("Выдвижные ящики:","2 шт ")
-							+item-tr("Двери:","2 шт")
+						+item-prod-1211("sl","1")
+							+item-tr("Цена:","10 000Р")
+							+item-tr("Выдвижные ящики:","1 шт ")
+							+item-tr("Двери:","1 шт")
 							+item-tr("Полки:","1 шт")
 							+item-tr("Габариты (ВхШхГ):","1637.5х1800х620") 
 					+e.slide
