@@ -18,6 +18,8 @@ mixin breadcrumb(...items)
 					a(href=(i == 0 ? "/" : '#') itemprop="item" )
 						span( itemprop="name")= items[i]
 						meta(itemprop="position" content= (i + 1) )
+ 
+ 
 
 mixin page-head(...items)
 	+b.page-head

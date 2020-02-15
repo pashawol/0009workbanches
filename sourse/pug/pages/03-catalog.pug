@@ -30,7 +30,16 @@ block pagecontent
 		+top-nav()
 	.container
 		+breadcrumb('Главная', title)
-
+		//- nav(aria-label='breadcrumb')
+		//- 	ol.breadcrumb(itemscope='itemscope', itemtype='http://schema.org/BreadcrumbList')
+		//- 		li.breadcrumb-item(itemprop='itemListElement', itemscope='itemscope', itemtype='http://schema.org/ListItem')
+		//- 			a(href='/', itemprop='item')
+		//- 				span(itemprop='name') Главная
+		//- 				meta(itemprop='position', content='1')
+		//- 		li.breadcrumb-item.active(itemprop='itemListElement', itemscope='itemscope', itemtype='http://schema.org/ListItem')
+		//- 			a(href='#', itemprop='item')
+		//- 				span(itemprop='name')= title
+		//- 				meta(itemprop='position', content='2')
 	+s-catalog-menu()(class="section-border ")
 	
 	+footer()

@@ -29,7 +29,27 @@ block pagecontent
 		+top-line()
 		+top-nav()
 	.container
-		+breadcrumb('Главная', 'Каталог', 'Аксессуары', title)
+		nav(aria-label='breadcrumb')
+			ol.breadcrumb(itemscope='itemscope', itemtype='http://schema.org/BreadcrumbList')
+				li.breadcrumb-item(itemprop='itemListElement', itemscope='itemscope', itemtype='http://schema.org/ListItem')
+					a(href='/', itemprop='item')
+						span(itemprop='name') Главная
+						meta(itemprop='position', content='1')
+				
+				li.breadcrumb-item(itemprop='itemListElement', itemscope='itemscope', itemtype='http://schema.org/ListItem')
+					a(href='/03-catalog.html', itemprop='item')
+						span(itemprop='name') Каталог
+						meta(itemprop='position', content='2')
+				
+				li.breadcrumb-item(itemprop='itemListElement', itemscope='itemscope', itemtype='http://schema.org/ListItem')
+					a(href='/aksessuari.html', itemprop='item')
+						span(itemprop='name') Аксессуары
+						meta(itemprop='position', content='3')
+				
+				li.breadcrumb-item.active(itemprop='itemListElement', itemscope='itemscope', itemtype='http://schema.org/ListItem')
+					a(href='#', itemprop='item')
+						span(itemprop='name')= title
+						meta(itemprop='position', content='4')
 	//- Меняем номер верстака
 	+s-prod-head-1320()(class="section-border ") 
 	+s-catalog('prodPage')
