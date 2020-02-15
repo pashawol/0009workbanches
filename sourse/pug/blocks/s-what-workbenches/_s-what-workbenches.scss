@@ -24,6 +24,7 @@
 	h2 {
 		font-weight: 700;
 		font-size: rem(20);
+
 		@include media-breakpoint-down(sm) {
 			font-size: rem(14);
 		}
@@ -57,7 +58,7 @@
 
 		@include media-breakpoint-up(md) {
 
-			columns: 2;
+			// columns: 2;
 		}
 	}
 
@@ -97,6 +98,10 @@
 		&__left-block {
 			padding-left: rem(62);
 		}
+	}
+
+	&__hidden-block {
+		display: none;
 	}
 
 	@include media-breakpoint-up(xl) {}

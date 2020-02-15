@@ -2,14 +2,18 @@ mixin s-shipping()
 	// start s-shipping
 	+b.SECTION.s-shipping.section#s-shipping&attributes(attributes)
 		.container
-			+b.section-title
-				h2 #[strong Отправим заказ] в&nbsp;тот&nbsp;же&nbsp;день
-				.row
-					.col-lg-6
-						p Доставим по&nbsp;Москве&nbsp;&mdash; #[strong в&nbsp;день заказа или на&nbsp;следующий.]
+			.row
+				.col-xl-7
+					+b.section-title
+						h2 #[strong Отправим заказ] в&nbsp;тот&nbsp;же&nbsp;день
+					p Доставим по&nbsp;Москве&nbsp;&mdash; #[strong в&nbsp;день заказа или на&nbsp;следующий.]
 
-						p По&nbsp;России #[strong от&nbsp;2&nbsp;до&nbsp;5&nbsp;дней] транспортной компанией
-					.col-lg-6
+					p По&nbsp;России #[strong от&nbsp;2&nbsp;до&nbsp;5&nbsp;дней] транспортной компанией
+				.col-xl-5
+					+e.img-wrap
+						+e.text--1 Углы укрепляем пенопластом
+						+e.text--2 Упаковываем в деревянный ящик, обернутый пузырчатой пленкой
 
+						img.res-i.lazy(src="#" data-src="img/@2x/s-shipping-img.png", alt="")
 				
 	// end s-shipping

@@ -16,8 +16,8 @@ mixin s-form()
 							<input type="hidden" name="formprice" value="formprice"/>
 							+form-tabs() 
 								+e.group-title Какую компанию вы&nbsp;представляете?
-
-								+e.row.row.justify-content-between
+								
+								+e.row-wrap: +e.row.row.justify-content-between
 									+b.LABEL.type-company.col-auto
 										+e.INPUT.input(type="radio" name="type-company[]" value="Производственная компания/ Завод" required)
 										+e.icon-wrap
@@ -58,10 +58,8 @@ mixin s-form05()
 	+b.s-form--05.section.block-with-lazy#s-form&attributes(attributes)
 		.container
 			+b.section-title.text-center
-				h2 Нужна помощь в&nbsp;подборе верстаков?
-				h3 Наш специалист проконсультирует вас, ответит на&nbsp;все вопросы
-					br
-					| и&nbsp;поможет подобрать необходимые инструменты
+				h2 Нужна помощь в&nbsp;подборе&nbsp;верстаков?
+				h3 Наш специалист&nbsp;проконсультирует вас, ответит на&nbsp;все вопросы и&nbsp;поможет&nbsp;подобрать необходимые&nbsp;инструменты
 			.row
 				.col.d-non.d-lg-block
 					+girl()
@@ -93,11 +91,102 @@ mixin s-form-13()
 
 				.col-xl-6.col-lg-7
 					+e.head-text 
-						+form-wrap("получить помощь в подборе верстака")
+						+form-wrap("получить помощь в подборе стеллажа")
 							input(type="hidden" name="SB5" value="SB5")
 							+form-modal() 
 							+inputName()
 							+button('получить помощь в подборе стеллажа')
+							+polite
+
+
+//- форма страницы шкафы
+mixin s-form-shkafi()
+	// start s-form05
+	+b.s-form--05.section.block-with-lazy#s-form--05&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Нужна помощь в выборе шкафа?
+				h3 Наш специалист проконсультирует вас, ответит на&nbsp;все вопросы
+					br
+					| и&nbsp;поможет подобрать необходимый шкаф
+			.row
+				.col
+					+girl()
+
+				.col-xl-6.col-lg-7
+					+e.head-text 
+						+form-wrap("получить помощь в подборе шкафа")
+							input(type="hidden" name="SB5" value="SB5")
+							+form-modal() 
+							+inputName()
+							+button('получить помощь в подборе шкафа')
+							+polite
+
+//- форма страницы тумбы
+mixin s-form-tumbi()
+	// start s-form05
+	+b.s-form--05.section.block-with-lazy#s-form--05&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Нужна помощь в выборе тумбы?
+				h3 Наш специалист проконсультирует вас, ответит на&nbsp;все вопросы
+					br
+					| и&nbsp;поможет подобрать необходимую тумбу
+			.row
+				.col
+					+girl()
+
+				.col-xl-6.col-lg-7
+					+e.head-text 
+						+form-wrap("получить помощь в подборе тумбы")
+							input(type="hidden" name="SB5" value="SB5")
+							+form-modal() 
+							+inputName()
+							+button('получить помощь в подборе тумбы')
+							+polite
+//- форма страницы комплекты мебели
+mixin s-form-mebel()
+	// start s-form05
+	+b.s-form--05.section.block-with-lazy#s-form--05&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Нужна помощь в выборе мебели?
+				h3 Наш специалист проконсультирует вас, ответит на&nbsp;все вопросы
+					br
+					| и&nbsp;поможет подобрать необходимую мебель
+			.row
+				.col
+					+girl()
+
+				.col-xl-6.col-lg-7
+					+e.head-text 
+						+form-wrap("получить помощь в подборе мебели")
+							input(type="hidden" name="SB5" value="SB5")
+							+form-modal() 
+							+inputName()
+							+button('получить помощь в подборе мебели')
+							+polite
+//- форма страницы аксессуары
+mixin s-form-aksessuari()
+	// start s-form05
+	+b.s-form--05.section.block-with-lazy#s-form--05&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Нужна помощь в выборе аксессуаров?
+				h3 Наш специалист проконсультирует вас, ответит на&nbsp;все вопросы
+					br
+					| и&nbsp;поможет подобрать необходимые аксессуары
+			.row
+				.col
+					+girl()
+
+				.col-xl-6.col-lg-7
+					+e.head-text 
+						+form-wrap("получить помощь в подборе аксессуаров")
+							input(type="hidden" name="SB5" value="SB5")
+							+form-modal() 
+							+inputName()
+							+button('получить помощь в выборе')
 							+polite
 
 

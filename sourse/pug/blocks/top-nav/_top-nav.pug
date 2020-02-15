@@ -1,11 +1,11 @@
 
 mixin item-menu() 
-	a(href="#") Верстаки слесарные
-	a(href="#")  Стеллажи металлические
-	a(href="#")  Шкафы металлические
-	a(href="#")  Тумбы инструментальные 
-	a(href="#")  Мебель для гаража
-	a(href="#")  Аксессуары 
+	a(href="verstaki.html") Верстаки слесарные
+	a(href="stellaji.html")  Стеллажи металлические
+	a(href="shkafi.html")  Шкафы металлические
+	a(href="tumbi.html")  Тумбы инструментальные 
+	a(href="mebel.html")  Мебель для гаража
+	a(href="aksessuari.html")  Аксессуары 
 mixin mob-mnu()
 	//- +b.toggle-menu-mobile--js.d-lg-none
 	//- 	span
@@ -14,28 +14,25 @@ mixin mob-mnu()
 			span
 		+e.inner
 		
-			a(href="/").active Главная
+			a(href="index.html").active Главная
 			+item-menu() 
-			a(href="#") Доставка и оплата
+			a(href="06-shiping.html") Доставка и оплата
 			a(href="07-contacts.html") Контакты
 	//  мобильное меню
 mixin top-nav() 
 	// start top-nav
 	+b.top-nav.block-with-lazy.d-none.d-sm-block
-		.container
-			.row.no-gutters
-				.col-xl-2.col-sm-auto
-					+b.catalog-menu
-						+e.toggle
-							+e.toggle-text 
-								span
-								| Каталог
-						+e.dropdown--tabs
-							
-							+item-menu()
-				.col
+		.container 
 					+b.menu-top
+						+b.catalog-menu
+							+e.toggle
+								+e.toggle-text 
+									span
+									| Каталог
+							+e.dropdown--tabs
+								
+								+item-menu()
 						ul 
-							li: a(href="#") Доставка и оплата
+							li: a(href="06-shiping.html") Доставка и оплата
 							li: a(href="07-contacts.html") Контакты
 	// end top-nav

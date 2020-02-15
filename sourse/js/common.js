@@ -136,7 +136,7 @@ function eventHandler() {
 
 	// JSCCommon.CustomInputFile();
 	// добавляет подложку для pixel perfect
-	$(".main-wrapper").after('<div class="screen" style="background-image: url(screen/03.png);"></div>')
+	// $(".main-wrapper").after('<div class="screen" style="background-image: url(screen/05.png);"></div>')
 	// /добавляет подложку для pixel perfect
 
 	// убирает прыгающую кнопку
@@ -323,6 +323,8 @@ function eventHandler() {
 			vertical = document.querySelector('.stoika-price').textContent.replace(" ", "");
 			horizontal = document.querySelector('.kronshtain-price').textContent.replace(" ", "");
 			result = (+document.getElementById("vertical").value * +vertical) + (+document.getElementById("horizontal").value * +horizontal);
+			if (isNaN(result)) result = 0;
+
 			document.getElementById("result").innerText = result;
 		}
 
@@ -343,6 +345,17 @@ function eventHandler() {
 	let now = new Date();
 	let date = now.getDate();
 	$(".counter").text(+$(".counter").data("start") + +date);
+
+	// показать все карточки в каталоге
+	$(".s-catalog__btn-more--js").click(function () {
+		$(this).parents('.s-catalog').find('.s-catalog__col:hidden').fadeIn(function () {
+			$(".s-catalog__btn-more--js").fadeOut();
+		});
+	})
+	$(".link-more-js").click(function (e) {
+		e.preventDefault();
+		$(this).hide().prev().slideDown();
+	})
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

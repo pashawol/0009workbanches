@@ -365,6 +365,18 @@ a {
 			font-size: rem(12);
 		}
 	}
+	.fancybox-close-small {
+		padding: rem(2);
+		opacity: 1;
+		path {
+			fill: #fff;
+		}
+		
+	}
+}
+
+.modal-white-close {
+	border-radius: rem(10) !important;
 }
 
 .modal-mat {

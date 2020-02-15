@@ -58,6 +58,7 @@ html {
 
 	padding-bottom: rem(32);
 
+	h1,
 	.h2,
 	h2 {
 		line-height: 1.4;
@@ -649,8 +650,14 @@ a {
 
 	a {
 		color: #333845;
-		text-decoration: underline;
 		font-weight: 400;
+		@include mt(1s);
+		text-decoration: none;
+		border-bottom: solid 1px;
+
+		&:hover {
+			border-color: transparent;
+		}
 	}
 }
 
@@ -667,6 +674,7 @@ a {
 
 // анимация с главной страницы
 @keyframes bounce {
+
 	from,
 	20%,
 	53%,
@@ -696,31 +704,32 @@ a {
 	animation-iteration-count: infinite;
 	animation-name: bounce;
 	transform-origin: center bottom;
+
 	&:hover {
 		animation-play-state: paused;
 	}
 }
 
-@keyframes pulse {
-	from {
-		transform: scale3d(1, 1, 1);
-	}
-
-	50% {
-		transform: scale3d(1.05, 1.05, 1.05);
-	}
-
-	to {
-		transform: scale3d(1, 1, 1);
-	}
-}
-
-.pulse {
-	animation-iteration-count: infinite;
-	animation-name: pulse;
-}
 
 .animated {
 	animation-duration: 1.2s;
 	animation-fill-mode: both;
+}
+
+
+@keyframes pulse {
+	0% {
+		transform: scale(0.5);
+		opacity: 0;
+	}
+
+	50% {
+		opacity: .5;
+	}
+
+	100% {
+		transform: scale(1.1);
+		opacity: 0;
+	}
+
 }

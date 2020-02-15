@@ -1,0 +1,40 @@
+extends layout/main.pug
+
+
+include ../blocks/s-content/_s-content.pug
+include ../blocks/s-contact/_s-contact.pug 
+include ../blocks/s-catalog/_s-catalog.pug
+include ../blocks/s-price/_s-price.pug
+include ../blocks/s-advantages/_s-advantages.pug
+include ../blocks/s-look/_s-look.pug
+include ../blocks/s-our/_s-our.pug
+include ../blocks/s-shipping/_s-shipping.pug
+include ../blocks/s-prod-head/_s-prod-head.pug
+include ../blocks/s-other-products/_s-other-products.pug
+
+
+block variables
+	- let  mainPage= null
+block title
+	- let  title= 'Шкаф навесной металлический ВМ_1511'
+	title= title
+block description 
+	meta(name="description", content= "Шкаф металлический навесной для инвентаря и документов" )
+
+block keywords
+	meta(name="Keywords", content= "купить металлический шкаф, металлический шкаф +для хранения, шкаф +для инструментов металлический, шкаф архивный металлический, шкаф металлический, шкаф металлический +для документов, шкаф металлический +для инвентаря, шкаф металлический двухсекционный, шкаф металлический навесной, шкаф металлический цена, шкаф металлический шм, шкаф уборочный металлический" )
+block pagecontent 
+	//- +mob-mnu()
+	+header()
+		+top-line()
+		+top-nav()
+	.container
+		+breadcrumb('Главная', 'Каталог', 'Шкафы металлические', title)
+	//- Меняем номер верстака
+	+s-prod-head-1511()(class="section-border ") 
+	+s-catalog('prodPage')
+		+b.section-title.text-center
+			h2 #[strong Самые популярные модели] слесарных верстаков
+	+s-other-products-shkafi.section-border
+	+s-form-shkafi
+	+footer()

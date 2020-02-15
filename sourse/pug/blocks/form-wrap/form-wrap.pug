@@ -1,6 +1,14 @@
 mixin form-head()
-	form.js-form-validate( data-parsley-validate="") 
-		input(type='hidden', class="order", name='order', value=`Заявка  с сайта` ) 
+	form.js-form-validate( data-parsley-validate="")  
+		input(type='hidden',  name='order-varibles', value=`` ) 
+		if !order 
+			input(type='hidden', class="order", name='order', value=`Заявка  с сайта` ) 
+		else
+			input(type='hidden', class="order", name='order', value= order ) 
+		input(type="hidden" class='utm_source' name='utm_source')
+		input(type="hidden" class='utm_term' name='utm_term')
+		input(type="hidden" class='utm_medium' name='utm_medium')
+		input(type="hidden" class='utm_campaign' name='utm_campaign')
 		block
 
 mixin input(placeholder,  t='text', label, name= t)
@@ -121,7 +129,7 @@ mixin form-tabs2()
 		block
 		.tabs__wrap
 			.tabs__content.active
-				+input("+7 (999) 999-99-99","tel",'Введите телефон:',"tel")(required)
+				+input("+7 (999) 999-99-99","tel",'Введите телефон:',"tel")
  
 			.tabs__content
 				+input("+7 (999) 999-99-99","tel",'Введите viber:',"viber")
@@ -144,7 +152,7 @@ mixin form-modal()
 		block
 		.tabs__wrap
 			.tabs__content.active
-				+input("+7 (999) 999-99-99","tel",'Введите телефон:',"tel")(required)
+				+input("+7 (999) 999-99-99","tel",'Введите телефон:',"tel")
 				//- .h5.text-secondar Перезвоню в течение рабочего дня
 			.tabs__content
 				+input("+7 (999) 999-99-99","tel",'Введите whatsapp:',"whatsapp")
@@ -164,7 +172,7 @@ mixin form-modal-06()
 		block
 		.tabs__wrap
 			.tabs__content.active
-				+input("+7 (999) 999-99-99","tel",'Введите телефон:',"tel")(required)
+				+input("+7 (999) 999-99-99","tel",'Введите телефон:',"tel")
 				//- .h5.text-secondar Перезвоню в течение рабочего дня
 			.tabs__content
 				+input("+7 (999) 999-99-99","tel",'Введите whatsapp:',"whatsapp")
@@ -197,7 +205,7 @@ mixin form-tabs-qwiz()
 			.tabs__content
 				+input("+7 (999) 999-99-99","tel",'Введите whatsapp:',"whatsapp")
 			.tabs__content
-				+input("Ваш telegram","tel",'Введите telegram:',"telegram")(required)
+				+input("Ваш telegram","tel",'Введите telegram:',"telegram")
  
 			.tabs__content
 				+input("Ваш email","email",'Введите email:',"email")
@@ -208,9 +216,16 @@ mixin form-tabs-qwiz()
 //- wrapper for form
 mixin form-wrap(order)
 	+b.form-wrap()&attributes(attributes)
-		form
-			input(type='hidden', class="order", name='order', value= order ) 
-		 
+		form 
+			input(type='hidden',  name='order-varibles', value=`` ) 
+			if !order 
+				input(type='hidden', class="order", name='order', value=`Заявка  с сайта` ) 
+			else
+				input(type='hidden', class="order", name='order', value= order ) 
+			input(type="hidden" class='utm_source' name='utm_source')
+			input(type="hidden" class='utm_term' name='utm_term')
+			input(type="hidden" class='utm_medium' name='utm_medium')
+			input(type="hidden" class='utm_campaign' name='utm_campaign')
 			block
 //- /wrapper for form
 
@@ -223,7 +238,7 @@ mixin polite()
 mixin form-body()
 	
 	+inputName()
-	+input("+7 (900) 444-44-44","tel",'Введите телефон:')(required)
+	+input("+7 (900) 444-44-44","tel",'Введите телефон:')
 	//- +e.title  Выберите время для звонка
 	+b.LABEL.custom-input-time
 		+e.INPUT.input(type='checkbox', name='scr8-time', )

@@ -4,21 +4,61 @@ mixin s-catalog-menu()
 		.container
 			+b.section-title.text-center
 				h1 У нас вы найдете все&nbsp;необходимое,
-				h3 как для производственных помещений и&nbsp;автомастерских, так&nbsp;и&nbsp;для небольших гаражей
+				.h3 как для производственных помещений и&nbsp;автомастерских, так&nbsp;и&nbsp;для небольших гаражей
 			.row
-				mixin prod-item(n)
+				mixin prod-item-verstaki(n)
 					.col-md-6.col-lg-4
 						+b.catalog-item
-							img.lazy.res-i(src="#" data-src="img/@2x/prod-1.jpg" alt="")
+							img.lazy.res-i(src="img/@2x/catalog-verstaki.jpg" data-src="img/@2x/catalog-verstaki.jpg" alt="Верстаки слесарные")
 							+e.description
 								h4= n
-								p Для автосервисов, заводов, производственных&nbsp;компаний и&nbsp;частных лиц
-								+btn-accent('в каталог', a)
+								p Для гаражей, автосервисов, производственных&nbsp;компаний
+								+btn-accent('подробнее', a="verstaki.html")
+				mixin prod-item-stellaji(n)
+					.col-md-6.col-lg-4
+						+b.catalog-item
+							img.lazy.res-i(src="img/@2x/catalog-stellaji.jpg" data-src="img/@2x/catalog-stellaji.jpg" alt="Стеллажи металлические")
+							+e.description
+								h4= n
+								p Для удобного размещения и&nbsp;хранения инструмента больших размеров
+								+btn-accent('подробнее', a="stellaji.html")
+				mixin prod-item-shkafi(n)
+					.col-md-6.col-lg-4
+						+b.catalog-item
+							img.lazy.res-i(src="img/@2x/catalog-shkafi.jpg" data-src="img/@2x/catalog-shkafi.jpg" alt="Шкафы металлические")
+							+e.description
+								h4= n
+								p Для хранения одежды, документов, инвентаря
+								+btn-accent('подробнее', a="shkafi.html")
+				mixin prod-item-tumbi(n)
+					.col-md-6.col-lg-4
+						+b.catalog-item
+							img.lazy.res-i(src="img/@2x/catalog-tumbi.jpg" data-src="img/@2x/catalog-tumbi.jpg" alt="Тумбы инструментальные")
+							+e.description
+								h4= n
+								p Для хранения мелкого инструмента, и&nbsp;содержания рабочего места в&nbsp;порядке
+								+btn-accent('подробнее', a="tumbi.html")
+				mixin prod-item-mebel(n)
+					.col-md-6.col-lg-4
+						+b.catalog-item
+							img.lazy.res-i(src="img/@2x/catalog-mebel.jpg" data-src="img/@2x/catalog-mebel.jpg" alt="Мебель для гаража")
+							+e.description
+								h4= n
+								p Комплекты металлической мебели, разработанные, специально для&nbsp;вас
+								+btn-accent('подробнее', a="mebel.html")
+				mixin prod-item-aksessuari(n)
+					.col-md-6.col-lg-4
+						+b.catalog-item
+							img.lazy.res-i(src="img/@2x/catalog-aksessuari.jpg" data-src="img/@2x/catalog-aksessuari.jpg" alt="Аксессуары для металлической мебели")
+							+e.description
+								h4= n
+								p Для металлической мебели, верстаков, инструментальных тележек
+								+btn-accent('подробнее', a="aksessuari.html")
 
-				+prod-item('Верстаки слесарные')
-				+prod-item('Стеллажи металлические')
-				+prod-item('Шкафы металлические')
-				+prod-item('Тумбы инструментальные')
-				+prod-item('Мебель для гаража')
-				+prod-item('Аксессуары')
+				+prod-item-verstaki('Верстаки слесарные')
+				+prod-item-stellaji('Стеллажи металлические')
+				+prod-item-shkafi('Шкафы металлические')
+				+prod-item-tumbi('Тумбы инструментальные')
+				+prod-item-mebel('Мебель для гаража')
+				+prod-item-aksessuari('Аксессуары')
 	// end s-catalog-menu

@@ -3,7 +3,7 @@ mixin item-tr(t1,t2)
 	tr
 		td.text-secondary= t1
 		td.fw-500= t2
-mixin item-prod(sl, i, a="#", t="Верстак слесарный ВМ_1216")
+mixin item-prod(sl, i, a="#", t="Верстак слесарный ВМ_1212")
 	+b.item-prod
 		+e.img-wrap(href= a)
 			-
@@ -16,6 +16,106 @@ mixin item-prod(sl, i, a="#", t="Верстак слесарный ВМ_1216")
 			table
 				block
 			+btn-accent('Подробнее', a)
+//- Популярные модели
+//- 1211
+mixin item-prod-1211(sl, i, a="verstak-1211.html", t="Верстак слесарный ВМ_1211")
+	+b.item-prod
+		+e.img-wrap(href= a)
+			-
+				let src= (sl=="sl" ? '#' :`img/@2x/1211-1.jpg`)
+				let lazy = (sl=="sl" ? `img/@2x/1211-1.jpg`: null)
+			img.res-i(src= src data-lazy= lazy , alt="Верстак слесарный ВМ_1211") 
+		+e.caption
+			+e.title
+				a(href= a)= t
+			table
+				block
+			+btn-accent('Подробнее', a)
+//- 1212
+mixin item-prod-1212(sl, i, a="verstak-1212.html", t="Верстак слесарный ВМ_1212")
+	+b.item-prod
+		+e.img-wrap(href= a)
+			-
+				let src= (sl=="sl" ? '#' :`img/@2x/1212-1.jpg`)
+				let lazy = (sl=="sl" ? `img/@2x/1212-1.jpg`: null)
+			img.res-i(src= src data-lazy= lazy , alt="Верстак слесарный ВМ_1212") 
+		+e.caption
+			+e.title
+				a(href= a)= t
+			table
+				block
+			+btn-accent('Подробнее', a)
+//- 1213
+mixin item-prod-1213(sl, i, a="verstak-1213.html", t="Верстак слесарный ВМ_1213")
+	+b.item-prod
+		+e.img-wrap(href= a)
+			-
+				let src= (sl=="sl" ? '#' :`img/@2x/1213-1.jpg`)
+				let lazy = (sl=="sl" ? `img/@2x/1213-1.jpg`: null)
+			img.res-i(src= src data-lazy= lazy , alt="Верстак слесарный ВМ_1213") 
+		+e.caption
+			+e.title
+				a(href= a)= t
+			table
+				block
+			+btn-accent('Подробнее', a)
+//- 1214
+mixin item-prod-1214(sl, i, a="verstak-1214.html", t="Верстак слесарный ВМ_1214")
+	+b.item-prod
+		+e.img-wrap(href= a)
+			-
+				let src= (sl=="sl" ? '#' :`img/@2x/1214-1.jpg`)
+				let lazy = (sl=="sl" ? `img/@2x/1214-1.jpg`: null)
+			img.res-i(src= src data-lazy= lazy , alt="Верстак слесарный ВМ_1214") 
+		+e.caption
+			+e.title
+				a(href= a)= t
+			table
+				block
+			+btn-accent('Подробнее', a)
+//- 1215
+mixin item-prod-1215(sl, i, a="verstak-1215.html", t="Верстак слесарный ВМ_1215")
+	+b.item-prod
+		+e.img-wrap(href= a)
+			-
+				let src= (sl=="sl" ? '#' :`img/@2x/1215-1.jpg`)
+				let lazy = (sl=="sl" ? `img/@2x/1215-1.jpg`: null)
+			img.res-i(src= src data-lazy= lazy , alt="Верстак слесарный ВМ_1215") 
+		+e.caption
+			+e.title
+				a(href= a)= t
+			table
+				block
+			+btn-accent('Подробнее', a)
+//- 1216
+mixin item-prod-1216(sl, i, a="verstak-1216.html", t="Верстак слесарный ВМ_1216")
+	+b.item-prod
+		+e.img-wrap(href= a)
+			-
+				let src= (sl=="sl" ? '#' :`img/@2x/1216-1.jpg`)
+				let lazy = (sl=="sl" ? `img/@2x/1216-1.jpg`: null)
+			img.res-i(src= src data-lazy= lazy , alt="Верстак слесарный ВМ_1216") 
+		+e.caption
+			+e.title
+				a(href= a)= t
+			table
+				block
+			+btn-accent('Подробнее', a)
+//- 1217
+mixin item-prod-1217(sl, i, a="verstak-1217.html", t="Верстак слесарный ВМ_1217")
+	+b.item-prod
+		+e.img-wrap(href= a)
+			-
+				let src= (sl=="sl" ? '#' :`img/@2x/1217-1.jpg`)
+				let lazy = (sl=="sl" ? `img/@2x/1217-1.jpg`: null)
+			img.res-i(src= src data-lazy= lazy , alt="Верстак слесарный ВМ_1217") 
+		+e.caption
+			+e.title
+				a(href= a)= t
+			table
+				block
+			+btn-accent('Подробнее', a)
+
 mixin s-catalog(prodPage)
 	// start s-catalog
 	+b.SECTION.s-catalog.section#s-catalog&attributes(attributes)
@@ -24,27 +124,27 @@ mixin s-catalog(prodPage)
 			+e.slider-wrap
 				+e.slider--js 
 					+e.slide
-						+item-prod("sl","1")
-							+item-tr("Цена:","61 900Р")
-							+item-tr("Выдвижные ящики:","2 шт ")
+						+item-prod-1211("sl","1")
+							+item-tr("Цена:","27 100Р")
+							+item-tr("Выдвижные ящики:","1 шт ")
+							+item-tr("Двери:","1 шт")
+							+item-tr("Полки:","1 шт")
+							+item-tr("Габариты (ВхШхГ):","810х1383х620") 
+					+e.slide
+						+item-prod-1214("sl","2")
+							+item-tr("Цена:","61 400Р")
+							+item-tr("Выдвижные ящики:","5 шт ")
 							+item-tr("Двери:","2 шт")
 							+item-tr("Полки:","1 шт")
-							+item-tr("Габариты (ВхШхГ):","1637.5х1800х620") 
+							+item-tr("Габариты (ВхШхГ):","810х1500х620") 
 					+e.slide
-						+item-prod("sl","2")
-							+item-tr("Цена:","61 900Р")
-							+item-tr("Выдвижные ящики:","2 шт ")
-							+item-tr("Двери:","2 шт")
-							+item-tr("Полки:","1 шт")
-							+item-tr("Габариты (ВхШхГ):","1637.5х1800х620") 
-					+e.slide
-						+item-prod("sl","3")
-							+item-tr("Цена:","61 900Р")
-							+item-tr("Выдвижные ящики:","2 шт ")
-							+item-tr("Двери:","2 шт")
-							+item-tr("Полки:","1 шт")
-							+item-tr("Габариты (ВхШхГ):","1637.5х1800х620") 
-					+e.slide
+						+item-prod-1217("sl","3")
+							+item-tr("Цена:","72 600Р")
+							+item-tr("Выдвижные ящики:","6 шт ")
+							+item-tr("Двери:","1 шт")
+							+item-tr("Полки:","2 шт")
+							+item-tr("Габариты (ВхШхГ):","810х1800х620") 
+					//-+e.slide
 						+item-prod("sl","1")
 							+item-tr("Цена:","61 900Р")
 							+item-tr("Выдвижные ящики:","2 шт ")
@@ -56,10 +156,419 @@ mixin s-catalog(prodPage)
 				+b.catalog-footer
 					.row
 						.col-md-6
-							+e.btn.btn-outline-brown(href="#") Смотреть все верстаки
+							+e.btn.btn-outline-brown(href="verstaki.html") Смотреть все верстаки
 						.col-md-6
 							p 
 								+icon("info") 
-								span #[a(href="#") В&nbsp;каталоге] вы&nbsp;также можете выбрать металлические стеллажи и&nbsp;шкафы, инструментальные тележки, аксессуары
+								span #[a(href="03-catalog.html") В&nbsp;каталоге] вы&nbsp;также можете выбрать металлические стеллажи и&nbsp;шкафы, инструментальные тележки, аксессуары
 							
 	// end s-catalog
+
+mixin s-catalog-4(prodPage)
+	// start s-catalog
+	+b.SECTION.s-catalog.section#s-catalog&attributes(attributes)
+		.container
+			block
+			.row
+
+					+e.col.col-xl-4.col-md-6
+						+item-prod-1211("","1")
+							+item-tr("Цена:","27 100Р")
+							+item-tr("Выдвижные ящики:","1 шт ")
+							+item-tr("Двери:","1 шт")
+							+item-tr("Полки:","1 шт")
+							+item-tr("Габариты (ВхШхГ):","810х1383х620") 
+					+e.col.col-xl-4.col-md-6
+						+item-prod-1212("","2")
+							+item-tr("Цена:","50 100Р")
+							+item-tr("Выдвижные ящики:","4 шт ")
+							+item-tr("Двери:","1 шт")
+							+item-tr("Полки:","1 шт")
+							+item-tr("Габариты (ВхШхГ):","810х1185х620") 
+					+e.col.col-xl-4.col-md-6
+						+item-prod-1213("","3")
+							+item-tr("Цена:","69 000Р")
+							+item-tr("Выдвижные ящики:","6 шт ")
+							+item-tr("Двери:","0 шт")
+							+item-tr("Полки:","2 шт")
+							+item-tr("Габариты (ВхШхГ):","810х1800х620") 
+					+e.col.col-xl-4.col-md-6
+						+item-prod-1214("","4")
+							+item-tr("Цена:","61 400Р")
+							+item-tr("Выдвижные ящики:","5 шт ")
+							+item-tr("Двери:","2 шт")
+							+item-tr("Полки:","1 шт")
+							+item-tr("Габариты (ВхШхГ):","810х1500х620") 
+					+e.col.col-xl-4.col-md-6
+						+item-prod-1215("","5")
+							+item-tr("Цена:","83 500Р")
+							+item-tr("Выдвижные ящики:","8 шт ")
+							+item-tr("Двери:","0 шт")
+							+item-tr("Полки:","2 шт")
+							+item-tr("Габариты (ВхШхГ):","810х1800х620") 
+					+e.col.col-xl-4.col-md-6
+						+item-prod-1216("","6")
+							+item-tr("Цена:","47 500Р")
+							+item-tr("Выдвижные ящики:","2 шт ")
+							+item-tr("Двери:","2 шт")
+							+item-tr("Полки:","2 шт")
+							+item-tr("Габариты (ВхШхГ):","810х1800х620") 
+					+e.col.col-xl-4.col-md-6
+						+item-prod-1217("","7")
+							+item-tr("Цена:","72 600Р")
+							+item-tr("Выдвижные ящики:","6 шт ")
+							+item-tr("Двери:","1 шт")
+							+item-tr("Полки:","2 шт")
+							+item-tr("Габариты (ВхШхГ):","810х1800х620") 
+			+e.footer
+				+e.btn-more--js.btn-outline-brown(type="button") Смотреть все верстаки
+	// end s-catalog
+
+
+mixin item-prod-1511(sl, i, a="shkaf-1511.html", t="Шкаф металлический ШМ_1511")
+	+b.item-prod
+		+e.img-wrap(href= a)
+			-
+				let src= (sl=="sl" ? '#' :`img/@2x/1511-1.jpg`)
+				let lazy = (sl=="sl" ? `img/@2x/1511-1.jpg`: null)
+			img.res-i(src= src data-lazy= lazy , alt="Шкаф металлический ШМ_1511") 
+		+e.caption
+			+e.title
+				a(href= a)= t
+			table
+				block
+			+btn-accent('Подробнее', a)
+
+mixin item-prod-1512(sl, i, a="shkaf-1512.html", t="Шкаф металлический ШМ_1512")
+	+b.item-prod
+		+e.img-wrap(href= a)
+			-
+				let src= (sl=="sl" ? '#' :`img/@2x/1512-1.jpg`)
+				let lazy = (sl=="sl" ? `img/@2x/1512-1.jpg`: null)
+			img.res-i(src= src data-lazy= lazy , alt="Шкаф металлический ШМ_1512") 
+		+e.caption
+			+e.title
+				a(href= a)= t
+			table
+				block
+			+btn-accent('Подробнее', a)
+
+
+
+mixin s-catalog-shkafi(prodPage)
+	// start s-catalog
+	+b.SECTION.s-catalog.section#s-catalog&attributes(attributes)
+		.container
+			block
+			.row
+
+					+e.col.col-xl-4.col-md-6
+						+item-prod-1511("","1")
+							+item-tr("Цена:","24 000Р")
+							+item-tr("Выдвижные ящики:","0 шт ")
+							+item-tr("Двери:","2 шт")
+							+item-tr("Полки:","1 шт")
+							+item-tr("Габариты (ВхШхГ):","600х1000х400") 
+					+e.col.col-xl-4.col-md-6
+						+item-prod-1512("","2")
+							+item-tr("Цена:","48 700Р")
+							+item-tr("Выдвижные ящики:","0 шт ")
+							+item-tr("Двери:","2 шт")
+							+item-tr("Полки:","4 шт")
+							+item-tr("Габариты (ВхШхГ):","1902х1000х650") 
+
+			+e.footer
+				//-+e.btn-more--js.btn-outline-brown(type="button") Смотреть все шкафы
+	// end s-catalog
+
+	
+mixin s-catalog-tumbi(prodPage)
+	// start s-catalog
+	+b.SECTION.s-catalog.section#s-catalog&attributes(attributes)
+		.container
+			block
+			.row
+
+					+e.col.col-xl-4.col-md-6
+						+item-prod-1311("","1")
+							+item-tr("Цена:","15 200Р")
+							+item-tr("Выдвижные ящики:","1 шт ")
+							+item-tr("Колеса:","4 шт")
+							+item-tr("Экран:","1 шт")
+							+item-tr("Габариты (ВхШхГ):","902х604х454") 
+					+e.col.col-xl-4.col-md-6
+						+item-prod-1411("","2")
+							+item-tr("Цена:","54 380Р")
+							+item-tr("Выдвижные ящики:","5 шт ")
+							+item-tr("Колеса:","4 шт")
+							+item-tr("Экран:","0 шт")
+							+item-tr("Габариты (ВхШхГ):","800х610х480") 
+					+e.col.col-xl-4.col-md-6
+						+item-prod-1412("","3")
+							+item-tr("Цена:","48 630Р")
+							+item-tr("Выдвижные ящики:","4 шт ")
+							+item-tr("Колеса:","4 шт")
+							+item-tr("Экран:","0 шт")
+							+item-tr("Габариты (ВхШхГ):","800х610х480") 
+
+			+e.footer
+				//-+e.btn-more--js.btn-outline-brown(type="button") Смотреть все шкафы
+	// end s-catalog
+
+	
+mixin item-prod-1311(sl, i, a="tumba-1311.html", t="Тумба инструментальная ТМ_1311")
+	+b.item-prod
+		+e.img-wrap(href= a)
+			-
+				let src= (sl=="sl" ? '#' :`img/@2x/1311-1.jpg`)
+				let lazy = (sl=="sl" ? `img/@2x/1311-1.jpg`: null)
+			img.res-i(src= src data-lazy= lazy , alt="Тумба инструментальная ТМ_1311") 
+		+e.caption
+			+e.title
+				a(href= a)= t
+			table
+				block
+			+btn-accent('Подробнее', a)
+	
+mixin item-prod-1411(sl, i, a="tumba-1411.html", t="Тумба инструментальная ТМ_1411")
+	+b.item-prod
+		+e.img-wrap(href= a)
+			-
+				let src= (sl=="sl" ? '#' :`img/@2x/1411-1.jpg`)
+				let lazy = (sl=="sl" ? `img/@2x/1411-1.jpg`: null)
+			img.res-i(src= src data-lazy= lazy , alt="Тумба инструментальная ТМ_1411") 
+		+e.caption
+			+e.title
+				a(href= a)= t
+			table
+				block
+			+btn-accent('Подробнее', a)
+	
+mixin item-prod-1412(sl, i, a="tumba-1412.html", t="Тумба инструментальная ТМ_1412")
+	+b.item-prod
+		+e.img-wrap(href= a)
+			-
+				let src= (sl=="sl" ? '#' :`img/@2x/1412-1.jpg`)
+				let lazy = (sl=="sl" ? `img/@2x/1412-1.jpg`: null)
+			img.res-i(src= src data-lazy= lazy , alt="Тумба инструментальная ТМ_1412") 
+		+e.caption
+			+e.title
+				a(href= a)= t
+			table
+				block
+			+btn-accent('Подробнее', a)
+
+
+
+	
+mixin s-catalog-mebel(prodPage)
+	// start s-catalog
+	+b.SECTION.s-catalog.section#s-catalog&attributes(attributes)
+		.container
+			block
+			.row
+
+					+e.col.col-xl-4.col-md-6
+						+item-prod-1511("","1")
+							+item-tr("Цена:","15 200Р")
+							+item-tr("Выдвижные ящики:","1 шт ")
+							+item-tr("Колеса:","4 шт")
+							+item-tr("Экран:","1 шт")
+							+item-tr("Габариты (ВхШхГ):","902х604х454") 
+					+e.col.col-xl-4.col-md-6
+						+item-prod-1512("","2")
+							+item-tr("Цена:","54 380Р")
+							+item-tr("Выдвижные ящики:","5 шт ")
+							+item-tr("Колеса:","4 шт")
+							+item-tr("Экран:","0 шт")
+							+item-tr("Габариты (ВхШхГ):","800х610х480") 
+
+
+			+e.footer
+				//-+e.btn-more--js.btn-outline-brown(type="button") Смотреть все шкафы
+	// end s-catalog
+
+mixin item-prod-1511(sl, i, a="shkaf-1511.html", t="Шкаф металлический ШМ_1511")
+	+b.item-prod
+		+e.img-wrap(href= a)
+			-
+				let src= (sl=="sl" ? '#' :`img/@2x/1511-1.jpg`)
+				let lazy = (sl=="sl" ? `img/@2x/1511-1.jpg`: null)
+			img.res-i(src= src data-lazy= lazy , alt="Шкаф металлический ШМ_1511") 
+		+e.caption
+			+e.title
+				a(href= a)= t
+			table
+				block
+			+btn-accent('Подробнее', a)
+
+mixin item-prod-1512(sl, i, a="shkaf-1512.html", t="Шкаф металлический ШМ_1512")
+	+b.item-prod
+		+e.img-wrap(href= a)
+			-
+				let src= (sl=="sl" ? '#' :`img/@2x/1512-1.jpg`)
+				let lazy = (sl=="sl" ? `img/@2x/1512-1.jpg`: null)
+			img.res-i(src= src data-lazy= lazy , alt="Шкаф металлический ШМ_1512") 
+		+e.caption
+			+e.title
+				a(href= a)= t
+			table
+				block
+			+btn-accent('Подробнее', a)
+
+		
+mixin s-catalog-aksessuari(prodPage)
+	// start s-catalog
+	+b.SECTION.s-catalog.section#s-catalog&attributes(attributes)
+		.container
+			block
+			.row
+
+					+e.col.col-xl-4.col-md-6
+						+item-prod-1120("","1")
+							+item-tr("Цена:","190Р")
+							//-+item-tr("Выдвижные ящики:","1 шт ")
+							//-+item-tr("Колеса:","4 шт")
+							//-+item-tr("Экран:","1 шт")
+							//-+item-tr("Габариты (ВхШхГ):","902х604х454") 
+					+e.col.col-xl-4.col-md-6
+						+item-prod-1220("","2")
+							+item-tr("Цена:","335Р")
+					+e.col.col-xl-4.col-md-6
+						+item-prod-1320("","3")
+							+item-tr("Цена:","560Р")
+					+e.col.col-xl-4.col-md-6
+						+item-prod-1420("","4")
+							+item-tr("Цена:","730Р")
+					+e.col.col-xl-4.col-md-6
+						+item-prod-1520("","5")
+							+item-tr("Цена:","680Р")
+					+e.col.col-xl-4.col-md-6
+						+item-prod-1620("","6")
+							+item-tr("Цена:","735Р")
+					+e.col.col-xl-4.col-md-6
+						+item-prod-1720("","7")
+							+item-tr("Цена:","460Р")
+					+e.col.col-xl-4.col-md-6
+						+item-prod-1820("","8")
+							+item-tr("Цена:","1 840Р")
+
+			+e.footer
+				//-+e.btn-more--js.btn-outline-brown(type="button") Смотреть все шкафы
+	// end s-catalog
+
+
+mixin item-prod-1120(sl, i, a="1120.html", t="Контейнер для мелких предметов")
+	+b.item-prod
+		+e.img-wrap(href= a)
+			-
+				let src= (sl=="sl" ? '#' :`img/@2x/1120-1.jpg`)
+				let lazy = (sl=="sl" ? `img/@2x/1120-1.jpg`: null)
+			img.res-i(src= src data-lazy= lazy , alt="Контейнер для мелких предметов") 
+		+e.caption
+			+e.title
+				a(href= a)= t
+			table
+				block
+			+btn-accent('Подробнее', a)
+
+mixin item-prod-1220(sl, i, a="1220.html", t="Полка навесная малая металлическая")
+	+b.item-prod
+		+e.img-wrap(href= a)
+			-
+				let src= (sl=="sl" ? '#' :`img/@2x/1220-1.jpg`)
+				let lazy = (sl=="sl" ? `img/@2x/1220-1.jpg`: null)
+			img.res-i(src= src data-lazy= lazy , alt="Полка навесная малая") 
+		+e.caption
+			+e.title
+				a(href= a)= t
+			table
+				block
+			+btn-accent('Подробнее', a)
+
+mixin item-prod-1320(sl, i, a="1320.html", t="Полка навесная большая металлическая")
+	+b.item-prod
+		+e.img-wrap(href= a)
+			-
+				let src= (sl=="sl" ? '#' :`img/@2x/1320-1.jpg`)
+				let lazy = (sl=="sl" ? `img/@2x/1320-1.jpg`: null)
+			img.res-i(src= src data-lazy= lazy , alt="Полка навесная большая") 
+		+e.caption
+			+e.title
+				a(href= a)= t
+			table
+				block
+			+btn-accent('Подробнее', a)
+
+mixin item-prod-1420(sl, i, a="1420.html", t="Карман для документов и других бумаг")
+	+b.item-prod
+		+e.img-wrap(href= a)
+			-
+				let src= (sl=="sl" ? '#' :`img/@2x/1420-1.jpg`)
+				let lazy = (sl=="sl" ? `img/@2x/1420-1.jpg`: null)
+			img.res-i(src= src data-lazy= lazy , alt="Карман для документов и других бумаг") 
+		+e.caption
+			+e.title
+				a(href= a)= t
+			table
+				block
+			+btn-accent('Подробнее', a)
+
+mixin item-prod-1520(sl, i, a="1520.html", t="Держатель отверток и гаечных ключей")
+	+b.item-prod
+		+e.img-wrap(href= a)
+			-
+				let src= (sl=="sl" ? '#' :`img/@2x/1520-1.jpg`)
+				let lazy = (sl=="sl" ? `img/@2x/1520-1.jpg`: null)
+			img.res-i(src= src data-lazy= lazy , alt="Держатель отверток и гаечных ключей") 
+		+e.caption
+			+e.title
+				a(href= a)= t
+			table
+				block
+			+btn-accent('Подробнее', a)
+
+mixin item-prod-1620(sl, i, a="1620.html", t="Держатель плоскогубцев, молотка ")
+	+b.item-prod
+		+e.img-wrap(href= a)
+			-
+				let src= (sl=="sl" ? '#' :`img/@2x/1620-1.jpg`)
+				let lazy = (sl=="sl" ? `img/@2x/1620-1.jpg`: null)
+			img.res-i(src= src data-lazy= lazy , alt="Держатель плоскогубцев и молотка ") 
+		+e.caption
+			+e.title
+				a(href= a)= t
+			table
+				block
+			+btn-accent('Подробнее', a)
+
+mixin item-prod-1720(sl, i, a="1720.html", t="Держатель полотенец")
+	+b.item-prod
+		+e.img-wrap(href= a)
+			-
+				let src= (sl=="sl" ? '#' :`img/@2x/1720-1.jpg`)
+				let lazy = (sl=="sl" ? `img/@2x/1720-1.jpg`: null)
+			img.res-i(src= src data-lazy= lazy , alt="Держатель полотенец") 
+		+e.caption
+			+e.title
+				a(href= a)= t
+			table
+				block
+			+btn-accent('Подробнее', a)
+
+mixin item-prod-1820(sl, i, a="1820.html", t="Держатель сверел")
+	+b.item-prod
+		+e.img-wrap(href= a)
+			-
+				let src= (sl=="sl" ? '#' :`img/@2x/1820-1.jpg`)
+				let lazy = (sl=="sl" ? `img/@2x/1820-1.jpg`: null)
+			img.res-i(src= src data-lazy= lazy , alt="Держатель сверел") 
+		+e.caption
+			+e.title
+				a(href= a)= t
+			table
+				block
+			+btn-accent('Подробнее', a)
+
+
+

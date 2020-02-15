@@ -1,6 +1,7 @@
 .header-block {
 	display: block;
 
+
 	@include media-breakpoint-up(xl) {
 
 		padding-top: rem(57);
@@ -158,7 +159,7 @@
 	}
 
 	.hidden {
-		bottom: 100%;
+		bottom: 110%;
 
 	}
 
@@ -176,7 +177,7 @@
 		right: 0%;
 		@include mt;
 
-		@include media-breakpoint-up(xl) {
+		@media (min-width: 1440px) {
 			bottom: 18.5%;
 			right: 11.5%;
 		}
@@ -242,7 +243,7 @@
 	&__display,
 	&__accessories,
 	.dot,
-	.dot-1,
+	.dot,
 	.dot-2,
 	.line,
 	.mobile-line {
@@ -299,10 +300,37 @@
 		}
 	}
 
-	// согласен, .dot-1 лишний
 	.dot,
-	.dot-1,
 	.dot-2 {
+		@include media-breakpoint-up(sm) {
+			width: rem(23);
+			height: rem(23);
+		}
+
+		&::before,
+		&::after {
+			content: '';
+			display: block;
+			position: absolute;
+			border: 50%;
+			border: 1px solid #fff;
+			left: rem(-20);
+			right: rem(-20);
+			top: rem(-20);
+			bottom: rem(-20);
+			border-radius: 50%;
+			animation: pulse 3s linear infinite;
+
+		}
+
+		&::after {
+			animation-delay: 1.2s;
+		}
+	}
+
+
+	.static-dot,
+	.static-dot-2 {
 
 		// border: 2px solid $accent;
 		// border-radius: 50%;
@@ -460,7 +488,7 @@
 			}
 		}
 
-		.dot-1 {
+		.dot {
 			@media (min-width: 768px) and (max-width:991.98px) {
 				right: rem(255);
 				top: rem(-100);
@@ -642,6 +670,21 @@
 			right: 12%;
 		}
 
+		@include media-breakpoint-only(md) {
+			right: 40%;
+			top: 38.5%;
+
+			.text {
+				top: rem(30);
+				// margin-top: rem(20);
+			}
+		}
+
+		@include media-breakpoint-only(lg) {
+			right: 24% !important;
+			top: 42%;
+		}
+
 		.line {
 			@media (max-width: 1439.98px) and (min-width: 1200px) {
 				height: 180px;
@@ -659,19 +702,23 @@
 			@include media-breakpoint-down(lg) {
 				width: 85%;
 			}
+
+			@include media-breakpoint-only(lg) {
+				left: rem(-10);
+				top: rem(-220);
+			}
+
+			@include media-breakpoint-only(md) {
+				left: rem(100);
+			}
 		}
 
 		@media (max-width: 1199.98px) and (min-width: 992px) {
 			right: 22%;
 
-			.text {
-				// position: relative;
-				// right: rem(110);
-				// margin-right: rem(60);
-			}
 		}
 
-		.dot-1 {
+		.dot {
 			top: rem(100);
 			left: rem(40);
 
@@ -694,24 +741,36 @@
 				top: rem(-215);
 				left: rem(48);
 			}
+
+			@include media-breakpoint-only(lg) {
+				left: rem(58);
+			}
+
+			@include media-breakpoint-only(md) {
+				left: rem(155);
+			}
 		}
 
 		.dot-2 {
 			top: rem(23);
 			left: rem(15);
 
-			@media (max-width: 1199.98px) and (min-width: 992px) {
-				top: rem(55);
-			}
-
 			@include media-breakpoint-up(lg) {
 				top: rem(28);
 				left: rem(20);
 			}
+
+			@include media-breakpoint-only(lg) {
+				left: rem(35);
+				top: rem(36);
+			}
+
+			@include media-breakpoint-only(md) {
+				left: rem(134);
+			}
 		}
 
 		.mobile-line {
-			@include media-breakpoint-up(sm) {}
 
 			height: rem(75);
 			top: rem(30);

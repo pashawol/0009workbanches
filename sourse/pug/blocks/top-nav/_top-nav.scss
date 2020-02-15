@@ -54,8 +54,11 @@
 }
 
 .menu-top {
+	display: flex;
+
 	ul {
 		list-style-type: none;
+		flex-grow: 1;
 
 		@include media-breakpoint-up(md) {
 			max-width: rem(350);
@@ -136,6 +139,7 @@
 
 	&__toggle {
 		color: #ffffff;
+		padding-right: rem(78);
 
 		&:hover,
 		&.active {
@@ -260,7 +264,8 @@
 			line-height: 1.65;
 			margin-bottom: 0;
 			text-decoration: none !important;
-			color: #5d5d5d;
+			color: #5d5d5d !important;
+			height: initial;
 
 			&:hover {
 				background-color: #eeeeee;

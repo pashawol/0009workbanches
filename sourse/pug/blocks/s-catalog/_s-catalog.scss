@@ -13,6 +13,7 @@
 .s-catalog {
 	h2 {
 		color: #333845;
+
 		strong {
 			display: block;
 		}
@@ -31,9 +32,20 @@
 		}
 	}
 
+	.slick-track {
+		display: flex;
+
+		&::before,
+		&::after {
+			display: none;
+
+		}
+	}
+
 	&__slide {
 		padding: 15px;
 		margin-bottom: rem(44);
+		height: initial;
 	}
 
 	&__footer-text {
@@ -79,35 +91,35 @@
 		}
 	}
 
-	&__btn-more {
-		@extend .btn;
-		@extend .btn-block;
-		@extend .btn-lg;
-		margin-left: auto;
-		margin-right: auto;
-		max-width: rem(327);
-		border-width: 2px;
-		border-color: #398bff;
-		margin-bottom: rem(30);
-		color: #0b4392;
+	// &__btn-more {
+	// 	@extend .btn;
+	// 	@extend .btn-block;
+	// 	@extend .btn-lg;
+	// 	margin-left: auto;
+	// 	margin-right: auto;
+	// 	max-width: rem(327);
+	// 	border-width: 2px;
+	// 	border-color: #398bff;
+	// 	margin-bottom: rem(30);
+	// 	color: #0b4392;
 
-		&:hover {
-			color: #0b4392;
-			border-color: #1c61c1;
+	// 	&:hover {
+	// 		color: #0b4392;
+	// 		border-color: #1c61c1;
 
-		}
+	// 	}
 
-		&:focus {
-			color: #0b4392;
-			border-color: #dfdfdf;
-		}
+	// 	&:focus {
+	// 		color: #0b4392;
+	// 		border-color: #dfdfdf;
+	// 	}
 
-		.icon {
-			font-size: rem(28);
-			color: #0b4392;
-			margin-right: rem(11);
-		}
-	}
+	// 	.icon {
+	// 		font-size: rem(28);
+	// 		color: #0b4392;
+	// 		margin-right: rem(11);
+	// 	}
+	// }
 
 
 	&--workbench {
@@ -116,20 +128,53 @@
 			font-size: rem(50);
 			font-weight: 700;
 			padding-bottom: rem(10);
-			@include media-breakpoint-down(md){
+
+			@include media-breakpoint-down(md) {
 				line-height: 1;
 			}
+
 			span {
 				display: block;
 				font-weight: 400;
 			}
 		}
+
 		padding-bottom: rem(30) !important;
-		@include media-breakpoint-down(md){
+
+		@include media-breakpoint-down(md) {
 			padding-top: rem(0) !important;
+
 			.section-title {
 				padding-bottom: rem(15) !important;
 			}
+		}
+	}
+
+	&__btn-more {
+		@extend .btn;
+		@include mt(.9);
+
+		@include media-breakpoint-up(md) {
+
+			width: rem(312);
+		}
+
+		width: rem(232);
+		display: block;
+		margin-left: auto;
+
+		@include media-breakpoint-up(md) {
+
+			margin-bottom: 0;
+		}
+
+		margin-bottom: rem(30);
+		margin-right: auto;
+	}
+
+	&__col {
+		&:nth-child(n + 7) {
+			display: none;
 		}
 	}
 
@@ -281,6 +326,7 @@
 
 		margin-bottom: rem(30);
 		margin-right: auto;
+		@include mt(.9);
 	}
 }
 

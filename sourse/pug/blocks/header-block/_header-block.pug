@@ -19,28 +19,33 @@ mixin header-block()
 								a.link-modal(href="#modal-mat") Резиновый коврик
 							+e.line-wrap
 								img.line(src='img/svg/header-line-1.svg' alt="")
-								.dot.pulse.animated
+								.dot
+									i.static-dot
 							.mobile-line
 						+e.guides 
 							.text 
 								a.link-modal(href="#modal-guides") Направляющие плавного скольжения
 							+e.line-wrap
 								img.line(src='img/svg/header-line-2.svg' alt="")
-								.dot-1.pulse.animated
-								.dot-2.pulse.animated
+								.dot
+									i.static-dot
+								.dot-2
+									i.static-dot-2
 							.mobile-line
 						+e.countertop 
 							.text 
 								a.link-modal(href="#countertop") Столешница
 							+e.line-wrap
 								img.line(src='img/svg/header-line-3.svg' alt="")
-								.dot.pulse.animated
+								.dot
+									i.static-dot
 							.mobile-line
 						+e.display 
 							.text 
 								a.link-modal(href="#modal-display") Экран
 							+e.line-wrap
-								.dot.pulse.animated
+								.dot
+									i.static-dot
 							.mobile-line
 
 						+e.accessories 
@@ -48,11 +53,13 @@ mixin header-block()
 								a.link-modal(href="#modal-accessories") Аксессуары
 							+e.line-wrap
 								img.line(src='img/svg/header-line-4.svg' alt="")
-								.dot-1.pulse.animated
-								.dot-2.pulse.animated
+								.dot
+									i.static-dot
+								.dot-2
+									i.static-dot-2
 							.mobile-line
 						// анимации находятся в base
-						+e.find-out.animated.bounce
+						//-+e.find-out.animated.bounce
 							+e.DIV.find-out-wrap
 								a(data-fancybox href="https://www.youtube.com/watch?v=I1_ip3epXv4&feature=emb_logo")
 									+icon('play-button')

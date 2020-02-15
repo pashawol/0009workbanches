@@ -37,60 +37,495 @@ mixin s-prod-head()
 			+b.section-title.text-center.d-lg-none
 				h1= title
 			.row
-				.col-lg-8
-					.row
-						.col-md-6
-							+b.s-prod-head-images
-								+e.inner
-									+e.slider--lg.--lg-js
-										- for (var x = 0; x < 5; x++)
-											+e.slide--lg
-												a(href= src data-fancybox="prod-gal")
-													+img()
-								+e.slider--sm.--sm-js
-									- for (var x = 0; x < 5; x++)
-										+e.slide
-											+e.img-wrap
-												+img()
-						.col-md-6
-							+e.content
-								.h1.d-none.d-lg-block= title
-								+e.descr 
-									.mobile-up
-										table
-											tr
-												td Размеры  (ШхВхГ): 
-												td 1637.6х1383х620 мм.
-											tr
-												td Цвет:
-												td на выбор по системе RAL
-									.mobile-down.order-lg-first 41 500 руб.
-								+e.form-wrap
-									+btn-accent('купить в 1 клик', '#modal-one-click')(class="link-modal" data-order=`Быстрый заказ- ${title}`)
-									+e.btn.btn-outline-brown.link-modal(    href="#modal-by" data-order=`Заказ- ${title}`) заказать
-					+e.equipment
-						h3 Комплектация
-						ul
-							li Выдвижной ящик с&nbsp;установкой на&nbsp;направляющие плавного скольжения&nbsp;&mdash; 1&nbsp;шт.
-							li Полка с&nbsp;регулировкой по&nbsp;высоте в&nbsp;трех положениях&nbsp;&mdash; 1&nbsp;шт.
-							li Дверь с&nbsp;петлями плавного закрывания&nbsp;&mdash; 1&nbsp;шт.
-							li Дополнительная полка в&nbsp;ногах у&nbsp;сидящего&nbsp;&mdash; 1&nbsp;шт.
-				.col-lg-4.shiping-time
+				.col-lg-4.col-md-6
+					+b.s-prod-head-images
+						+e.inner
+							+e.slider--lg.--lg-js
+								- for (var x = 0; x < 5; x++)
+									+e.slide--lg
+										a(href= src data-fancybox="prod-gal")
+											+img()
+						+e.slider--sm.--sm-js
+							- for (var x = 0; x < 5; x++)
+								+e.slide
+									+e.img-wrap
+										+img()
+				.col-lg-4.col-md-6
+					+e.content
+						.h1.d-none.d-lg-block= title
+						+e.descr 
+							.mobile-up
+								table
+									tr
+										td Размеры  (ШхВхГ): 
+										td 1637.6х1383х620 мм.
+									tr
+										td Цвет:
+										td на выбор по системе RAL
+							.mobile-down.order-lg-first 41 700 руб.
+						+e.form-wrap
+							+btn-accent('купить в 1 клик', '#modal-one-click')(class="link-modal" data-order=`Быстрый заказ- ${title}`)
+							+e.btn.btn-outline-brown.link-modal(    href="#modal-by" data-order=`Заказ- ${title}`) заказать
+				.col-lg-4.col-sm-6.shiping-time.md-order-last
 					+e.sales.d-none.d-lg-block
 						+icon('workbench')
 						span В этом месяце продано <br> #[span.counter(data-start="5") 36] верстаков
 					+sidebar
+				+e.equipment.col-lg-8.col-sm-6.md-order-penultimate
+					h3 Комплектация
+					ul
+						li Выдвижной ящик с&nbsp;установкой на&nbsp;направляющие плавного скольжения&nbsp;&mdash; 1&nbsp;шт.
+						li Полка с&nbsp;регулировкой по&nbsp;высоте в&nbsp;трех положениях&nbsp;&mdash; 1&nbsp;шт.
+						li Дверь с&nbsp;петлями плавного закрывания&nbsp;&mdash; 1&nbsp;шт.
+						li Дополнительная полка в&nbsp;ногах у&nbsp;сидящего&nbsp;&mdash; 1&nbsp;шт.
 	// end s-prod-head
+
+mixin s-prod-head-1211()
+	-
+		let src= 'img/@2x/1211-1.jpg'
+		let title = "Верстак слесарный ВМ_1211"
+	mixin img(i)
+		img.res-i(src="#" data-lazy= i, alt="Верстак слесарный ВМ_1211")
+	// start s-prod-head
+	+b.s-prod-head&attributes(attributes)
+		.container
+			+b.section-title.text-center.d-lg-none
+				h1= title
+			.row
+				.col-lg-4.col-md-6
+					+b.s-prod-head-images
+						+e.inner
+							+e.slider--lg.--lg-js
+									//- Fancybox 
+									+e.slide--lg
+										a(href='img/@2x/1211-1x.jpg' data-fancybox="prod-gal")
+											+img('img/@2x/1211-1.jpg')
+									//-+e.slide--lg
+										a(href='img/@2x/1211-1x.jpg' data-fancybox="prod-gal")
+											+img('img/@2x/1211-1.jpg')
+						+e.slider--sm.--sm-js
+								//- Листалка 
+								+e.slide
+									+e.img-wrap
+										+img('img/@2x/1211-1.jpg')
+								//-+e.slide
+									+e.img-wrap
+										+img('img/@2x/prod-2.jpg')
+				.col-lg-4.col-md-6
+					+e.content
+						.h1.d-none.d-lg-block= title
+						+e.descr 
+							.mobile-up
+								table
+									tr
+										td Размеры  (ШхВхГ): 
+										td 1383х810х620 мм.
+									tr
+										td Цвет:
+										td на выбор по системе RAL
+							.mobile-down.order-lg-first 27 100 руб.*
+						+e.form-wrap
+							+btn-accent('купить в 1 клик', '#modal-one-click')(class="link-modal" data-order=`Быстрый заказ- ${title}`)
+							+e.btn.btn-outline-brown.link-modal(    href="#modal-by" data-order=`Заказ- ${title}`) заказать
+				.col-lg-4.col-sm-6.shiping-time.md-order-last
+					+e.sales.d-none.d-lg-block
+						+icon('workbench')
+						span В этом месяце продано <br> #[span.counter(data-start="6") 36] верстаков
+					+sidebar
+				+e.equipment.col-lg-8.col-sm-6.md-order-penultimate
+					h3 Комплектация
+					ul
+						
+						li Выдвижной ящик с&nbsp;установкой на&nbsp;направляющие плавного скольжения&nbsp;&mdash; 1&nbsp;шт.
+						li Полка с&nbsp;регулировкой по&nbsp;высоте в&nbsp;трех положениях&nbsp;&mdash; 1&nbsp;шт.
+						li Дверь с&nbsp;петлями плавного закрывания&nbsp;&mdash; 1&nbsp;шт.
+						li Дополнительная полка в&nbsp;ногах у&nbsp;сидящего&nbsp;&mdash; 1&nbsp;шт.
+						li *Стоимость указана без&nbsp;учета стоимости экрана и&nbsp;навесных элементов
+	// end s-prod-head-1211
+
+mixin s-prod-head-1212()
+	-
+		let src= 'img/@2x/1212-1.jpg'
+		let title = "Верстак слесарный ВМ_1212"
+	mixin img(i)
+		img.res-i(src="#" data-lazy= i, alt="Верстак слесарный ВМ_1212")
+	// start s-prod-head
+	+b.s-prod-head&attributes(attributes)
+		.container
+			+b.section-title.text-center.d-lg-none
+				h1= title
+			.row
+				.col-lg-4.col-md-6
+					+b.s-prod-head-images
+						+e.inner
+							+e.slider--lg.--lg-js
+									//- Fancybox 
+									+e.slide--lg
+										a(href='img/@2x/1212-1x.jpg' data-fancybox="prod-gal")
+											+img('img/@2x/1212-1.jpg')
+									//-+e.slide--lg
+										a(href='img/@2x/1211-1x.jpg' data-fancybox="prod-gal")
+											+img('img/@2x/1211-1.jpg')
+						+e.slider--sm.--sm-js
+								//- Листалка 
+								+e.slide
+									+e.img-wrap
+										+img('img/@2x/1212-1.jpg')
+								//-+e.slide
+									+e.img-wrap
+										+img('img/@2x/prod-2.jpg')
+				.col-lg-4.col-md-6
+					+e.content
+						.h1.d-none.d-lg-block= title
+						+e.descr 
+							.mobile-up
+								table
+									tr
+										td Размеры  (ШхВхГ): 
+										td 1185х810х620 мм.
+									tr
+										td Цвет:
+										td на выбор по системе RAL
+							.mobile-down.order-lg-first 50 100 руб.*
+						+e.form-wrap
+							+btn-accent('купить в 1 клик', '#modal-one-click')(class="link-modal" data-order=`Быстрый заказ- ${title}`)
+							+e.btn.btn-outline-brown.link-modal(    href="#modal-by" data-order=`Заказ- ${title}`) заказать
+				.col-lg-4.col-sm-6.shiping-time.md-order-last
+					+e.sales.d-none.d-lg-block
+						+icon('workbench')
+						span В этом месяце продано <br> #[span.counter(data-start="3") 36] верстаков
+					+sidebar
+				+e.equipment.col-lg-8.col-sm-6.md-order-penultimate
+					h3 Комплектация
+					ul
+						li Выдвижной ящик с&nbsp;установкой на&nbsp;направляющие плавного скольжения&nbsp;&mdash; 4&nbsp;шт.
+						li Полка с&nbsp;регулировкой по&nbsp;высоте в&nbsp;трех положениях&nbsp;&mdash; 1&nbsp;шт.
+						li Дверь с&nbsp;петлями плавного закрывания&nbsp;&mdash; 1&nbsp;шт.
+						//-li Дополнительная полка в&nbsp;ногах у&nbsp;сидящего&nbsp;&mdash; 1&nbsp;шт.
+						li *Стоимость указана без&nbsp;учета стоимости экрана и&nbsp;навесных элементов
+	// end s-prod-head-1212
+
+
+mixin s-prod-head-1213()
+	-
+		let src= 'img/@2x/1213-1.jpg'
+		let title = "Верстак слесарный ВМ_1213"
+	mixin img(i)
+		img.res-i(src="#" data-lazy= i, alt="Верстак слесарный ВМ_1213")
+	// start s-prod-head
+	+b.s-prod-head&attributes(attributes)
+		.container
+			+b.section-title.text-center.d-lg-none
+				h1= title
+			.row
+				.col-lg-4.col-md-6
+					+b.s-prod-head-images
+						+e.inner
+							+e.slider--lg.--lg-js
+									//- Fancybox 
+									+e.slide--lg
+										a(href='img/@2x/1213-1x.jpg' data-fancybox="prod-gal")
+											+img('img/@2x/1213-1.jpg')
+									//-+e.slide--lg
+										a(href='img/@2x/1211-1x.jpg' data-fancybox="prod-gal")
+											+img('img/@2x/1211-1.jpg')
+						+e.slider--sm.--sm-js
+								//- Листалка 
+								+e.slide
+									+e.img-wrap
+										+img('img/@2x/1213-1.jpg')
+								//-+e.slide
+									+e.img-wrap
+										+img('img/@2x/prod-2.jpg')
+				.col-lg-4.col-md-6
+					+e.content
+						.h1.d-none.d-lg-block= title
+						+e.descr 
+							.mobile-up
+								table
+									tr
+										td Размеры  (ШхВхГ): 
+										td 1800х810х620 мм.
+									tr
+										td Цвет:
+										td на выбор по системе RAL
+							.mobile-down.order-lg-first 69 000 руб.*
+						+e.form-wrap
+							+btn-accent('купить в 1 клик', '#modal-one-click')(class="link-modal" data-order=`Быстрый заказ- ${title}`)
+							+e.btn.btn-outline-brown.link-modal(    href="#modal-by" data-order=`Заказ- ${title}`) заказать
+				.col-lg-4.col-sm-6.shiping-time.md-order-last
+					+e.sales.d-none.d-lg-block
+						+icon('workbench')
+						span В этом месяце продано <br> #[span.counter(data-start="1") 36] верстаков
+					+sidebar
+				+e.equipment.col-lg-8.col-sm-6.md-order-penultimate
+					h3 Комплектация
+					ul
+						li Выдвижной ящик с&nbsp;установкой на&nbsp;направляющие плавного скольжения&nbsp;&mdash; 6&nbsp;шт.
+						//-li Полка с&nbsp;регулировкой по&nbsp;высоте в&nbsp;трех положениях&nbsp;&mdash; 1&nbsp;шт.
+						li Полка без&nbsp;регулировки по&nbsp;высоте&nbsp;&mdash; 2&nbsp;шт.
+						//-li Дверь с&nbsp;петлями плавного закрывания&nbsp;&mdash; 1&nbsp;шт.
+						//-li Дополнительная полка в&nbsp;ногах у&nbsp;сидящего&nbsp;&mdash; 1&nbsp;шт.
+						li *Стоимость указана без&nbsp;учета стоимости экрана и&nbsp;навесных элементов
+	// end s-prod-head-1213
+
+mixin s-prod-head-1214()
+	-
+		let src= 'img/@2x/1214-1.jpg'
+		let title = "Верстак слесарный ВМ_1214"
+	mixin img(i)
+		img.res-i(src="#" data-lazy= i, alt="Верстак слесарный ВМ_1214")
+	// start s-prod-head
+	+b.s-prod-head&attributes(attributes)
+		.container
+			+b.section-title.text-center.d-lg-none
+				h1= title
+			.row
+				.col-lg-4.col-md-6
+					+b.s-prod-head-images
+						+e.inner
+							+e.slider--lg.--lg-js
+									//- Fancybox 
+									+e.slide--lg
+										a(href='img/@2x/1214-1x.jpg' data-fancybox="prod-gal")
+											+img('img/@2x/1214-1.jpg')
+									//-+e.slide--lg
+										a(href='img/@2x/1211-1x.jpg' data-fancybox="prod-gal")
+											+img('img/@2x/1211-1.jpg')
+						+e.slider--sm.--sm-js
+								//- Листалка 
+								+e.slide
+									+e.img-wrap
+										+img('img/@2x/1214-1.jpg')
+								//-+e.slide
+									+e.img-wrap
+										+img('img/@2x/prod-2.jpg')
+				.col-lg-4.col-md-6
+					+e.content
+						.h1.d-none.d-lg-block= title
+						+e.descr 
+							.mobile-up
+								table
+									tr
+										td Размеры  (ШхВхГ): 
+										td 1500х810х620 мм.
+									tr
+										td Цвет:
+										td на выбор по системе RAL
+							.mobile-down.order-lg-first 61 400 руб.*
+						+e.form-wrap
+							+btn-accent('купить в 1 клик', '#modal-one-click')(class="link-modal" data-order=`Быстрый заказ- ${title}`)
+							+e.btn.btn-outline-brown.link-modal(    href="#modal-by" data-order=`Заказ- ${title}`) заказать
+				.col-lg-4.col-sm-6.shiping-time.md-order-last
+					+e.sales.d-none.d-lg-block
+						+icon('workbench')
+						span В этом месяце продано <br> #[span.counter(data-start="14") 36] верстаков
+					+sidebar
+				+e.equipment.col-lg-8.col-sm-6.md-order-penultimate
+					h3 Комплектация
+					ul
+						li Выдвижной ящик с&nbsp;установкой на&nbsp;направляющие плавного скольжения&nbsp;&mdash; 5&nbsp;шт.
+						li Полка с&nbsp;регулировкой по&nbsp;высоте в&nbsp;трех положениях&nbsp;&mdash; 1&nbsp;шт.
+						li Дверь с&nbsp;петлями плавного закрывания&nbsp;&mdash; 2&nbsp;шт.
+						//-li Дополнительная полка в&nbsp;ногах у&nbsp;сидящего&nbsp;&mdash; 1&nbsp;шт.
+						li *Стоимость указана без&nbsp;учета стоимости экрана и&nbsp;навесных элементов
+	// end s-prod-head-1214
+
+mixin s-prod-head-1215()
+	-
+		let src= 'img/@2x/1215-1.jpg'
+		let title = "Верстак слесарный ВМ_1215"
+	mixin img(i)
+		img.res-i(src="#" data-lazy= i, alt="Верстак слесарный ВМ_1215")
+	// start s-prod-head
+	+b.s-prod-head&attributes(attributes)
+		.container
+			+b.section-title.text-center.d-lg-none
+				h1= title
+			.row
+				.col-lg-4.col-md-6
+					+b.s-prod-head-images
+						+e.inner
+							+e.slider--lg.--lg-js
+									//- Fancybox 
+									+e.slide--lg
+										a(href='img/@2x/1215-1x.jpg' data-fancybox="prod-gal")
+											+img('img/@2x/1215-1.jpg')
+									//-+e.slide--lg
+										a(href='img/@2x/1211-1x.jpg' data-fancybox="prod-gal")
+											+img('img/@2x/1211-1.jpg')
+						+e.slider--sm.--sm-js
+								//- Листалка 
+								+e.slide
+									+e.img-wrap
+										+img('img/@2x/1215-1.jpg')
+								//-+e.slide
+									+e.img-wrap
+										+img('img/@2x/prod-2.jpg')
+				.col-lg-4.col-md-6
+					+e.content
+						.h1.d-none.d-lg-block= title
+						+e.descr 
+							.mobile-up
+								table
+									tr
+										td Размеры  (ШхВхГ): 
+										td 1800х810х620 мм.
+									tr
+										td Цвет:
+										td на выбор по системе RAL
+							.mobile-down.order-lg-first 83 500 руб.*
+						+e.form-wrap
+							+btn-accent('купить в 1 клик', '#modal-one-click')(class="link-modal" data-order=`Быстрый заказ- ${title}`)
+							+e.btn.btn-outline-brown.link-modal(    href="#modal-by" data-order=`Заказ- ${title}`) заказать
+				.col-lg-4.col-sm-6.shiping-time.md-order-last
+					+e.sales.d-none.d-lg-block
+						+icon('workbench')
+						span В этом месяце продано <br> #[span.counter(data-start="5") 36] верстаков
+					+sidebar
+				+e.equipment.col-lg-8.col-sm-6.md-order-penultimate
+					h3 Комплектация
+					ul
+						li Выдвижной ящик с&nbsp;установкой на&nbsp;направляющие плавного скольжения&nbsp;&mdash; 8&nbsp;шт.
+						li Полка без&nbsp;регулировки по&nbsp;высоте&nbsp;&mdash; 2&nbsp;шт.
+						//li Дверь с&nbsp;петлями плавного закрывания&nbsp;&mdash; 1&nbsp;шт.
+						//-li Дополнительная полка в&nbsp;ногах у&nbsp;сидящего&nbsp;&mdash; 1&nbsp;шт.
+						li *Стоимость указана без&nbsp;учета стоимости экрана и&nbsp;навесных элементов
+	// end s-prod-head-1215
+
+mixin s-prod-head-1216()
+	-
+		let src= 'img/@2x/1216-1.jpg'
+		let title = "Верстак слесарный ВМ_1216"
+	mixin img(i)
+		img.res-i(src="#" data-lazy= i, alt="Верстак слесарный ВМ_1216")
+	// start s-prod-head
+	+b.s-prod-head&attributes(attributes)
+		.container
+			+b.section-title.text-center.d-lg-none
+				h1= title
+			.row
+				.col-lg-4.col-md-6
+					+b.s-prod-head-images
+						+e.inner
+							+e.slider--lg.--lg-js
+									//- Fancybox 
+									+e.slide--lg
+										a(href='img/@2x/1216-1x.jpg' data-fancybox="prod-gal")
+											+img('img/@2x/1216-1.jpg')
+									//-+e.slide--lg
+										a(href='img/@2x/1211-1x.jpg' data-fancybox="prod-gal")
+											+img('img/@2x/1211-1.jpg')
+						+e.slider--sm.--sm-js
+								//- Листалка 
+								+e.slide
+									+e.img-wrap
+										+img('img/@2x/1216-1.jpg')
+								//-+e.slide
+									+e.img-wrap
+										+img('img/@2x/prod-2.jpg')
+				.col-lg-4.col-md-6
+					+e.content
+						.h1.d-none.d-lg-block= title
+						+e.descr 
+							.mobile-up
+								table
+									tr
+										td Размеры  (ШхВхГ): 
+										td 1800х810х620 мм.
+									tr
+										td Цвет:
+										td на выбор по системе RAL
+							.mobile-down.order-lg-first 47 500 руб.*
+						+e.form-wrap
+							+btn-accent('купить в 1 клик', '#modal-one-click')(class="link-modal" data-order=`Быстрый заказ- ${title}`)
+							+e.btn.btn-outline-brown.link-modal(    href="#modal-by" data-order=`Заказ- ${title}`) заказать
+				.col-lg-4.col-sm-6.shiping-time.md-order-last
+					+e.sales.d-none.d-lg-block
+						+icon('workbench')
+						span В этом месяце продано <br> #[span.counter(data-start="4") 36] верстаков
+					+sidebar
+				+e.equipment.col-lg-8.col-sm-6.md-order-penultimate
+					h3 Комплектация
+					ul
+						li Выдвижной ящик с&nbsp;установкой на&nbsp;направляющие плавного скольжения&nbsp;&mdash; 2&nbsp;шт.
+						li Полка без&nbsp;регулировки по&nbsp;высоте&nbsp;&mdash; 2&nbsp;шт.
+						li Дверь с&nbsp;петлями плавного закрывания&nbsp;&mdash; 2&nbsp;шт.
+						//-li Дополнительная полка в&nbsp;ногах у&nbsp;сидящего&nbsp;&mdash; 1&nbsp;шт.
+						li *Стоимость указана без&nbsp;учета стоимости экрана и&nbsp;навесных элементов
+	// end s-prod-head-1216
+
+mixin s-prod-head-1217()
+	-
+		let src= 'img/@2x/1217-1.jpg'
+		let title = "Верстак слесарный ВМ_1217"
+	mixin img(i)
+		img.res-i(src="#" data-lazy= i, alt="Верстак слесарный ВМ_1217")
+	// start s-prod-head
+	+b.s-prod-head&attributes(attributes)
+		.container
+			+b.section-title.text-center.d-lg-none
+				h1= title
+			.row
+				.col-lg-4.col-md-6
+					+b.s-prod-head-images
+						+e.inner
+							+e.slider--lg.--lg-js
+									//- Fancybox 
+									+e.slide--lg
+										a(href='img/@2x/1217-1x.jpg' data-fancybox="prod-gal")
+											+img('img/@2x/1217-1.jpg')
+									//-+e.slide--lg
+										a(href='img/@2x/1211-1x.jpg' data-fancybox="prod-gal")
+											+img('img/@2x/1211-1.jpg')
+						+e.slider--sm.--sm-js
+								//- Листалка 
+								+e.slide
+									+e.img-wrap
+										+img('img/@2x/1217-1.jpg')
+								//-+e.slide
+									+e.img-wrap
+										+img('img/@2x/prod-2.jpg')
+				.col-lg-4.col-md-6
+					+e.content
+						.h1.d-none.d-lg-block= title
+						+e.descr 
+							.mobile-up
+								table
+									tr
+										td Размеры  (ШхВхГ): 
+										td 1800х810х620 мм.
+									tr
+										td Цвет:
+										td на выбор по системе RAL
+							.mobile-down.order-lg-first 72 600 руб.*
+						+e.form-wrap
+							+btn-accent('купить в 1 клик', '#modal-one-click')(class="link-modal" data-order=`Быстрый заказ- ${title}`)
+							+e.btn.btn-outline-brown.link-modal(    href="#modal-by" data-order=`Заказ- ${title}`) заказать
+				.col-lg-4.col-sm-6.shiping-time.md-order-last
+					+e.sales.d-none.d-lg-block
+						+icon('workbench')
+						span В этом месяце продано <br> #[span.counter(data-start="11") 36] верстаков
+					+sidebar
+				+e.equipment.col-lg-8.col-sm-6.md-order-penultimate
+					h3 Комплектация
+					ul
+						li Выдвижной ящик с&nbsp;установкой на&nbsp;направляющие плавного скольжения&nbsp;&mdash; 6&nbsp;шт.
+						li Полка без&nbsp;регулировки по&nbsp;высоте&nbsp;&mdash; 2&nbsp;шт.
+						li Дверь с&nbsp;петлями плавного закрывания&nbsp;&mdash; 1&nbsp;шт.
+						//-li Дополнительная полка в&nbsp;ногах у&nbsp;сидящего&nbsp;&mdash; 1&nbsp;шт.
+						li *Стоимость указана без&nbsp;учета стоимости экрана и&nbsp;навесных элементов
+	// end s-prod-head-1217
 
 
 
 
 mixin s-prod-head-13()
 	-
-		let src= 'img/@2x/prod-1.jpg'
+		let src= 'img/@2x/1217-1.jpg'
 		let title = "Стойка вертикальная/ кронштейн"
 	mixin img()
-		img.res-i(src="#" data-lazy= src, alt="")
+		img.res-i(src="#" data-lazy= src, alt="Стеллаж металлический")
 	// start s-prod-head
 	+b.s-prod-head.s-prod-racks&attributes(attributes)
 		.container
@@ -103,15 +538,21 @@ mixin s-prod-head-13()
 							+b.s-prod-head-images
 								+e.inner
 									+e.slider--lg.--lg-js
-										- for (var x = 0; x < 5; x++)
+										
 											+e.slide--lg
-												a(href= src data-fancybox="prod-gal")
-													+img()
+												a(href='img/@2x/1211-1x.jpg' src data-fancybox="prod-gal")
+													+img('img/@2x/1212-1.jpg')
+											+e.slide--lg
+												a(href='img/@2x/1213-1x.jpg' src data-fancybox="prod-gal")
+													+img('img/@2x/1214-1.jpg')
 								+e.slider--sm.--sm-js
-									- for (var x = 0; x < 5; x++)
+									
 										+e.slide
 											+e.img-wrap
-												+img()
+												+img('img/@2x/1217-5.jpg')
+										+e.slide
+											+e.img-wrap
+												+img('img/@2x/1215-6.jpg')
 						.col-md-6
 							+e.content
 								.h1.d-none.d-lg-block= title
@@ -234,3 +675,792 @@ mixin s-prod-head-13()
 						//- 	| В корзину
 					//- +e.footer-text *При оформлении заказа  уточняйте&nbsp;цену по&nbsp;т: #[a(href="tel:8(3519)22-00-22") 8 (3519) 22-00-22]
 	// end s-prod-head
+
+
+
+	
+mixin s-prod-head-1511()
+	-
+		let src= 'img/@2x/1511-1.jpg'
+		let title = "Шкаф металлический ШМ_1511"
+	mixin img(i)
+		img.res-i(src="#" data-lazy= i, alt="Шкаф металлический ШМ_1511")
+	// start s-prod-head
+	+b.s-prod-head&attributes(attributes)
+		.container
+			+b.section-title.text-center.d-lg-none
+				h1= title
+			.row
+				.col-lg-4.col-md-6
+					+b.s-prod-head-images
+						+e.inner
+							+e.slider--lg.--lg-js
+									//- Fancybox 
+									+e.slide--lg
+										a(href='img/@2x/1511-1x.jpg' data-fancybox="prod-gal")
+											+img('img/@2x/1511-1.jpg')
+									//-+e.slide--lg
+										a(href='img/@2x/1211-1x.jpg' data-fancybox="prod-gal")
+											+img('img/@2x/1211-1.jpg')
+						+e.slider--sm.--sm-js
+								//- Листалка 
+								+e.slide
+									+e.img-wrap
+										+img('img/@2x/1511-1.jpg')
+								//-+e.slide
+									+e.img-wrap
+										+img('img/@2x/prod-2.jpg')
+				.col-lg-4.col-md-6
+					+e.content
+						.h1.d-none.d-lg-block= title
+						+e.descr 
+							.mobile-up
+								table
+									tr
+										td Размеры  (ВхШхГ): 
+										td 600х1000х400 мм.
+									tr
+										td Цвет:
+										td на выбор по системе RAL
+							.mobile-down.order-lg-first 24 600 руб.
+						+e.form-wrap
+							+btn-accent('купить в 1 клик', '#modal-one-click')(class="link-modal" data-order=`Быстрый заказ- ${title}`)
+							+e.btn.btn-outline-brown.link-modal(    href="#modal-by" data-order=`Заказ- ${title}`) заказать
+				.col-lg-4.col-sm-6.shiping-time.md-order-last
+					+e.sales.d-none.d-lg-block
+						+icon('workbench')
+						span В этом месяце продано <br> #[span.counter(data-start="2") 36] шкафов
+					+sidebar
+				+e.equipment.col-lg-8.col-sm-6.md-order-penultimate
+					h3 Комплектация
+					ul
+						
+						li Полка без&nbsp;регулировки по&nbsp;высоте&nbsp;&mdash; 1&nbsp;шт.
+						li Дверь с&nbsp;петлями плавного закрывания&nbsp;&mdash; 2&nbsp;шт.
+						//-li Дополнительная полка в&nbsp;ногах у&nbsp;сидящего&nbsp;&mdash; 1&nbsp;шт.
+	// end s-prod-head-1511
+	
+mixin s-prod-head-1512()
+	-
+		let src= 'img/@2x/1511-1.jpg'
+		let title = "Шкаф металлический ШМ_1512"
+	mixin img(i)
+		img.res-i(src="#" data-lazy= i, alt="Шкаф металлический ШМ_1512")
+	// start s-prod-head
+	+b.s-prod-head&attributes(attributes)
+		.container
+			+b.section-title.text-center.d-lg-none
+				h1= title
+			.row
+				.col-lg-4.col-md-6
+					+b.s-prod-head-images
+						+e.inner
+							+e.slider--lg.--lg-js
+									//- Fancybox 
+									+e.slide--lg
+										a(href='img/@2x/1512-1x.jpg' data-fancybox="prod-gal")
+											+img('img/@2x/1512-1.jpg')
+									//-+e.slide--lg
+										a(href='img/@2x/1211-1x.jpg' data-fancybox="prod-gal")
+											+img('img/@2x/1211-1.jpg')
+						+e.slider--sm.--sm-js
+								//- Листалка 
+								+e.slide
+									+e.img-wrap
+										+img('img/@2x/1512-1.jpg')
+								//-+e.slide
+									+e.img-wrap
+										+img('img/@2x/prod-2.jpg')
+				.col-lg-4.col-md-6
+					+e.content
+						.h1.d-none.d-lg-block= title
+						+e.descr 
+							.mobile-up
+								table
+									tr
+										td Размеры  (ВхШхГ): 
+										td 1902х1000х650 мм.
+									tr
+										td Цвет:
+										td на выбор по системе RAL
+							.mobile-down.order-lg-first 48 700 руб.
+						+e.form-wrap
+							+btn-accent('купить в 1 клик', '#modal-one-click')(class="link-modal" data-order=`Быстрый заказ- ${title}`)
+							+e.btn.btn-outline-brown.link-modal(    href="#modal-by" data-order=`Заказ- ${title}`) заказать
+				.col-lg-4.col-sm-6.shiping-time.md-order-last
+					+e.sales.d-none.d-lg-block
+						+icon('workbench')
+						span В этом месяце продано <br> #[span.counter(data-start="1") 36] шкафов
+					+sidebar
+				+e.equipment.col-lg-8.col-sm-6.md-order-penultimate
+					h3 Комплектация
+					ul
+						
+						li Полка без&nbsp;регулировки по&nbsp;высоте&nbsp;&mdash; 4&nbsp;шт.
+						li Дверь с&nbsp;петлями плавного закрывания&nbsp;&mdash; 2&nbsp;шт.
+						//-li Дополнительная полка в&nbsp;ногах у&nbsp;сидящего&nbsp;&mdash; 1&nbsp;шт.
+	// end s-prod-head-1511
+	
+mixin s-prod-head-1311()
+	-
+		let src= 'img/@2x/1311-1.jpg'
+		let title = "Тумба ТМ_1311"
+	mixin img(i)
+		img.res-i(src="#" data-lazy= i, alt="Тумба инструментальная ТМ_1311")
+	// start s-prod-head
+	+b.s-prod-head&attributes(attributes)
+		.container
+			+b.section-title.text-center.d-lg-none
+				h1= title
+			.row
+				.col-lg-4.col-md-6
+					+b.s-prod-head-images
+						+e.inner
+							+e.slider--lg.--lg-js
+									//- Fancybox 
+									+e.slide--lg
+										a(href='img/@2x/1311-1x.jpg' data-fancybox="prod-gal")
+											+img('img/@2x/1311-1.jpg')
+									//-+e.slide--lg
+										a(href='img/@2x/1211-1x.jpg' data-fancybox="prod-gal")
+											+img('img/@2x/1211-1.jpg')
+						+e.slider--sm.--sm-js
+								//- Листалка 
+								+e.slide
+									+e.img-wrap
+										+img('img/@2x/1311-1.jpg')
+								//-+e.slide
+									+e.img-wrap
+										+img('img/@2x/prod-2.jpg')
+				.col-lg-4.col-md-6
+					+e.content
+						.h1.d-none.d-lg-block= title
+						+e.descr 
+							.mobile-up
+								table
+									tr
+										td Размеры  (ВхШхГ): 
+										td 902х604х454 мм.
+									tr
+										td Цвет:
+										td на выбор по системе RAL
+							.mobile-down.order-lg-first 15 200 руб.
+						+e.form-wrap
+							+btn-accent('купить в 1 клик', '#modal-one-click')(class="link-modal" data-order=`Быстрый заказ- ${title}`)
+							+e.btn.btn-outline-brown.link-modal(    href="#modal-by" data-order=`Заказ- ${title}`) заказать
+				.col-lg-4.col-sm-6.shiping-time.md-order-last
+					+e.sales.d-none.d-lg-block
+						+icon('workbench')
+						span В этом месяце продано <br> #[span.counter(data-start="5") 36] тумб
+					+sidebar
+				+e.equipment.col-lg-8.col-sm-6.md-order-penultimate
+					h3 Комплектация
+					ul
+						li Выдвижной ящик с&nbsp;установкой на&nbsp;направляющие плавного скольжения&nbsp;&mdash; 4&nbsp;шт.
+						li Колеса для&nbsp;удобства транспортировки&nbsp;&mdash; 4&nbsp;шт.
+						li Экран для&nbsp;размещения инструмента&nbsp;&mdash; 2&nbsp;шт.
+						//-li Дополнительная полка в&nbsp;ногах у&nbsp;сидящего&nbsp;&mdash; 1&nbsp;шт.
+	// end s-prod-head-1311
+mixin s-prod-head-1411()
+	-
+		let src= 'img/@2x/1411-1.jpg'
+		let title = "Тумба ТМ_1411"
+	mixin img(i)
+		img.res-i(src="#" data-lazy= i, alt="Тумба инструментальная ТМ_1411")
+	// start s-prod-head
+	+b.s-prod-head&attributes(attributes)
+		.container
+			+b.section-title.text-center.d-lg-none
+				h1= title
+			.row
+				.col-lg-4.col-md-6
+					+b.s-prod-head-images
+						+e.inner
+							+e.slider--lg.--lg-js
+									//- Fancybox 
+									+e.slide--lg
+										a(href='img/@2x/1411-1x.jpg' data-fancybox="prod-gal")
+											+img('img/@2x/1411-1.jpg')
+									//-+e.slide--lg
+										a(href='img/@2x/1211-1x.jpg' data-fancybox="prod-gal")
+											+img('img/@2x/1211-1.jpg')
+						+e.slider--sm.--sm-js
+								//- Листалка 
+								+e.slide
+									+e.img-wrap
+										+img('img/@2x/1411-1.jpg')
+								//-+e.slide
+									+e.img-wrap
+										+img('img/@2x/prod-2.jpg')
+				.col-lg-4.col-md-6
+					+e.content
+						.h1.d-none.d-lg-block= title
+						+e.descr 
+							.mobile-up
+								table
+									tr
+										td Размеры  (ВхШхГ): 
+										td 800х610х480 мм.
+									tr
+										td Цвет:
+										td на выбор по системе RAL
+							.mobile-down.order-lg-first 54 380 руб.
+						+e.form-wrap
+							+btn-accent('купить в 1 клик', '#modal-one-click')(class="link-modal" data-order=`Быстрый заказ- ${title}`)
+							+e.btn.btn-outline-brown.link-modal(    href="#modal-by" data-order=`Заказ- ${title}`) заказать
+				.col-lg-4.col-sm-6.shiping-time.md-order-last
+					+e.sales.d-none.d-lg-block
+						+icon('workbench')
+						span В этом месяце продано <br> #[span.counter(data-start="7") 36] тумб
+					+sidebar
+				+e.equipment.col-lg-8.col-sm-6.md-order-penultimate
+					h3 Комплектация
+					ul
+						li Выдвижной ящик с&nbsp;установкой на&nbsp;направляющие плавного скольжения&nbsp;&mdash; 5&nbsp;шт.
+						li Колеса для&nbsp;удобства транспортировки&nbsp;&mdash; 4&nbsp;шт.
+						//-li Экран для&nbsp;размещения инструмента&nbsp;&mdash; 2&nbsp;шт.
+						//-li Дополнительная полка в&nbsp;ногах у&nbsp;сидящего&nbsp;&mdash; 1&nbsp;шт.
+	// end s-prod-head-1411
+mixin s-prod-head-1412()
+	-
+		let src= 'img/@2x/1412-1.jpg'
+		let title = "Тумба ТМ_1412"
+	mixin img(i)
+		img.res-i(src="#" data-lazy= i, alt="Тумба инструментальная ТМ_1412")
+	// start s-prod-head
+	+b.s-prod-head&attributes(attributes)
+		.container
+			+b.section-title.text-center.d-lg-none
+				h1= title
+			.row
+				.col-lg-4.col-md-6
+					+b.s-prod-head-images
+						+e.inner
+							+e.slider--lg.--lg-js
+									//- Fancybox 
+									+e.slide--lg
+										a(href='img/@2x/1412-1x.jpg' data-fancybox="prod-gal")
+											+img('img/@2x/1412-1.jpg')
+									//-+e.slide--lg
+										a(href='img/@2x/1211-1x.jpg' data-fancybox="prod-gal")
+											+img('img/@2x/1211-1.jpg')
+						+e.slider--sm.--sm-js
+								//- Листалка 
+								+e.slide
+									+e.img-wrap
+										+img('img/@2x/1412-1.jpg')
+								//-+e.slide
+									+e.img-wrap
+										+img('img/@2x/prod-2.jpg')
+				.col-lg-4.col-md-6
+					+e.content
+						.h1.d-none.d-lg-block= title
+						+e.descr 
+							.mobile-up
+								table
+									tr
+										td Размеры  (ВхШхГ): 
+										td 800х610х480 мм.
+									tr
+										td Цвет:
+										td на выбор по системе RAL
+							.mobile-down.order-lg-first 48 630 руб.
+						+e.form-wrap
+							+btn-accent('купить в 1 клик', '#modal-one-click')(class="link-modal" data-order=`Быстрый заказ- ${title}`)
+							+e.btn.btn-outline-brown.link-modal(    href="#modal-by" data-order=`Заказ- ${title}`) заказать
+				.col-lg-4.col-sm-6.shiping-time.md-order-last
+					+e.sales.d-none.d-lg-block
+						+icon('workbench')
+						span В этом месяце продано <br> #[span.counter(data-start="3") 36] тумб
+					+sidebar
+				+e.equipment.col-lg-8.col-sm-6.md-order-penultimate
+					h3 Комплектация
+					ul
+						li Выдвижной ящик с&nbsp;установкой на&nbsp;направляющие плавного скольжения&nbsp;&mdash; 4&nbsp;шт.
+						li Колеса для&nbsp;удобства транспортировки&nbsp;&mdash; 4&nbsp;шт.
+						//-li Экран для&nbsp;размещения инструмента&nbsp;&mdash; 2&nbsp;шт.
+						//-li Дополнительная полка в&nbsp;ногах у&nbsp;сидящего&nbsp;&mdash; 1&nbsp;шт.
+	// end s-prod-head-1412
+
+
+//- аксессуары 
+mixin s-prod-head-1120()
+	-
+		let src= 'img/@2x/1120-1.jpg'
+		let title = "Контейнер А1120"
+	mixin img(i)
+		img.res-i(src="#" data-lazy= i, alt="Контейнер для мелких предметов")
+	// start s-prod-head
+	+b.s-prod-head&attributes(attributes)
+		.container
+			+b.section-title.text-center.d-lg-none
+				h1= title
+			.row
+				.col-lg-4.col-md-6
+					+b.s-prod-head-images
+						+e.inner
+							+e.slider--lg.--lg-js
+									//- Fancybox 
+									+e.slide--lg
+										a(href='img/@2x/1120-1x.jpg' data-fancybox="prod-gal")
+											+img('img/@2x/1120-1.jpg')
+									//-+e.slide--lg
+										a(href='img/@2x/1211-1x.jpg' data-fancybox="prod-gal")
+											+img('img/@2x/1211-1.jpg')
+						+e.slider--sm.--sm-js
+								//- Листалка 
+								+e.slide
+									+e.img-wrap
+										+img('img/@2x/1120-1.jpg')
+								//-+e.slide
+									+e.img-wrap
+										+img('img/@2x/prod-2.jpg')
+				.col-lg-4.col-md-6
+					+e.content
+						.h1.d-none.d-lg-block= title
+						+e.descr 
+							.mobile-up
+								table
+									tr
+										td Размеры  (ВхШхГ): 
+										td _______ мм.
+									tr
+										td Цвет:
+										td на выбор по системе RAL
+							.mobile-down.order-lg-first 190 руб.
+						+e.form-wrap
+							+btn-accent('купить в 1 клик', '#modal-one-click')(class="link-modal" data-order=`Быстрый заказ- ${title}`)
+							+e.btn.btn-outline-brown.link-modal(    href="#modal-by" data-order=`Заказ- ${title}`) заказать
+				.col-lg-4.col-sm-6.shiping-time.md-order-last
+					//-+e.sales.d-none.d-lg-block
+						+icon('workbench')
+						span В этом месяце продано <br> #[span.counter(data-start="3") 36] тумб
+					+sidebar
+				//-+e.equipment.col-lg-8.col-sm-6.md-order-penultimate
+					h3 Комплектация
+					ul
+						li Выдвижной ящик с&nbsp;установкой на&nbsp;направляющие плавного скольжения&nbsp;&mdash; 4&nbsp;шт.
+						li Колеса для&nbsp;удобства транспортировки&nbsp;&mdash; 4&nbsp;шт.
+						//-li Экран для&nbsp;размещения инструмента&nbsp;&mdash; 2&nbsp;шт.
+						//-li Дополнительная полка в&nbsp;ногах у&nbsp;сидящего&nbsp;&mdash; 1&nbsp;шт.
+	// end s-prod-head-1120
+mixin s-prod-head-1220()
+	-
+		let src= 'img/@2x/1220-1.jpg'
+		let title = "Полка малая А1220"
+	mixin img(i)
+		img.res-i(src="#" data-lazy= i, alt="Полка навесная малая")
+	// start s-prod-head
+	+b.s-prod-head&attributes(attributes)
+		.container
+			+b.section-title.text-center.d-lg-none
+				h1= title
+			.row
+				.col-lg-4.col-md-6
+					+b.s-prod-head-images
+						+e.inner
+							+e.slider--lg.--lg-js
+									//- Fancybox 
+									+e.slide--lg
+										a(href='img/@2x/1220-1x.jpg' data-fancybox="prod-gal")
+											+img('img/@2x/1220-1.jpg')
+									//-+e.slide--lg
+										a(href='img/@2x/1211-1x.jpg' data-fancybox="prod-gal")
+											+img('img/@2x/1211-1.jpg')
+						+e.slider--sm.--sm-js
+								//- Листалка 
+								+e.slide
+									+e.img-wrap
+										+img('img/@2x/1220-1.jpg')
+								//-+e.slide
+									+e.img-wrap
+										+img('img/@2x/prod-2.jpg')
+				.col-lg-4.col-md-6
+					+e.content
+						.h1.d-none.d-lg-block= title
+						+e.descr 
+							.mobile-up
+								table
+									tr
+										td Размеры  (ВхШхГ): 
+										td _______ мм.
+									tr
+										td Цвет:
+										td на выбор по системе RAL
+							.mobile-down.order-lg-first 335 руб.
+						+e.form-wrap
+							+btn-accent('купить в 1 клик', '#modal-one-click')(class="link-modal" data-order=`Быстрый заказ- ${title}`)
+							+e.btn.btn-outline-brown.link-modal(    href="#modal-by" data-order=`Заказ- ${title}`) заказать
+				.col-lg-4.col-sm-6.shiping-time.md-order-last
+					//-+e.sales.d-none.d-lg-block
+						+icon('workbench')
+						span В этом месяце продано <br> #[span.counter(data-start="3") 36] тумб
+					+sidebar
+				//-+e.equipment.col-lg-8.col-sm-6.md-order-penultimate
+					h3 Комплектация
+					ul
+						li Выдвижной ящик с&nbsp;установкой на&nbsp;направляющие плавного скольжения&nbsp;&mdash; 4&nbsp;шт.
+						li Колеса для&nbsp;удобства транспортировки&nbsp;&mdash; 4&nbsp;шт.
+						//-li Экран для&nbsp;размещения инструмента&nbsp;&mdash; 2&nbsp;шт.
+						//-li Дополнительная полка в&nbsp;ногах у&nbsp;сидящего&nbsp;&mdash; 1&nbsp;шт.
+	// end s-prod-head-1220
+mixin s-prod-head-1320()
+	-
+		let src= 'img/@2x/1320-1.jpg'
+		let title = "Полка большая А1320"
+	mixin img(i)
+		img.res-i(src="#" data-lazy= i, alt="Полка навесная большая металлическая")
+	// start s-prod-head
+	+b.s-prod-head&attributes(attributes)
+		.container
+			+b.section-title.text-center.d-lg-none
+				h1= title
+			.row
+				.col-lg-4.col-md-6
+					+b.s-prod-head-images
+						+e.inner
+							+e.slider--lg.--lg-js
+									//- Fancybox 
+									+e.slide--lg
+										a(href='img/@2x/1320-1x.jpg' data-fancybox="prod-gal")
+											+img('img/@2x/1320-1.jpg')
+									//-+e.slide--lg
+										a(href='img/@2x/1211-1x.jpg' data-fancybox="prod-gal")
+											+img('img/@2x/1211-1.jpg')
+						+e.slider--sm.--sm-js
+								//- Листалка 
+								+e.slide
+									+e.img-wrap
+										+img('img/@2x/1320-1.jpg')
+								//-+e.slide
+									+e.img-wrap
+										+img('img/@2x/prod-2.jpg')
+				.col-lg-4.col-md-6
+					+e.content
+						.h1.d-none.d-lg-block= title
+						+e.descr 
+							.mobile-up
+								table
+									tr
+										td Размеры  (ВхШхГ): 
+										td _______ мм.
+									tr
+										td Цвет:
+										td на выбор по системе RAL
+							.mobile-down.order-lg-first 560 руб.
+						+e.form-wrap
+							+btn-accent('купить в 1 клик', '#modal-one-click')(class="link-modal" data-order=`Быстрый заказ- ${title}`)
+							+e.btn.btn-outline-brown.link-modal(    href="#modal-by" data-order=`Заказ- ${title}`) заказать
+				.col-lg-4.col-sm-6.shiping-time.md-order-last
+					//-+e.sales.d-none.d-lg-block
+						+icon('workbench')
+						span В этом месяце продано <br> #[span.counter(data-start="3") 36] тумб
+					+sidebar
+				//-+e.equipment.col-lg-8.col-sm-6.md-order-penultimate
+					h3 Комплектация
+					ul
+						li Выдвижной ящик с&nbsp;установкой на&nbsp;направляющие плавного скольжения&nbsp;&mdash; 4&nbsp;шт.
+						li Колеса для&nbsp;удобства транспортировки&nbsp;&mdash; 4&nbsp;шт.
+						//-li Экран для&nbsp;размещения инструмента&nbsp;&mdash; 2&nbsp;шт.
+						//-li Дополнительная полка в&nbsp;ногах у&nbsp;сидящего&nbsp;&mdash; 1&nbsp;шт.
+	// end s-prod-head-1320
+mixin s-prod-head-1420()
+	-
+		let src= 'img/@2x/1420-1.jpg'
+		let title = "Карман для докумнетов А1420"
+	mixin img(i)
+		img.res-i(src="#" data-lazy= i, alt="Карман для документов и других бумаг")
+	// start s-prod-head
+	+b.s-prod-head&attributes(attributes)
+		.container
+			+b.section-title.text-center.d-lg-none
+				h1= title
+			.row
+				.col-lg-4.col-md-6
+					+b.s-prod-head-images
+						+e.inner
+							+e.slider--lg.--lg-js
+									//- Fancybox 
+									+e.slide--lg
+										a(href='img/@2x/1420-1x.jpg' data-fancybox="prod-gal")
+											+img('img/@2x/1420-1.jpg')
+									//-+e.slide--lg
+										a(href='img/@2x/1211-1x.jpg' data-fancybox="prod-gal")
+											+img('img/@2x/1211-1.jpg')
+						+e.slider--sm.--sm-js
+								//- Листалка 
+								+e.slide
+									+e.img-wrap
+										+img('img/@2x/1420-1.jpg')
+								//-+e.slide
+									+e.img-wrap
+										+img('img/@2x/prod-2.jpg')
+				.col-lg-4.col-md-6
+					+e.content
+						.h1.d-none.d-lg-block= title
+						+e.descr 
+							.mobile-up
+								table
+									tr
+										td Размеры  (ВхШхГ): 
+										td _______ мм.
+									tr
+										td Цвет:
+										td на выбор по системе RAL
+							.mobile-down.order-lg-first 730 руб.
+						+e.form-wrap
+							+btn-accent('купить в 1 клик', '#modal-one-click')(class="link-modal" data-order=`Быстрый заказ- ${title}`)
+							+e.btn.btn-outline-brown.link-modal(    href="#modal-by" data-order=`Заказ- ${title}`) заказать
+				.col-lg-4.col-sm-6.shiping-time.md-order-last
+					//-+e.sales.d-none.d-lg-block
+						+icon('workbench')
+						span В этом месяце продано <br> #[span.counter(data-start="3") 36] тумб
+					+sidebar
+				//-+e.equipment.col-lg-8.col-sm-6.md-order-penultimate
+					h3 Комплектация
+					ul
+						li Выдвижной ящик с&nbsp;установкой на&nbsp;направляющие плавного скольжения&nbsp;&mdash; 4&nbsp;шт.
+						li Колеса для&nbsp;удобства транспортировки&nbsp;&mdash; 4&nbsp;шт.
+						//-li Экран для&nbsp;размещения инструмента&nbsp;&mdash; 2&nbsp;шт.
+						//-li Дополнительная полка в&nbsp;ногах у&nbsp;сидящего&nbsp;&mdash; 1&nbsp;шт.
+	// end s-prod-head-1420
+mixin s-prod-head-1520()
+	-
+		let src= 'img/@2x/1520-1.jpg'
+		let title = "Держатель отверток и ключей А1520"
+	mixin img(i)
+		img.res-i(src="#" data-lazy= i, alt="Держатель отверток и гаечных ключей")
+	// start s-prod-head
+	+b.s-prod-head&attributes(attributes)
+		.container
+			+b.section-title.text-center.d-lg-none
+				h1= title
+			.row
+				.col-lg-4.col-md-6
+					+b.s-prod-head-images
+						+e.inner
+							+e.slider--lg.--lg-js
+									//- Fancybox 
+									+e.slide--lg
+										a(href='img/@2x/1520-1x.jpg' data-fancybox="prod-gal")
+											+img('img/@2x/1520-1.jpg')
+									//-+e.slide--lg
+										a(href='img/@2x/1211-1x.jpg' data-fancybox="prod-gal")
+											+img('img/@2x/1211-1.jpg')
+						+e.slider--sm.--sm-js
+								//- Листалка 
+								+e.slide
+									+e.img-wrap
+										+img('img/@2x/1520-1.jpg')
+								//-+e.slide
+									+e.img-wrap
+										+img('img/@2x/prod-2.jpg')
+				.col-lg-4.col-md-6
+					+e.content
+						.h1.d-none.d-lg-block= title
+						+e.descr 
+							.mobile-up
+								table
+									tr
+										td Размеры  (ВхШхГ): 
+										td _______ мм.
+									tr
+										td Цвет:
+										td на выбор по системе RAL
+							.mobile-down.order-lg-first 680 руб.
+						+e.form-wrap
+							+btn-accent('купить в 1 клик', '#modal-one-click')(class="link-modal" data-order=`Быстрый заказ- ${title}`)
+							+e.btn.btn-outline-brown.link-modal(    href="#modal-by" data-order=`Заказ- ${title}`) заказать
+				.col-lg-4.col-sm-6.shiping-time.md-order-last
+					//-+e.sales.d-none.d-lg-block
+						+icon('workbench')
+						span В этом месяце продано <br> #[span.counter(data-start="3") 36] тумб
+					+sidebar
+				//-+e.equipment.col-lg-8.col-sm-6.md-order-penultimate
+					h3 Комплектация
+					ul
+						li Выдвижной ящик с&nbsp;установкой на&nbsp;направляющие плавного скольжения&nbsp;&mdash; 4&nbsp;шт.
+						li Колеса для&nbsp;удобства транспортировки&nbsp;&mdash; 4&nbsp;шт.
+						//-li Экран для&nbsp;размещения инструмента&nbsp;&mdash; 2&nbsp;шт.
+						//-li Дополнительная полка в&nbsp;ногах у&nbsp;сидящего&nbsp;&mdash; 1&nbsp;шт.
+	// end s-prod-head-1520
+mixin s-prod-head-1620()
+	-
+		let src= 'img/@2x/1620-1.jpg'
+		let title = "Держатель плоскогубцев и молотка А1620"
+	mixin img(i)
+		img.res-i(src="#" data-lazy= i, alt="Держатель плоскогубцев и молотка")
+	// start s-prod-head
+	+b.s-prod-head&attributes(attributes)
+		.container
+			+b.section-title.text-center.d-lg-none
+				h1= title
+			.row
+				.col-lg-4.col-md-6
+					+b.s-prod-head-images
+						+e.inner
+							+e.slider--lg.--lg-js
+									//- Fancybox 
+									+e.slide--lg
+										a(href='img/@2x/1620-1x.jpg' data-fancybox="prod-gal")
+											+img('img/@2x/1620-1.jpg')
+									//-+e.slide--lg
+										a(href='img/@2x/1211-1x.jpg' data-fancybox="prod-gal")
+											+img('img/@2x/1211-1.jpg')
+						+e.slider--sm.--sm-js
+								//- Листалка 
+								+e.slide
+									+e.img-wrap
+										+img('img/@2x/1620-1.jpg')
+								//-+e.slide
+									+e.img-wrap
+										+img('img/@2x/prod-2.jpg')
+				.col-lg-4.col-md-6
+					+e.content
+						.h1.d-none.d-lg-block= title
+						+e.descr 
+							.mobile-up
+								table
+									tr
+										td Размеры  (ВхШхГ): 
+										td _______ мм.
+									tr
+										td Цвет:
+										td на выбор по системе RAL
+							.mobile-down.order-lg-first 735 руб.
+						+e.form-wrap
+							+btn-accent('купить в 1 клик', '#modal-one-click')(class="link-modal" data-order=`Быстрый заказ- ${title}`)
+							+e.btn.btn-outline-brown.link-modal(    href="#modal-by" data-order=`Заказ- ${title}`) заказать
+				.col-lg-4.col-sm-6.shiping-time.md-order-last
+					//-+e.sales.d-none.d-lg-block
+						+icon('workbench')
+						span В этом месяце продано <br> #[span.counter(data-start="3") 36] тумб
+					+sidebar
+				//-+e.equipment.col-lg-8.col-sm-6.md-order-penultimate
+					h3 Комплектация
+					ul
+						li Выдвижной ящик с&nbsp;установкой на&nbsp;направляющие плавного скольжения&nbsp;&mdash; 4&nbsp;шт.
+						li Колеса для&nbsp;удобства транспортировки&nbsp;&mdash; 4&nbsp;шт.
+						//-li Экран для&nbsp;размещения инструмента&nbsp;&mdash; 2&nbsp;шт.
+						//-li Дополнительная полка в&nbsp;ногах у&nbsp;сидящего&nbsp;&mdash; 1&nbsp;шт.
+	// end s-prod-head-1620
+mixin s-prod-head-1720()
+	-
+		let src= 'img/@2x/1720-1.jpg'
+		let title = "Держатель полотенец А1720"
+	mixin img(i)
+		img.res-i(src="#" data-lazy= i, alt="Держатель полотенец")
+	// start s-prod-head
+	+b.s-prod-head&attributes(attributes)
+		.container
+			+b.section-title.text-center.d-lg-none
+				h1= title
+			.row
+				.col-lg-4.col-md-6
+					+b.s-prod-head-images
+						+e.inner
+							+e.slider--lg.--lg-js
+									//- Fancybox 
+									+e.slide--lg
+										a(href='img/@2x/1720-1x.jpg' data-fancybox="prod-gal")
+											+img('img/@2x/1720-1.jpg')
+									//-+e.slide--lg
+										a(href='img/@2x/1211-1x.jpg' data-fancybox="prod-gal")
+											+img('img/@2x/1211-1.jpg')
+						+e.slider--sm.--sm-js
+								//- Листалка 
+								+e.slide
+									+e.img-wrap
+										+img('img/@2x/1720-1.jpg')
+								//-+e.slide
+									+e.img-wrap
+										+img('img/@2x/prod-2.jpg')
+				.col-lg-4.col-md-6
+					+e.content
+						.h1.d-none.d-lg-block= title
+						+e.descr 
+							.mobile-up
+								table
+									tr
+										td Размеры  (ВхШхГ): 
+										td _______ мм.
+									tr
+										td Цвет:
+										td на выбор по системе RAL
+							.mobile-down.order-lg-first 460 руб.
+						+e.form-wrap
+							+btn-accent('купить в 1 клик', '#modal-one-click')(class="link-modal" data-order=`Быстрый заказ- ${title}`)
+							+e.btn.btn-outline-brown.link-modal(    href="#modal-by" data-order=`Заказ- ${title}`) заказать
+				.col-lg-4.col-sm-6.shiping-time.md-order-last
+					//-+e.sales.d-none.d-lg-block
+						+icon('workbench')
+						span В этом месяце продано <br> #[span.counter(data-start="3") 36] тумб
+					+sidebar
+				//-+e.equipment.col-lg-8.col-sm-6.md-order-penultimate
+					h3 Комплектация
+					ul
+						li Выдвижной ящик с&nbsp;установкой на&nbsp;направляющие плавного скольжения&nbsp;&mdash; 4&nbsp;шт.
+						li Колеса для&nbsp;удобства транспортировки&nbsp;&mdash; 4&nbsp;шт.
+						//-li Экран для&nbsp;размещения инструмента&nbsp;&mdash; 2&nbsp;шт.
+						//-li Дополнительная полка в&nbsp;ногах у&nbsp;сидящего&nbsp;&mdash; 1&nbsp;шт.
+	// end s-prod-head-1720
+mixin s-prod-head-1820()
+	-
+		let src= 'img/@2x/1820-1.jpg'
+		let title = "Держатель свёрел А1820"
+	mixin img(i)
+		img.res-i(src="#" data-lazy= i, alt="Держатель свёрел")
+	// start s-prod-head
+	+b.s-prod-head&attributes(attributes)
+		.container
+			+b.section-title.text-center.d-lg-none
+				h1= title
+			.row
+				.col-lg-4.col-md-6
+					+b.s-prod-head-images
+						+e.inner
+							+e.slider--lg.--lg-js
+									//- Fancybox 
+									+e.slide--lg
+										a(href='img/@2x/1820-1x.jpg' data-fancybox="prod-gal")
+											+img('img/@2x/1820-1.jpg')
+									//-+e.slide--lg
+										a(href='img/@2x/1211-1x.jpg' data-fancybox="prod-gal")
+											+img('img/@2x/1211-1.jpg')
+						+e.slider--sm.--sm-js
+								//- Листалка 
+								+e.slide
+									+e.img-wrap
+										+img('img/@2x/1820-1.jpg')
+								//-+e.slide
+									+e.img-wrap
+										+img('img/@2x/prod-2.jpg')
+				.col-lg-4.col-md-6
+					+e.content
+						.h1.d-none.d-lg-block= title
+						+e.descr 
+							.mobile-up
+								table
+									tr
+										td Размеры  (ВхШхГ): 
+										td _______ мм.
+									tr
+										td Цвет:
+										td на выбор по системе RAL
+							.mobile-down.order-lg-first 1 840 руб.
+						+e.form-wrap
+							+btn-accent('купить в 1 клик', '#modal-one-click')(class="link-modal" data-order=`Быстрый заказ- ${title}`)
+							+e.btn.btn-outline-brown.link-modal(    href="#modal-by" data-order=`Заказ- ${title}`) заказать
+				.col-lg-4.col-sm-6.shiping-time.md-order-last
+					//-+e.sales.d-none.d-lg-block
+						+icon('workbench')
+						span В этом месяце продано <br> #[span.counter(data-start="3") 36] тумб
+					+sidebar
+				//-+e.equipment.col-lg-8.col-sm-6.md-order-penultimate
+					h3 Комплектация
+					ul
+						li Выдвижной ящик с&nbsp;установкой на&nbsp;направляющие плавного скольжения&nbsp;&mdash; 4&nbsp;шт.
+						li Колеса для&nbsp;удобства транспортировки&nbsp;&mdash; 4&nbsp;шт.
+						//-li Экран для&nbsp;размещения инструмента&nbsp;&mdash; 2&nbsp;шт.
+						//-li Дополнительная полка в&nbsp;ногах у&nbsp;сидящего&nbsp;&mdash; 1&nbsp;шт.
+	// end s-prod-head-1820

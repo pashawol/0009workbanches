@@ -29,16 +29,25 @@
 
   a {
     color: #ffffff;
+    text-decoration: none !important;
+
+    &:hover {
+      color: $accent;
+    }
   }
 
   ul {
     list-style-type: none;
 
 
-    a:not(.text-accent) {
+    a {
 
       // color: #ffffff !important;
-      color: #ffffff !important;
+      color: #ffffff;
+
+      &:hover {
+        color: $accent;
+      }
     }
 
   }
@@ -235,7 +244,8 @@
     display: inline-block;
     margin-bottom: rem(12);
     border-bottom: 1px dashed #b9d2f6;
-    @include mt;
+    @include mt(.6);
+    color: #ffffff !important;
 
     &:hover {
       border-color: #0b4190;

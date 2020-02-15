@@ -17,7 +17,11 @@ block variables
 block title
 	- let  title= 'Cпасибо'
 	title= title
+block description 
+	meta(name="description", content= "" )
 
+block keywords
+	meta(name="Keywords", content= "" )
 block php
 	.d-none.
 		<?php
@@ -35,13 +39,14 @@ block php
 			///от кого письмо
 					$mail->setFrom('info@info.com');
 		
-					$mail->addAddress('wol1414@gmail.com');
+					$mail->addAddress('spike.mgn@gmail.com');
+					// $mail->addAddress('wol1414@gmail.com');
 					// $mail->addAddress('rocketsstat@yandex.ru');
 					// $mail->addAddress('455203@mail.ru');
 
 
 			//Субъект
-					$mail->Subject = 'Заявка с сайта moibloki';
+					$mail->Subject = 'Заявка с сайта virtuose';
 
 					$time = date('d.m.Y в H:i');
 					$html = '
@@ -168,7 +173,7 @@ block pagecontent
 		+top-nav()
 	.container
 		.back-to-main
-			a(href="") Вернуться на сайт
+			a(href="/") Вернуться на сайт
 
 	// start s-thanks
 	+b.SECTION.s-thanks.section.section-border
@@ -195,7 +200,7 @@ block pagecontent
 					 
 					if(isset($_POST['SB4'])) {
 								?>  
-							<h3>Наш специалист перезвонит в ближайшее время и обсудит с вами заказ.</h3> 
+							<h3>Наш специалист перезвонит в&nbsp;ближайшее время и&nbsp;обсудит с&nbsp;вами заказ.</h3> 
 					<?php } 
 					 
 					if(isset($_POST['SB5'])) {
