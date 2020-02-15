@@ -1,0 +1,40 @@
+extends layout/main.pug
+
+
+include ../blocks/s-content/_s-content.pug
+include ../blocks/s-contact/_s-contact.pug 
+include ../blocks/s-catalog/_s-catalog.pug
+include ../blocks/s-price/_s-price.pug
+include ../blocks/s-advantages/_s-advantages.pug
+include ../blocks/s-look/_s-look.pug
+include ../blocks/s-our/_s-our.pug
+include ../blocks/s-shipping/_s-shipping.pug
+include ../blocks/s-prod-head/_s-prod-head.pug
+include ../blocks/s-other-products/_s-other-products.pug
+
+
+block variables
+	- let  mainPage= null
+block title
+	- let  title= 'Верстак слесарный ВМ_1217'
+	title= title
+block description 
+	meta(name="description", content= "Верстак слесарный ВМ_1217 для слесарных работ и бережного хранения инструмента" )
+
+block keywords
+	meta(name="Keywords", content= "Верстак слесарный ВМ_1217, верстак 1217, верстак вм 1217, верстак слесарный, верстак слесарный +для гаража, верстак слесарный вс, верстак слесарный однотумбовый, верстак слесарный металлический, верстак слесарный металлический купить, верстак слесарный размеры, верстак слесарный цена, верстаки слесарные металлические +для гаража, купить верстак слесарный" )
+block pagecontent 
+	//- +mob-mnu()
+	+header()
+		+top-line()
+		+top-nav()
+	.container
+		+breadcrumb('Главная', 'Каталог', 'Верстаки слесарные', title)
+	//- Меняем номер верстака
+	+s-prod-head-1217()(class="section-border ") 
+	+s-catalog('prodPage')
+		+b.section-title.text-center
+			h2 #[strong Самые популярные модели] слесарных верстаков
+	+s-other-products.section-border
+	+s-form05
+	+footer()

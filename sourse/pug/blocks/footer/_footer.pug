@@ -7,16 +7,16 @@ mixin footer()
 						.row
 							.col-xl-auto
 								ul
-									li: a(href="#").strong  Каталог 
-									li: a(href="#")  Верстаки слесарные
-									li: a(href="#")  Стеллажи металлические
-									li: a(href="#")  Шкафы металлические
-									li: a(href="#")  Тумбы инструментальные
-									li: a(href="#")  Мебель для гаража
-									li: a(href="#")  Аксессуары
+									li: a(href="03-catalog.html").strong  Каталог 
+									li: a(href="verstaki.html")  Верстаки слесарные
+									li: a(href="stellaji.html")  Стеллажи металлические
+									li: a(href="shkafi.html")  Шкафы металлические
+									li: a(href="tumbi.html")  Тумбы инструментальные
+									li: a(href="mebel.html")  Мебель для гаража
+									li: a(href="aksessuari.html")  Аксессуары
 							.col-xl-auto 
 								ul
-									li: a(href="#")  Доставка и оплата
+									li: a(href="06-shiping.html")  Доставка и оплата
 									li: a(href="07-contacts.html")  Контакты 
 				.col-lg-auto.col-4-sm
 					.row 
@@ -25,8 +25,8 @@ mixin footer()
 						.col-lg-auto.d-none.d-sm-block
 							+soc()
 				.col-lg-auto.col-sm.order-sm-first
-						+e.logo(href="#")
-							img.res-i.lazy(src="#" data-src="img/@2x/logo.png", alt="")
+						+e.logo(href="index.html")
+							img.res-i.lazy(src="index.html" data-src="img/@2x/logo.png", alt="")
 						+e.logo-caption Производство и продажа металлической мебели с доставкой по всей России 
 						.d-sm-none
 							+soc()
@@ -38,9 +38,9 @@ mixin footer()
 			+b.develop-block
 				.row
 					.col-sm-auto
-						+e.text Создание и&nbsp;продвижение  сайта: #[a(href="#" target="_blank")  Студия &laquo;Барс&raquo;] 
+						+e.text Создание и&nbsp;продвижение  сайта: #[a(href="https://studiobars.ru" target="_blank")  Студия &laquo;Барс&raquo;] 
 					.col-sm-auto
-						+b.develop-link(href="#" target="_blank")
+						+b.develop-link(href="https://studiobars.ru" target="_blank")
 							+e.panel
 								img.img-1(src="img/svg/hand.svg", alt="")
 								img.img-2(src="img/svg/logo-text.svg", alt="")

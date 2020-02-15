@@ -1,0 +1,40 @@
+extends layout/main.pug
+
+
+include ../blocks/s-content/_s-content.pug
+include ../blocks/s-contact/_s-contact.pug 
+include ../blocks/s-catalog/_s-catalog.pug
+include ../blocks/s-price/_s-price.pug
+include ../blocks/s-advantages/_s-advantages.pug
+include ../blocks/s-look/_s-look.pug
+include ../blocks/s-our/_s-our.pug
+include ../blocks/s-shipping/_s-shipping.pug
+include ../blocks/s-prod-head/_s-prod-head.pug
+include ../blocks/s-other-products/_s-other-products.pug
+include ../blocks/s-what-workbenches/_s-what-workbenches.pug
+
+block variables
+	- let  mainPage= null
+block title
+	- let  title= 'Шкафы металлические для инвентаря и инструмента'
+	title= title
+block description 
+	meta(name="description", content= "Шкафы металлические для автосервисов, заводов, гаражей" )
+
+block keywords
+	meta(name="Keywords", content= "купить металлический шкаф, металлический шкаф +для хранения, шкаф +для инструментов металлический, шкаф архивный металлический, шкаф металлический, шкаф металлический +для документов, шкаф металлический двухсекционный, шкаф металлический навесной, шкаф металлический цена, шкафы металлические +для раздевалок" )
+block pagecontent 
+	//- +mob-mnu()
+	+header()
+		+top-line()
+		+top-nav()
+	.container
+		+breadcrumb('Главная', 'Каталог',  title)
+ 
+	+s-catalog-shkafi()(class="pt-0")
+		+b.section-title.text-center
+			h1 Шкафы металлические
+	+s-other-products-shkafi.section-border
+	+s-form-shkafi
+	+s-what-shkafi
+	+footer()

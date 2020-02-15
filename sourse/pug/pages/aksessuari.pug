@@ -1,0 +1,40 @@
+extends layout/main.pug
+
+
+include ../blocks/s-content/_s-content.pug
+include ../blocks/s-contact/_s-contact.pug 
+include ../blocks/s-catalog/_s-catalog.pug
+include ../blocks/s-price/_s-price.pug
+include ../blocks/s-advantages/_s-advantages.pug
+include ../blocks/s-look/_s-look.pug
+include ../blocks/s-our/_s-our.pug
+include ../blocks/s-shipping/_s-shipping.pug
+include ../blocks/s-prod-head/_s-prod-head.pug
+include ../blocks/s-other-products/_s-other-products.pug
+include ../blocks/s-what-workbenches/_s-what-workbenches.pug
+
+block variables
+	- let  mainPage= null
+block title
+	- let  title= 'Аксессуары для металлической мебели'
+	title= title
+block description 
+	meta(name="description", content= "Аксессуары для металлической мебели" )
+
+block keywords
+	meta(name="Keywords", content= "Аксессуары для металлической мебели, контейнер для маленьких предметов, полка навесная малая, держатель молота и плоскогубцев, дрежатель полотенец, держатель сверел, держатель отверток и ключей, карман для бумаг" )
+block pagecontent 
+	//- +mob-mnu()
+	+header()
+		+top-line()
+		+top-nav()
+	.container
+		+breadcrumb('Главная', 'Каталог',  title)
+ 
+	+s-catalog-aksessuari()(class="pt-0")
+		+b.section-title.text-center
+			h1 Аксессуары
+	+s-other-products-aksessuari.section-border
+	+s-form-aksessuari
+	+s-what-aksessuari
+	+footer()
