@@ -186,12 +186,12 @@ mixin s-catalog-4(prodPage)
 							+item-tr("Полки:","1 шт")
 							+item-tr("Габариты (ВхШхГ):","810х1185х620") 
 					+e.col.col-xl-4.col-md-6
-						+item-prod-1213("","3")
-							+item-tr("Цена:","69 000Р")
+						+item-prod-1217("","3")
+							+item-tr("Цена:","72 600Р")
 							+item-tr("Выдвижные ящики:","6 шт ")
-							+item-tr("Двери:","0 шт")
+							+item-tr("Двери:","1 шт")
 							+item-tr("Полки:","2 шт")
-							+item-tr("Габариты (ВхШхГ):","810х1800х620") 
+							+item-tr("Габариты (ВхШхГ):","810х1800х620")
 					+e.col.col-xl-4.col-md-6
 						+item-prod-1214("","4")
 							+item-tr("Цена:","61 400Р")
@@ -214,10 +214,10 @@ mixin s-catalog-4(prodPage)
 							+item-tr("Полки:","2 шт")
 							+item-tr("Габариты (ВхШхГ):","810х1800х620") 
 					+e.col.col-xl-4.col-md-6
-						+item-prod-1217("","7")
-							+item-tr("Цена:","72 600Р")
+						+item-prod-1213("","7")
+							+item-tr("Цена:","69 000Р")
 							+item-tr("Выдвижные ящики:","6 шт ")
-							+item-tr("Двери:","1 шт")
+							+item-tr("Двери:","0 шт")
 							+item-tr("Полки:","2 шт")
 							+item-tr("Габариты (ВхШхГ):","810х1800х620") 
 			+e.footer
@@ -316,13 +316,13 @@ mixin s-catalog-tumbi(prodPage)
 	// end s-catalog
 
 	
-mixin item-prod-1311(sl, i, a="tumba-1311.html", t="Тумба инструментальная ТМ_1311")
+mixin item-prod-1311(sl, i, a="tumba-1311.html", t="Тележка инструментальная ТМ_1311")
 	+b.item-prod
 		+e.img-wrap(href= a)
 			-
 				let src= (sl=="sl" ? '#' :`img/@2x/1311-1.jpg`)
 				let lazy = (sl=="sl" ? `img/@2x/1311-1.jpg`: null)
-			img.res-i(src= src data-lazy= lazy , alt="Тумба инструментальная ТМ_1311") 
+			img.res-i(src= src data-lazy= lazy , alt="Тележка инструментальная ТМ_1311") 
 		+e.caption
 			+e.title
 				a(href= a)= t
@@ -454,7 +454,7 @@ mixin s-catalog-aksessuari(prodPage)
 							+item-tr("Цена:","1 840Р")
 
 			+e.footer
-				//-+e.btn-more--js.btn-outline-brown(type="button") Смотреть все шкафы
+				+e.btn-more--js.btn-outline-brown(type="button") Смотреть все
 	// end s-catalog
 
 
