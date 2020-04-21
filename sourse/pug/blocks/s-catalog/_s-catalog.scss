@@ -154,6 +154,10 @@
 		@extend .btn;
 		@include mt(.9);
 
+		&:not(:disabled):not(.disabled):active {
+			color: #ffffff;
+		}
+
 		@include media-breakpoint-up(md) {
 
 			width: rem(312);
@@ -309,6 +313,10 @@
 
 	&__btn {
 		@extend .btn;
+
+		&:not(:disabled):not(.disabled):active {
+			color: #ffffff;
+		}
 
 		@include media-breakpoint-up(md) {
 

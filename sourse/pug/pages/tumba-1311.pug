@@ -16,10 +16,10 @@ include ../blocks/s-other-products/_s-other-products.pug
 block variables
 	- let  mainPage= null
 block title
-	- let  title= 'Тумба инструментальная металлическая ТМ_1311'
+	- let  title= 'Тележка инструментальная металлическая ТМ_1311'
 	title= title
 block description 
-	meta(name="description", content= "Тумба инструментальная металлическая ТМ_1311 для инструментов" )
+	meta(name="description", content= "Тележка инструментальная металлическая ТМ_1311 для инструментов" )
 
 block keywords
 	meta(name="Keywords", content= "инструментальная тумба +на колесах, инструментальные тумбы металлические +для инструментов, тумба инструмент, тумба инструментальная, тумба инструментальная 5 ящиков, тумба инструментальная купить, тумба инструментальная металлическая, тумба инструментальная передвижная, тумба инструментальная цена" )
@@ -28,8 +28,28 @@ block pagecontent
 	+header()
 		+top-line()
 		+top-nav()
-	.container
-		+breadcrumb('Главная', 'Каталог', 'Тумбы инструментальные', title)
+	.container 
+		nav(aria-label='breadcrumb')
+			ol.breadcrumb(itemscope='itemscope', itemtype='http://schema.org/BreadcrumbList')
+				li.breadcrumb-item(itemprop='itemListElement', itemscope='itemscope', itemtype='http://schema.org/ListItem')
+					a(href='/', itemprop='item')
+						span(itemprop='name') Главная
+						meta(itemprop='position', content='1')
+				
+				li.breadcrumb-item(itemprop='itemListElement', itemscope='itemscope', itemtype='http://schema.org/ListItem')
+					a(href='/03-catalog.html', itemprop='item')
+						span(itemprop='name') Каталог
+						meta(itemprop='position', content='2')
+				
+				li.breadcrumb-item(itemprop='itemListElement', itemscope='itemscope', itemtype='http://schema.org/ListItem')
+					a(href='/tumbi.html', itemprop='item')
+						span(itemprop='name') Тумбы инструментальные
+						meta(itemprop='position', content='3')
+				
+				li.breadcrumb-item.active(itemprop='itemListElement', itemscope='itemscope', itemtype='http://schema.org/ListItem')
+					a(href='#', itemprop='item')
+						span(itemprop='name')= title
+						meta(itemprop='position', content='4')
 	//- Меняем номер верстака
 	+s-prod-head-1311()(class="section-border ") 
 	+s-catalog('prodPage')

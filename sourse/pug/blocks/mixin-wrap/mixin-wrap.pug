@@ -18,6 +18,8 @@ mixin breadcrumb(...items)
 					a(href=(i == 0 ? "/" : '#') itemprop="item" )
 						span( itemprop="name")= items[i]
 						meta(itemprop="position" content= (i + 1) )
+ 
+ 
 
 mixin page-head(...items)
 	+b.page-head
@@ -62,10 +64,10 @@ mixin arrow()
 mixin soc()
 	+b.soc-text Следите за&nbsp;нашими новостями в&nbsp;соцсетях:
 	+b.soc 
-		+e.A.item--vk(href="#" target="_blank")
-			+icon('vk')
+		//- +e.A.item--vk(href="#" target="_blank")
+		//- 	+icon('vk')
 		
-		+e.A.item--instagram(href="#" target="_blank")
+		+e.A.item--instagram(href="https://www.instagram.com/v_group.ru/" target="_blank")
 			+icon('instagram') 
 //- /scial buttons
 //- WP menu
@@ -202,7 +204,7 @@ mixin contact-block()
 			.col-auto.d-none.d-md-block
 				+e.tel(href="tel:8(495)266-60-73") 8 (495) #[strong 266-60-73]
 				br
-				+e.tel(href="tel:8(495)266-60-73") 8 (495) #[strong 266-60-73]
+				+e.tel(href="tel:8(960)455-48-97") 8 (960) #[strong 455-48-97]
 			.col-auto.d-sm-block.d-none
 				.d-none.d-md-block
 					+e.item--whatsapp(target="_blank" href="https://wa.me/74952666073")
@@ -222,7 +224,7 @@ mixin contact-block-footer()
 			.col-auto
 				+e.tel(href="tel:8(495)266-60-73") 8 (495) #[strong 266-60-73]
 				br
-				+e.tel(href="tel:8(495)266-60-73") 8 (495) #[strong 266-60-73]
+				+e.tel(href="tel:8(960)455-48-97") 8 (960) #[strong 455-48-97]
 				br 
 				+e.link.link-modal(href="#modal-call") Заказать звонок 
 

@@ -1,6 +1,5 @@
 mixin sidebar()
-	+b.s-prod-head-sidebar
-		//- +e.price 
+	+b.s-prod-head-sidebar 
 		ul
 			li
 				+icon('check-mark')
@@ -29,7 +28,7 @@ mixin s-prod-head()
 	-
 		let src= 'img/@2x/prod-1.jpg'
 		let title = "Верстак слесарный ВМ_1214"
-	mixin img()
+	mixin img(src)
 		img.res-i(src="#" data-lazy= src, alt="")
 	// start s-prod-head
 	+b.s-prod-head&attributes(attributes)
@@ -67,9 +66,9 @@ mixin s-prod-head()
 							+btn-accent('купить в 1 клик', '#modal-one-click')(class="link-modal" data-order=`Быстрый заказ- ${title}`)
 							+e.btn.btn-outline-brown.link-modal(    href="#modal-by" data-order=`Заказ- ${title}`) заказать
 				.col-lg-4.col-sm-6.shiping-time.md-order-last
-					+e.sales.d-none.d-lg-block
-						+icon('workbench')
-						span В этом месяце продано <br> #[span.counter(data-start="5") 36] верстаков
+					//- +e.sales.d-none.d-lg-block
+					//- 	+icon('workbench')
+					//- 	span В этом месяце продано <br> #[span.counter(data-start="5") 36] верстаков
 					+sidebar
 				+e.equipment.col-lg-8.col-sm-6.md-order-penultimate
 					h3 Комплектация
@@ -123,14 +122,24 @@ mixin s-prod-head-1211()
 									tr
 										td Цвет:
 										td на выбор по системе RAL
-							.mobile-down.order-lg-first 27 100 руб.*
+							.mobile-down.order-lg-first
+								table
+									tr
+										td 24 400 р*
+										td Направляющие Blum 
+									tr
+										td 27 100 р*
+										td Шариковые направляющие 
+										
+
+							 
 						+e.form-wrap
 							+btn-accent('купить в 1 клик', '#modal-one-click')(class="link-modal" data-order=`Быстрый заказ- ${title}`)
 							+e.btn.btn-outline-brown.link-modal(    href="#modal-by" data-order=`Заказ- ${title}`) заказать
 				.col-lg-4.col-sm-6.shiping-time.md-order-last
-					+e.sales.d-none.d-lg-block
-						+icon('workbench')
-						span В этом месяце продано <br> #[span.counter(data-start="6") 36] верстаков
+					//- +e.sales.d-none.d-lg-block
+					//- 	+icon('workbench')
+					//- 	span В этом месяце продано <br> #[span.counter(data-start="6") 36] верстаков
 					+sidebar
 				+e.equipment.col-lg-8.col-sm-6.md-order-penultimate
 					h3 Комплектация
@@ -141,6 +150,7 @@ mixin s-prod-head-1211()
 						li Дверь с&nbsp;петлями плавного закрывания&nbsp;&mdash; 1&nbsp;шт.
 						li Дополнительная полка в&nbsp;ногах у&nbsp;сидящего&nbsp;&mdash; 1&nbsp;шт.
 						li *Стоимость указана без&nbsp;учета стоимости экрана и&nbsp;навесных элементов
+						li <b>Экран для верстака</b> ВМ_1211 (ШхВ): 1383х800 мм. — <b> 6.125 руб. </b>
 	// end s-prod-head-1211
 
 mixin s-prod-head-1212()
@@ -191,9 +201,9 @@ mixin s-prod-head-1212()
 							+btn-accent('купить в 1 клик', '#modal-one-click')(class="link-modal" data-order=`Быстрый заказ- ${title}`)
 							+e.btn.btn-outline-brown.link-modal(    href="#modal-by" data-order=`Заказ- ${title}`) заказать
 				.col-lg-4.col-sm-6.shiping-time.md-order-last
-					+e.sales.d-none.d-lg-block
-						+icon('workbench')
-						span В этом месяце продано <br> #[span.counter(data-start="3") 36] верстаков
+					//- +e.sales.d-none.d-lg-block
+					//- 	+icon('workbench')
+					//- 	span В этом месяце продано <br> #[span.counter(data-start="3") 36] верстаков
 					+sidebar
 				+e.equipment.col-lg-8.col-sm-6.md-order-penultimate
 					h3 Комплектация
@@ -203,6 +213,7 @@ mixin s-prod-head-1212()
 						li Дверь с&nbsp;петлями плавного закрывания&nbsp;&mdash; 1&nbsp;шт.
 						//-li Дополнительная полка в&nbsp;ногах у&nbsp;сидящего&nbsp;&mdash; 1&nbsp;шт.
 						li *Стоимость указана без&nbsp;учета стоимости экрана и&nbsp;навесных элементов
+						li <b>Экран для верстака</b> ВМ_1212 (ШхВ): 1185х800 мм. — <b> 5.600 руб. </b>
 	// end s-prod-head-1212
 
 
@@ -254,9 +265,9 @@ mixin s-prod-head-1213()
 							+btn-accent('купить в 1 клик', '#modal-one-click')(class="link-modal" data-order=`Быстрый заказ- ${title}`)
 							+e.btn.btn-outline-brown.link-modal(    href="#modal-by" data-order=`Заказ- ${title}`) заказать
 				.col-lg-4.col-sm-6.shiping-time.md-order-last
-					+e.sales.d-none.d-lg-block
-						+icon('workbench')
-						span В этом месяце продано <br> #[span.counter(data-start="1") 36] верстаков
+					//- +e.sales.d-none.d-lg-block
+					//- 	+icon('workbench')
+					//- 	span В этом месяце продано <br> #[span.counter(data-start="1") 36] верстаков
 					+sidebar
 				+e.equipment.col-lg-8.col-sm-6.md-order-penultimate
 					h3 Комплектация
@@ -267,6 +278,7 @@ mixin s-prod-head-1213()
 						//-li Дверь с&nbsp;петлями плавного закрывания&nbsp;&mdash; 1&nbsp;шт.
 						//-li Дополнительная полка в&nbsp;ногах у&nbsp;сидящего&nbsp;&mdash; 1&nbsp;шт.
 						li *Стоимость указана без&nbsp;учета стоимости экрана и&nbsp;навесных элементов
+						li <b>Экран для верстака</b> ВМ_1213 (ШхВ): 1800х800 мм. — <b> 7.125 руб. </b>
 	// end s-prod-head-1213
 
 mixin s-prod-head-1214()
@@ -317,9 +329,9 @@ mixin s-prod-head-1214()
 							+btn-accent('купить в 1 клик', '#modal-one-click')(class="link-modal" data-order=`Быстрый заказ- ${title}`)
 							+e.btn.btn-outline-brown.link-modal(    href="#modal-by" data-order=`Заказ- ${title}`) заказать
 				.col-lg-4.col-sm-6.shiping-time.md-order-last
-					+e.sales.d-none.d-lg-block
-						+icon('workbench')
-						span В этом месяце продано <br> #[span.counter(data-start="14") 36] верстаков
+					//- +e.sales.d-none.d-lg-block
+					//- 	+icon('workbench')
+					//- 	span В этом месяце продано <br> #[span.counter(data-start="14") 36] верстаков
 					+sidebar
 				+e.equipment.col-lg-8.col-sm-6.md-order-penultimate
 					h3 Комплектация
@@ -329,6 +341,7 @@ mixin s-prod-head-1214()
 						li Дверь с&nbsp;петлями плавного закрывания&nbsp;&mdash; 2&nbsp;шт.
 						//-li Дополнительная полка в&nbsp;ногах у&nbsp;сидящего&nbsp;&mdash; 1&nbsp;шт.
 						li *Стоимость указана без&nbsp;учета стоимости экрана и&nbsp;навесных элементов
+						li <b>Экран для верстака</b> ВМ_1214 (ШхВ): 1500х800 мм. — <b> 6.700 руб. </b>
 	// end s-prod-head-1214
 
 mixin s-prod-head-1215()
@@ -379,9 +392,9 @@ mixin s-prod-head-1215()
 							+btn-accent('купить в 1 клик', '#modal-one-click')(class="link-modal" data-order=`Быстрый заказ- ${title}`)
 							+e.btn.btn-outline-brown.link-modal(    href="#modal-by" data-order=`Заказ- ${title}`) заказать
 				.col-lg-4.col-sm-6.shiping-time.md-order-last
-					+e.sales.d-none.d-lg-block
-						+icon('workbench')
-						span В этом месяце продано <br> #[span.counter(data-start="5") 36] верстаков
+					//- +e.sales.d-none.d-lg-block
+					//- 	+icon('workbench')
+					//- 	span В этом месяце продано <br> #[span.counter(data-start="5") 36] верстаков
 					+sidebar
 				+e.equipment.col-lg-8.col-sm-6.md-order-penultimate
 					h3 Комплектация
@@ -391,6 +404,7 @@ mixin s-prod-head-1215()
 						//li Дверь с&nbsp;петлями плавного закрывания&nbsp;&mdash; 1&nbsp;шт.
 						//-li Дополнительная полка в&nbsp;ногах у&nbsp;сидящего&nbsp;&mdash; 1&nbsp;шт.
 						li *Стоимость указана без&nbsp;учета стоимости экрана и&nbsp;навесных элементов
+						li <b>Экран для верстака</b> ВМ_1215 (ШхВ): 1800х800 мм. — <b> 7.125 руб. </b>
 	// end s-prod-head-1215
 
 mixin s-prod-head-1216()
@@ -441,9 +455,9 @@ mixin s-prod-head-1216()
 							+btn-accent('купить в 1 клик', '#modal-one-click')(class="link-modal" data-order=`Быстрый заказ- ${title}`)
 							+e.btn.btn-outline-brown.link-modal(    href="#modal-by" data-order=`Заказ- ${title}`) заказать
 				.col-lg-4.col-sm-6.shiping-time.md-order-last
-					+e.sales.d-none.d-lg-block
-						+icon('workbench')
-						span В этом месяце продано <br> #[span.counter(data-start="4") 36] верстаков
+					//- +e.sales.d-none.d-lg-block
+					//- 	+icon('workbench')
+					//- 	span В этом месяце продано <br> #[span.counter(data-start="4") 36] верстаков
 					+sidebar
 				+e.equipment.col-lg-8.col-sm-6.md-order-penultimate
 					h3 Комплектация
@@ -453,6 +467,7 @@ mixin s-prod-head-1216()
 						li Дверь с&nbsp;петлями плавного закрывания&nbsp;&mdash; 2&nbsp;шт.
 						//-li Дополнительная полка в&nbsp;ногах у&nbsp;сидящего&nbsp;&mdash; 1&nbsp;шт.
 						li *Стоимость указана без&nbsp;учета стоимости экрана и&nbsp;навесных элементов
+						li <b>Экран для верстака</b> ВМ_1216 (ШхВ): 1800х800 мм. — <b> 7.125 руб. </b>
 	// end s-prod-head-1216
 
 mixin s-prod-head-1217()
@@ -503,9 +518,9 @@ mixin s-prod-head-1217()
 							+btn-accent('купить в 1 клик', '#modal-one-click')(class="link-modal" data-order=`Быстрый заказ- ${title}`)
 							+e.btn.btn-outline-brown.link-modal(    href="#modal-by" data-order=`Заказ- ${title}`) заказать
 				.col-lg-4.col-sm-6.shiping-time.md-order-last
-					+e.sales.d-none.d-lg-block
-						+icon('workbench')
-						span В этом месяце продано <br> #[span.counter(data-start="11") 36] верстаков
+					//- +e.sales.d-none.d-lg-block
+					//- 	+icon('workbench')
+					//- 	span В этом месяце продано <br> #[span.counter(data-start="11") 36] верстаков
 					+sidebar
 				+e.equipment.col-lg-8.col-sm-6.md-order-penultimate
 					h3 Комплектация
@@ -515,6 +530,7 @@ mixin s-prod-head-1217()
 						li Дверь с&nbsp;петлями плавного закрывания&nbsp;&mdash; 1&nbsp;шт.
 						//-li Дополнительная полка в&nbsp;ногах у&nbsp;сидящего&nbsp;&mdash; 1&nbsp;шт.
 						li *Стоимость указана без&nbsp;учета стоимости экрана и&nbsp;навесных элементов
+						li <b>Экран для верстака</b> ВМ_1217 (ШхВ): 1800х800 мм. — <b> 7.125 руб. </b>
 	// end s-prod-head-1217
 
 
@@ -522,9 +538,9 @@ mixin s-prod-head-1217()
 
 mixin s-prod-head-13()
 	-
-		let src= 'img/@2x/1217-1.jpg'
+		let src= 'img/@2x/stellaj-1.jpg'
 		let title = "Стойка вертикальная/ кронштейн"
-	mixin img()
+	mixin img(src)
 		img.res-i(src="#" data-lazy= src, alt="Стеллаж металлический")
 	// start s-prod-head
 	+b.s-prod-head.s-prod-racks&attributes(attributes)
@@ -540,19 +556,19 @@ mixin s-prod-head-13()
 									+e.slider--lg.--lg-js
 										
 											+e.slide--lg
-												a(href='img/@2x/1211-1x.jpg' src data-fancybox="prod-gal")
-													+img('img/@2x/1212-1.jpg')
-											+e.slide--lg
-												a(href='img/@2x/1213-1x.jpg' src data-fancybox="prod-gal")
-													+img('img/@2x/1214-1.jpg')
+												a(href='img/@2x/stellaj-1x.jpg' src data-fancybox="prod-gal")
+													+img('img/@2x/stellaj-1.jpg')
+											//-+e.slide--lg
+												a(href='img/@2x/stellaj-1x.jpg' src data-fancybox="prod-gal")
+													+img('img/@2x/stellaj-1.jpg')
 								+e.slider--sm.--sm-js
 									
 										+e.slide
 											+e.img-wrap
-												+img('img/@2x/1217-5.jpg')
-										+e.slide
+												+img('img/@2x/stellaj-1.jpg')
+										//-+e.slide
 											+e.img-wrap
-												+img('img/@2x/1215-6.jpg')
+												+img('img/@2x/stellaj-1.jpg')
 						.col-md-6
 							+e.content
 								.h1.d-none.d-lg-block= title
@@ -666,9 +682,9 @@ mixin s-prod-head-13()
 									+btn-accent('заказать', '#modal-by')(class="link-modal btn-calc" data-order=`Заказ стеллажа ${title}`) 
 
 				.col-lg-4.shiping-time
-					+e.sales.d-none.d-lg-block
-						+icon('rack')
-						span В этом месяце продано<br> #[span.counter(data-start="5") 6] стеллажей
+					//- +e.sales.d-none.d-lg-block
+					//- 	+icon('rack')
+					//- 	span В этом месяце продано<br> #[span.counter(data-start="5") 6] стеллажей
 					+sidebar()
 						//- +e.btn(type="button")
 						//- 	+icon('cart')
@@ -727,9 +743,9 @@ mixin s-prod-head-1511()
 							+btn-accent('купить в 1 клик', '#modal-one-click')(class="link-modal" data-order=`Быстрый заказ- ${title}`)
 							+e.btn.btn-outline-brown.link-modal(    href="#modal-by" data-order=`Заказ- ${title}`) заказать
 				.col-lg-4.col-sm-6.shiping-time.md-order-last
-					+e.sales.d-none.d-lg-block
-						+icon('workbench')
-						span В этом месяце продано <br> #[span.counter(data-start="2") 36] шкафов
+					//- +e.sales.d-none.d-lg-block
+					//- 	+icon('workbench')
+					//- 	span В этом месяце продано <br> #[span.counter(data-start="2") 36] шкафов
 					+sidebar
 				+e.equipment.col-lg-8.col-sm-6.md-order-penultimate
 					h3 Комплектация
@@ -788,9 +804,9 @@ mixin s-prod-head-1512()
 							+btn-accent('купить в 1 клик', '#modal-one-click')(class="link-modal" data-order=`Быстрый заказ- ${title}`)
 							+e.btn.btn-outline-brown.link-modal(    href="#modal-by" data-order=`Заказ- ${title}`) заказать
 				.col-lg-4.col-sm-6.shiping-time.md-order-last
-					+e.sales.d-none.d-lg-block
-						+icon('workbench')
-						span В этом месяце продано <br> #[span.counter(data-start="1") 36] шкафов
+					//- +e.sales.d-none.d-lg-block
+					//- 	+icon('workbench')
+					//- 	span В этом месяце продано <br> #[span.counter(data-start="1") 36] шкафов
 					+sidebar
 				+e.equipment.col-lg-8.col-sm-6.md-order-penultimate
 					h3 Комплектация
@@ -804,7 +820,7 @@ mixin s-prod-head-1512()
 mixin s-prod-head-1311()
 	-
 		let src= 'img/@2x/1311-1.jpg'
-		let title = "Тумба ТМ_1311"
+		let title = "Тележка ТМ_1311"
 	mixin img(i)
 		img.res-i(src="#" data-lazy= i, alt="Тумба инструментальная ТМ_1311")
 	// start s-prod-head
@@ -849,9 +865,9 @@ mixin s-prod-head-1311()
 							+btn-accent('купить в 1 клик', '#modal-one-click')(class="link-modal" data-order=`Быстрый заказ- ${title}`)
 							+e.btn.btn-outline-brown.link-modal(    href="#modal-by" data-order=`Заказ- ${title}`) заказать
 				.col-lg-4.col-sm-6.shiping-time.md-order-last
-					+e.sales.d-none.d-lg-block
-						+icon('workbench')
-						span В этом месяце продано <br> #[span.counter(data-start="5") 36] тумб
+					//- +e.sales.d-none.d-lg-block
+					//- 	+icon('workbench')
+					//- 	span В этом месяце продано <br> #[span.counter(data-start="5") 36] тумб
 					+sidebar
 				+e.equipment.col-lg-8.col-sm-6.md-order-penultimate
 					h3 Комплектация
@@ -909,9 +925,9 @@ mixin s-prod-head-1411()
 							+btn-accent('купить в 1 клик', '#modal-one-click')(class="link-modal" data-order=`Быстрый заказ- ${title}`)
 							+e.btn.btn-outline-brown.link-modal(    href="#modal-by" data-order=`Заказ- ${title}`) заказать
 				.col-lg-4.col-sm-6.shiping-time.md-order-last
-					+e.sales.d-none.d-lg-block
-						+icon('workbench')
-						span В этом месяце продано <br> #[span.counter(data-start="7") 36] тумб
+					//- +e.sales.d-none.d-lg-block
+					//- 	+icon('workbench')
+					//- 	span В этом месяце продано <br> #[span.counter(data-start="7") 36] тумб
 					+sidebar
 				+e.equipment.col-lg-8.col-sm-6.md-order-penultimate
 					h3 Комплектация
@@ -969,9 +985,9 @@ mixin s-prod-head-1412()
 							+btn-accent('купить в 1 клик', '#modal-one-click')(class="link-modal" data-order=`Быстрый заказ- ${title}`)
 							+e.btn.btn-outline-brown.link-modal(    href="#modal-by" data-order=`Заказ- ${title}`) заказать
 				.col-lg-4.col-sm-6.shiping-time.md-order-last
-					+e.sales.d-none.d-lg-block
-						+icon('workbench')
-						span В этом месяце продано <br> #[span.counter(data-start="3") 36] тумб
+					//- +e.sales.d-none.d-lg-block
+					//- 	+icon('workbench')
+					//- 	span В этом месяце продано <br> #[span.counter(data-start="3") 36] тумб
 					+sidebar
 				+e.equipment.col-lg-8.col-sm-6.md-order-penultimate
 					h3 Комплектация
@@ -1023,7 +1039,7 @@ mixin s-prod-head-1120()
 								table
 									tr
 										td Размеры  (ВхШхГ): 
-										td _______ мм.
+										td  60х55х100 мм.
 									tr
 										td Цвет:
 										td на выбор по системе RAL
@@ -1047,7 +1063,7 @@ mixin s-prod-head-1120()
 mixin s-prod-head-1220()
 	-
 		let src= 'img/@2x/1220-1.jpg'
-		let title = "Полка малая А1220"
+		let title = "Полка малая А1220 379мм."
 	mixin img(i)
 		img.res-i(src="#" data-lazy= i, alt="Полка навесная малая")
 	// start s-prod-head
@@ -1083,7 +1099,7 @@ mixin s-prod-head-1220()
 								table
 									tr
 										td Размеры  (ВхШхГ): 
-										td _______ мм.
+										td 90х379х 150 мм.
 									tr
 										td Цвет:
 										td на выбор по системе RAL
@@ -1107,7 +1123,7 @@ mixin s-prod-head-1220()
 mixin s-prod-head-1320()
 	-
 		let src= 'img/@2x/1320-1.jpg'
-		let title = "Полка большая А1320"
+		let title = "Полка большая А1320 595мм."
 	mixin img(i)
 		img.res-i(src="#" data-lazy= i, alt="Полка навесная большая металлическая")
 	// start s-prod-head
@@ -1143,7 +1159,7 @@ mixin s-prod-head-1320()
 								table
 									tr
 										td Размеры  (ВхШхГ): 
-										td _______ мм.
+										td 90х595х150 мм.
 									tr
 										td Цвет:
 										td на выбор по системе RAL
@@ -1203,7 +1219,7 @@ mixin s-prod-head-1420()
 								table
 									tr
 										td Размеры  (ВхШхГ): 
-										td _______ мм.
+										td 250(215)х270х45,2 мм.
 									tr
 										td Цвет:
 										td на выбор по системе RAL
@@ -1263,7 +1279,7 @@ mixin s-prod-head-1520()
 								table
 									tr
 										td Размеры  (ВхШхГ): 
-										td _______ мм.
+										td 50,5х404х75,5 мм.
 									tr
 										td Цвет:
 										td на выбор по системе RAL
@@ -1323,7 +1339,7 @@ mixin s-prod-head-1620()
 								table
 									tr
 										td Размеры  (ВхШхГ): 
-										td _______ мм.
+										td 50,5х404х105 мм.
 									tr
 										td Цвет:
 										td на выбор по системе RAL
@@ -1383,7 +1399,7 @@ mixin s-prod-head-1720()
 								table
 									tr
 										td Размеры  (ВхШхГ): 
-										td _______ мм.
+										td 30х325х120 мм.
 									tr
 										td Цвет:
 										td на выбор по системе RAL
@@ -1443,7 +1459,7 @@ mixin s-prod-head-1820()
 								table
 									tr
 										td Размеры  (ВхШхГ): 
-										td _______ мм.
+										td 50,5х404х105 мм.
 									tr
 										td Цвет:
 										td на выбор по системе RAL
