@@ -84,7 +84,7 @@
 		}
 
 		@include media-breakpoint-up(lg) {
-			margin-top: rem(-70);
+			// margin-top: rem(-70);
 
 		}
 
@@ -182,16 +182,17 @@
 
 		.mobile-down {
 			padding-bottom: rem(21);
-			font-size: rem(27);
 			font-weight: 500;
 			letter-spacing: rem(0.5);
+
+			font-size: rem(27);
 
 			@include media-breakpoint-up(md) {
 				font-size: rem(22);
 			}
 
 			@include media-breakpoint-down(md) {
-				text-align: center;
+				// text-align: center;
 			}
 		}
 	}
@@ -415,4 +416,32 @@
 
 .s-prod-head__content .s-prod-head__equipment {
 	margin-top: 0;
+}
+
+.mobile-down {
+	text-align: left;
+
+	td {
+		padding-bottom: rem(5);
+		vertical-align: top;
+		// vertical-align: bottom;
+
+		padding-bottom: rem(10) !important;
+		font-size: 1.2rem;
+
+		&:nth-child(1) {
+			font-weight: 500;
+			color: $body-color;
+			font-size: rem(27);
+
+			@include media-breakpoint-up(md) {
+				font-size: rem(22);
+			}
+		}
+
+		&:nth-child(2) {
+			font-weight: 400;
+			color: #5d5d5d;
+		}
+	}
 }

@@ -1,6 +1,5 @@
 mixin sidebar()
-	+b.s-prod-head-sidebar
-		//- +e.price 
+	+b.s-prod-head-sidebar 
 		ul
 			li
 				+icon('check-mark')
@@ -67,9 +66,9 @@ mixin s-prod-head()
 							+btn-accent('купить в 1 клик', '#modal-one-click')(class="link-modal" data-order=`Быстрый заказ- ${title}`)
 							+e.btn.btn-outline-brown.link-modal(    href="#modal-by" data-order=`Заказ- ${title}`) заказать
 				.col-lg-4.col-sm-6.shiping-time.md-order-last
-					+e.sales.d-none.d-lg-block
-						+icon('workbench')
-						span В этом месяце продано <br> #[span.counter(data-start="5") 36] верстаков
+					//- +e.sales.d-none.d-lg-block
+					//- 	+icon('workbench')
+					//- 	span В этом месяце продано <br> #[span.counter(data-start="5") 36] верстаков
 					+sidebar
 				+e.equipment.col-lg-8.col-sm-6.md-order-penultimate
 					h3 Комплектация
@@ -123,14 +122,24 @@ mixin s-prod-head-1211()
 									tr
 										td Цвет:
 										td на выбор по системе RAL
-							.mobile-down.order-lg-first 27 100 руб.*
+							.mobile-down.order-lg-first
+								table
+									tr
+										td 27 100 р*
+										td Шариковые направляющие 
+										
+									tr
+										td 24 400 р*
+										td Направляющие Blum 
+
+							 
 						+e.form-wrap
 							+btn-accent('купить в 1 клик', '#modal-one-click')(class="link-modal" data-order=`Быстрый заказ- ${title}`)
 							+e.btn.btn-outline-brown.link-modal(    href="#modal-by" data-order=`Заказ- ${title}`) заказать
 				.col-lg-4.col-sm-6.shiping-time.md-order-last
-					+e.sales.d-none.d-lg-block
-						+icon('workbench')
-						span В этом месяце продано <br> #[span.counter(data-start="6") 36] верстаков
+					//- +e.sales.d-none.d-lg-block
+					//- 	+icon('workbench')
+					//- 	span В этом месяце продано <br> #[span.counter(data-start="6") 36] верстаков
 					+sidebar
 				+e.equipment.col-lg-8.col-sm-6.md-order-penultimate
 					h3 Комплектация
@@ -192,9 +201,9 @@ mixin s-prod-head-1212()
 							+btn-accent('купить в 1 клик', '#modal-one-click')(class="link-modal" data-order=`Быстрый заказ- ${title}`)
 							+e.btn.btn-outline-brown.link-modal(    href="#modal-by" data-order=`Заказ- ${title}`) заказать
 				.col-lg-4.col-sm-6.shiping-time.md-order-last
-					+e.sales.d-none.d-lg-block
-						+icon('workbench')
-						span В этом месяце продано <br> #[span.counter(data-start="3") 36] верстаков
+					//- +e.sales.d-none.d-lg-block
+					//- 	+icon('workbench')
+					//- 	span В этом месяце продано <br> #[span.counter(data-start="3") 36] верстаков
 					+sidebar
 				+e.equipment.col-lg-8.col-sm-6.md-order-penultimate
 					h3 Комплектация
@@ -256,9 +265,9 @@ mixin s-prod-head-1213()
 							+btn-accent('купить в 1 клик', '#modal-one-click')(class="link-modal" data-order=`Быстрый заказ- ${title}`)
 							+e.btn.btn-outline-brown.link-modal(    href="#modal-by" data-order=`Заказ- ${title}`) заказать
 				.col-lg-4.col-sm-6.shiping-time.md-order-last
-					+e.sales.d-none.d-lg-block
-						+icon('workbench')
-						span В этом месяце продано <br> #[span.counter(data-start="1") 36] верстаков
+					//- +e.sales.d-none.d-lg-block
+					//- 	+icon('workbench')
+					//- 	span В этом месяце продано <br> #[span.counter(data-start="1") 36] верстаков
 					+sidebar
 				+e.equipment.col-lg-8.col-sm-6.md-order-penultimate
 					h3 Комплектация
@@ -320,9 +329,9 @@ mixin s-prod-head-1214()
 							+btn-accent('купить в 1 клик', '#modal-one-click')(class="link-modal" data-order=`Быстрый заказ- ${title}`)
 							+e.btn.btn-outline-brown.link-modal(    href="#modal-by" data-order=`Заказ- ${title}`) заказать
 				.col-lg-4.col-sm-6.shiping-time.md-order-last
-					+e.sales.d-none.d-lg-block
-						+icon('workbench')
-						span В этом месяце продано <br> #[span.counter(data-start="14") 36] верстаков
+					//- +e.sales.d-none.d-lg-block
+					//- 	+icon('workbench')
+					//- 	span В этом месяце продано <br> #[span.counter(data-start="14") 36] верстаков
 					+sidebar
 				+e.equipment.col-lg-8.col-sm-6.md-order-penultimate
 					h3 Комплектация
@@ -383,9 +392,9 @@ mixin s-prod-head-1215()
 							+btn-accent('купить в 1 клик', '#modal-one-click')(class="link-modal" data-order=`Быстрый заказ- ${title}`)
 							+e.btn.btn-outline-brown.link-modal(    href="#modal-by" data-order=`Заказ- ${title}`) заказать
 				.col-lg-4.col-sm-6.shiping-time.md-order-last
-					+e.sales.d-none.d-lg-block
-						+icon('workbench')
-						span В этом месяце продано <br> #[span.counter(data-start="5") 36] верстаков
+					//- +e.sales.d-none.d-lg-block
+					//- 	+icon('workbench')
+					//- 	span В этом месяце продано <br> #[span.counter(data-start="5") 36] верстаков
 					+sidebar
 				+e.equipment.col-lg-8.col-sm-6.md-order-penultimate
 					h3 Комплектация
@@ -446,9 +455,9 @@ mixin s-prod-head-1216()
 							+btn-accent('купить в 1 клик', '#modal-one-click')(class="link-modal" data-order=`Быстрый заказ- ${title}`)
 							+e.btn.btn-outline-brown.link-modal(    href="#modal-by" data-order=`Заказ- ${title}`) заказать
 				.col-lg-4.col-sm-6.shiping-time.md-order-last
-					+e.sales.d-none.d-lg-block
-						+icon('workbench')
-						span В этом месяце продано <br> #[span.counter(data-start="4") 36] верстаков
+					//- +e.sales.d-none.d-lg-block
+					//- 	+icon('workbench')
+					//- 	span В этом месяце продано <br> #[span.counter(data-start="4") 36] верстаков
 					+sidebar
 				+e.equipment.col-lg-8.col-sm-6.md-order-penultimate
 					h3 Комплектация
@@ -509,9 +518,9 @@ mixin s-prod-head-1217()
 							+btn-accent('купить в 1 клик', '#modal-one-click')(class="link-modal" data-order=`Быстрый заказ- ${title}`)
 							+e.btn.btn-outline-brown.link-modal(    href="#modal-by" data-order=`Заказ- ${title}`) заказать
 				.col-lg-4.col-sm-6.shiping-time.md-order-last
-					+e.sales.d-none.d-lg-block
-						+icon('workbench')
-						span В этом месяце продано <br> #[span.counter(data-start="11") 36] верстаков
+					//- +e.sales.d-none.d-lg-block
+					//- 	+icon('workbench')
+					//- 	span В этом месяце продано <br> #[span.counter(data-start="11") 36] верстаков
 					+sidebar
 				+e.equipment.col-lg-8.col-sm-6.md-order-penultimate
 					h3 Комплектация
@@ -673,9 +682,9 @@ mixin s-prod-head-13()
 									+btn-accent('заказать', '#modal-by')(class="link-modal btn-calc" data-order=`Заказ стеллажа ${title}`) 
 
 				.col-lg-4.shiping-time
-					+e.sales.d-none.d-lg-block
-						+icon('rack')
-						span В этом месяце продано<br> #[span.counter(data-start="5") 6] стеллажей
+					//- +e.sales.d-none.d-lg-block
+					//- 	+icon('rack')
+					//- 	span В этом месяце продано<br> #[span.counter(data-start="5") 6] стеллажей
 					+sidebar()
 						//- +e.btn(type="button")
 						//- 	+icon('cart')
@@ -734,9 +743,9 @@ mixin s-prod-head-1511()
 							+btn-accent('купить в 1 клик', '#modal-one-click')(class="link-modal" data-order=`Быстрый заказ- ${title}`)
 							+e.btn.btn-outline-brown.link-modal(    href="#modal-by" data-order=`Заказ- ${title}`) заказать
 				.col-lg-4.col-sm-6.shiping-time.md-order-last
-					+e.sales.d-none.d-lg-block
-						+icon('workbench')
-						span В этом месяце продано <br> #[span.counter(data-start="2") 36] шкафов
+					//- +e.sales.d-none.d-lg-block
+					//- 	+icon('workbench')
+					//- 	span В этом месяце продано <br> #[span.counter(data-start="2") 36] шкафов
 					+sidebar
 				+e.equipment.col-lg-8.col-sm-6.md-order-penultimate
 					h3 Комплектация
@@ -795,9 +804,9 @@ mixin s-prod-head-1512()
 							+btn-accent('купить в 1 клик', '#modal-one-click')(class="link-modal" data-order=`Быстрый заказ- ${title}`)
 							+e.btn.btn-outline-brown.link-modal(    href="#modal-by" data-order=`Заказ- ${title}`) заказать
 				.col-lg-4.col-sm-6.shiping-time.md-order-last
-					+e.sales.d-none.d-lg-block
-						+icon('workbench')
-						span В этом месяце продано <br> #[span.counter(data-start="1") 36] шкафов
+					//- +e.sales.d-none.d-lg-block
+					//- 	+icon('workbench')
+					//- 	span В этом месяце продано <br> #[span.counter(data-start="1") 36] шкафов
 					+sidebar
 				+e.equipment.col-lg-8.col-sm-6.md-order-penultimate
 					h3 Комплектация
@@ -856,9 +865,9 @@ mixin s-prod-head-1311()
 							+btn-accent('купить в 1 клик', '#modal-one-click')(class="link-modal" data-order=`Быстрый заказ- ${title}`)
 							+e.btn.btn-outline-brown.link-modal(    href="#modal-by" data-order=`Заказ- ${title}`) заказать
 				.col-lg-4.col-sm-6.shiping-time.md-order-last
-					+e.sales.d-none.d-lg-block
-						+icon('workbench')
-						span В этом месяце продано <br> #[span.counter(data-start="5") 36] тумб
+					//- +e.sales.d-none.d-lg-block
+					//- 	+icon('workbench')
+					//- 	span В этом месяце продано <br> #[span.counter(data-start="5") 36] тумб
 					+sidebar
 				+e.equipment.col-lg-8.col-sm-6.md-order-penultimate
 					h3 Комплектация
@@ -916,9 +925,9 @@ mixin s-prod-head-1411()
 							+btn-accent('купить в 1 клик', '#modal-one-click')(class="link-modal" data-order=`Быстрый заказ- ${title}`)
 							+e.btn.btn-outline-brown.link-modal(    href="#modal-by" data-order=`Заказ- ${title}`) заказать
 				.col-lg-4.col-sm-6.shiping-time.md-order-last
-					+e.sales.d-none.d-lg-block
-						+icon('workbench')
-						span В этом месяце продано <br> #[span.counter(data-start="7") 36] тумб
+					//- +e.sales.d-none.d-lg-block
+					//- 	+icon('workbench')
+					//- 	span В этом месяце продано <br> #[span.counter(data-start="7") 36] тумб
 					+sidebar
 				+e.equipment.col-lg-8.col-sm-6.md-order-penultimate
 					h3 Комплектация
@@ -976,9 +985,9 @@ mixin s-prod-head-1412()
 							+btn-accent('купить в 1 клик', '#modal-one-click')(class="link-modal" data-order=`Быстрый заказ- ${title}`)
 							+e.btn.btn-outline-brown.link-modal(    href="#modal-by" data-order=`Заказ- ${title}`) заказать
 				.col-lg-4.col-sm-6.shiping-time.md-order-last
-					+e.sales.d-none.d-lg-block
-						+icon('workbench')
-						span В этом месяце продано <br> #[span.counter(data-start="3") 36] тумб
+					//- +e.sales.d-none.d-lg-block
+					//- 	+icon('workbench')
+					//- 	span В этом месяце продано <br> #[span.counter(data-start="3") 36] тумб
 					+sidebar
 				+e.equipment.col-lg-8.col-sm-6.md-order-penultimate
 					h3 Комплектация
