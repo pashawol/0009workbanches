@@ -271,6 +271,11 @@ function eventHandler() {
 		$(modal).find(".order").val($(this).data("order")); // $(this).parents('.s-prod-head')
 		// 		? $($(this).data("src")).find(".color").val($(this).parents('.s-prod-head').find(".radio-input__input:checked").val())
 		// 		: $($(this).data("src")).find(".color").val('')
+	}); // показать еще 
+
+	$(".s-prod-head__loadMore").click(function () {
+		$(this).toggle();
+		$(".s-prod-head__hiddenBlock").slideToggle();
 	}); // калькулятор
 
 	function getCost(x, id) {

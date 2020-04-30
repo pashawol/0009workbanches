@@ -17,7 +17,7 @@ include ../blocks/s-other-products/_s-other-products.pug
 block variables
 	- let  mainPage= null
 block title
-	- let  title= 'Стеллажи металлические'
+	- let  title= 'Стеллажная система'
 	title= title
 
 block description 
@@ -42,17 +42,17 @@ block pagecontent
 					a(href='/03-catalog.html', itemprop='item')
 						span(itemprop='name') Каталог
 						meta(itemprop='position', content='2')
+
 				li.breadcrumb-item(itemprop='itemListElement', itemscope='itemscope', itemtype='http://schema.org/ListItem')
 					a(href='/catalog-stellaji.html', itemprop='item')
 						span(itemprop='name') Стеллажи
 						meta(itemprop='position', content='3')
- 
 				li.breadcrumb-item.active(itemprop='itemListElement', itemscope='itemscope', itemtype='http://schema.org/ListItem')
 					a(href='#', itemprop='item')
 						span(itemprop='name')= title
 						meta(itemprop='position', content='4')
 
-	+s-prod-head-13()
+	+s-prod-head-14()
 	+s-other-products-13.section-border
 	+s-form-13()
 	//-+s-what-stellaji

@@ -31,6 +31,37 @@ mixin item-prod-1211(sl, i, a="verstak-1211.html", t="Верстак слеса�
 			table
 				block
 			+btn-accent('Подробнее', a)
+
+//-Стелажные системы
+mixin item-prod-stellajnie-sistemi(sl, i, a="stellajnie-sistemi.html", t="Стеллажные системы")
+	+b.item-prod
+		+e.img-wrap(href= a)
+			-
+				let src= (sl=="sl" ? '#' :`img/@2x/catalog-stellaji.jpg`)
+				let lazy = (sl=="sl" ? `img/@2x/catalog-stellaji.jpg`: null)
+			img.res-i(src= src data-lazy= lazy , alt="Стеллажные системы") 
+		+e.caption
+			+e.title
+				a(href= a)= t
+			table
+				block
+			+btn-accent('Подробнее', a)
+
+//-Стелажны металические
+mixin item-prod-stellaj-metal(sl, i, a="stellaji.html", t="Стеллажы металические")
+	+b.item-prod
+		+e.img-wrap(href= a)
+			-
+				let src= (sl=="sl" ? '#' :`img/@2x/catalog-stellaji.jpg`)
+				let lazy = (sl=="sl" ? `img/@2x/catalog-stellaji.jpg`: null)
+			img.res-i(src= src data-lazy= lazy , alt="Стеллажы металические") 
+		+e.caption
+			+e.title
+				a(href= a)= t
+			table
+				block
+			+btn-accent('Подробнее', a)
+
 //- 1212
 mixin item-prod-1212(sl, i, a="verstak-1212.html", t="Верстак слесарный ВМ_1212")
 	+b.item-prod
@@ -223,6 +254,22 @@ mixin s-catalog-4(prodPage)
 			+e.footer
 				+e.btn-more--js.btn-outline-brown(type="button") Смотреть все верстаки
 	// end s-catalog
+
+
+mixin s-catalog-stelaji(prodPage)
+	// start s-catalog
+	+b.SECTION.s-catalog.section#s-catalog&attributes(attributes)
+		.container
+			block
+			.row
+
+					+e.col.col-xl-4.col-md-6
+						+item-prod-stellajnie-sistemi("","1")
+							+item-tr("Цена:","от 20585 Р")
+					+e.col.col-xl-4.col-md-6
+						+item-prod-stellaj-metal("","2")
+							+item-tr("Цена:","от 6 815 Р")
+
 
 
 mixin item-prod-1511(sl, i, a="shkaf-1511.html", t="Шкаф металлический ШМ_1511")

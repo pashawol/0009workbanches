@@ -34,6 +34,10 @@
 		&__title {
 			max-width: rem(150);
 			font-size: 1rem;
+
+			&--other {
+				max-width: rem(230);
+			}
 		}
 
 		&__input {
