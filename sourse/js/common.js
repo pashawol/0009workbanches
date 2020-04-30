@@ -307,6 +307,12 @@ function eventHandler() {
 
 	})
 
+	// показать еще 
+	$(".s-prod-head__loadMore").click(function(){
+		$(this).toggle();
+		$(".s-prod-head__hiddenBlock").slideToggle();
+	})
+
 	// калькулятор
 	function getCost(x, id) {
 		var option = document.getElementById(id);

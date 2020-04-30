@@ -17,11 +17,11 @@ mixin s-catalog-menu()
 				mixin prod-item-stellaji(n)
 					.col-md-6.col-lg-4
 						+b.catalog-item
-							img.lazy.res-i(src="img/@2x/catalog-stellaji.jpg" data-src="img/@2x/catalog-stellaji.jpg" alt="Стеллажи металлические")
+							img.lazy.res-i(src="img/@2x/catalog-stellaji.jpg" data-src="img/@2x/catalog-stellaji.jpg" alt="Стеллажи")
 							+e.description
 								h4= n
 								p Для удобного размещения и&nbsp;хранения инструмента больших размеров
-								+btn-accent('подробнее', a="stellaji.html")
+								+btn-accent('подробнее', a="catalog-stellaji.html")
 				mixin prod-item-shkafi(n)
 					.col-md-6.col-lg-4
 						+b.catalog-item
@@ -56,7 +56,7 @@ mixin s-catalog-menu()
 								+btn-accent('подробнее', a="aksessuari.html")
 
 				+prod-item-verstaki('Верстаки слесарные')
-				+prod-item-stellaji('Стеллажи металлические')
+				+prod-item-stellaji('Стеллажи')
 				+prod-item-shkafi('Шкафы металлические')
 				+prod-item-tumbi('Тумбы инструментальные')
 				+prod-item-mebel('Мебель для гаража')
