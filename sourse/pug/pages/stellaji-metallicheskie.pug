@@ -2,7 +2,7 @@ extends layout/main.pug
 
 
 include ../blocks/s-content/_s-content.pug
-include ../blocks/s-contact/_s-contact.pug 
+include ../blocks/s-contact/_s-contact.pug
 include ../blocks/s-catalog/_s-catalog.pug
 include ../blocks/s-price/_s-price.pug
 include ../blocks/s-advantages/_s-advantages.pug
@@ -10,14 +10,16 @@ include ../blocks/s-look/_s-look.pug
 include ../blocks/s-our/_s-our.pug
 include ../blocks/s-shipping/_s-shipping.pug
 include ../blocks/s-prod-head/_s-prod-head.pug
-include ../blocks/s-other-products/_s-other-products.pug
 include ../blocks/s-what-workbenches/_s-what-workbenches.pug
+include ../blocks/s-other-products/_s-other-products.pug
+
 
 block variables
 	- let  mainPage= null
 block title
-	- let  title= 'Стеллажи '
+	- let  title= 'Стеллажи металлические'
 	title= title
+
 block description 
 	meta(name="description", content= "Стеллажи металлические сборные для склада" )
 
@@ -39,16 +41,19 @@ block pagecontent
 				li.breadcrumb-item(itemprop='itemListElement', itemscope='itemscope', itemtype='http://schema.org/ListItem')
 					a(href='/03-catalog.html', itemprop='item')
 						span(itemprop='name') Каталог
-						meta(itemprop='position', content='2') 
+						meta(itemprop='position', content='2')
+				li.breadcrumb-item(itemprop='itemListElement', itemscope='itemscope', itemtype='http://schema.org/ListItem')
+					a(href='/stellaji.html', itemprop='item')
+						span(itemprop='name') Стеллажи
+						meta(itemprop='position', content='3')
+ 
 				li.breadcrumb-item.active(itemprop='itemListElement', itemscope='itemscope', itemtype='http://schema.org/ListItem')
 					a(href='#', itemprop='item')
 						span(itemprop='name')= title
-						meta(itemprop='position', content='3')
- 
-	+s-catalog-stelaji()(class="pt-0")
-		+b.section-title.text-center
-			h1= title
-	+s-other-products.section-border
-	+s-form05
-	//-+s-what-workbenches
+						meta(itemprop='position', content='4')
+
+	+s-prod-head-13()
+	+s-other-products-13.section-border
+	+s-form-13()
+	//-+s-what-stellaji
 	+footer()
