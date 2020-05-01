@@ -736,10 +736,10 @@ mixin s-prod-head-13()
 
 mixin s-prod-head-14()
 	-
-		let src= 'img/@2x/stellaj-1.jpg'
+		let src= 'img/@2x/stellajnie-sistemi-2.jpg'
 		let title = "Стеллажная система"
 	mixin img(src)
-		img.res-i(src="#" data-lazy= src, alt="Стеллаж металлический")
+		img.res-i(src="#" data-lazy= src, alt="Стеллажная система")
 	// start s-prod-head
 	+b.s-prod-head.s-prod-racks&attributes(attributes)
 		.container
@@ -750,18 +750,69 @@ mixin s-prod-head-14()
 					+b.s-prod-head-images
 						+e.inner
 							+e.slider--lg.--lg-js
-								
+								mixin sliderItem(i)
 									+e.slide--lg
-										a(href='img/@2x/stellaj-1x.jpg' src data-fancybox="prod-gal")
-											+img('img/@2x/stellaj-1.jpg')
-									//-+e.slide--lg
-										a(href='img/@2x/stellaj-1x.jpg' src data-fancybox="prod-gal")
-											+img('img/@2x/stellaj-1.jpg')
+										a(href=`img/@2x/stellajnie-sistemi-${i}.jpg` src data-fancybox="prod-gal")
+											+img(`img/@2x/stellajnie-sistemi-${i}.jpg`)
+								+sliderItem('1')
+								+sliderItem('2')
+								+sliderItem('3')
+								+sliderItem('4')
+								+sliderItem('5')
+								+sliderItem('6')
+								+sliderItem('7')
+								+sliderItem('8')
+								+sliderItem('9')
+								+sliderItem('10')
+								+sliderItem('11')
+								+sliderItem('12')
+								+sliderItem('13')
+								+sliderItem('14')
+								+sliderItem('15')
+								+sliderItem('16')
+								//- +sliderItem('17')
+								+sliderItem('18')
+								+sliderItem('19')
+								+sliderItem('20')
+								+sliderItem('21')
+								+sliderItem('22')
+								+sliderItem('23')
+								+sliderItem('24')
+								+sliderItem('25')
+								+sliderItem('26')
+								+sliderItem('27')
 						+e.slider--sm.--sm-js
-							
+							mixin sliderItemSm(i)
 								+e.slide
 									+e.img-wrap
-										+img('img/@2x/stellaj-1.jpg')
+										+img(`img/@2x/stellajnie-sistemi-${i}.jpg`)
+							+sliderItemSm('1')
+							+sliderItemSm('2')
+							+sliderItemSm('3')
+							+sliderItemSm('4')
+							+sliderItemSm('5')
+							+sliderItemSm('6')
+							+sliderItemSm('7')
+							+sliderItemSm('8')
+							+sliderItemSm('9')
+							+sliderItemSm('10')
+							+sliderItemSm('11')
+							+sliderItemSm('12')
+							+sliderItemSm('13')
+							+sliderItemSm('14')
+							+sliderItemSm('15')
+							+sliderItemSm('16')
+							//- +sliderItemSm('17')
+							+sliderItemSm('18')
+							+sliderItemSm('19')
+							+sliderItemSm('20')
+							+sliderItemSm('21')
+							+sliderItemSm('22')
+							+sliderItemSm('23')
+							+sliderItemSm('24')
+							+sliderItemSm('25')
+							+sliderItemSm('26')
+							+sliderItemSm('27')
 								//-+e.slide
 									+e.img-wrap
 										+img('img/@2x/stellaj-1.jpg')
