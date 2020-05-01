@@ -37,6 +37,9 @@
 
 			&--other {
 				max-width: rem(230);
+				@include media-breakpoint-only(lg){
+					max-width: rem(170);
+				}
 			}
 		}
 
