@@ -92,6 +92,28 @@
 		}
 	}
 
+	&--lg {
+		@include media-breakpoint-only(lg) {
+			.form-wrap__input-wrap {
+				height: calc(100% - 1rem);
+
+				label {
+					height: calc(100% - .5rem);
+					display: flex;
+					flex-direction: column;
+					justify-content: flex-end;
+				}
+			}
+			.form-wrap__input {
+				flex-shrink: 0;
+			}
+
+			h3 {
+				text-align: left;
+			}
+		}
+	}
+
 	@include media-breakpoint-up(xl) {}
 
 	@include media-breakpoint-up(lg) {}
