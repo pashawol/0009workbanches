@@ -32,13 +32,13 @@ mixin item-prod-1211(sl, i, a="verstak-1211.html", t="Верстак слеса�
 				block
 			+btn-accent('Подробнее', a)
 
-//-Стелажные системы
-mixin item-prod-stellajnie-sistemi(sl, i, a="stellajnie-sistemi.html", t="Стеллажные системы")
+//-Стелажная системы
+mixin item-prod-stellajnie-sistemi(sl, i, a="stellajnie-sistemi.html", t="Стеллажная системы")
 	+b.item-prod
 		+e.img-wrap(href= a)
 			-
-				let src= (sl=="sl" ? '#' :`img/@2x/catalog-stellaji.jpg`)
-				let lazy = (sl=="sl" ? `img/@2x/catalog-stellaji.jpg`: null)
+				let src= (sl=="sl" ? '#' :`img/@2x/stellajnie-sistemi-2.jpg`)
+				let lazy = (sl=="sl" ? `img/@2x/stellajnie-sistemi-2.jpg`: null)
 			img.res-i(src= src data-lazy= lazy , alt="Стеллажные системы") 
 		+e.caption
 			+e.title
@@ -48,7 +48,7 @@ mixin item-prod-stellajnie-sistemi(sl, i, a="stellajnie-sistemi.html", t="Сте
 			+btn-accent('Подробнее', a)
 
 //-Стелажны металические
-mixin item-prod-stellaj-metal(sl, i, a="stellaji.html", t="Стеллажы металические")
+mixin item-prod-stellaj-metal(sl, i, a="stellaji-metallicheskie.html", t="Стеллажы металические")
 	+b.item-prod
 		+e.img-wrap(href= a)
 			-
