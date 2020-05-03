@@ -290,7 +290,7 @@ function eventHandler() {
 		return x;
 	}
 
-	if ($("div").is(".form-calc")) {
+	if ($("div").is(".form-calc--1")) {
 		var change = function change() {
 			var vertical, horizontal, cost, result;
 			vertical = document.querySelector('.stoika-price').textContent.replace(" ", "");
@@ -301,13 +301,44 @@ function eventHandler() {
 		};
 
 		change();
-		$(".form-calc").on('input change input cut copy paste', 'input, select', function () {
+		$(".form-calc--1").on('input change input cut copy paste', 'input, select', function () {
 			change();
 		});
 		$(".form-calc .link-modal").click(function () {
 			$("#modal-by").find('[name="stoyki"]').val($(this).parents(".form-calc").find("#vertical").val() + "шт.");
 			$("#modal-by").find('[name="kranshtein"]').val($(this).parents(".form-calc").find("#horizontal").val() + "шт.");
 			$("#modal-by").find('[name="price"]').val($("#result").text() + "руб.");
+		});
+	}
+
+	if ($("div").is(".form-calc-system")) {
+		var change2 = function change2() {
+			var result = 0;
+			var select = $(".form-calc-system select");
+
+			for (var i = 0; i < select.length; i++) {
+				result += +$(select[i]).data('price') * +$(select[i]).val();
+			} // result = (+document.getElementById("vertical").value * +vertical) + (+document.getElementById("horizontal").value * +horizontal);
+
+
+			if (isNaN(result)) result = 0;
+			document.getElementById("result").innerText = result;
+		};
+
+		change2();
+		$(".form-calc-system").on('input change input cut copy paste', 'input, select', function () {
+			change2();
+		});
+		$(".form-calc-system .link-modal").click(function () {
+			var result2 = '';
+			var select = $(".form-calc-system select");
+
+			for (var i = 0; i < select.length; i++) {
+				result2 += "<tr style=\"background-color: #f8f8f8;\"> \n\t\t\t\t\t<td style=\"padding: 10px; border: #e9e9e9 1px solid;\"> ".concat($(select[i]).data('name'), " :</td> \n\t\t\t\t\t<td style=\"padding: 10px; border: #e9e9e9 1px solid;\"><b> ").concat($(select[i]).val(), " \u0448\u0442. (").concat($(select[i]).data('price'), " \u0440\u0443\u0431.)  </b></td></tr>");
+			}
+
+			$("#modal-by").find('[name="names"]').val(result2);
+			$("#modal-by").find('[name="price"]').val($("#result").text() + " руб.");
 		});
 	} // подстановка числа купленных
 

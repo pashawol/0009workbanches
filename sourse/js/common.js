@@ -323,7 +323,7 @@ function eventHandler() {
 		}
 		return x;
 	}
-	if ($("div").is(".form-calc")) {
+	if ($("div").is(".form-calc--1")) {
 		function change() {
 			let vertical, horizontal, cost, result;
 			vertical = document.querySelector('.stoika-price').textContent.replace(" ", "");
@@ -336,7 +336,7 @@ function eventHandler() {
 
 		change();
 
-		$(".form-calc").on('input change input cut copy paste', 'input, select', function () {
+		$(".form-calc--1").on('input change input cut copy paste', 'input, select', function () {
 			change();
 		})
 
@@ -347,6 +347,42 @@ function eventHandler() {
 
 		})
 	}
+	
+	if ($("div").is(".form-calc-system")) {
+		function change2() {
+			let  result = 0;
+			let select = $(".form-calc-system select");
+			for (let i = 0; i < select.length; i++) {
+				result += (+$(select[i]).data('price')) * (+$(select[i]).val()); 
+			}
+			// result = (+document.getElementById("vertical").value * +vertical) + (+document.getElementById("horizontal").value * +horizontal);
+			if (isNaN(result)) result = 0;
+
+			document.getElementById("result").innerText = result;
+		}
+
+		change2();
+
+		$(".form-calc-system").on('input change input cut copy paste', 'input, select', function () {
+			change2();
+		})
+
+		$(".form-calc-system .link-modal").click(function () {
+			let result2 = '';
+			let select = $(".form-calc-system select");
+			for (let i = 0; i < select.length; i++) {
+				result2 += `<tr style="background-color: #f8f8f8;"> 
+					<td style="padding: 10px; border: #e9e9e9 1px solid;"> ${$(select[i]).data('name')} :</td> 
+					<td style="padding: 10px; border: #e9e9e9 1px solid;"><b> ${$(select[i]).val()} шт. (${$(select[i]).data('price')} руб.)  </b></td></tr>`;
+
+			}
+
+			$("#modal-by").find('[name="names"]').val( result2 	)
+			$("#modal-by").find('[name="price"]').val($("#result").text() + " руб.")
+
+		})
+	}
+
 	// подстановка числа купленных
 	let now = new Date();
 	let date = now.getDate();

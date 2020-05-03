@@ -631,7 +631,7 @@ mixin s-prod-head-13()
 											li Кронштейн металлический — 1 шт.
 
 
-					+b.s-prod-head-calculate.form-calc
+					+b.s-prod-head-calculate.form-calc--1
 						h3 Рассчитайте стоимость&nbsp;стеллажа
 						+b.form-wrap
 							.row
@@ -864,11 +864,14 @@ mixin s-prod-head-14()
 						h3 Рассчитайте стоимость стеллажной системы
 						+b.form-wrap
 							.row
-								.col-md-6
-									+e.input-wrap
-										label
-											+e.SPAN.title--other Сколько нужно вертикальных&nbsp;стоек?
-											+e.SELECT.input(id="vertical")
+								mixin select-body()
+									.col-md-6
+										+e.input-wrap
+											label
+												block
+								+select-body()
+									+e.SPAN.title--other Сколько нужно вертикальных&nbsp;стоек?
+									+e.SELECT.input(id="vertical" data-name="Стойка вертикальная" data-price="2970")
 												option(value="2" ) 2шт.
 												option(value="4" ) 4шт.
 												option(value="6" ) 6шт.
@@ -919,11 +922,9 @@ mixin s-prod-head-14()
 												option(value="96" ) 96шт. 
 												option(value="98" ) 98шт. 
 												option(value="100") 100шт. 
-								.col-md-6
-									+e.input-wrap
-										label
-											+e.SPAN.title--other Сколько нужно горизонтальных закладных (2.7м)?
-											+e.SELECT.input(id="horizontal")
+								+select-body()
+									+e.SPAN.title--other Сколько нужно горизонтальных закладных (2.7м)?
+									+e.SELECT.input(id="horizontal" data-name="Закладная горизонтальная 2,70 м" data-price="1790")
 												option(value="2" ) 2шт.
 												option(value="4" ) 4шт.
 												option(value="6" ) 6шт.
@@ -974,11 +975,9 @@ mixin s-prod-head-14()
 												option(value="96" ) 96шт. 
 												option(value="98" ) 98шт. 
 												option(value="100") 100шт. 
-								.col-md-6
-									+e.input-wrap
-										label
-											+e.SPAN.title--other Сколько нужно <br>полок (800&nbsp;мм)?
-											+e.SELECT.input(id="shelf800")
+								+select-body()
+									+e.SPAN.title--other Сколько нужно <br>полок (800&nbsp;мм)?
+									+e.SELECT.input(id="shelf800" data-name="Полка 800 мм" data-price="3060")
 												option(value="1") 1шт.
 												option(value="2") 2шт.
 												option(value="3") 3шт.
@@ -999,37 +998,9 @@ mixin s-prod-head-14()
 												option(value="18"  ) 18шт.
 												option(value="19"  ) 19шт.
 												option(value="20"  ) 20шт. 
-								.col-md-6
-									+e.input-wrap
-										label
-											+e.SPAN.title--other Сколько нужно экранов&nbsp;(800&nbsp;мм)?
-											+e.SELECT.input(id="screen800")
-												option(value="1") 1шт.
-												option(value="2") 2шт.
-												option(value="3") 3шт.
-												option(value="4") 4шт.
-												option(value="5") 5шт.
-												option(value="6") 6шт.
-												option(value="7") 7шт.
-												option(value="8") 8шт.
-												option(value="9") 9шт.
-												option(value="10"  ) 10шт.
-												option(value="11"  ) 11шт.
-												option(value="12"  ) 12шт.
-												option(value="13"  ) 13шт.
-												option(value="14"  ) 14шт.
-												option(value="15"  ) 15шт.
-												option(value="16"  ) 16шт.
-												option(value="17"  ) 17шт.
-												option(value="18"  ) 18шт.
-												option(value="19"  ) 19шт.
-												option(value="20"  ) 20шт. 
-
-								.col-md-6
-									+e.input-wrap
-										label
-											+e.SPAN.title--other Сколько нужно полок навесных малых (379 мм А1220)?
-											+e.SELECT.input(id="a1220")
+								+select-body()
+									+e.SPAN.title--other Сколько нужно экранов&nbsp;(800&nbsp;мм)?
+									+e.SELECT.input(id="screen800" data-name="Экран 800 мм" data-price="3205")
 												option(value="1") 1шт.
 												option(value="2") 2шт.
 												option(value="3") 3шт.
@@ -1051,11 +1022,9 @@ mixin s-prod-head-14()
 												option(value="19"  ) 19шт.
 												option(value="20"  ) 20шт. 
 
-								.col-md-6
-									+e.input-wrap
-										label
-											+e.SPAN.title--other Сколько нужно полок навесных больших (595 мм А1320)?
-											+e.SELECT.input(id="a1320")
+								+select-body()
+									+e.SPAN.title--other Сколько нужно полок навесных малых (379 мм А1220)?
+									+e.SELECT.input(id="a1220" data-name="Полка навесная малая 379 мм А1220" data-price="335")
 												option(value="1") 1шт.
 												option(value="2") 2шт.
 												option(value="3") 3шт.
@@ -1077,11 +1046,9 @@ mixin s-prod-head-14()
 												option(value="19"  ) 19шт.
 												option(value="20"  ) 20шт. 
 
-								.col-md-6
-									+e.input-wrap
-										label
-											+e.SPAN.title--other Сколько нужно контейнеров для мелких предметов (А1120)?
-											+e.SELECT.input(id="a1120")
+								+select-body()
+									+e.SPAN.title--other Сколько нужно полок навесных больших (595 мм А1320)?
+									+e.SELECT.input(id="a1320" data-name="Полка навесная большая 595 мм А1320" data-price="560")
 												option(value="1") 1шт.
 												option(value="2") 2шт.
 												option(value="3") 3шт.
@@ -1103,11 +1070,9 @@ mixin s-prod-head-14()
 												option(value="19"  ) 19шт.
 												option(value="20"  ) 20шт. 
 
-								.col-md-6
-									+e.input-wrap
-										label
-											+e.SPAN.title--other Сколько нужно держателей отверток и ключей (А1520)?
-											+e.SELECT.input(id="a1520")
+								+select-body()
+									+e.SPAN.title--other Сколько нужно контейнеров для мелких предметов (А1120)?
+									+e.SELECT.input(id="a1120" data-name="Контейнер для мелких предметов А1120" data-price="190")
 												option(value="1") 1шт.
 												option(value="2") 2шт.
 												option(value="3") 3шт.
@@ -1129,11 +1094,9 @@ mixin s-prod-head-14()
 												option(value="19"  ) 19шт.
 												option(value="20"  ) 20шт. 
 
-								.col-md-6
-									+e.input-wrap
-										label
-											+e.SPAN.title--other Сколько нужно держателей молотка и плоскогубцев (А1620)?
-											+e.SELECT.input(id="a1620")
+								+select-body()
+									+e.SPAN.title--other Сколько нужно держателей отверток и ключей (А1520)?
+									+e.SELECT.input(id="a1520" data-name="Держатель отверток и ключей А1520" data-price="680")
 												option(value="1") 1шт.
 												option(value="2") 2шт.
 												option(value="3") 3шт.
@@ -1155,11 +1118,9 @@ mixin s-prod-head-14()
 												option(value="19"  ) 19шт.
 												option(value="20"  ) 20шт. 
 
-								.col-md-6
-									+e.input-wrap
-										label
-											+e.SPAN.title--other Сколько нужно держателей полотенец (А1720)?
-											+e.SELECT.input(id="a1720")
+								+select-body()
+									+e.SPAN.title--other Сколько нужно держателей молотка и плоскогубцев (А1620)?
+									+e.SELECT.input(id="a1620" data-name="Держатель молотка и плоскогубцев А1620" data-price="735")
 												option(value="1") 1шт.
 												option(value="2") 2шт.
 												option(value="3") 3шт.
@@ -1180,11 +1141,33 @@ mixin s-prod-head-14()
 												option(value="18"  ) 18шт.
 												option(value="19"  ) 19шт.
 												option(value="20"  ) 20шт. 
-								.col-md-6
-									+e.input-wrap
-										label
-											+e.SPAN.title--other Сколько нужно держателей сверел (нерж. сталь А1820)
-											+e.SELECT.input(id="a1820")
+
+								+select-body()
+									+e.SPAN.title--other Сколько нужно держателей полотенец (А1720)?
+									+e.SELECT.input(id="a1720" data-name="Держатель полотенец А1720" data-price="460")
+												option(value="1") 1шт.
+												option(value="2") 2шт.
+												option(value="3") 3шт.
+												option(value="4") 4шт.
+												option(value="5") 5шт.
+												option(value="6") 6шт.
+												option(value="7") 7шт.
+												option(value="8") 8шт.
+												option(value="9") 9шт.
+												option(value="10"  ) 10шт.
+												option(value="11"  ) 11шт.
+												option(value="12"  ) 12шт.
+												option(value="13"  ) 13шт.
+												option(value="14"  ) 14шт.
+												option(value="15"  ) 15шт.
+												option(value="16"  ) 16шт.
+												option(value="17"  ) 17шт.
+												option(value="18"  ) 18шт.
+												option(value="19"  ) 19шт.
+												option(value="20"  ) 20шт. 
+								+select-body()
+									+e.SPAN.title--other Сколько нужно держателей сверел (нерж. сталь А1820)
+									+e.SELECT.input(id="a1820" data-name="Держатель сверел (нерж.сталь) А1820" data-price="1840")
 												option(value="1") 1шт.
 												option(value="2") 2шт.
 												option(value="3") 3шт.
