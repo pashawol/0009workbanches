@@ -739,7 +739,7 @@ mixin s-prod-head-14()
 		let src= 'img/@2x/stellajnie-sistemi-2.jpg'
 		let title = "Стеллажная система"
 	mixin img(src)
-		img.res-i(src="#" data-lazy= src, alt="Стеллажная система")
+		img.res-i.object-fit-js.w-100.h-100(src="#" data-lazy= src, alt="Стеллажная система")
 	// start s-prod-head
 	+b.s-prod-head.s-prod-racks&attributes(attributes)
 		.container
@@ -753,7 +753,7 @@ mixin s-prod-head-14()
 								mixin sliderItem(i)
 									+e.slide--lg
 										a(href=`img/@2x/stellajnie-sistemi-${i}.jpg` src data-fancybox="prod-gal")
-											+img(`img/@2x/stellajnie-sistemi-${i}.jpg`)
+											+img(`img/@1x/stellajnie-sistemi-${i}.jpg`)
 								+sliderItem('1')
 								+sliderItem('2')
 								+sliderItem('3')
@@ -785,7 +785,7 @@ mixin s-prod-head-14()
 							mixin sliderItemSm(i)
 								+e.slide
 									+e.img-wrap
-										+img(`img/@2x/stellajnie-sistemi-${i}.jpg`)
+										+img(`img/@1x/stellajnie-sistemi-${i}.jpg`)
 							+sliderItemSm('1')
 							+sliderItemSm('2')
 							+sliderItemSm('3')
@@ -820,13 +820,13 @@ mixin s-prod-head-14()
 					+e.content
 						.h1.d-none.d-lg-block= title
 						+e.descr 
-							.h6 Система стеллажного хранения предназначена для организации рабочего пространства и&nbsp;эргономичный системы хранения элементов бытового типа таких как: садовый инструмент, промышленный инструмент, коробки и&nbsp;канистры, разнообразных предметов личного использования.
-							.h6 Тип системы наборная (размер системы хранения варьируется в&nbsp;зависимости от&nbsp;ваших нужд) межосевое расстояние при монтаже 816мм.
+							.h6 Предназначена для организации рабочего пространства и&nbsp;эргономичный системы хранения элементов бытового типа таких как: садовый инструмент, промышленный инструмент, коробки и&nbsp;канистры, разнообразных предметов личного использования.
+							.h6 #[strong Тип системы: ]наборная (размер системы хранения варьируется в&nbsp;зависимости от&nbsp;ваших нужд) межосевое расстояние при монтаже 816мм.
 				.col-sm-6.col-lg-4.md-order-2
 					+sidebar()
 				.col-lg-5.col-md-6.md-order-1
 					+e.unfoldedOptions
-						p Комплектация
+						h3 Комплектация
 						p.strong Направляющая двухрядная вертикальная
 						p 
 							i Используется как вертикальная стойка при монтаже систем хранения. Два ряда пазов предназначены для установки кронштейнов,экранов и полок.
@@ -858,7 +858,7 @@ mixin s-prod-head-14()
 								li Вес: 3 кг.
 								li Габариты (ВхШхГ), мм - 87х800х280
 								li Тип крепления: навешивание зип
-						+e.BUTTON.loadMore(type="button") Показать еще
+						+e.BUTTON.loadMore(type="button") Показать всё
 				.col-lg-7.sm-order-1
 					+b.s-prod-head-calculate--lg.form-calc-system
 						h3 Рассчитайте стоимость стеллажной системы
@@ -869,10 +869,34 @@ mixin s-prod-head-14()
 										+e.input-wrap
 											label
 												block
+								mixin options()
+									option(value="0" selected) 0шт.
+									option(value="1" ) 1шт.
+									option(value="2") 2шт.
+									option(value="3") 3шт.
+									option(value="4") 4шт.
+									option(value="5") 5шт.
+									option(value="6") 6шт.
+									option(value="7") 7шт.
+									option(value="8") 8шт.
+									option(value="9") 9шт.
+									option(value="10"  ) 10шт.
+									option(value="11"  ) 11шт.
+									option(value="12"  ) 12шт.
+									option(value="13"  ) 13шт.
+									option(value="14"  ) 14шт.
+									option(value="15"  ) 15шт.
+									option(value="16"  ) 16шт.
+									option(value="17"  ) 17шт.
+									option(value="18"  ) 18шт.
+									option(value="19"  ) 19шт.
+									option(value="20"  ) 20шт. 
 								+select-body()
 									+e.SPAN.title--other Сколько нужно вертикальных&nbsp;стоек?
 									+e.SELECT.input(id="vertical" data-name="Стойка вертикальная" data-price="2970")
-												option(value="2" ) 2шт.
+												option(value="0" ) 0шт.
+												option(value="1" ) 1шт.
+												option(value="2" selected) 2шт.
 												option(value="4" ) 4шт.
 												option(value="6" ) 6шт.
 												option(value="8" ) 8шт.
@@ -925,6 +949,8 @@ mixin s-prod-head-14()
 								+select-body()
 									+e.SPAN.title--other Сколько нужно горизонтальных закладных (2.7м)?
 									+e.SELECT.input(id="horizontal" data-name="Закладная горизонтальная 2,70 м" data-price="1790")
+												option(value="0" selected) 0шт.
+												option(value="1"  ) 1шт.
 												option(value="2" ) 2шт.
 												option(value="4" ) 4шт.
 												option(value="6" ) 6шт.
@@ -978,216 +1004,41 @@ mixin s-prod-head-14()
 								+select-body()
 									+e.SPAN.title--other Сколько нужно <br>полок (800&nbsp;мм)?
 									+e.SELECT.input(id="shelf800" data-name="Полка 800 мм" data-price="3060")
-												option(value="1") 1шт.
-												option(value="2") 2шт.
-												option(value="3") 3шт.
-												option(value="4") 4шт.
-												option(value="5") 5шт.
-												option(value="6") 6шт.
-												option(value="7") 7шт.
-												option(value="8") 8шт.
-												option(value="9") 9шт.
-												option(value="10"  ) 10шт.
-												option(value="11"  ) 11шт.
-												option(value="12"  ) 12шт.
-												option(value="13"  ) 13шт.
-												option(value="14"  ) 14шт.
-												option(value="15"  ) 15шт.
-												option(value="16"  ) 16шт.
-												option(value="17"  ) 17шт.
-												option(value="18"  ) 18шт.
-												option(value="19"  ) 19шт.
-												option(value="20"  ) 20шт. 
+												+options()
 								+select-body()
 									+e.SPAN.title--other Сколько нужно экранов&nbsp;(800&nbsp;мм)?
 									+e.SELECT.input(id="screen800" data-name="Экран 800 мм" data-price="3205")
-												option(value="1") 1шт.
-												option(value="2") 2шт.
-												option(value="3") 3шт.
-												option(value="4") 4шт.
-												option(value="5") 5шт.
-												option(value="6") 6шт.
-												option(value="7") 7шт.
-												option(value="8") 8шт.
-												option(value="9") 9шт.
-												option(value="10"  ) 10шт.
-												option(value="11"  ) 11шт.
-												option(value="12"  ) 12шт.
-												option(value="13"  ) 13шт.
-												option(value="14"  ) 14шт.
-												option(value="15"  ) 15шт.
-												option(value="16"  ) 16шт.
-												option(value="17"  ) 17шт.
-												option(value="18"  ) 18шт.
-												option(value="19"  ) 19шт.
-												option(value="20"  ) 20шт. 
-
+												+options()
 								+select-body()
 									+e.SPAN.title--other Сколько нужно полок навесных малых (379 мм А1220)?
 									+e.SELECT.input(id="a1220" data-name="Полка навесная малая 379 мм А1220" data-price="335")
-												option(value="1") 1шт.
-												option(value="2") 2шт.
-												option(value="3") 3шт.
-												option(value="4") 4шт.
-												option(value="5") 5шт.
-												option(value="6") 6шт.
-												option(value="7") 7шт.
-												option(value="8") 8шт.
-												option(value="9") 9шт.
-												option(value="10"  ) 10шт.
-												option(value="11"  ) 11шт.
-												option(value="12"  ) 12шт.
-												option(value="13"  ) 13шт.
-												option(value="14"  ) 14шт.
-												option(value="15"  ) 15шт.
-												option(value="16"  ) 16шт.
-												option(value="17"  ) 17шт.
-												option(value="18"  ) 18шт.
-												option(value="19"  ) 19шт.
-												option(value="20"  ) 20шт. 
+												+options()
 
 								+select-body()
 									+e.SPAN.title--other Сколько нужно полок навесных больших (595 мм А1320)?
 									+e.SELECT.input(id="a1320" data-name="Полка навесная большая 595 мм А1320" data-price="560")
-												option(value="1") 1шт.
-												option(value="2") 2шт.
-												option(value="3") 3шт.
-												option(value="4") 4шт.
-												option(value="5") 5шт.
-												option(value="6") 6шт.
-												option(value="7") 7шт.
-												option(value="8") 8шт.
-												option(value="9") 9шт.
-												option(value="10"  ) 10шт.
-												option(value="11"  ) 11шт.
-												option(value="12"  ) 12шт.
-												option(value="13"  ) 13шт.
-												option(value="14"  ) 14шт.
-												option(value="15"  ) 15шт.
-												option(value="16"  ) 16шт.
-												option(value="17"  ) 17шт.
-												option(value="18"  ) 18шт.
-												option(value="19"  ) 19шт.
-												option(value="20"  ) 20шт. 
-
+												+options()
 								+select-body()
 									+e.SPAN.title--other Сколько нужно контейнеров для мелких предметов (А1120)?
 									+e.SELECT.input(id="a1120" data-name="Контейнер для мелких предметов А1120" data-price="190")
-												option(value="1") 1шт.
-												option(value="2") 2шт.
-												option(value="3") 3шт.
-												option(value="4") 4шт.
-												option(value="5") 5шт.
-												option(value="6") 6шт.
-												option(value="7") 7шт.
-												option(value="8") 8шт.
-												option(value="9") 9шт.
-												option(value="10"  ) 10шт.
-												option(value="11"  ) 11шт.
-												option(value="12"  ) 12шт.
-												option(value="13"  ) 13шт.
-												option(value="14"  ) 14шт.
-												option(value="15"  ) 15шт.
-												option(value="16"  ) 16шт.
-												option(value="17"  ) 17шт.
-												option(value="18"  ) 18шт.
-												option(value="19"  ) 19шт.
-												option(value="20"  ) 20шт. 
+												+options()
 
 								+select-body()
 									+e.SPAN.title--other Сколько нужно держателей отверток и ключей (А1520)?
 									+e.SELECT.input(id="a1520" data-name="Держатель отверток и ключей А1520" data-price="680")
-												option(value="1") 1шт.
-												option(value="2") 2шт.
-												option(value="3") 3шт.
-												option(value="4") 4шт.
-												option(value="5") 5шт.
-												option(value="6") 6шт.
-												option(value="7") 7шт.
-												option(value="8") 8шт.
-												option(value="9") 9шт.
-												option(value="10"  ) 10шт.
-												option(value="11"  ) 11шт.
-												option(value="12"  ) 12шт.
-												option(value="13"  ) 13шт.
-												option(value="14"  ) 14шт.
-												option(value="15"  ) 15шт.
-												option(value="16"  ) 16шт.
-												option(value="17"  ) 17шт.
-												option(value="18"  ) 18шт.
-												option(value="19"  ) 19шт.
-												option(value="20"  ) 20шт. 
-
+											+options()
 								+select-body()
 									+e.SPAN.title--other Сколько нужно держателей молотка и плоскогубцев (А1620)?
 									+e.SELECT.input(id="a1620" data-name="Держатель молотка и плоскогубцев А1620" data-price="735")
-												option(value="1") 1шт.
-												option(value="2") 2шт.
-												option(value="3") 3шт.
-												option(value="4") 4шт.
-												option(value="5") 5шт.
-												option(value="6") 6шт.
-												option(value="7") 7шт.
-												option(value="8") 8шт.
-												option(value="9") 9шт.
-												option(value="10"  ) 10шт.
-												option(value="11"  ) 11шт.
-												option(value="12"  ) 12шт.
-												option(value="13"  ) 13шт.
-												option(value="14"  ) 14шт.
-												option(value="15"  ) 15шт.
-												option(value="16"  ) 16шт.
-												option(value="17"  ) 17шт.
-												option(value="18"  ) 18шт.
-												option(value="19"  ) 19шт.
-												option(value="20"  ) 20шт. 
-
+											+options()
 								+select-body()
 									+e.SPAN.title--other Сколько нужно держателей полотенец (А1720)?
 									+e.SELECT.input(id="a1720" data-name="Держатель полотенец А1720" data-price="460")
-												option(value="1") 1шт.
-												option(value="2") 2шт.
-												option(value="3") 3шт.
-												option(value="4") 4шт.
-												option(value="5") 5шт.
-												option(value="6") 6шт.
-												option(value="7") 7шт.
-												option(value="8") 8шт.
-												option(value="9") 9шт.
-												option(value="10"  ) 10шт.
-												option(value="11"  ) 11шт.
-												option(value="12"  ) 12шт.
-												option(value="13"  ) 13шт.
-												option(value="14"  ) 14шт.
-												option(value="15"  ) 15шт.
-												option(value="16"  ) 16шт.
-												option(value="17"  ) 17шт.
-												option(value="18"  ) 18шт.
-												option(value="19"  ) 19шт.
-												option(value="20"  ) 20шт. 
+											+options()
 								+select-body()
 									+e.SPAN.title--other Сколько нужно держателей сверел (нерж. сталь А1820)
 									+e.SELECT.input(id="a1820" data-name="Держатель сверел (нерж.сталь) А1820" data-price="1840")
-												option(value="1") 1шт.
-												option(value="2") 2шт.
-												option(value="3") 3шт.
-												option(value="4") 4шт.
-												option(value="5") 5шт.
-												option(value="6") 6шт.
-												option(value="7") 7шт.
-												option(value="8") 8шт.
-												option(value="9") 9шт.
-												option(value="10"  ) 10шт.
-												option(value="11"  ) 11шт.
-												option(value="12"  ) 12шт.
-												option(value="13"  ) 13шт.
-												option(value="14"  ) 14шт.
-												option(value="15"  ) 15шт.
-												option(value="16"  ) 16шт.
-												option(value="17"  ) 17шт.
-												option(value="18"  ) 18шт.
-												option(value="19"  ) 19шт.
-												option(value="20"  ) 20шт. 
+											+options()
 							.row
 								+e.cost.col-md-6.align-self-center
 									h3 Стоимость: 
