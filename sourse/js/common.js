@@ -347,14 +347,28 @@ function eventHandler() {
 
 		})
 	}
-	
+
+	$('.form-wrap__btn-count--plus').click(function () {
+		// if ($(this).prev().val() < 3) {
+		$(this).prev().val(+$(this).prev().val() + (+$(this).prev().data("step") || 1));
+		// }
+	});
+	$('.form-wrap__btn-count--minus').click(function () {
+		if ($(this).next().val() > 0) {
+			if ($(this).next().val() > 0) $(this).next().val(+$(this).next().val() - (+$(this).next().data("step") || 1));
+		}
+	});
+ 
 	if ($("div").is(".form-calc-system")) {
 		function change2() {
+
 			let  result = 0;
-			let select = $(".form-calc-system select");
+			let select = $(".form-calc-system .form-wrap__input");
 			for (let i = 0; i < select.length; i++) {
-				result += (+$(select[i]).data('price')) * (+$(select[i]).val()); 
+				result += (+$(select[i]).data('price')) * ($(select[i]).val()); 
+		 
 			}
+		 
 			// result = (+document.getElementById("vertical").value * +vertical) + (+document.getElementById("horizontal").value * +horizontal);
 			if (isNaN(result)) result = 0;
 
@@ -363,13 +377,13 @@ function eventHandler() {
 
 		change2();
 
-		$(".form-calc-system").on('input change input cut copy paste', 'input, select', function () {
+		$(".form-calc-system").on('input change input cut copy paste click', 'input, select, .form-wrap__btn-count--plus, .form-wrap__btn-count--minus', function () {
 			change2();
 		})
 
 		$(".form-calc-system .link-modal").click(function () {
 			let result2 = '';
-			let select = $(".form-calc-system select");
+			let select = $(".form-calc-system .form-wrap__input");
 			for (let i = 0; i < select.length; i++) {
 				result2 += `<tr style="background-color: #f8f8f8;"> 
 					<td style="padding: 10px; border: #e9e9e9 1px solid;"> ${$(select[i]).data('name')} :</td> 
