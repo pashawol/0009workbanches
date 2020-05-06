@@ -631,92 +631,107 @@ mixin s-prod-head-13()
 											li Кронштейн металлический — 1 шт.
 
 
-					+b.s-prod-head-calculate.form-calc--1
+					+b.s-prod-head-calculate.form-calc.form-calc-system
 						h3 Рассчитайте стоимость&nbsp;стеллажа
 						+b.form-wrap
 							.row
-								.col-md-6
-									+e.input-wrap
-										label
-											+e.SPAN.title Сколько нужно вертикальных стоек?
-											+e.SELECT.input(id="vertical")
-												option(value="1") 1шт.
-												option(value="2") 2шт.
-												option(value="3") 3шт.
-												option(value="4") 4шт.
-												option(value="5") 5шт.
-												option(value="6") 6шт.
-												option(value="7") 7шт.
-												option(value="8") 8шт.
-												option(value="9") 9шт.
-												option(value="10"  ) 10шт.
-												option(value="11"  ) 11шт.
-												option(value="12"  ) 12шт.
-												option(value="13"  ) 13шт.
-												option(value="14"  ) 14шт.
-												option(value="15"  ) 15шт.
-												option(value="16"  ) 16шт.
-												option(value="17"  ) 17шт.
-												option(value="18"  ) 18шт.
-												option(value="19"  ) 19шт.
-												option(value="20"  ) 20шт. 
+								mixin select-body()
+									.col-md-6
+										+e.input-wrap
+											block
+											+e.block-add
+												+e.btn-count--minus  
+												+e.INPUT.input(type="number" value="0" )&attributes(attributes)
+												+e.btn-count--plus 
+								+select-body()(id="vertical" data-name="Стойка вертикальная" data-price="5075")
+									+e.SPAN.title Сколько нужно вертикальных&nbsp;стоек? 
+									
+								+select-body()(id="horizontal" data-name="Стойка вертикальная" data-price="870" data-step="2" )
+									+e.SPAN.title Сколько нужно кронштейнов?
+
+								//- .col-md-6
+								//- 	+e.input-wrap
+								//- 		label
+								//- 			+e.SPAN.title Сколько нужно вертикальных стоек?
+								//- 			+e.SELECT.input(id="vertical")
+								//- 				option(value="1") 1шт.
+								//- 				option(value="2") 2шт.
+								//- 				option(value="3") 3шт.
+								//- 				option(value="4") 4шт.
+								//- 				option(value="5") 5шт.
+								//- 				option(value="6") 6шт.
+								//- 				option(value="7") 7шт.
+								//- 				option(value="8") 8шт.
+								//- 				option(value="9") 9шт.
+								//- 				option(value="10"  ) 10шт.
+								//- 				option(value="11"  ) 11шт.
+								//- 				option(value="12"  ) 12шт.
+								//- 				option(value="13"  ) 13шт.
+								//- 				option(value="14"  ) 14шт.
+								//- 				option(value="15"  ) 15шт.
+								//- 				option(value="16"  ) 16шт.
+								//- 				option(value="17"  ) 17шт.
+								//- 				option(value="18"  ) 18шт.
+								//- 				option(value="19"  ) 19шт.
+								//- 				option(value="20"  ) 20шт. 
 												 
-								.col-md-6
+								//- .col-md-6
 								
-									+e.input-wrap
-										label
-											+e.SPAN.title Сколько нужно кронштейнов?
-											+e.SELECT.input(id="horizontal")
-												option(value="2" ) 2шт.
-												option(value="4" ) 4шт.
-												option(value="6" ) 6шт.
-												option(value="8" ) 8шт.
-												option(value="10" ) 10шт. 
-												option(value="12" ) 12шт.
-												option(value="14" ) 14шт.
-												option(value="16" ) 16шт.
-												option(value="18" ) 18шт.
-												option(value="20" ) 20шт.
-												option(value="22" ) 22шт.
-												option(value="24" ) 24шт.
-												option(value="26" ) 26шт.
-												option(value="28" ) 28шт.
-												option(value="30" ) 30шт.
-												option(value="32" ) 32шт. 
-												option(value="34" ) 34шт. 
-												option(value="36" ) 36шт. 
-												option(value="38" ) 38шт. 
-												option(value="40" ) 40шт. 
-												option(value="42" ) 42шт. 
-												option(value="44" ) 44шт. 
-												option(value="46" ) 46шт. 
-												option(value="48" ) 48шт. 
-												option(value="50" ) 50шт. 
-												option(value="52" ) 52шт. 
-												option(value="54" ) 54шт. 
-												option(value="56" ) 56шт. 
-												option(value="58" ) 58шт. 
-												option(value="60" ) 60шт. 
-												option(value="62" ) 62шт. 
-												option(value="64" ) 64шт. 
-												option(value="66" ) 66шт. 
-												option(value="68" ) 68шт. 
-												option(value="70" ) 70шт. 
-												option(value="72" ) 72шт. 
-												option(value="74" ) 74шт. 
-												option(value="76" ) 76шт. 
-												option(value="78" ) 78шт. 
-												option(value="80" ) 80шт. 
-												option(value="82" ) 82шт. 
-												option(value="84" ) 84шт. 
-												option(value="86" ) 86шт. 
-												option(value="88" ) 88шт. 
-												option(value="90" ) 90шт. 
-												option(value="92" ) 92шт. 
-												option(value="94" ) 94шт. 
-												option(value="96" ) 96шт. 
-												option(value="98" ) 98шт. 
-												option(value="100") 100шт.  
+								//- 	+e.input-wrap
+								//- 		label
+								//- 			+e.SPAN.title Сколько нужно кронштейнов?
+								//- 			+e.SELECT.input(id="horizontal")
+								//- 				option(value="2" ) 2шт.
+								//- 				option(value="4" ) 4шт.
+								//- 				option(value="6" ) 6шт.
+								//- 				option(value="8" ) 8шт.
+								//- 				option(value="10" ) 10шт. 
+								//- 				option(value="12" ) 12шт.
+								//- 				option(value="14" ) 14шт.
+								//- 				option(value="16" ) 16шт.
+								//- 				option(value="18" ) 18шт.
+								//- 				option(value="20" ) 20шт.
+								//- 				option(value="22" ) 22шт.
+								//- 				option(value="24" ) 24шт.
+								//- 				option(value="26" ) 26шт.
+								//- 				option(value="28" ) 28шт.
+								//- 				option(value="30" ) 30шт.
+								//- 				option(value="32" ) 32шт. 
+								//- 				option(value="34" ) 34шт. 
+								//- 				option(value="36" ) 36шт. 
+								//- 				option(value="38" ) 38шт. 
+								//- 				option(value="40" ) 40шт. 
+								//- 				option(value="42" ) 42шт. 
+								//- 				option(value="44" ) 44шт. 
+								//- 				option(value="46" ) 46шт. 
+								//- 				option(value="48" ) 48шт. 
+								//- 				option(value="50" ) 50шт. 
+								//- 				option(value="52" ) 52шт. 
+								//- 				option(value="54" ) 54шт. 
+								//- 				option(value="56" ) 56шт. 
+								//- 				option(value="58" ) 58шт. 
+								//- 				option(value="60" ) 60шт. 
+								//- 				option(value="62" ) 62шт. 
+								//- 				option(value="64" ) 64шт. 
+								//- 				option(value="66" ) 66шт. 
+								//- 				option(value="68" ) 68шт. 
+								//- 				option(value="70" ) 70шт. 
+								//- 				option(value="72" ) 72шт. 
+								//- 				option(value="74" ) 74шт. 
+								//- 				option(value="76" ) 76шт. 
+								//- 				option(value="78" ) 78шт. 
+								//- 				option(value="80" ) 80шт. 
+								//- 				option(value="82" ) 82шт. 
+								//- 				option(value="84" ) 84шт. 
+								//- 				option(value="86" ) 86шт. 
+								//- 				option(value="88" ) 88шт. 
+								//- 				option(value="90" ) 90шт. 
+								//- 				option(value="92" ) 92шт. 
+								//- 				option(value="94" ) 94шт. 
+								//- 				option(value="96" ) 96шт. 
+								//- 				option(value="98" ) 98шт. 
+								//- 				option(value="100") 100шт.  
+								
 								+e.cost.col-md-6.align-self-center
 									h3 Стоимость: 
 										span #[strong#result 0] рублей
@@ -756,31 +771,33 @@ mixin s-prod-head-14()
 											+img(`img/@1x/stellajnie-sistemi-${i}.jpg`)
 								+sliderItem('1')
 								+sliderItem('2')
-								+sliderItem('3')
-								+sliderItem('4')
-								+sliderItem('5')
-								+sliderItem('6')
-								+sliderItem('7')
-								+sliderItem('8')
-								+sliderItem('9')
-								+sliderItem('10')
-								+sliderItem('11')
-								+sliderItem('12')
-								+sliderItem('13')
-								+sliderItem('14')
-								+sliderItem('15')
-								+sliderItem('16')
-								//- +sliderItem('17')
-								+sliderItem('18')
-								+sliderItem('19')
-								+sliderItem('20')
-								+sliderItem('21')
-								+sliderItem('22')
-								+sliderItem('23')
-								+sliderItem('24')
-								+sliderItem('25')
-								+sliderItem('26')
-								+sliderItem('27')
+								//- +sliderItem('3')
+								//- +sliderItem('4')
+								//- +sliderItem('5')
+								//- +sliderItem('6')
+								//- +sliderItem('7')
+								//- +sliderItem('8')
+								//- +sliderItem('9')
+								//- +sliderItem('10')
+								//- +sliderItem('11')
+								//- +sliderItem('12')
+								//- +sliderItem('13')
+								//- +sliderItem('14')
+								//- +sliderItem('15')
+								//- +sliderItem('16')
+								//- //- +sliderItem('17')
+								//- +sliderItem('18')
+								//- +sliderItem('19')
+								//- +sliderItem('20')
+								//- +sliderItem('21')
+								//- +sliderItem('22')
+								//- +sliderItem('23')
+								//- +sliderItem('24')
+								//- +sliderItem('25')
+								//- +sliderItem('26')
+								//- +sliderItem('27')
+								+sliderItem('28')
+								+sliderItem('29')
 						+e.slider--sm.--sm-js
 							mixin sliderItemSm(i)
 								+e.slide
@@ -788,31 +805,33 @@ mixin s-prod-head-14()
 										+img(`img/@1x/stellajnie-sistemi-${i}.jpg`)
 							+sliderItemSm('1')
 							+sliderItemSm('2')
-							+sliderItemSm('3')
-							+sliderItemSm('4')
-							+sliderItemSm('5')
-							+sliderItemSm('6')
-							+sliderItemSm('7')
-							+sliderItemSm('8')
-							+sliderItemSm('9')
-							+sliderItemSm('10')
-							+sliderItemSm('11')
-							+sliderItemSm('12')
-							+sliderItemSm('13')
-							+sliderItemSm('14')
-							+sliderItemSm('15')
-							+sliderItemSm('16')
-							//- +sliderItemSm('17')
-							+sliderItemSm('18')
-							+sliderItemSm('19')
-							+sliderItemSm('20')
-							+sliderItemSm('21')
-							+sliderItemSm('22')
-							+sliderItemSm('23')
-							+sliderItemSm('24')
-							+sliderItemSm('25')
-							+sliderItemSm('26')
-							+sliderItemSm('27')
+							//- +sliderItemSm('3')
+							//- +sliderItemSm('4')
+							//- +sliderItemSm('5')
+							//- +sliderItemSm('6')
+							//- +sliderItemSm('7')
+							//- +sliderItemSm('8')
+							//- +sliderItemSm('9')
+							//- +sliderItemSm('10')
+							//- +sliderItemSm('11')
+							//- +sliderItemSm('12')
+							//- +sliderItemSm('13')
+							//- +sliderItemSm('14')
+							//- +sliderItemSm('15')
+							//- +sliderItemSm('16')
+							//- //- +sliderItemSm('17')
+							//- +sliderItemSm('18')
+							//- +sliderItemSm('19')
+							//- +sliderItemSm('20')
+							//- +sliderItemSm('21')
+							//- +sliderItemSm('22')
+							//- +sliderItemSm('23')
+							//- +sliderItemSm('24')
+							//- +sliderItemSm('25')
+							//- +sliderItemSm('26')
+							//- +sliderItemSm('27')
+							+sliderItemSm('28')
+							+sliderItemSm('29')
 								//-+e.slide
 									+e.img-wrap
 										+img('img/@2x/stellaj-1.jpg')
@@ -862,13 +881,16 @@ mixin s-prod-head-14()
 				.col-lg-7.sm-order-1
 					+b.s-prod-head-calculate--lg.form-calc-system
 						h3 Рассчитайте стоимость стеллажной системы
-						+b.form-wrap
+						+b.FORM.form-wrap
 							.row
 								mixin select-body()
 									.col-md-6
 										+e.input-wrap
-											label
-												block
+											block
+											+e.block-add
+												+e.btn-count--minus  
+												+e.INPUT.input(type="number" value="0" )&attributes(attributes)
+												+e.btn-count--plus
 								mixin options()
 									option(value="0" selected) 0шт.
 									option(value="1" ) 1шт.
@@ -891,154 +913,33 @@ mixin s-prod-head-14()
 									option(value="18"  ) 18шт.
 									option(value="19"  ) 19шт.
 									option(value="20"  ) 20шт. 
-								+select-body()
-									+e.SPAN.title--other Сколько нужно вертикальных&nbsp;стоек?
-									+e.SELECT.input(id="vertical" data-name="Стойка вертикальная" data-price="2970")
-												option(value="0" ) 0шт.
-												option(value="1" ) 1шт.
-												option(value="2" selected) 2шт.
-												option(value="4" ) 4шт.
-												option(value="6" ) 6шт.
-												option(value="8" ) 8шт.
-												option(value="10" ) 10шт. 
-												option(value="12" ) 12шт.
-												option(value="14" ) 14шт.
-												option(value="16" ) 16шт.
-												option(value="18" ) 18шт.
-												option(value="20" ) 20шт.
-												option(value="22" ) 22шт.
-												option(value="24" ) 24шт.
-												option(value="26" ) 26шт.
-												option(value="28" ) 28шт.
-												option(value="30" ) 30шт.
-												option(value="32" ) 32шт. 
-												option(value="34" ) 34шт. 
-												option(value="36" ) 36шт. 
-												option(value="38" ) 38шт. 
-												option(value="40" ) 40шт. 
-												option(value="42" ) 42шт. 
-												option(value="44" ) 44шт. 
-												option(value="46" ) 46шт. 
-												option(value="48" ) 48шт. 
-												option(value="50" ) 50шт. 
-												option(value="52" ) 52шт. 
-												option(value="54" ) 54шт. 
-												option(value="56" ) 56шт. 
-												option(value="58" ) 58шт. 
-												option(value="60" ) 60шт. 
-												option(value="62" ) 62шт. 
-												option(value="64" ) 64шт. 
-												option(value="66" ) 66шт. 
-												option(value="68" ) 68шт. 
-												option(value="70" ) 70шт. 
-												option(value="72" ) 72шт. 
-												option(value="74" ) 74шт. 
-												option(value="76" ) 76шт. 
-												option(value="78" ) 78шт. 
-												option(value="80" ) 80шт. 
-												option(value="82" ) 82шт. 
-												option(value="84" ) 84шт. 
-												option(value="86" ) 86шт. 
-												option(value="88" ) 88шт. 
-												option(value="90" ) 90шт. 
-												option(value="92" ) 92шт. 
-												option(value="94" ) 94шт. 
-												option(value="96" ) 96шт. 
-												option(value="98" ) 98шт. 
-												option(value="100") 100шт. 
-								+select-body()
-									+e.SPAN.title--other Сколько нужно горизонтальных закладных (2.7м)?
-									+e.SELECT.input(id="horizontal" data-name="Закладная горизонтальная 2,70 м" data-price="1790")
-												option(value="0" selected) 0шт.
-												option(value="1"  ) 1шт.
-												option(value="2" ) 2шт.
-												option(value="4" ) 4шт.
-												option(value="6" ) 6шт.
-												option(value="8" ) 8шт.
-												option(value="10" ) 10шт. 
-												option(value="12" ) 12шт.
-												option(value="14" ) 14шт.
-												option(value="16" ) 16шт.
-												option(value="18" ) 18шт.
-												option(value="20" ) 20шт.
-												option(value="22" ) 22шт.
-												option(value="24" ) 24шт.
-												option(value="26" ) 26шт.
-												option(value="28" ) 28шт.
-												option(value="30" ) 30шт.
-												option(value="32" ) 32шт. 
-												option(value="34" ) 34шт. 
-												option(value="36" ) 36шт. 
-												option(value="38" ) 38шт. 
-												option(value="40" ) 40шт. 
-												option(value="42" ) 42шт. 
-												option(value="44" ) 44шт. 
-												option(value="46" ) 46шт. 
-												option(value="48" ) 48шт. 
-												option(value="50" ) 50шт. 
-												option(value="52" ) 52шт. 
-												option(value="54" ) 54шт. 
-												option(value="56" ) 56шт. 
-												option(value="58" ) 58шт. 
-												option(value="60" ) 60шт. 
-												option(value="62" ) 62шт. 
-												option(value="64" ) 64шт. 
-												option(value="66" ) 66шт. 
-												option(value="68" ) 68шт. 
-												option(value="70" ) 70шт. 
-												option(value="72" ) 72шт. 
-												option(value="74" ) 74шт. 
-												option(value="76" ) 76шт. 
-												option(value="78" ) 78шт. 
-												option(value="80" ) 80шт. 
-												option(value="82" ) 82шт. 
-												option(value="84" ) 84шт. 
-												option(value="86" ) 86шт. 
-												option(value="88" ) 88шт. 
-												option(value="90" ) 90шт. 
-												option(value="92" ) 92шт. 
-												option(value="94" ) 94шт. 
-												option(value="96" ) 96шт. 
-												option(value="98" ) 98шт. 
-												option(value="100") 100шт. 
-								+select-body()
-									+e.SPAN.title--other Сколько нужно <br>полок (800&nbsp;мм)?
-									+e.SELECT.input(id="shelf800" data-name="Полка 800 мм" data-price="3060")
-												+options()
-								+select-body()
-									+e.SPAN.title--other Сколько нужно экранов&nbsp;(800&nbsp;мм)?
-									+e.SELECT.input(id="screen800" data-name="Экран 800 мм" data-price="3205")
-												+options()
-								+select-body()
+								
+								+select-body()(id="vertical" data-name="Стойка вертикальная" data-price="2970")
+									+e.SPAN.title--other Сколько нужно вертикальных&nbsp;стоек? 
+								+select-body()(id="horizontal" data-name="Закладная горизонтальная " data-price="700")
+									+e.SPAN.title--other Сколько нужно горизонтальных закладных (1 м/п)?
+								 
+								+select-body()(id="shelf800" data-name="Полка 800 мм" data-price="3060")
+									+e.SPAN.title--other Сколько нужно <br>полок (800&nbsp;мм)? 
+								+select-body()(id="screen800" data-name="Экран 800 мм" data-price="3205")
+									+e.SPAN.title--other Сколько нужно экранов&nbsp;(800&nbsp;мм)? 
+								+select-body()(id="a1220" data-name="Полка навесная малая 379 мм А1220" data-price="335")
 									+e.SPAN.title--other Сколько нужно полок навесных малых (379 мм А1220)?
-									+e.SELECT.input(id="a1220" data-name="Полка навесная малая 379 мм А1220" data-price="335")
-												+options()
+						 
 
-								+select-body()
-									+e.SPAN.title--other Сколько нужно полок навесных больших (595 мм А1320)?
-									+e.SELECT.input(id="a1320" data-name="Полка навесная большая 595 мм А1320" data-price="560")
-												+options()
-								+select-body()
-									+e.SPAN.title--other Сколько нужно контейнеров для мелких предметов (А1120)?
-									+e.SELECT.input(id="a1120" data-name="Контейнер для мелких предметов А1120" data-price="190")
-												+options()
+								+select-body()(id="a1320" data-name="Полка навесная большая 595 мм А1320" data-price="560")
+									+e.SPAN.title--other Сколько нужно полок навесных больших (595 мм А1320)? 
+								+select-body()(id="a1120" data-name="Контейнер для мелких предметов А1120" data-price="190")
+									+e.SPAN.title--other Сколько нужно контейнеров для мелких предметов (А1120)? 
 
-								+select-body()
-									+e.SPAN.title--other Сколько нужно держателей отверток и ключей (А1520)?
-									+e.SELECT.input(id="a1520" data-name="Держатель отверток и ключей А1520" data-price="680")
-											+options()
-								+select-body()
-									+e.SPAN.title--other Сколько нужно держателей молотка и плоскогубцев (А1620)?
-									+e.SELECT.input(id="a1620" data-name="Держатель молотка и плоскогубцев А1620" data-price="735")
-											+options()
-								+select-body()
-									+e.SPAN.title--other Сколько нужно держателей полотенец (А1720)?
-									+e.SELECT.input(id="a1720" data-name="Держатель полотенец А1720" data-price="460")
-											+options()
-								+select-body()
-									+e.SPAN.title--other Сколько нужно держателей сверел (нерж. сталь А1820)
-									+e.SELECT.input(id="a1820" data-name="Держатель сверел (нерж.сталь) А1820" data-price="1840")
-											+options()
+								+select-body()(id="a1520" data-name="Держатель отверток и ключей А1520" data-price="680")
+									+e.SPAN.title--other Сколько нужно держателей отверток и ключей (А1520)? 
+								+select-body()(id="a1620" data-name="Держатель молотка и плоскогубцев А1620" data-price="735")
+									+e.SPAN.title--other Сколько нужно держателей молотка и плоскогубцев (А1620)? 
+								+select-body()(id="a1720" data-name="Держатель полотенец А1720" data-price="460")
+									+e.SPAN.title--other Сколько нужно держателей полотенец (А1720)? 
+								+select-body()(id="a1820" data-name="Держатель сверел (нерж.сталь) А1820" data-price="1840")
+									+e.SPAN.title--other Сколько нужно держателей сверел (нерж. сталь А1820) 
 							.row
 								+e.cost.col-md-6.align-self-center
 									h3 Стоимость: 

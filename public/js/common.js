@@ -311,13 +311,23 @@ function eventHandler() {
 		});
 	}
 
+	$('.form-wrap__btn-count--plus').click(function () {
+		// if ($(this).prev().val() < 3) {
+		$(this).prev().val(+$(this).prev().val() + (+$(this).prev().data("step") || 1)); // }
+	});
+	$('.form-wrap__btn-count--minus').click(function () {
+		if ($(this).next().val() > 0) {
+			if ($(this).next().val() > 0) $(this).next().val(+$(this).next().val() - (+$(this).next().data("step") || 1));
+		}
+	});
+
 	if ($("div").is(".form-calc-system")) {
 		var change2 = function change2() {
 			var result = 0;
-			var select = $(".form-calc-system select");
+			var select = $(".form-calc-system .form-wrap__input");
 
 			for (var i = 0; i < select.length; i++) {
-				result += +$(select[i]).data('price') * +$(select[i]).val();
+				result += +$(select[i]).data('price') * $(select[i]).val();
 			} // result = (+document.getElementById("vertical").value * +vertical) + (+document.getElementById("horizontal").value * +horizontal);
 
 
@@ -326,12 +336,12 @@ function eventHandler() {
 		};
 
 		change2();
-		$(".form-calc-system").on('input change input cut copy paste', 'input, select', function () {
+		$(".form-calc-system").on('input change input cut copy paste click', 'input, select, .form-wrap__btn-count--plus, .form-wrap__btn-count--minus', function () {
 			change2();
 		});
 		$(".form-calc-system .link-modal").click(function () {
 			var result2 = '';
-			var select = $(".form-calc-system select");
+			var select = $(".form-calc-system .form-wrap__input");
 
 			for (var i = 0; i < select.length; i++) {
 				result2 += "<tr style=\"background-color: #f8f8f8;\"> \n\t\t\t\t\t<td style=\"padding: 10px; border: #e9e9e9 1px solid;\"> ".concat($(select[i]).data('name'), " :</td> \n\t\t\t\t\t<td style=\"padding: 10px; border: #e9e9e9 1px solid;\"><b> ").concat($(select[i]).val(), " \u0448\u0442. (").concat($(select[i]).data('price'), " \u0440\u0443\u0431.)  </b></td></tr>");
